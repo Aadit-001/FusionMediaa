@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './App.css';
-import Navbar from './components/Navbar'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -252,7 +251,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <div ref={containerRef} className=" smooth-scroll">
         {/* <div className="bg-black hero-section slide slide1" id="slide1">
             <div className="container">
