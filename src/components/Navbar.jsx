@@ -2,6 +2,7 @@ import React from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './Navbar.css';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -9,10 +10,10 @@ const Navbar = () => {
             <div class="menuu">
                 <img src={logo} alt="Logo" width="20%" class="logo-img"/>
                 <ul class="nav-links">
-                    <li><a href="./pages/home.html">Work</a></li>
-                    <li class="dropdown"><a href="./pages/services.html">Services</a></li>
-                    <li><a href="./pages/contact.html">Clients</a></li>
-                    <li><a href="./pages/contact.html">About</a></li>
+                    <li><Link to="/work">Work</Link></li>
+                    <li class="dropdown"><Link to="/services">Services</Link></li>
+                    <li><Link to="/clients">Clients</Link></li>
+                    <li><Link to="/about">About</Link></li>
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
                         background="transparent"
