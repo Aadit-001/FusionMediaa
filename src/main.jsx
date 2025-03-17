@@ -10,12 +10,14 @@ import Clients from './pages/Clients'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Work from './pages/work.jsx'
+import Clients from './pages/clients.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RootLayout />} >
+      <Route path="/" element={<RootLayout />} >
           <Route index element={<App />} />
           <Route path="/work" element={<Work />} />
           <Route path="/services" element={<Services />} />
