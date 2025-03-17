@@ -1,9 +1,22 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
+import { motion } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './App.css';
+import axisbank from './assets/clients/axisbank.png';
+import nesco from './assets/clients/nesco.png';
+import quest from './assets/clients/quest.png';
+import JP from './assets/clients/JP.png';
+import tata from './assets/clients/tata.png';
+import leela from './assets/clients/leela.png';
+import VI from './assets/clients/VI.png';
+import kimatsu from './assets/clients/kimatsu.png';
+import bookmyshow from './assets/clients/bookmyshow.png';
+import witty from './assets/clients/witty.png';
+import symbiosis from './assets/clients/symbiosis.png';
+import electrolab from './assets/clients/electrolab.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -250,9 +263,7 @@ function App() {
     }, []);
 
   return (
-    <>
-    {/* <Navbar/> */}
-    <div ref={containerRef} className=" smooth-scroll">
+    <div ref={containerRef} className="smooth-scroll">
         <div className="hero-section slide slide1" id="slide1">
             <div className="container">
                 <div className="hero-content">
@@ -288,7 +299,7 @@ function App() {
                                     src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
                                     // background="red"
                                     speed="1"
-                                    style={{width: 900, height: 900}}
+                                    style={{width: 800, height: 800}}
                                     loop
                                     autoplay
                                 />
@@ -303,18 +314,80 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    <div className="clients absolute top-[90%] h-[10%] w-full">
-                        <div className='h-full w-full bg-transparent z-[-1] flex items-center justify-center'>sldfkds</div>
+                    <div className="clients absolute top-[92%] h-[10%] w-full">
+                    <div className='h-full w-full flex items-center justify-center'>
+                    <div className="marquee h-full w-full">
+                        <div className="marquee-content h-full w-full">
+                            <img src={axisbank} className='h-full w-auto' alt="Client Logo 1" />
+                            <img src={nesco} className='h-full w-auto' alt="Client Logo 2" />
+                            <img src={quest} className='h-full w-auto' alt="Client Logo 3" />
+                            <img src={JP} className='h-full w-auto' alt="Client Logo 4" />
+                            <img src={tata} className='h-full w-auto' alt="Client Logo 5" />
+                            <img src={leela} className='h-full w-auto' alt="Client Logo 6" />
+                            <img src={VI} className='h-full w-auto' alt="Client Logo 7" />
+                            <img src={kimatsu} className='h-full w-auto' alt="Client Logo 8" />
+                            <img src={bookmyshow} className='h-full w-auto' alt="Client Logo 9" />
+                            <img src={witty} className='h-full w-auto' alt="Client Logo 10" />
+                            <img src={symbiosis} className='h-full w-auto' alt="Client Logo 11" />
+                            <img src={electrolab} className='h-full w-auto' alt="Client Logo 12" />
+                            <img src={axisbank} className='h-full w-auto' alt="Client Logo 1" />
+                            <img src={nesco} className='h-full w-auto' alt="Client Logo 2" />
+                            <img src={quest} className='h-full w-auto' alt="Client Logo 3" />
+                            <img src={JP} className='h-full w-auto' alt="Client Logo 4" />
+                            <img src={tata} className='h-full w-auto' alt="Client Logo 5" />
+                            <img src={leela} className='h-full w-auto' alt="Client Logo 6" />
+                            <img src={VI} className='h-full w-auto' alt="Client Logo 7" />
+                            <img src={kimatsu} className='h-full w-auto' alt="Client Logo 8" />
+                            <img src={bookmyshow} className='h-full w-auto' alt="Client Logo 9" />
+                            <img src={witty} className='h-full w-auto' alt="Client Logo 10" />
+                            <img src={symbiosis} className='h-full w-auto' alt="Client Logo 11" />
+                            <img src={electrolab} className='h-full w-auto' alt="Client Logo 12" />
+                        </div>
+
+                    </div>
+                    <div className=' absolute top-0 left-0 h-full w-[40%] from-white to-transparent bg-gradient-to-r'>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div className="second-section slide slide2" id="slide2">
-            <div className="container">
-                <div className="content-wrapper">
-                    dks
-                </div>
+            <div className="second-container">
+                {/* <div className="content-wrapper"> */}
+                    <div className='blocck h-[30%] w-full  font-bold text-5xl mt-10'>
+                        <h1
+                            // initial={{ y: 20, opacity: 0 }}
+                            // animate={{ y: 0, opacity: 1 }}
+                            // transition={{ delay: 0.1 }}
+                        >
+                            We are a global creative agency that combines design expertise with technology and intelligence.
+                        </h1>
+                    </div>
+                    <div className='structure h-[70%] w-full  flex flex-col items-center justify-center gap-5'>
+                        <div className='relative  flex items-center justify-around gap-60'>
+                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                        </div>
+                        <div className='relative  flex items-center justify-around gap-40'>
+                            <div className='h-24 w-24 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            {/* <hr className='absolute left-1/2 border-2 border-black w-[40%]'></hr> */}
+                            <div className='h-36 w-36 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            {/* <hr className='absolute right-1/2 border-2 border-black w-[40%]'></hr> */}
+                            <div className='h-24 w-24 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                        </div>
+                        <div className='relative  flex items-center justify-around gap-60'>
+                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                        </div>
+                        <hr className='absolute left-1/3 translate-x-2 border-1 border-black w-[12%] rotate-90'></hr>
+                        <hr className='absolute right-1/3 -translate-x-2 border-1 border-black w-[12%] rotate-90'></hr>
+                        <hr className='absolute left-1/3 translate-x-5 border-1 border-black w-[11%] '></hr>
+                        <hr className='absolute right-1/3 -translate-x-5 border-1 border-black w-[11%] '></hr>
+
+                        {/* <div className='relative left-3/4  -translate-x-3/4 h-20 w-20 rounded-full bg-green-500'></div> */}
+                    </div>
             </div>
         </div>
 
@@ -333,7 +406,6 @@ function App() {
             </div>
         </div>
     </div>
-    </>
   )
 }
 
