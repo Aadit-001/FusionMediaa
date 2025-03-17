@@ -253,49 +253,6 @@ function App() {
     <>
     {/* <Navbar/> */}
     <div ref={containerRef} className=" smooth-scroll">
-        {/* <div className="bg-black hero-section slide slide1" id="slide1">
-            <div className="container">
-                <div className="hero-content">
-                    <div className="circle" id="circle1"></div>
-                    <div className="circle" id="circle2"></div>
-                    <div className="circle" id="circle3"></div>
-                    <div className="circle" id="circle4"></div>
-                    <div className="circle" id="circle5"></div>
-                    <div className="circle" id="circle6"></div>
-                    <div className="circle" id="circle7"></div>
-                </div>
-            </div>
-        </div>
-
-        <div className="second-section slide slide2" id="slide2">
-            <div className="container">
-                <div className="content-wrapper">
-                    dks
-                </div>
-            </div>
-        </div>
-
-        <div className="third-section slide slide3" id="slide3">
-            <div className="container">
-                <div className="content-wrapper">
-                   ,dnf,
-                </div>
-            </div>
-        </div>
-        <div className="fourth-section slide slide4" id="slide4">
-            <div className="container">
-                <div className="content-wrapper">
-                    <div className="img-section">dsd</div>
-                    <div className="content-section">dsd</div>
-                </div>
-            </div>
-        </div> */}
-
-    {/* </div> */}
-    
-
-
-    {/* // <div ref={containerRef} className="smooth-scroll"> */}
         <div className="hero-section slide slide1" id="slide1">
             <div className="container">
                 <div className="hero-content">
@@ -307,26 +264,47 @@ function App() {
                     <div className="circle" id="circle6">6</div>
                     <div className="circle" id="circle7">7</div>
                     <div className="main-container">
+                        {/* <div className='w-[60%] h-full bg-red-600 flex items-center justify-center -ml-10'>
+                            <DotLottieReact
+                                src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
+                                // background="red"
+                                speed="1"
+                                style={{width: 1000, height: 600}}
+                                loop
+                                autoplay
+                            />
+                        </div>
+                        <div className="w-[30%] h-full bg-green-600 flex flex-col items-start justify-items-center">
+                                <h1 className="font-extrabold text-7xl">Design</h1>
+                                <h1 className="font-extrabold text-7xl">Thinking</h1>
+                                <h1 className="font-extrabold text-7xl">Accelarate</h1>
+                                <div className="text-xl font-normal">
+                                    We Revolutionize User Experience Using Behavioural Science.
+                                </div>
+                        </div> */}
                         <div className="left-container">
-                            <div className="design">
+                            <div className=" -ml-60">
                                 <DotLottieReact
                                     src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
-                                    background="transparent"
+                                    // background="red"
                                     speed="1"
                                     style={{width: 900, height: 900}}
                                     loop
                                     autoplay
                                 />
                             </div>
-                            <div className="right-container">
-                                <h1 className="heading">Design</h1>
-                                <h1 className="heading">Thinking</h1>
-                                <h1 className="heading">Accelarate</h1>
-                                <p className="paragraph-hero">
+                            <div className="right-container -ml-10">
+                                <h1 className="font-extrabold text-7xl">Design</h1>
+                                <h1 className="font-extrabold text-7xl">Thinking</h1>
+                                <h1 className="font-extrabold text-7xl">Accelarate</h1>
+                                <div className="text-xl font-normal">
                                     We Revolutionize User Experience Using Behavioural Science.
-                                </p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="clients absolute top-[90%] h-[10%] w-full">
+                        <div className='h-full w-full bg-transparent z-[-1] flex items-center justify-center'>sldfkds</div>
                     </div>
                 </div>
             </div>
@@ -338,9 +316,6 @@ function App() {
                     dks
                 </div>
             </div>
-            <div className="left-container">
-                
-            </div>
         </div>
 
         <div className="third-section slide slide3" id="slide3">
@@ -349,18 +324,12 @@ function App() {
                    ,dnf,
                 </div>
             </div>
-            <div className="left-container">
-                
-            </div>
         </div>
         <div className="fourth-section slide slide4" id="slide4">
             <div className="container">
                 <div className="content-wrapper">
                     ds
                 </div>
-            </div>
-            <div className="left-container">
-                
             </div>
         </div>
     </div>

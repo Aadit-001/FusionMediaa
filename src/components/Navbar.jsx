@@ -1,25 +1,45 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './Navbar.css';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-        <div class="nav-container"> 
-            <div class="menuu">
-                <img src={logo} alt="Logo" width="20%" class="logo-img"/>
-                <ul class="nav-links">
-                    <li><Link to="/work">Work</Link></li>
-                    <li class="dropdown"><Link to="/services">Services</Link></li>
-                    <li><Link to="/clients">Clients</Link></li>
-                    <li><Link to="/about">About</Link></li>
+        <div className={`fixed top-0 w-full transition-all duration-300 ${
+        isScrolled ? "h-[8%] bg-white border-b border-black w-full z-1000 align-middle items-center flex " : "nav-container"
+      }`}> 
+            <div className="menuu">
+                <img src={logo} alt="Logo" width="20%" className="logo-img"/>
+                <ul className="nav-links">
+                    <li><NavLink to="/work" isActive={(isActive) => isActive ? "active" : ""}>Work</NavLink></li>
+                    <li className="dropdown"><NavLink to="/services" isActive={(isActive) => isActive ? "active" : ""}>Services</NavLink></li>
+                    <li><NavLink to="/clients" isActive={(isActive) => isActive ? "active" : ""}>Clients</NavLink></li>
+                    <li><NavLink to="/about" isActive={(isActive) => isActive ? "active" : ""}>About</NavLink></li>
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
                         background="transparent"
                         color="#fff"
                         speed="1"
-                        style={{width: 40, height: 40}}
+                        style={isScrolled ? {width: 30, height: 30} : {width: 40, height: 40}}
                         loop
                         autoplay
                     />
@@ -31,7 +51,7 @@ const Navbar = () => {
                         loop
                         autoplay
                     /> */}
-                    <button class="btn liquid"><span>contact</span></button>
+                    <button className={`${isScrolled ? 'btnScrolled liquid' : 'btn liquid'}`}><span>contact</span></button>
                 </ul>
             </div>
         </div>

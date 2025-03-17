@@ -26,7 +26,7 @@
   
   .btn {
     position: relative;
-    padding: 1rem 3rem;
+    padding: 0.6rem 3rem;
     font-size: larger;
     font-weight: 600;
     /* width: 36%; */
@@ -38,6 +38,24 @@
     overflow: hidden;
     transition: all 0.3s ease;
   }
+
+  .btnScrolled{
+    position: relative;
+    padding: 0.4rem 2rem;
+    font-size: larger;
+    font-weight: 600;
+    /* width: 36%; */
+    color: rgb(0, 0, 0);
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* margin-top: 6px; */
+  }
+
+
   
   .liquid {
     background: linear-gradient(#000000 0 0) no-repeat calc(200% - var(--p, 0%))
