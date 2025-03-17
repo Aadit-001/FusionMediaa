@@ -28,7 +28,13 @@ const Navbar = () => {
         isScrolled ? "h-[8%] bg-white border-b border-black w-full z-1000 align-middle items-center flex " : "nav-container"
       }`}> 
             <div className="menuu">
-                <img src={logo} alt="Logo" width="20%" className="logo-img"/>
+                <Link to="/" className="inline-block w-[20%]">
+                    <img 
+                        src={logo} 
+                        alt="Logo" 
+                        className="logo-img w-full h-auto"
+                    />
+                </Link>
                 <ul className="nav-links">
                     <li><NavLink to="/work" isActive={(isActive) => isActive ? "active" : ""}>Work</NavLink></li>
                     <li className="dropdown"><NavLink to="/services" isActive={(isActive) => isActive ? "active" : ""}>Services</NavLink></li>
