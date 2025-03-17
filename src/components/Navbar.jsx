@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './Navbar.css';
 import logo from '../assets/logo.png';
-import {Link,NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
