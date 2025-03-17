@@ -79,20 +79,20 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className="pt-[600px] mt-[500px] main-container">
+    <div className=" main-container">
       <div className="container mx-auto px-4 md:px-6">
         <div className="h-[60px]"></div>
         
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center gap-2 text-gray-500 mb-8 justify-center">
+        <div className="flex items-center gap-2 text-2xl text-gray-500 mb-8 justify-center">
           <span>Home</span>
           <span>•</span>
           <span className="text-gray-400">Clients</span>
         </div>
 
         {/* Title Section */}
-        <div className="flex flex-col items-center justify-center text-center mb-24">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight max-w-4xl mx-auto">
+        <div className="flex flex-col items-center justify-center text-center ">
+          <h2 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
             We make happy clients by<br />
             interconnecting technology<br />
             with business & art.
@@ -105,17 +105,14 @@ const Clients = () => {
             src="https://lottie.host/83a9fd3a-e1a0-448b-b854-f1e911428554/yCSoUfNkOr.lottie"
             loop
             autoplay
-            style={{ width: '400px', height: '400px' }}
+            style={{ width: '500px', height: '500px' }}
           />
         </div>
 
         {/* Clients Title */}
-        <div className="flex justify-center mb-[200px]">
+        <div className="flex justify-center mb-24">
           <h1 className="text-[#FF3366] text-5xl font-medium">Our Partners</h1>
         </div>
-
-        {/* Spacing div */}
-        <div className="h-[100px]"></div>
 
         {/* Clients Logo Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-18 mb-[100px] mx-[-8px]">
@@ -133,27 +130,16 @@ const Clients = () => {
           ))}
         </div>
 
-          {/* Spacing div */}
-        <div className="h-[100px]"></div>
-
         {/* Testimonials Section */}
-        <div className="mb-[200px] flex flex-col items-center">
+        <div className=" flex flex-col items-center">
           {/* Testimonial Header */}
           <div className="text-center mb-20">
           <h3 className="text-4xl md:text-5xl font-bold">
               Happy clients with 100+<br />
               successful Projects
             </h3>
-            
-            {/* Spacing div */}
-            <div className="h-[30px]"></div>
-
-            <h2 className="text-[#FF3366] text-2xl font-medium mb-4">TESTIMONIALS</h2>    
+            <h2 className="text-[#FF3366] text-2xl font-medium  mt-[20px]">TESTIMONIALS</h2>    
           </div>
-
-           {/* Spacing div */}
-        <div className="h-[50px]"></div>
-
           {/* Testimonial Content */}
           <div className="max-w-[900px] mx-auto flex flex-col items-center relative">
             {/* Quote Mark */}
@@ -164,10 +150,8 @@ const Clients = () => {
               <p className="text-2xl md:text-3xl font-normal mb-16 leading-relaxed text-left pl-8">
                 {testimonials[currentTestimonial].text}
               </p>
-           {/* Spacing div */}
-        <div className="h-[50px]"></div>
               {/* Author Info */}
-              <div className="flex items-center justify-start w-full gap-4 mb-24  pl-8">
+              <div className="flex items-center justify-start w-full gap-4 mb-2  pl-8">
                 <img 
                   src={testimonials[currentTestimonial].image}
                   alt={testimonials[currentTestimonial].name}
@@ -180,7 +164,7 @@ const Clients = () => {
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center gap-3 mt-8">
+              <div className="flex justify-center gap-3 ">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -194,19 +178,13 @@ const Clients = () => {
             </div>
           </div>
         </div>
-
-                 {/* Spacing div */}
-        <div className="h-[100px]"></div>
-
         {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#8B5CF6] text-white py-60 rounded-lg mb-[200px] h-[300px] flex items-center justify-center">
+        <div className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#8B5CF6] text-white py-60 rounded-lg mt-22 h-[300px] flex items-center justify-center">
           <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight">
             Ready to transform<br />
             your digital presence?
           </h2>
         </div>
-                 {/* Spacing div */}
-                 <div className="h-[100px]"></div>
       </div>
     </div>
   );
