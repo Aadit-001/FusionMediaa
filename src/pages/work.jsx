@@ -53,7 +53,7 @@ const Work = () => {
   ];
 
   return (
-    <div className="pt-[600px] mt-[500px] main-container"> {/* Extremely increased spacing */}
+    <div className=" main-container"> {/* Extremely increased spacing */}
       <div className="container mx-auto px-4 md:px-6">
       <div className="h-[60px]"></div>
         {/* Small "WORK" text above heading */}
