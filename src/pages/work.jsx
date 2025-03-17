@@ -53,7 +53,7 @@ const Work = () => {
   ];
 
   return (
-    <div className=" main-container"> {/* Extremely increased spacing */}
+    <div className="main-container"> {/* Extremely increased spacing */}
       <div className="container mx-auto px-4 md:px-6">
       <div className="h-[60px]"></div>
         {/* Small "WORK" text above heading */}
@@ -68,10 +68,8 @@ const Work = () => {
           </h1>
         </div>
 
-        <div className="h-[80px]"></div>
-
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 mb-[800px]"> {/* Doubled bottom margin */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 mb-24"> {/* Doubled bottom margin */}
           {projects.map((project) => (
             <div key={project.id} className="group cursor-pointer">
               <div className="relative overflow-hidden mb-6"> {/* Added margin bottom */}
@@ -91,11 +89,8 @@ const Work = () => {
           ))}
         </div>
 
-        {/* Spacing div */}
-        <div className="h-[80px]"></div> {/* Added large spacing div */}
-
         {/* "More Work" Section */}
-        <div className="border border-gray-300 rounded-lg py-10 px-16 flex justify-between items-center mt-[800px] h-32"> 
+        <div className="border border-gray-300 rounded-lg py-10 px-16 flex justify-between items-center h-32"> 
           <p className="text-gray-700 text-4xl font-medium ml-[100px]">We have more awesome work to show</p> {/* Using ml-[100px] instead of pl */}
           <button className="bg-[#6366F1] text-white rounded-full p-4 hover:bg-[#5558DD] transition-colors mr-[100px]"> {/* Using mr-[100px] */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,15 +102,12 @@ const Work = () => {
         <div className="h-[80px]"></div>
 
         {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#8B5CF6] text-white py-60 rounded-lg mb-[200px] h-[300px] flex items-center justify-center"> {/* Increased mb-20 to mb-[200px] */}
+        <div className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#8B5CF6] text-white py-60 rounded-lg h-[300px] flex items-center justify-center"> {/* Increased mb-20 to mb-[200px] */}
           <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight">
             Let's create a measurable<br />
             impact on your business.
           </h2>
         </div>
-
-        {/* Add extra spacing div if needed */}
-        <div className="h-[100px]"></div>
       </div>
     </div>
     
