@@ -2,9 +2,16 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import tt from '../assets/testimonial/tt.png';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import logo from '../assets/logo.png';
+import { Briefcase, BarChart2, Settings, Target } from 'lucide-react';
 
 const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [whyChooseRef, whyChooseInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,38 +26,57 @@ const About = () => {
 
   return (
     <div className="w-full bg-white">
-      {/* Progress Bar */}
-      <div 
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-red-500 to-blue-500 z-50"
-        style={{ width: `${scrollProgress}%` }}
-      />
-
       {/* Hero Section */}
-      <section className="h-screen relative overflow-hidden bg-gray-50">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 flex items-center justify-center"
-        >
-          <div className="text-center">
-            <h1 className="text-8xl font-bold mb-6 text-gray-900">
-              About Us
-            </h1>
-            <p className="text-2xl text-gray-700 font-medium">
-              Crafting Digital Excellence
-            </p>
+      <section className="min-h-screen relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 relative">
+          <div className="grid grid-cols-12 gap-8 min-h-screen items-center">
+            {/* Left Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="col-span-7 space-y-8"
+            >
+              <div className="space-y-6">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-8xl font-bold leading-tight"
+                >
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">
+                    Welcome To
+                  </span>
+                  <span>
+                    <img src={logo} alt="Fusion Media" className="w-[700px] h-auto -ml-22" />
+                  </span>
+                </motion.h1>
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                  className="text-xl text-gray-600 max-w-xl"
+                >
+                  Transforming ideas into exceptional digital experiences through innovation, 
+                  creativity, and strategic excellence.
+                </motion.p>
+              </div>
+            </motion.div>
+            <div className='col-span-5 scale-150'>
+                <DotLottieReact
+                    src="https://lottie.host/0df722b7-162c-4853-a61b-c5a450e8ac37/OvhrWEHMFW.lottie"
+                    loop
+                    autoplay
+                    className="w-full h-full"
+                />
+            </div>
           </div>
-        </motion.div>
-        
-        {/* Subtle Background */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-100 to-blue-100" />
         </div>
+
       </section>
 
       {/* Who We Are Section */}
-      <section className="min-h-screen py-32 relative bg-white">
+      <section className="py-16 relative bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -58,7 +84,7 @@ const About = () => {
             transition={{ duration: 1 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-semibold mb-16 text-center text-gray-900">
+            <h2 className="text-3xl font-semibold mb-8 text-center text-gray-900">
               WHO WE ARE
             </h2>
             <p className="text-6xl font-semibold leading-tight text-center text-gray-800">
@@ -69,7 +95,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="min-h-screen py-32 relative bg-white">
+      <section className="py-16 relative bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-32">
             {/* Vision */}
@@ -189,6 +215,128 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section with Marquee */}
+      <motion.section 
+        ref={whyChooseRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={whyChooseInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }} 
+        className="py-20 bg-black text-white overflow-hidden"
+      >
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.h2
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold mb-16 text-center"
+          >
+            Why Choose Us?
+          </motion.h2>
+
+          {/* Marquee Text */}
+          <div className="w-full">
+            <div className="relative flex overflow-x-hidden">
+              <div className="flex animate-scroll gap-8 py-12">
+                {Array.from({ length: 4 }).map((_, index) => (
+                  <div key={index} className="flex flex-shrink-0">
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-black mx-8 text-blue-500 font-sans">BRANDING & MARKETING</span>
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-bold mx-8 text-red-500 font-serif">SOCIAL MEDIA & CONTENT</span>
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-extrabold mx-8 text-purple-400 font-mono">GRAPHIC DESIGN</span>
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-black mx-8 text-green-400 font-sans">EVENT MARKETING</span>
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-bold mx-8 text-blue-500 font-serif">WEBSITE SERVICES</span>
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-bold mx-8 text-pink-500 font-serif">OOH & DOOH</span>
+                    <span className="flex-shrink-0 text-5xl md:text-8xl font-black mx-8 text-blue-500 font-sans">UGC CONTENT</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(calc(-50% - 2rem));
+              }
+            }
+            .animate-scroll {
+              animation: scroll 30s linear infinite;
+            }
+            .pause:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-20">
+            {/* Industry Expertise */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <Briefcase className="h-12 w-12 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Industry Expertise</h3>
+              <p className="text-gray-400">
+                Over a decade of experience in branding and marketing, delivering exceptional results across industries.
+              </p>
+            </motion.div>
+
+            {/* Creative & Data-Driven */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <BarChart2 className="h-12 w-12 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Creative & Data-Driven</h3>
+              <p className="text-gray-400">
+                Perfect blend of creative innovation and data-driven strategies for maximum impact.
+              </p>
+            </motion.div>
+
+            {/* Customized Solutions */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <Settings className="h-12 w-12 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Customized Solutions</h3>
+              <p className="text-gray-400">
+                Tailored strategies designed specifically for your brand's unique needs and goals.
+              </p>
+            </motion.div>
+
+            {/* Result-Oriented */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-center"
+            >
+              <div className="flex justify-center mb-6">
+                <Target className="h-12 w-12 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Result-Oriented</h3>
+              <p className="text-gray-400">
+                Focused on delivering measurable success and tangible business growth.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
     </div>
   );
 };
