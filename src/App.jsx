@@ -60,7 +60,7 @@ function App() {
                     // first section
                     var tl = gsap.timeline({scrollTrigger:{
                         trigger: ".second-section",
-                        start: "0% 100%",
+                        start: "30% 100%",
                         end: "50% 50%",
                         scrub: true,
                         // visibility: "visible",
@@ -72,10 +72,10 @@ function App() {
                     
                     // Position circles 1, 3, 6 vertically on the left side
                     tl.to('#circle1', {
-                        top: "150%",
+                        top: "230%",
                         left: "35%",
                         rotate: "180deg",
-                        scale: 2,
+                        // scale: 2,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -83,10 +83,10 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle3', {
-                        top: "165%",
+                        top: "210%",
                         left: "25%",
                         rotate: "180deg",
-                        scale: 1.8,
+                        scale: 1.5,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -94,10 +94,10 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle6', {
-                        top: "177%",
-                        left: "34%",
+                        top: "188%",
+                        left: "35%",
                         rotate: "180deg",
-                        scale: 0.8,
+                        // scale: 0.8,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -106,10 +106,10 @@ function App() {
             
                     // Position circle 4 in the middle
                     tl.to('#circle4', {
-                        top: "159%",
-                        left: "45%",
+                        top: "207%",
+                        left: "47%",
                         rotate: "180deg",
-                        scale: 0.8,
+                        scale: 1.4,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -118,10 +118,10 @@ function App() {
             
                     // Position circles 2, 5, 7 vertically on the right side
                     tl.to('#circle2', {
-                        top: "150%",
-                        left: "63%",
+                        top: "230%",
+                        left: "60%",
                         rotate: "180deg",
-                        scale: 2,
+                        // scale: 2,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -129,10 +129,10 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle5', {
-                        top: "165%",
-                        left: "72%",
+                        top: "210%",
+                        left: "70%",
                         rotate: "180deg",
-                        scale: 1.8,
+                        scale: 1.5,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -140,10 +140,10 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle7', {
-                        top: "175%",
-                        left: "61%",
+                        top: "188%",
+                        left: "60%",
                         rotate: "180deg",
-                        scale: 0.7,
+                        // scale: 0.7,
                         duration: 2,
                         visibility: "visible",
                         opacity: 1,
@@ -154,7 +154,7 @@ function App() {
                     // second section animation
                     var t2 = gsap.timeline({scrollTrigger:{
                         trigger: ".third-section",
-                        start: "0% 100%",
+                        start: "20% 100%",
                         end: "50% 50%",
                         scrub: true
                     }})
@@ -163,7 +163,7 @@ function App() {
                     
                     // Position circles 1, 3, 6 vertically on the left side
                     t2.to('#circle1', {
-                        top: "240%",
+                        top: "270%",
                         left: "4%",
                         rotate: "180deg",
                         scale: 1.8,
@@ -171,7 +171,7 @@ function App() {
                     }, 'circles');
                     
                     t2.to('#circle3', {
-                        top: "270%",
+                        top: "300%",
                         left: "4%",
                         rotate: "180deg",
                         scale: 1,
@@ -179,7 +179,7 @@ function App() {
                     }, 'circles');
                     
                     t2.to('#circle6', {
-                        top: "300%",
+                        top: "330%",
                         left: "4%",
                         rotate: "180deg",
                         scale: 0.8,
@@ -188,7 +188,7 @@ function App() {
             
                     // Position circle 4 in the middle
                     t2.to('#circle4', {
-                        top: "270%",
+                        top: "300%",
                         left: "45%",
                         rotate: "180deg",
                         scale: 1.2,
@@ -197,14 +197,6 @@ function App() {
             
                     // Position circles 2, 5, 7 vertically on the right side
                     t2.to('#circle2', {
-                        top: "240%",
-                        left: "90%",
-                        rotate: "180deg",
-                        scale: 0.8,
-                        duration: 1
-                    }, 'circles');
-                    
-                    t2.to('#circle5', {
                         top: "270%",
                         left: "90%",
                         rotate: "180deg",
@@ -212,8 +204,16 @@ function App() {
                         duration: 1
                     }, 'circles');
                     
-                    t2.to('#circle7', {
+                    t2.to('#circle5', {
                         top: "300%",
+                        left: "90%",
+                        rotate: "180deg",
+                        scale: 0.8,
+                        duration: 1
+                    }, 'circles');
+                    
+                    t2.to('#circle7', {
+                        top: "330%",
                         left: "90%",
                         rotate: "180deg",
                         scale: 0.8,
@@ -229,7 +229,7 @@ function App() {
                     }})
             
                     t3.to('#circle1, #circle6', {
-                        top: "340%",
+                        top: "370%",
                         left: "4%",
                         rotate: "180deg",
                         scale: 1.2,
@@ -237,7 +237,7 @@ function App() {
                     }, 'circles3');
             
                     t3.to('#circle3, #circle4, #circle5', {
-                        top: "340%",
+                        top: "370%",
                         left: "45%",
                         rotate: "180deg",
                         scale: 1.2,
@@ -245,7 +245,7 @@ function App() {
                     }, 'circles3');
             
                     t3.to('#circle2, #circle7', {
-                        top: "340%",
+                        top: "370%",
                         left: "90%",
                         rotate: "180deg",
                         scale: 1.2,
@@ -314,7 +314,7 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    <div className="clients absolute top-[92%] h-[10%] w-full">
+                    <div className="clients absolute top-[100%] h-[10%] w-full">
                     <div className='h-full w-full flex items-center justify-center'>
                     <div className="marquee h-full w-full">
                         <div className="marquee-content h-full w-full">
@@ -367,24 +367,26 @@ function App() {
                     </div>
                     <div className='structure h-[70%] w-full  flex flex-col items-center justify-center gap-5'>
                         <div className='relative  flex items-center justify-around gap-60'>
-                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
-                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
                         </div>
                         <div className='relative  flex items-center justify-around gap-40'>
-                            <div className='h-24 w-24 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-24 w-24 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
                             {/* <hr className='absolute left-1/2 border-2 border-black w-[40%]'></hr> */}
-                            <div className='h-36 w-36 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-36 w-36 rounded-full  border-2 border-dotted border-black shadow-sm shadow-black   flex items-center justify-center animate-spin'>
+                                <div className='h-32 w-32 rounded-full  border-2  border-black'></div>
+                            </div>
                             {/* <hr className='absolute right-1/2 border-2 border-black w-[40%]'></hr> */}
-                            <div className='h-24 w-24 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-24 w-24 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
                         </div>
                         <div className='relative  flex items-center justify-around gap-60'>
-                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
-                            <div className='h-16 w-16 rounded-full  border-2 border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
                         </div>
-                        <hr className='absolute left-1/3 translate-x-2 border-1 border-black w-[12%] rotate-90'></hr>
-                        <hr className='absolute right-1/3 -translate-x-2 border-1 border-black w-[12%] rotate-90'></hr>
-                        <hr className='absolute left-1/3 translate-x-5 border-1 border-black w-[11%] '></hr>
-                        <hr className='absolute right-1/3 -translate-x-5 border-1 border-black w-[11%] '></hr>
+                        <hr className='absolute left-1/3 translate-x-2 border-1 border-dotted border-black w-[12%] rotate-90'></hr>
+                        <hr className='absolute right-1/3 -translate-x-2 border-1 border-dotted border-black w-[12%] rotate-90'></hr>
+                        <hr className='absolute left-1/3 translate-x-5 border-1 border-dotted border-black w-[11%] '></hr>
+                        <hr className='absolute right-1/3 -translate-x-5 border-1 border-dotted border-black w-[11%] '></hr>
 
                         {/* <div className='relative left-3/4  -translate-x-3/4 h-20 w-20 rounded-full bg-green-500'></div> */}
                     </div>

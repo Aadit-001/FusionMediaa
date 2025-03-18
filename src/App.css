@@ -50,7 +50,7 @@ a {
 }
 
 .hero-section .container {
-  height: 100%;
+  height: 90%;
 }
 
 /* .hero-section .container nav {
@@ -123,8 +123,8 @@ a {
 }
 
 #circle4 {
-  width: 6vw;
-  height: 6vw;
+  width: 5.5vw;
+  height: 5.5vw;
   top: 44%;
 }
 
@@ -448,12 +448,12 @@ a:hover {
 
 @keyframes appear {
   from {
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateY(100%);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    /* opacity: 1; */
+    transform: translateY(0%);
   }
 }
 
