@@ -79,7 +79,7 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className=" main-container">
+    <div className="main-container" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="h-[60px]"></div>
         
@@ -92,7 +92,7 @@ const Clients = () => {
 
         {/* Title Section */}
         <div className="flex flex-col items-center justify-center text-center ">
-          <h2 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto" style={{ fontFamily: 'Lobster, cursive' }}>
             We make happy clients by<br />
             interconnecting technology<br />
             with business & art.
@@ -111,7 +111,7 @@ const Clients = () => {
 
         {/* Clients Title */}
         <div className="flex justify-center mb-24">
-          <h1 className="text-[#FF3366] text-5xl font-medium">Our Partners</h1>
+          <h1 className="text-[#FF3366] text-5xl font-medium" style={{ fontFamily: 'Lobster, cursive' }}>Our Partners</h1>
         </div>
 
         {/* Clients Logo Grid */}
@@ -131,14 +131,14 @@ const Clients = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className=" flex flex-col items-center mt-[200px]">
+        <div className="flex flex-col items-center mt-[200px]">
           {/* Testimonial Header */}
           <div className="text-center mb-20">
-          <h3 className="text-4xl md:text-5xl font-bold">
+            <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
               Happy clients with 100+<br />
               successful Projects
             </h3>
-            <h2 className="text-[#FF3366] text-2xl font-medium  mt-[20px]">TESTIMONIALS</h2>    
+            <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>    
           </div>
           {/* Testimonial Content */}
           <div className="max-w-[1000px] mx-auto flex flex-col items-center relative">
@@ -180,7 +180,7 @@ const Clients = () => {
         </div>
         {/* Bottom CTA Section */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg mt-22 h-[300px] flex items-center justify-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight">
+          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>
             Ready to transform<br />
             your digital presence?
           </h2>

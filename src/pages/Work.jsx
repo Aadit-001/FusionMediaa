@@ -60,34 +60,31 @@ const Work = () => {
   ];
 
   return (
-    <div className="main-container"> {/* Extremely increased spacing */}
+    <div className="main-container" style={{ fontFamily: 'Roboto, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
-      <div className="h-[60px]"></div>
-        {/* Small "WORK" text above heading */}
+        <div className="h-[60px]"></div>
         <p className="text-gray-500 uppercase tracking-wider mb-4">WORK</p>
         
-        {/* Header Section */}
-        <div className="mb-24"> {/* Increased bottom margin */}
-          <h1 className="text-4xl md:text-5xl font-normal mb-4 leading-tight"> 
+        <div className="mb-24">
+          <h1 className="text-5xl md:text-6xl font-normal mb-4 leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}> 
             We Have<br />
             Designed Experiences<br />
             For Over 260 Projects.
           </h1>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 mb-24"> {/* Doubled bottom margin */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 mb-24">
           {projects.map((project) => (
             <div key={project.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-6"> {/* Added margin bottom */}
+              <div className="relative overflow-hidden mb-6">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-[400px] object-cover" 
                 />
               </div>
-              <div className="space-y-3"> {/* Using space-y for consistent spacing */}
-                <h3 className="text-2xl font-normal">{project.title}</h3> {/* Adjusted size and removed bold */}
+              <div className="space-y-3">
+                <h3 className="text-2xl font-normal" style={{ fontFamily: 'Playfair Display, serif' }}>{project.title}</h3>
                 <p className="text-gray-600">{project.description}</p>
                 <p className="text-gray-500">{project.category}</p>
                 <p className="text-gray-500 hover:text-black transition-colors">{project.viewLink}</p>
@@ -96,9 +93,8 @@ const Work = () => {
           ))}
         </div>
 
-        {/* "More Work" Section */}
         <div className="border border-gray-300 rounded-lg py-10 px-16 flex justify-between items-center h-32"> 
-          <p className="text-gray-700 text-4xl font-medium ml-[100px]">We have more awesome work to show</p> {/* Using ml-[100px] instead of pl */}
+          <p className="text-gray-700 text-4xl font-medium ml-[100px]">We have more awesome work to show</p>
           <div
             onClick={handleNavigation}
             className="bg-[#6366F1] text-white rounded-full p-4 hover:bg-[#5558DD] transition-colors cursor-pointer mr-[100px]"
@@ -111,16 +107,14 @@ const Work = () => {
 
         <div className="h-[80px]"></div>
 
-        {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg h-[300px] flex items-center justify-center"> {/* Increased mb-20 to mb-[200px] */}
-          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg h-[300px] flex items-center justify-center">
+          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Let's create a measurable<br />
             impact on your business.
           </h2>
         </div>
       </div>
     </div>
-    
   );
 };
 
