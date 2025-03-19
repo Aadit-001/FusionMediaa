@@ -16,6 +16,7 @@ import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 
 
@@ -86,6 +87,12 @@ const Clients = () => {
     threshold: 0.1,    // Trigger when 10% of the element is visible
   });
 
+  // Variants for the text reveal animation
+  const textRevealVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="main-container" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
@@ -98,13 +105,25 @@ const Clients = () => {
           <span className="text-gray-400">Clients</span>
         </div>
 
-        {/* Title Section */}
+        {/* Title Section with Text Reveal Animation */}
         <div className="flex flex-col items-center justify-center text-center ">
-          <h2 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto" style={{ fontFamily: 'Lobster, cursive' }}>
-            We make happy clients by<br />
-            interconnecting technology<br />
-            with business & art.
-          </h2>
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.3 }}
+            className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto"
+            style={{ fontFamily: 'Lobster, cursive' }}
+          >
+            <motion.div variants={textRevealVariants}>
+              We make happy clients by
+            </motion.div>
+            <motion.div variants={textRevealVariants}>
+              interconnecting technology
+            </motion.div>
+            <motion.div variants={textRevealVariants}>
+              with business & art.
+            </motion.div>
+          </motion.h2>
         </div>
 
         {/* Hero Image */}
@@ -143,7 +162,7 @@ const Clients = () => {
           {/* Testimonial Header */}
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
-              Happy clients with <span className="text-[#FF3366]">{inView && <CountUp end={100} duration={3} />}+</span><br />
+              Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
               successful Projects
             </h3>
             <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>    
