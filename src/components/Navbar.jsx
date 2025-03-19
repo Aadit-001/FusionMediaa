@@ -57,7 +57,9 @@ const Navbar = () => {
                         loop
                         autoplay
                     /> */}
-                    <button className={`${isScrolled ? 'btnScrolled liquid' : 'btn liquid'}`}><span>contact</span></button>
+                    <Link to="/contact">
+                        <button className={`${isScrolled ? 'btnScrolled liquid' : 'btn liquid'}`}><span>contact</span></button>
+                    </Link>
                 </ul>
             </div>
         </div>
