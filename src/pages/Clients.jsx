@@ -14,6 +14,8 @@ import leela from '../assets/clients/leela.png';
 import vi from '../assets/clients/VI.png';
 import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -78,6 +80,12 @@ const Clients = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Use the useInView hook to detect when the element is in view
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger only once
+    threshold: 0.1,    // Trigger when 10% of the element is visible
+  });
+
   return (
     <div className="main-container" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
@@ -131,11 +139,11 @@ const Clients = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className="flex flex-col items-center mt-[200px]">
+        <div className="flex flex-col items-center mt-[200px]" ref={ref}>
           {/* Testimonial Header */}
           <div className="text-center mb-20">
             <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
-              Happy clients with 100+<br />
+              Happy clients with <span className="text-[#FF3366]">{inView && <CountUp end={100} duration={3} />}+</span><br />
               successful Projects
             </h3>
             <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>    
