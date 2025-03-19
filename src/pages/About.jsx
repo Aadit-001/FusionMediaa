@@ -44,7 +44,7 @@ const About = () => {
                   transition={{ delay: 0.3 }}
                   className="text-8xl font-bold leading-tight"
                 >
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
                     Welcome To
                   </span>
                   <span>

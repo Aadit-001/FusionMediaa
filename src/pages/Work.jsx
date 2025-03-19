@@ -6,6 +6,7 @@ import billboard from '../assets/billboard.png';
 import theatre from '../assets/theatre.png';
 import metro from '../assets/metro.png';
 import busstop from '../assets/busstop.png';
+import { motion } from 'framer-motion';
 
 const Work = () => {
   const navigate = useNavigate();
@@ -59,6 +60,12 @@ const Work = () => {
     }
   ];
 
+  // Variants for the text reveal animation
+  const textRevealVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="main-container" style={{ fontFamily: 'Roboto, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
@@ -66,11 +73,23 @@ const Work = () => {
         <p className="text-gray-500 uppercase tracking-wider mb-4">WORK</p>
         
         <div className="mb-24">
-          <h1 className="text-5xl md:text-6xl font-normal mb-4 leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}> 
-            We Have<br />
-            Designed Experiences<br />
-            For Over 260 Projects.
-          </h1>
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.3 }}
+            className="text-5xl md:text-6xl font-normal mb-4 leading-tight"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            <motion.div variants={textRevealVariants}>
+              We Have
+            </motion.div>
+            <motion.div variants={textRevealVariants}>
+              Designed Experiences
+            </motion.div>
+            <motion.div variants={textRevealVariants}>
+              For Over 100 Projects.
+            </motion.div>
+          </motion.h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 mb-24">
