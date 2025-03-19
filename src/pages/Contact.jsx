@@ -61,11 +61,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white pt-16">
+    <div className="bg-white pt-16" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Header with Lottie Animation */}
         <div className="flex justify-between items-center mb-2">
-          <h1 className="text-6xl font-bold">Let's Talk!</h1>
+          <h1 className="text-6xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>Let's Talk!</h1>
           <div className="flex justify-center items-center">
             <DotLottieReact
               src="https://lottie.host/7a0c5038-5aac-4894-8862-ca95b5c881db/Bq1sqF1zaA.lottie"
@@ -133,7 +133,7 @@ const Contact = () => {
           <div className="mb-8 md:mb-0 flex items-center">
             <img src={india} alt="India" className="w-50 h-50 mr-4" />
             <div>
-              <h3 className="text-5xl font-bold">India</h3>
+              <h3 className="text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>India</h3>
               <p className="text-gray-900 mb-2">{currentTime}</p>
               <p>
                 TIRUPATI UDYOG, 208-209, IB Patel Rd, Jay Prakash Nagar,<br />
