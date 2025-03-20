@@ -14,6 +14,9 @@ import leela from '../assets/clients/leela.png';
 import vi from '../assets/clients/VI.png';
 import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 
 
@@ -48,14 +51,14 @@ const Clients = () => {
       text: "Working with Fusion Media has been a game-changer for our business. Their creative solutions and technical expertise have exceeded our expectations.",
       name: "Michael Chen",
       position: "Director, Innovation Labs",
-      image: bookmyshow
+      image: youtube
     },
     {
       id: 3,
       text: "The team's dedication to quality and innovation is unmatched. They've helped us create experiences that truly resonate with our users.",
       name: "Emma Williams",
       position: "Head of Design, Future Corp",
-      image: bookmyshow
+      image: axisbank
     }
   ];
 
@@ -78,8 +81,20 @@ const Clients = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Use the useInView hook to detect when the element is in view
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger only once
+    threshold: 0.1,    // Trigger when 10% of the element is visible
+  });
+
+  // Variants for the text reveal animation
+  const textRevealVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className=" main-container">
+    <div className="main-container" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="h-[60px]"></div>
         
@@ -90,13 +105,25 @@ const Clients = () => {
           <span className="text-gray-400">Clients</span>
         </div>
 
-        {/* Title Section */}
+        {/* Title Section with Text Reveal Animation */}
         <div className="flex flex-col items-center justify-center text-center ">
-          <h2 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-            We make happy clients by<br />
-            interconnecting technology<br />
-            with business & art.
-          </h2>
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: 0.3 }}
+            className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto"
+            style={{ fontFamily: 'Lobster, cursive' }}
+          >
+            <motion.div variants={textRevealVariants}>
+              We make happy clients by
+            </motion.div>
+            <motion.div variants={textRevealVariants}>
+              interconnecting technology
+            </motion.div>
+            <motion.div variants={textRevealVariants}>
+              with business & art.
+            </motion.div>
+          </motion.h2>
         </div>
 
         {/* Hero Image */}
@@ -111,7 +138,7 @@ const Clients = () => {
 
         {/* Clients Title */}
         <div className="flex justify-center mb-24">
-          <h1 className="text-[#FF3366] text-5xl font-medium">Our Partners</h1>
+          <h1 className="text-[#FF3366] text-5xl font-medium" style={{ fontFamily: 'Lobster, cursive' }}>Our Partners</h1>
         </div>
 
         {/* Clients Logo Grid */}
@@ -131,45 +158,45 @@ const Clients = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className=" flex flex-col items-center">
+        <div className="flex flex-col items-center mt-[200px]" ref={ref}>
           {/* Testimonial Header */}
           <div className="text-center mb-20">
-          <h3 className="text-4xl md:text-5xl font-bold">
-              Happy clients with 100+<br />
+            <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
+              Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
               successful Projects
             </h3>
-            <h2 className="text-[#FF3366] text-2xl font-medium  mt-[20px]">TESTIMONIALS</h2>    
+            <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>    
           </div>
           {/* Testimonial Content */}
-          <div className="max-w-[900px] mx-auto flex flex-col items-center relative">
+          <div className="max-w-[1000px] mx-auto flex flex-col items-center relative">
             {/* Quote Mark */}
-            <span className="absolute -left-16 top-0 text-[#FF3366] text-[120px] font-serif leading-none">"</span>
+            <span className="absolute -left-20 top-0 text-[#FF3366] text-[180px] font-serif leading-none">"</span>
             
             {/* Testimonial Text */}
             <div className="text-center w-full">
-              <p className="text-2xl md:text-3xl font-normal mb-16 leading-relaxed text-left pl-8">
+              <p className="text-3xl md:text-4xl font-normal mb-20 leading-relaxed text-left pl-12">
                 {testimonials[currentTestimonial].text}
               </p>
               {/* Author Info */}
-              <div className="flex items-center justify-start w-full gap-4 mb-2  pl-8">
+              <div className="flex items-center justify-start w-full gap-6 mb-4 pl-12">
                 <img 
                   src={testimonials[currentTestimonial].image}
                   alt={testimonials[currentTestimonial].name}
-                  className="w-16 h-16 rounded-full object-cover"
+                  className="w-24 h-24 rounded-full object-cover"
                 />
                 <div className="text-left">
-                  <h4 className="text-xl font-bold">{testimonials[currentTestimonial].name}</h4>
-                  <p className="text-gray-600">{testimonials[currentTestimonial].position}</p>
+                  <h4 className="text-2xl font-bold">{testimonials[currentTestimonial].name}</h4>
+                  <p className="text-xl text-gray-600">{testimonials[currentTestimonial].position}</p>
                 </div>
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center gap-3 ">
+              <div className="flex justify-center gap-4 mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
+                    className={`w-3 h-3 rounded-full transition-colors ${
                       currentTestimonial === index ? 'bg-[#FF3366]' : 'bg-gray-300'
                     }`}
                   />
@@ -179,8 +206,8 @@ const Clients = () => {
           </div>
         </div>
         {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-r from-[#6366F1] via-[#7C3AED] to-[#8B5CF6] text-white py-60 rounded-lg mt-22 h-[300px] flex items-center justify-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg mt-22 h-[300px] flex items-center justify-center">
+          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>
             Ready to transform<br />
             your digital presence?
           </h2>
