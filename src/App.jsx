@@ -163,15 +163,15 @@ function App() {
                     
                     // Position circles 1, 3, 6 vertically on the left side
                     t2.to('#circle1', {
-                        top: "270%",
+                        top: "290%",
                         left: "4%",
                         rotate: "180deg",
-                        scale: 1.8,
+                        scale: 1,
                         duration: 1
                     }, 'circles');
                     
                     t2.to('#circle3', {
-                        top: "300%",
+                        top: "320%",
                         left: "4%",
                         rotate: "180deg",
                         scale: 1,
@@ -179,44 +179,44 @@ function App() {
                     }, 'circles');
                     
                     t2.to('#circle6', {
-                        top: "330%",
+                        top: "350%",
                         left: "4%",
                         rotate: "180deg",
-                        scale: 0.8,
+                        scale: 1,
                         duration: 1
                     }, 'circles');
             
                     // Position circle 4 in the middle
                     t2.to('#circle4', {
-                        top: "300%",
+                        top: "320%",
                         left: "45%",
                         rotate: "180deg",
-                        scale: 1.2,
+                        scale: 1,
                         duration: 1
                     }, 'circles');
             
                     // Position circles 2, 5, 7 vertically on the right side
                     t2.to('#circle2', {
-                        top: "270%",
+                        top: "290%",
                         left: "90%",
                         rotate: "180deg",
-                        scale: 0.8,
+                        scale: 1,
                         duration: 1
                     }, 'circles');
                     
                     t2.to('#circle5', {
-                        top: "300%",
+                        top: "320%",
                         left: "90%",
                         rotate: "180deg",
-                        scale: 0.8,
+                        scale: 1,
                         duration: 1
                     }, 'circles');
                     
                     t2.to('#circle7', {
-                        top: "330%",
+                        top: "350%",
                         left: "90%",
                         rotate: "180deg",
-                        scale: 0.8,
+                        scale: 1,
                         duration: 1
                     }, 'circles');
             
@@ -396,7 +396,25 @@ function App() {
         <div className="third-section slide slide3" id="slide3">
             <div className="container">
                 <div className="content-wrapper">
-                   ,dnf,
+                   <div className='bg-red-600 h-[100%] w-[100%] flex justify-center items-center'>
+                   <div className='relative  flex items-center justify-around gap-60'>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                        </div>
+                        <div className='relative  flex items-center justify-around gap-40'>
+                            <div className='h-24 w-24 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                            {/* <hr className='absolute left-1/2 border-2 border-black w-[40%]'></hr> */}
+                            <div className='h-36 w-36 rounded-full  border-2 border-dotted border-black shadow-sm shadow-black   flex items-center justify-center animate-spin'>
+                                <div className='h-32 w-32 rounded-full  border-2  border-black'></div>
+                            </div>
+                            {/* <hr className='absolute right-1/2 border-2 border-black w-[40%]'></hr> */}
+                            <div className='h-24 w-24 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                        </div>
+                        <div className='relative  flex items-center justify-around gap-60'>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                            <div className='h-16 w-16 rounded-full  border-2 border-dotted border-black shadow-lg shadow-black'></div>
+                        </div>
+                   </div>
                 </div>
             </div>
         </div>
