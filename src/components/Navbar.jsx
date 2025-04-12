@@ -36,10 +36,30 @@ const Navbar = () => {
                     />
                 </Link>
                 <ul className="nav-links">
-                    <li><NavLink to="/work" isActive={(isActive) => isActive ? "active" : ""}>Work</NavLink></li>
-                    <li className="dropdown"><NavLink to="/services" isActive={(isActive) => isActive ? "active" : ""}>Services</NavLink></li>
-                    <li><NavLink to="/clients" isActive={(isActive) => isActive ? "active" : ""}>Clients</NavLink></li>
-                    <li><NavLink to="/about" isActive={(isActive) => isActive ? "active" : ""}>About</NavLink></li>
+                    <li><NavLink 
+                        to="/work" 
+                        className={({ isActive }) => 
+                            isActive ? "text-purple-600" : ""
+                        }
+                    >Work</NavLink></li>
+                    <li className="dropdown"><NavLink 
+                        to="/services" 
+                        className={({ isActive }) => 
+                            isActive ? "text-purple-600" : ""
+                        }
+                    >Services</NavLink></li>
+                    <li><NavLink 
+                        to="/clients" 
+                        className={({ isActive }) => 
+                            isActive ? "text-purple-600" : ""
+                        }
+                    >Clients</NavLink></li>
+                    <li><NavLink 
+                        to="/about" 
+                        className={({ isActive }) => 
+                            isActive ? "text-purple-600" : ""
+                        }
+                    >About</NavLink></li>
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
                         background="transparent"
