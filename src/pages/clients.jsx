@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import bookmyshow from '../assets/clients/bookmyshow.png';
-import youtube from '../assets/clients/youtube.png';
+import fusionEvent from '../assets/clients/fusionEvent.png';
+import horeca from '../assets/clients/horeca.jpg';
+import healthyMeal from '../assets/clients/healthyMeal.jpg';
+import mountainWood from '../assets/clients/mountainWood.png';
 import axisbank from '../assets/clients/axisbank.png';  
-import quest from '../assets/clients/quest.png';
 import symbiosis from '../assets/clients/symbiosis.png';
 import witty from '../assets/clients/witty.png';
-import tata from '../assets/clients/tata.png';
 import electrolab from '../assets/clients/electrolab.png';
 import nesco from '../assets/clients/nesco.png';
 import svcbank from '../assets/clients/svcbank.png';
 import leela from '../assets/clients/leela.png';
-import vi from '../assets/clients/VI.png';
 import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
 import CountUp from 'react-countup';
@@ -22,18 +21,17 @@ import { motion } from 'framer-motion';
 
 const Clients = () => {
   const clientLogos = [
-    { id: 1, name: 'BookMyShow', logo: bookmyshow },
-    { id: 2, name: 'Youtube', logo: youtube },
-    { id: 3, name: 'Axis Bank', logo: axisbank },
-    { id: 4, name: 'Quest', logo: quest },
-    { id: 5, name: 'Symbiosis', logo: symbiosis },
-    { id: 6, name: 'Witty', logo: witty },
-    { id: 7, name: 'Tata', logo: tata },
+    { id: 1, name: 'Horeca', logo: horeca },
+    { id: 2, name: 'Healthy Meal', logo: healthyMeal },
+    { id: 3, name: 'Mountain Wood', logo: mountainWood },
+    { id: 4, name: 'Fusion Event', logo: fusionEvent },
+    { id: 5, name: 'Axis Bank', logo: axisbank },
+    { id: 6, name: 'Symbiosis', logo: symbiosis },
+    { id: 7, name: 'Witty', logo: witty },
     { id: 8, name: 'Electrolab', logo: electrolab },
     { id: 9, name: 'NESCO', logo: nesco },
     { id: 10, name: 'SVC Bank', logo: svcbank },
     { id: 11, name: 'Leela', logo: leela },
-    { id: 12, name: 'VI', logo: vi },
     { id: 13, name: 'Kimatsu', logo: kimatsu },
     { id: 14, name: 'JP', logo: jp },
   ];
@@ -44,21 +42,21 @@ const Clients = () => {
       text: "Fusion Media has been instrumental in transforming our digital presence. Their innovative approach and attention to detail have helped us achieve remarkable results.",
       name: "Sarah Johnson",
       position: "CEO, TechVision Inc.",
-      image: bookmyshow
+      image: horeca
     },
     {
       id: 2,
       text: "Working with Fusion Media has been a game-changer for our business. Their creative solutions and technical expertise have exceeded our expectations.",
       name: "Michael Chen",
       position: "Director, Innovation Labs",
-      image: youtube
+      image: healthyMeal
     },
     {
       id: 3,
       text: "The team's dedication to quality and innovation is unmatched. They've helped us create experiences that truly resonate with our users.",
       name: "Emma Williams",
       position: "Head of Design, Future Corp",
-      image: axisbank
+      image: mountainWood
     }
   ];
 
