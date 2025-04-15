@@ -140,16 +140,16 @@ const Clients = () => {
         </div>
 
         {/* Clients Logo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-18 mb-[100px] mx-[-8px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 mb-[100px] px-8">
           {clientLogos.map((client) => (
             <div 
               key={client.id} 
-              className="flex items-center justify-center px-2"
+              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <img 
                 src={client.logo} 
                 alt={client.name}
-                className="max-h-18 w-auto transition-all duration-300"
+                className="max-h-16 w-auto object-contain transition-all duration-300 hover:scale-105"
               />
             </div>
           ))}
@@ -177,11 +177,13 @@ const Clients = () => {
               </p>
               {/* Author Info */}
               <div className="flex items-center justify-start w-full gap-6 mb-4 pl-12">
-                <img 
-                  src={testimonials[currentTestimonial].image}
-                  alt={testimonials[currentTestimonial].name}
-                  className="w-24 h-24 rounded-full object-cover"
-                />
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-200">
+                  <img 
+                    src={testimonials[currentTestimonial].image}
+                    alt={testimonials[currentTestimonial].name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="text-left">
                   <h4 className="text-2xl font-bold">{testimonials[currentTestimonial].name}</h4>
                   <p className="text-xl text-gray-600">{testimonials[currentTestimonial].position}</p>

@@ -1,75 +1,86 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="py-16 px-4 md:px-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        {/* Logo and Social Section */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold">Fusion Media</h2>
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-600 hover:text-black">
-              <i className="fab fa-facebook"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-black">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-black">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-black">
-              <i className="fab fa-dribbble"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-black">
-              <i className="fab fa-twitter"></i>
-            </a>
+    <footer className="py-16 px-4 md:px-8 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        {/* Top Section: Flex instead of Grid */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-y-10 md:gap-x-6">
+          {/* Logo and Social Section */}
+          <div className="mb-8 md:mb-0 md:w-1/4 flex-shrink-0">
+            <img src={logo} alt="Fusion Media Logo" className="w-60 h-auto mb-4 -ml-6" />
+            <p className="text-gray-600 max-w-xs mb-6">
+              Transforming ideas into exceptional digital experiences through innovative design and technology.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors"><i className="fab fa-facebook text-xl"></i></a>
+              <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors"><i className="fab fa-linkedin text-xl"></i></a>
+              <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors"><i className="fab fa-instagram text-xl"></i></a>
+              <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors"><i className="fab fa-dribbble text-xl"></i></a>
+              <a href="#" className="text-gray-500 hover:text-gray-900 transition-colors"><i className="fab fa-twitter text-xl"></i></a>
+            </div>
           </div>
-          <div className="text-sm text-gray-600">
-            <p>© Fusion Media.</p>
-            <p>All rights reserved 2025</p>
+
+          {/* Services Section */}
+          <div className="mb-8 md:mb-0 md:w-1/4">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services/content-marketing" className="text-gray-600 hover:text-gray-900 transition-colors">Content Marketing</Link></li>
+              <li><Link to="/services/branding" className="text-gray-600 hover:text-gray-900 transition-colors">Branding</Link></li>
+              <li><Link to="/services/social-media-marketing" className="text-gray-600 hover:text-gray-900 transition-colors">Social Media Marketing</Link></li>
+              <li><Link to="/services/website-services" className="text-gray-600 hover:text-gray-900 transition-colors">Website Services</Link></li>
+              <li><Link to="/services/event-marketing" className="text-gray-600 hover:text-gray-900 transition-colors">Event Marketing</Link></li>
+              <li><Link to="/services/public-relations" className="text-gray-600 hover:text-gray-900 transition-colors">Public Reactions</Link></li>
+              <li><Link to="/services/ooh" className="text-gray-600 hover:text-gray-900 transition-colors">OOH</Link></li>
+            </ul>
+          </div>
+
+          {/* Quick Links Section */}
+          <div className="mb-8 md:mb-0 md:w-1/5">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About Us</Link></li>
+              <li><Link to="/work" className="text-gray-600 hover:text-gray-900 transition-colors">Work</Link></li>
+              <li><Link to="/clients" className="text-gray-600 hover:text-gray-900 transition-colors">Clients</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Reach Us</Link></li>
+              <li><Link to="/blogs" className="text-gray-600 hover:text-gray-900 transition-colors">Blogs</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Info Section */}
+          <div className="md:w-1/4">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 ml-2">Contact</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start space-x-3">
+                <i className="fas fa-map-marker-alt text-gray-500 mt-1"></i>
+                <span className="text-gray-600 whitespace-pre-line">
+                  TIRUPATI UDYOG, 208-209,
+                  IB Patel Rd, Jay Prakash Nagar,
+                  Goregaon, Mumbai,
+                  Maharashtra 400063
+                </span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <i className="fas fa-phone text-gray-500"></i>
+                <span className="text-gray-600">+91 81045 11574</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <i className="fas fa-envelope text-gray-500"></i>
+                <span className="text-gray-600">Pratham.Fusionmarketing@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Services Section */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Services</h3>
-          <ul className="space-y-2">
-            <li><Link to="/design" className="text-gray-600 hover:text-black">Design</Link></li>
-            <li><Link to="/technology" className="text-gray-600 hover:text-black">Technology</Link></li>
-            <li><Link to="/neuromarketing" className="text-gray-600 hover:text-black">Neuromarketing</Link></li>
-            <li><Link to="/digital-marketing" className="text-gray-600 hover:text-black">Digital Marketing</Link></li>
-          </ul>
-        </div>
-
-        {/* About Section */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">About</h3>
-          <ul className="space-y-2">
-            <li><Link to="/about-us" className="text-gray-600 hover:text-black">About Us</Link></li>
-            <li><Link to="/team" className="text-gray-600 hover:text-black">Team</Link></li>
-            <li><Link to="/career" className="text-gray-600 hover:text-black">Career</Link></li>
-          </ul>
-        </div>
-
-        {/* Quick Links 1 */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Quick Links</h3>
-          <ul className="space-y-2">
-            <li><Link to="/work" className="text-gray-600 hover:text-black">Work</Link></li>
-            <li><Link to="/clients" className="text-gray-600 hover:text-black">Clients</Link></li>
-            <li><Link to="/reach-us" className="text-gray-600 hover:text-black">Reach Us</Link></li>
-            <li><Link to="/blogs" className="text-gray-600 hover:text-black">Blogs</Link></li>
-          </ul>
-        </div>
-
-        {/* Quick Links 2 */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Quick Links</h3>
-          <ul className="space-y-2">
-            <li><Link to="/privacy-policy" className="text-gray-600 hover:text-black">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="text-gray-600 hover:text-black">Terms of use</Link></li>
-          </ul>
+        {/* Bottom Section */}
+        <div className="border-t border-gray-200 pt-8 mt-12">
+          <div className="flex justify-center items-center">
+            <div className="text-sm text-gray-600">
+              <p>&copy; 2025 Fusion Media. All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
