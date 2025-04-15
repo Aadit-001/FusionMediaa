@@ -204,7 +204,8 @@ a {
 }
 
 .second-section {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(254, 254, 254);
+  /* max-width: 00px; */
 }
 
 .third-section {
@@ -357,7 +358,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   gap: 2vw;
 }
 
@@ -370,6 +371,30 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100vw;
+  padding: 2vw 5vw;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #eee;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.cardd {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
 /* .content-container {
@@ -515,12 +540,14 @@ a:hover {
 
 .cardd{
   position: relative;
-  width: 390px;
-  height: 490px;
+  width: 24%;
+  height: 80%;
+  /* max-width: 30px; */
   margin: 0 auto;
   background: #fff;
   /* box-shadow: 0 15px 60px rgba(0,0,0, .2); */
   /* border-radius: 15px; */
+  z-index: 200;
 }
 
 .cardd .facee{
@@ -637,19 +664,44 @@ a:hover {
   box-sizing: border-box;
 }
 
-.sticky-section1{
+
+
+.sticky-section,
+.sticky-2,
+.sticky-3,
+.sticky-4,
+.sticky-5,
+.sticky-6,
+.sticky-7 {
   position: sticky;
   top: 0;
   z-index: 10;
-  /* background-color: #fff; */
   padding: 1rem;
-  width: 500%;
-  max-width: 1200px;
-  margin: 0 auto;
-  /* box-shadow: 0 2px 5px rgba(0,0,0, .2); */
-  /* background-color: transparent; */
-  z-index: -130;
+  width: 100vw;
+  max-width: 600px;
+  margin-left: 7%;
+  margin-right: auto;
   box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Remove centering and stretch to left */
+}
+
+.sticky-section1 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1rem;
+  width: 100vw;
+  max-width: 1200px;
+  margin-left: 7%;
+  margin-right: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* Remove centering and stretch to left */
 }
 
 
@@ -657,3 +709,14 @@ a:hover {
   z-index: -140;
 
 } */
+#box1 ,#box2 ,#box3 ,#box4{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 auto;
+  display: block;
+  /* visibility: hidden; */
+  /* z-index: 110; */
+}
+
