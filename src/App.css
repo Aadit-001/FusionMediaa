@@ -4,6 +4,15 @@
 
 
 /* Layout */
+.app-max-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .container {
   width: 80vw;
   margin: auto;
@@ -11,13 +20,15 @@
 }
 
 .second-container{
-  width: 70vw;
+  width: 100%;
+  max-width: 1200px;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* Common Elements */
@@ -204,9 +215,14 @@ a {
   height: 100vh;
 }
 
+.fifth-section {
+  height: 100vh;
+}
+
 .second-section .container,
 .third-section .container,
-.fourth-section .container{
+.fourth-section .container,
+.fifth-section .container{
   height: 100%;
 }
 
@@ -499,12 +515,12 @@ a:hover {
 
 .cardd{
   position: relative;
-  width: 350px;
-  height: 450px;
+  width: 390px;
+  height: 490px;
   margin: 0 auto;
   background: #fff;
-  box-shadow: 0 15px 60px rgba(0,0,0, .2);
-  border-radius: 15px;
+  /* box-shadow: 0 15px 60px rgba(0,0,0, .2); */
+  /* border-radius: 15px; */
 }
 
 .cardd .facee{
@@ -542,29 +558,29 @@ a:hover {
 
 .cardd:nth-child(1) .facee.face22{
   background: linear-gradient(45deg, #3503ad, #f7308c);
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .cardd:nth-child(2) .facee.face22{
   background: linear-gradient(45deg, #ccff00, #09afff);
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .cardd:nth-child(3) .facee.face22{
   background: linear-gradient(45deg, #e91e63, #ffeb3b);
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .cardd:nth-child(4) .facee.face22{
   background: linear-gradient(45deg, #e91e63, #ffeb3b);
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 
 
 .cardd:hover .facee.face22{
   height: 60px;
-  border-radius: 0 0 15px 15px;
+  /* border-radius: 0 0 15px 15px; */
 }
 
 .cardd .facee.face22:before{
@@ -575,7 +591,7 @@ a:hover {
   width: 50%;
   height: 100%;
   background: rgba(255,255,255, 0.1);
-  border-radius: 15px 0 0 15px;
+  /* border-radius: 15px 0 0 15px; */
 }
 
 .cardd .facee.face22 h2{
@@ -612,12 +628,30 @@ a:hover {
   z-index: 10;
   /* background-color: #fff; */
   padding: 1rem;
-  width: 80%;
+  width: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
   /* box-shadow: 0 2px 5px rgba(0,0,0, .2); */
   /* background-color: transparent; */
   z-index: -130;
-
+  box-sizing: border-box;
 }
+
+.sticky-section1{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* background-color: #fff; */
+  padding: 1rem;
+  width: 500%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* box-shadow: 0 2px 5px rgba(0,0,0, .2); */
+  /* background-color: transparent; */
+  z-index: -130;
+  box-sizing: border-box;
+}
+
 
 /* .sticky-7{
   z-index: -140;
