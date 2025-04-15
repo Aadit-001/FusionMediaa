@@ -243,14 +243,14 @@ function App() {
                     // third section animation
                     var t3 = gsap.timeline({scrollTrigger:{
                         trigger: ".sticky-1",
-                        start: "60% 100%",
+                        start: "0% 100%",
                         end: "50% 50%",
                         scrub: true
                     }})
             
                     t3.to('#circle1,#circle2,#circle3,#circle6,#circle5,#circle7', {
-                        top: "420%",
-                        left: "50%",
+                        top: "404%",
+                        left: "3%",
                         rotate: "180deg",
                         scale: 1,
                         duration: 2,
@@ -260,8 +260,8 @@ function App() {
 
 
                     t3.to('#circle4', {
-                        top: "418%",
-                        left: "49%",
+                        top: "402%",
+                        left: "2%",
                         rotate: "180deg",
                         scale: 0.8,
                         duration: 2,
@@ -567,6 +567,7 @@ function App() {
 
   return (
     <div ref={containerRef} className="smooth-scroll">
+      <div className="app-max-container">
         <div className="hero-section slide slide1" id="slide1">
             <div className="container">
                 <div className="hero-content">
@@ -757,8 +758,8 @@ function App() {
             </div>
         </div>
 
-        <div className="sticky-sections slide flex flex-col justify-center -mt-40 items-center" id='slide5'>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-1 flex">
+        <div className="sticky-sections slide flex flex-col" id='slide5'>
+            <div className="sticky-section1 bg-white h-screen w-full sticky-1 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-128 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -799,8 +800,8 @@ function App() {
                     </div>
                 )} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-2 flex">
-            <div className='left w-1/2 '>
+            <div className="sticky-section bg-green-500 h-screen sticky-2 flex">
+            <div className='left'>
                     <div className='h-20 w-96 bg-white flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-blue-600 rounded-full'></div>
@@ -829,7 +830,7 @@ function App() {
                             <span className='text-2xl'>--&gt; Social media marketing</span>
                         </motion.div>
                     </div>
-                </div>
+            </div>
                 {/* {inView && (
                     <div className='right w-1/2 '>  
                         <DotLottieReact
@@ -840,7 +841,7 @@ function App() {
                     </div>
                 )} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-3 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-3 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-128 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -879,7 +880,7 @@ function App() {
                 />              
                 </div>} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-4 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-4 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -918,7 +919,7 @@ function App() {
                 />              
                 </div>} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-5 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-5 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -953,7 +954,7 @@ function App() {
                 <DotLottieReact src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie" loop={isAnimating} autoplay={isAnimating} />
                 </div>} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-6 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-6 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -994,7 +995,7 @@ function App() {
                 </div>
             )} */}
             </div>
-            <div className="sticky-section bg-white  h-screen w-full block-services sticky-7 flex">
+            <div className="sticky-section bg-white  h-screen w-full sticky-7 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -1160,6 +1161,7 @@ function App() {
                 </div>
             </div>
         </div>
+    </div>
     </div>
   )
 }

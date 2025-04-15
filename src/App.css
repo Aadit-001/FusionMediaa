@@ -4,6 +4,15 @@
 
 
 /* Layout */
+.app-max-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .container {
   width: 80vw;
   margin: auto;
@@ -11,13 +20,15 @@
 }
 
 .second-container{
-  width: 70vw;
+  width: 100%;
+  max-width: 1200px;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* Common Elements */
@@ -617,12 +628,30 @@ a:hover {
   z-index: 10;
   /* background-color: #fff; */
   padding: 1rem;
-  width: 80%;
+  width: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
   /* box-shadow: 0 2px 5px rgba(0,0,0, .2); */
   /* background-color: transparent; */
   z-index: -130;
-
+  box-sizing: border-box;
 }
+
+.sticky-section1{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* background-color: #fff; */
+  padding: 1rem;
+  width: 500%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* box-shadow: 0 2px 5px rgba(0,0,0, .2); */
+  /* background-color: transparent; */
+  z-index: -130;
+  box-sizing: border-box;
+}
+
 
 /* .sticky-7{
   z-index: -140;
