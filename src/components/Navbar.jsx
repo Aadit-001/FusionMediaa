@@ -6,44 +6,44 @@ import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 
 const SERVICES = [
   {
-    name: "Web Development",
-    description: "Custom web solutions",
+    name: "Content Marketing",
+    description: "Engaging content that connects.",
     color: "bg-blue-100",
     link: "/services/web-development"
   },
   {
-    name: "Mobile Apps",
-    description: "Cross-platform mobile apps",
+    name: "Branding",
+    description: "Identity that stands out.",
     color: "bg-green-100",
-    link: "/services/mobile-apps"
+    link: "/services/branding"
   },
   {
-    name: "UI/UX Design",
-    description: "Intuitive design experiences",
+    name: "Social Media Marketing",
+    description: "Buzz where it matters.",
     color: "bg-purple-100",
     link: "/services/ui-ux"
   },
   {
-    name: "Cloud Solutions",
-    description: "Scalable cloud infrastructure",
+    name: "Website Services",
+    description: "Websites that work.",
     color: "bg-indigo-100",
     link: "/services/cloud"
   },
   {
-    name: "AI & Machine Learning",
-    description: "Intelligent system development",
+    name: "Event Marketing",
+    description: "Events that pop.",
     color: "bg-red-100",
     link: "/services/ai-ml"
   },
   {
-    name: "Cybersecurity",
-    description: "Robust security solutions",
+    name: "Public Reactions",
+    description: "Shaping public voice.",
     color: "bg-yellow-100",
     link: "/services/cybersecurity"
   },
   {
-    name: "Digital Marketing",
-    description: "Growth-driven strategies",
+    name: "OOH",
+    description: "Ads that turn heads.",
     color: "bg-pink-100",
     link: "/services/digital-marketing"
   }
@@ -71,6 +71,7 @@ const Navbar = () => {
     }, []);
 
     const handleServiceClick = (link) => {
+        setIsServicesHovered(false);
         navigate(link);
     };
 
@@ -104,7 +105,6 @@ const Navbar = () => {
                         onClick={() => setIsServicesHovered(prevState => !prevState)}
                     >
                         <NavLink 
-                            // to="/services" 
                             className={({ isActive }) => 
                                 isActive ? "text-purple-600" : ""
                             }
@@ -131,7 +131,7 @@ const Navbar = () => {
                                 )}
                             </div>
                         </NavLink>
-                        {(isServicesHovered || isServicesPage) && (
+                        {isServicesHovered && (
                             <div className="absolute top-full left-1/2 -ml-2 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-2">
                                 {SERVICES.map((service, index) => (
                                     <div 

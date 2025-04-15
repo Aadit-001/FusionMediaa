@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Blogs from './blogs/blogs.jsx'
 import BlogDetail from './blogs/blogDetail.jsx'
 import AdminBlog from './blogs/adminBlog.jsx'
+import Branding from './services/branding.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:id" element={<BlogDetail />} />
           <Route path="/admin/blog" element={<AdminBlog />} />
+          <Route path="/services/branding" element={<Branding />} />
           </Route>
       </Routes>
     </BrowserRouter>
