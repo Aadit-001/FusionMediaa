@@ -620,28 +620,20 @@ function App() {
                         <div className="marquee-content h-full w-full">
                             <img src={axisbank} className='h-full w-auto' alt="Client Logo 1" />
                             <img src={nesco} className='h-full w-auto' alt="Client Logo 2" />
-                            <img src={quest} className='h-full w-auto' alt="Client Logo 3" />
-                            <img src={JP} className='h-full w-auto' alt="Client Logo 4" />
-                            <img src={tata} className='h-full w-auto' alt="Client Logo 5" />
-                            <img src={leela} className='h-full w-auto' alt="Client Logo 6" />
-                            <img src={VI} className='h-full w-auto' alt="Client Logo 7" />
-                            <img src={kimatsu} className='h-full w-auto' alt="Client Logo 8" />
-                            <img src={bookmyshow} className='h-full w-auto' alt="Client Logo 9" />
-                            <img src={witty} className='h-full w-auto' alt="Client Logo 10" />
-                            <img src={symbiosis} className='h-full w-auto' alt="Client Logo 11" />
-                            <img src={electrolab} className='h-full w-auto' alt="Client Logo 12" />
+                            <img src={JP} className='h-full w-auto' alt="Client Logo 3" />
+                            <img src={leela} className='h-full w-auto' alt="Client Logo 4" />
+                            <img src={kimatsu} className='h-full w-auto' alt="Client Logo 5" />
+                            <img src={witty} className='h-full w-auto' alt="Client Logo 6" />
+                            <img src={symbiosis} className='h-full w-auto' alt="Client Logo 7" />
+                            <img src={electrolab} className='h-full w-auto' alt="Client Logo 8" />
                             <img src={axisbank} className='h-full w-auto' alt="Client Logo 1" />
                             <img src={nesco} className='h-full w-auto' alt="Client Logo 2" />
-                            <img src={quest} className='h-full w-auto' alt="Client Logo 3" />
-                            <img src={JP} className='h-full w-auto' alt="Client Logo 4" />
-                            <img src={tata} className='h-full w-auto' alt="Client Logo 5" />
-                            <img src={leela} className='h-full w-auto' alt="Client Logo 6" />
-                            <img src={VI} className='h-full w-auto' alt="Client Logo 7" />
-                            <img src={kimatsu} className='h-full w-auto' alt="Client Logo 8" />
-                            <img src={bookmyshow} className='h-full w-auto' alt="Client Logo 9" />
-                            <img src={witty} className='h-full w-auto' alt="Client Logo 10" />
-                            <img src={symbiosis} className='h-full w-auto' alt="Client Logo 11" />
-                            <img src={electrolab} className='h-full w-auto' alt="Client Logo 12" />
+                            <img src={JP} className='h-full w-auto' alt="Client Logo 3" />
+                            <img src={leela} className='h-full w-auto' alt="Client Logo 4" />
+                            <img src={kimatsu} className='h-full w-auto' alt="Client Logo 5" />
+                            <img src={witty} className='h-full w-auto' alt="Client Logo 6" />
+                            <img src={symbiosis} className='h-full w-auto' alt="Client Logo 7" />
+                            <img src={electrolab} className='h-full w-auto' alt="Client Logo 8" />
                         </div>
 
                     </div>
@@ -981,15 +973,15 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
-            {/* {inView && (
-                <div className='right w-1/2 '>  
-                    <DotLottieReact
-                        src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                        loop={isAnimating}
-                        autoplay={isAnimating}
-                    />            
-                </div>
-            )} */}
+                {/* {inView && (
+                    <div className='right w-1/2 '>  
+                        <DotLottieReact
+                            src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                            loop={isAnimating}
+                            autoplay={isAnimating}
+                        />            
+                    </div>
+                )} */}
             </div>
             <div className="sticky-section bg-white  h-screen w-full sticky-7 flex">
                 <div className='left w-1/2 '>
