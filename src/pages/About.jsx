@@ -176,12 +176,6 @@ const About = () => {
                     growth hacker at Leo9 Studio headquartered<br />
                     in Mumbai, India, and an office in N.J., U.S.A.
                   </p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="text-[#ff4d6d] text-lg hover:underline"
-                  >
-                    know more
-                  </motion.button>
                 </div>
 
                 {/* Image - Adjusted bottom position */}
