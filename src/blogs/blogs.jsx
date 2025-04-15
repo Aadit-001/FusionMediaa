@@ -76,7 +76,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-purple-100 via-indigo-100 to-blue-100 pt-32 pb-20">
         <div className="absolute inset-0">
