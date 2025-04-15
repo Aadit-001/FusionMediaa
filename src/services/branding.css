@@ -8,7 +8,7 @@
     height: 100vh;
   }
 
-  .circle {
+  .circless {
     position: absolute;
     border-radius: 50%;
     /* filter: drop-shadow(0 10px 5px rgba(37, 35, 34, 0.0745098039)); */
@@ -24,14 +24,14 @@
   }
 
 
-  #circle1 {
+  #circle11 {
     width: 30vw;
     height: 30vw;
     top: 22%;
     left: 14%;
   }
 
-  #circle3{
+  #circle13{
     /* width: 30vw; */
     /* height: 30vw; */
     top: 80%;

@@ -60,7 +60,7 @@ const Branding = () => {
                       // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
                       
                       // Position circles 1, 3, 6 vertically on the left side
-                      tl.to('#circle1', {
+                      tl.to('#circle11', {
                           // top: "230%",
                           // left: "35%",
                           rotate: "360deg",
@@ -80,7 +80,7 @@ const Branding = () => {
                         // markers: true
                     }})
 
-                    t2.to('#circle3', {
+                    t2.to('#circle13', {
                         top: "160%",
                         left: "50%",
                         rotate: "360deg",
@@ -320,7 +320,7 @@ const Branding = () => {
       <div className="services-section flex min-h-screen mt-2">
             {/* <div className="container"> */}
                 {/* <div className="hero-content"> */}
-                    <div className="circle" id="circle1">
+                    <div className="circless" id="circle11">
                     {/* <div className="absolute bg-amber-400 w-4 h-4 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
                     <div className="absolute bg-amber-400 w-4 h-4 rounded-full  top-1/2 -translate-x-1/2 -translate-y-1/2">3</div> */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 -ml-24 h-12 bg-[#FF4D6D] rounded-full"></div>
@@ -329,7 +329,7 @@ const Branding = () => {
                     {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id='circle2'></div> */}
                     {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id="circle3"></div> */}
                     </div>
-                    <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle3"></div>
+                    <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
 
                     <div className="w-1/2 flex items-center absolute right-1 top-1/3">
                       <div className="max-w-xl">
