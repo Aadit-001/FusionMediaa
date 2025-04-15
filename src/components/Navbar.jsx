@@ -60,6 +60,20 @@ const Navbar = () => {
                             isActive ? "text-purple-600" : ""
                         }
                     >About</NavLink></li>
+                    {/* ye nikal na hai */}
+                    <li><NavLink 
+                        to="/blogs" 
+                        className={({ isActive }) => 
+                            isActive ? "text-purple-600" : ""
+                        }
+                    >Blogs</NavLink></li>
+                    <li><NavLink 
+                        to="/admin/blog" 
+                        className={({ isActive }) => 
+                            isActive ? "text-purple-600" : ""
+                        }
+                    >Admin</NavLink></li>
+                    {/* yaha tak */}
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
                         background="transparent"
