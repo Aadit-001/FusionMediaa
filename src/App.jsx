@@ -17,11 +17,31 @@ import bookmyshow from './assets/clients/bookmyshow.png';
 import witty from './assets/clients/witty.png';
 import symbiosis from './assets/clients/symbiosis.png';
 import electrolab from './assets/clients/electrolab.png';
+// import animation from './assets/Animation.lottie';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+import { useState } from 'react';
+import tt from './assets/testimonial/tt.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const { ref, inView } = useInView({
+        triggerOnce: false, // Trigger only once
+        threshold: 0.1,
+        onChange: (inView) => {
+            setIsAnimating(inView);
+        }
+      });
+
+      // Variants for the text reveal animation
+    //   const textRevealVariants = {
+    //     hidden: { opacity: 0, y: 20 },
+    //     visible: { opacity: 1, y: 0 },
+    //   };
 
   const containerRef = useRef(null);
 
@@ -223,14 +243,14 @@ function App() {
                     // third section animation
                     var t3 = gsap.timeline({scrollTrigger:{
                         trigger: ".sticky-1",
-                        start: "60% 100%",
+                        start: "0% 100%",
                         end: "50% 50%",
                         scrub: true
                     }})
             
                     t3.to('#circle1,#circle2,#circle3,#circle6,#circle5,#circle7', {
-                        top: "420%",
-                        left: "50%",
+                        top: "404%",
+                        left: "3%",
                         rotate: "180deg",
                         scale: 1,
                         duration: 2,
@@ -240,8 +260,8 @@ function App() {
 
 
                     t3.to('#circle4', {
-                        top: "418%",
-                        left: "49%",
+                        top: "402%",
+                        left: "2%",
                         rotate: "180deg",
                         scale: 0.8,
                         duration: 2,
@@ -547,6 +567,7 @@ function App() {
 
   return (
     <div ref={containerRef} className="smooth-scroll">
+      <div className="app-max-container">
         <div className="hero-section slide slide1" id="slide1">
             <div className="container">
                 <div className="hero-content">
@@ -737,8 +758,8 @@ function App() {
             </div>
         </div>
 
-        <div className="sticky-sections slide flex flex-col justify-center items-center -mt-40" id='slide5'>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-1 flex">
+        <div className="sticky-sections slide flex flex-col" id='slide5'>
+            <div className="sticky-section1 bg-white h-screen w-full sticky-1 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-128 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -746,7 +767,7 @@ function App() {
                         </div>
                         <span className='text-4xl font-bold ml-4'>Content marketing</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
+                    <div className='relative  flex items-center justify-around  ' ref={ref}>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -769,16 +790,18 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
-                <div className='right w-1/2 '>  
-                    <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
-                />        
-                </div>
+                {/* {inView && (
+                    <div className='right w-1/2 '>  
+                        <DotLottieReact
+                            src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                            loop={isAnimating}
+                            autoplay={isAnimating}
+                        />        
+                    </div>
+                )} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-2 flex">
-            <div className='left w-1/2 '>
+            <div className="sticky-section bg-green-500 h-screen sticky-2 flex">
+            <div className='left'>
                     <div className='h-20 w-96 bg-white flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-blue-600 rounded-full'></div>
@@ -807,16 +830,18 @@ function App() {
                             <span className='text-2xl'>--&gt; Social media marketing</span>
                         </motion.div>
                     </div>
-                </div>
-                <div className='right w-1/2 '>  
-                <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
-                />                
-                </div>
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-3 flex">
+                {/* {inView && (
+                    <div className='right w-1/2 '>  
+                        <DotLottieReact
+                            src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                            loop={isAnimating}
+                            autoplay={isAnimating}
+                        />                
+                    </div>
+                )} */}
+            </div>
+            <div className="sticky-section bg-white h-screen w-full sticky-3 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-128 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -847,15 +872,15 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
-                <div className='right w-1/2 '>  
+                {/* {inView && <div className='right w-1/2 '>  
                 <DotLottieReact
                     src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
+                    loop={isAnimating}
+                    autoplay={isAnimating}
                 />              
-                </div>
+                </div>} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-4 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-4 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -886,15 +911,15 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
-                <div className='right w-1/2 '>  
+                {/* {inView && <div className='right w-1/2 '>  
                 <DotLottieReact
                     src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
+                    loop={isAnimating}
+                    autoplay={isAnimating}
                 />              
-                </div>
+                </div>} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-5 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-5 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -925,15 +950,11 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
-                <div className='right w-1/2 '>  
-                <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
-                />              
-                </div>
+                {/* {inView && <div className='right w-1/2 '>  
+                <DotLottieReact src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie" loop={isAnimating} autoplay={isAnimating} />
+                </div>} */}
             </div>
-            <div className="sticky-section bg-white h-screen w-full block-services sticky-6 flex">
+            <div className="sticky-section bg-white h-screen w-full sticky-6 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -964,15 +985,17 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
+            {/* {inView && (
                 <div className='right w-1/2 '>  
-                <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
-                />             
+                    <DotLottieReact
+                        src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                        loop={isAnimating}
+                        autoplay={isAnimating}
+                    />            
                 </div>
+            )} */}
             </div>
-            <div className="sticky-section bg-white  h-screen w-full block-services sticky-7 flex">
+            <div className="sticky-section bg-white  h-screen w-full sticky-7 flex">
                 <div className='left w-1/2 '>
                     <div className='h-20 w-96 flex items-center mt-20 '>
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
@@ -1003,64 +1026,142 @@ function App() {
                         </motion.div>
                     </div>
                 </div>
-                <div className='right w-1/2 '>  
+                {/* {inView && <div className='right w-1/2 '>  
                 <DotLottieReact
                     src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop
-                    autoplay
+                    loop={isAnimating}
+                    autoplay={isAnimating}
                 />              
-                </div>
+                </div>} */}
             </div>
         </div>
 
         <div className="fourth-section slide slide4  flex items-center justify-center" id="slide4">
             <div className="containerr">
                 <div className="cardd">
-      <div className="facee face11">
-        <div className="contentt">
-          <h2>Lorem Ipsum</h2> 
-          <p>Lorem </p>
+            <div className="facee face11">
+                <div className="contentt">
+                <h2>Lorem Ipsum</h2> 
+                <p>Lorem </p>
+                </div>
+            </div>
+            <div className="facee face22">
+                <h2>01</h2>
+            </div>
+                </div>
+                    <div className="cardd">
+                        <div className="facee face11">
+                            <div className="contentt">
+                                <h2>Lorem Ipsum</h2> 
+                                <p>Lorem Ipsum is simply. </p>
+                            </div>
+                        </div>
+                        <div className="facee face22">
+                            <h2>02</h2>
+                        </div>
+                    </div>
+                    <div className="cardd">
+                        <div className="facee face11">
+                            <div className="contentt">
+                                <h2>Lorem Ipsum</h2> 
+                                <p>Lorem Ipsum is simpl </p>
+                            </div>
+                        </div>
+                        <div className="facee face22">
+                            <h2>03</h2>
+                        </div>
+                    </div>
+                    <div className="cardd">
+                        <div className="facee face11">
+                            <div className="contentt">
+                                <h2>Lorem Ipsum</h2> 
+                                <p>Lorem Ipsum is simpl </p>
+                            </div>
+                        </div>
+                        <div className="facee face22">
+                            <h2>04</h2>
+                        </div>
+                    </div>
+                    </div>
         </div>
-      </div>
-      <div className="facee face22">
-        <h2>01</h2>
-      </div>
+
+        <div className="fifth-section slide slide5  flex items-center justify-center"  id="slide5" ref={ref}>
+            <div className="container">
+                <div className="hero-content">
+                <div className="text-center mb-20">
+                    <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
+                        Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
+                        successful Projects
+                    </h3>
+                    {/* <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>     */}
                 </div>
-            <div className="cardd">
-                <div className="facee face11">
-                    <div className="contentt">
-                        <h2>Lorem Ipsum</h2> 
-                        <p>Lorem Ipsum is simply. </p>
-                    </div>
+                    <section className="bg-white">
+                            <div className="container mx-auto px-4">
+                              <div className="max-w-6xl mx-auto">
+                                {/* Quote Card */}
+                                <motion.div
+                                  initial={{ opacity: 0, y: 50 }}
+                                  whileInView={{ opacity: 1, y: 0 }}
+                                  transition={{ duration: 0.2 }}
+                                  className="relative bg-white"
+                                >
+                                  {/* Large Quote Mark */}
+                                  <div className="absolute -top-14 left-8 z-20">
+                                    <span className="text-[150px] leading-none text-[#ff4d6d]">"</span>
+                                  </div>
+                    
+                                  {/* Card Content */}
+                                  <div className="relative border border-black rounded-sm p-12">
+                                    {/* Quote Content */}
+                                    <div className="relative z-10">
+                                      <p className="text-3xl font-medium text-gray-900 mb-2 max-w-[650px] leading-normal">
+                                        Jugal Shah is the founder, CXO, and<br />
+                                        growth hacker at Leo9 Studio headquartered<br />
+                                        in Mumbai, India, and an office in N.J., U.S.A.
+                                      </p>
+                                      <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        className="text-[#ff4d6d] text-lg hover:underline"
+                                      >
+                                        know more
+                                      </motion.button>
+                                    </div>
+                    
+                                    {/* Image - Adjusted bottom position */}
+                                    <div className="absolute right-12 -bottom-0 w-96">
+                                      <img 
+                                        src={tt} 
+                                        alt="Jugal Shah"
+                                        className="w-full h-full object-cover object-center"
+                                      />
+                                    </div>
+                    
+                                    {/* Founder Info */}
+                                    <div className="mt-40">
+                                      <h3 className="text-3xl font-bold text-gray-900">Jugal Shah</h3>
+                                      <p className="text-xl text-gray-600 mt-1 max-w-[500px] leading-normal">
+                                        Founder, Head of UX at Leo9 Studio.<br />
+                                        Behavioral science and
+                                        Neuromarketing expert.
+                                      </p>
+                                      <a 
+                                        href="https://linkedin.com" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="inline-block text-[#0077b5] mt-1"
+                                      >
+                                        in
+                                      </a>
+                                    </div>
+                                  </div>
+                                </motion.div>
+                              </div>
+                            </div>
+                    </section>
                 </div>
-                <div className="facee face22">
-                    <h2>02</h2>
-                </div>
-            </div>
-            <div className="cardd">
-                <div className="facee face11">
-                    <div className="contentt">
-                        <h2>Lorem Ipsum</h2> 
-                        <p>Lorem Ipsum is simpl </p>
-                    </div>
-                </div>
-                <div className="facee face22">
-                    <h2>03</h2>
-                </div>
-            </div>
-            <div className="cardd">
-                <div className="facee face11">
-                    <div className="contentt">
-                        <h2>Lorem Ipsum</h2> 
-                        <p>Lorem Ipsum is simpl </p>
-                    </div>
-                </div>
-                <div className="facee face22">
-                    <h2>04</h2>
-                </div>
-            </div>
             </div>
         </div>
+    </div>
     </div>
   )
 }
