@@ -118,7 +118,7 @@ const Work = () => {
 
         <div className="h-[80px]"></div>
 
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 rounded-lg mt-22 h-[280px] flex items-center justify-center">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg h-[300px] flex items-center justify-center">
           <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
             Let's create a measurable<br />
             impact on your business.

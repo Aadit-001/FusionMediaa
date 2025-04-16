@@ -206,7 +206,7 @@ const Clients = () => {
           </div>
         </div>
         {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 rounded-lg mt-22 h-[280px] flex items-center justify-center">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg mt-22 h-[300px] flex items-center justify-center">
           <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>
             Ready to transform<br />
             your digital presence?
