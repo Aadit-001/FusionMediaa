@@ -7,6 +7,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import './branding.css';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -321,6 +322,12 @@ const Branding = () => {
             {/* <div className="container"> */}
                 {/* <div className="hero-content"> */}
                     <div className="circless" id="circle11">
+                    <DotLottieReact
+      src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
+      loop
+      autoplay
+    />
+
                     {/* <div className="absolute bg-amber-400 w-4 h-4 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
                     <div className="absolute bg-amber-400 w-4 h-4 rounded-full  top-1/2 -translate-x-1/2 -translate-y-1/2">3</div> */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 -ml-24 h-12 bg-[#FF4D6D] rounded-full"></div>
