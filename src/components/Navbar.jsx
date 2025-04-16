@@ -52,6 +52,7 @@ const SERVICES = [
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isServicesHovered, setIsServicesHovered] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -72,11 +73,13 @@ const Navbar = () => {
 
     const handleServiceClick = (link) => {
         setIsServicesHovered(false);
+        setIsMobileMenuOpen(false);
         navigate(link);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handleNavigation = (e) => {
+        setIsMobileMenuOpen(false);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -97,7 +100,30 @@ const Navbar = () => {
                         className="logo-img w-full h-auto"
                     />
                 </Link>
-                <ul className="nav-links relative">
+                
+                {/* Mobile Menu Button */}
+                <button 
+                    className="md:hidden text-black p-2"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        className="h-6 w-6" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                    >
+                        <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M4 6h16M4 12h16M4 18h16" 
+                        />
+                    </svg>
+                </button>
+
+                {/* Desktop Navigation */}
+                <ul className="nav-links hidden md:flex">
                     <li><NavLink 
                         to="/work" 
                         className={({ isActive }) => 
@@ -194,7 +220,7 @@ const Navbar = () => {
                         onClick={handleNavigation}
                     >Blogs</NavLink></li>
                     <li><NavLink 
-                        to="/admin/blog" 
+                        to="/admin/view" 
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
@@ -213,6 +239,118 @@ const Navbar = () => {
                         <button className={`${isScrolled ? 'btnScrolled liquid' : 'btn liquid'}`}><span>contact</span></button>
                     </Link>
                 </ul>
+
+                {/* Mobile Navigation Menu */}
+                <div className={`mobile-menu md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <div className="p-4">
+                        <div className="flex justify-between items-center mb-8">
+                            <Link to="/" onClick={handleNavigation}>
+                                <img src={logo} alt="Logo" className="w-32" />
+                            </Link>
+                            <button 
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-black p-2"
+                            >
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    className="h-6 w-6" 
+                                    fill="none" 
+                                    viewBox="0 0 24 24" 
+                                    stroke="currentColor"
+                                >
+                                    <path 
+                                        strokeLinecap="round" 
+                                        strokeLinejoin="round" 
+                                        strokeWidth={2} 
+                                        d="M6 18L18 6M6 6l12 12" 
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <ul className="space-y-4">
+                            <li>
+                                <NavLink 
+                                    to="/work" 
+                                    className="block text-xl py-2"
+                                    onClick={handleNavigation}
+                                >Work</NavLink>
+                            </li>
+                            <li>
+                                <div className="text-xl py-2">
+                                    <div 
+                                        className="flex items-center cursor-pointer"
+                                        onClick={() => setIsServicesHovered(!isServicesHovered)}
+                                    >
+                                        Services
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg" 
+                                            className={`h-4 w-4 ml-1 transition-transform ${isServicesHovered ? 'rotate-180' : ''}`}
+                                            fill="none" 
+                                            viewBox="0 0 24 24" 
+                                            stroke="currentColor"
+                                        >
+                                            <path 
+                                                strokeLinecap="round" 
+                                                strokeLinejoin="round" 
+                                                strokeWidth={2} 
+                                                d="M19 9l-7 7-7-7" 
+                                            />
+                                        </svg>
+                                    </div>
+                                    {isServicesHovered && (
+                                        <div className="mt-2 space-y-2 pl-4">
+                                            {SERVICES.map((service, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`${service.color} p-3 rounded-lg cursor-pointer`}
+                                                    onClick={() => handleServiceClick(service.link)}
+                                                >
+                                                    <h3 className="font-bold">{service.name}</h3>
+                                                    <p className="text-sm">{service.description}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </li>
+                            <li>
+                                <NavLink 
+                                    to="/clients" 
+                                    className="block text-xl py-2"
+                                    onClick={handleNavigation}
+                                >Clients</NavLink>
+                            </li>
+                            <li>
+                                <NavLink 
+                                    to="/about" 
+                                    className="block text-xl py-2"
+                                    onClick={handleNavigation}
+                                >About</NavLink>
+                            </li>
+                            <li>
+                                <NavLink 
+                                    to="/blogs" 
+                                    className="block text-xl py-2"
+                                    onClick={handleNavigation}
+                                >Blogs</NavLink>
+                            </li>
+                            <li>
+                                <NavLink 
+                                    to="/admin/blog" 
+                                    className="block text-xl py-2"
+                                    onClick={handleNavigation}
+                                >Admin</NavLink>
+                            </li>
+                            <li>
+                                <Link to="/contact" onClick={handleNavigation}>
+                                    <button className="btn liquid w-full text-center">
+                                        <span>contact</span>
+                                    </button>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     )

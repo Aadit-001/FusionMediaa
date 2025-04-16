@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { db } from '../../firebase';
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 
 const Blog = () => {
+  const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Scroll to top when location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -124,7 +130,11 @@ const Blog = () => {
         {filteredPosts.length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Latest Blog</h2>
-            <Link to={`/blogs/${filteredPosts[0].id}`} className="block">
+            <Link 
+              to={`/blogs/${filteredPosts[0].id}`} 
+              className="block"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="flex flex-col md:flex-row">
                   <div className="md:w-1/2">
@@ -169,7 +179,12 @@ const Blog = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">All Blogs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.slice(1).map((blog) => (
-              <Link to={`/blogs/${blog.id}`} key={blog.id} className="block">
+              <Link 
+                to={`/blogs/${blog.id}`} 
+                key={blog.id} 
+                className="block"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <img 
                     src={blog.image} 
