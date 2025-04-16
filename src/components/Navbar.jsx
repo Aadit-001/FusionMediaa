@@ -9,7 +9,7 @@ const SERVICES = [
     name: "Content Marketing",
     description: "Engaging content that connects.",
     color: "bg-blue-100",
-    link: "/services/web-development"
+    link: "/services/contentmarketing"
   },
   {
     name: "Branding",
@@ -21,31 +21,31 @@ const SERVICES = [
     name: "Social Media Marketing",
     description: "Buzz where it matters.",
     color: "bg-purple-100",
-    link: "/services/ui-ux"
+    link: "/services/socialmediamarketing"
   },
   {
     name: "Website Services",
     description: "Websites that work.",
     color: "bg-indigo-100",
-    link: "/services/cloud"
+    link: "/services/website"
   },
   {
     name: "Event Marketing",
     description: "Events that pop.",
     color: "bg-red-100",
-    link: "/services/ai-ml"
+    link: "/services/eventmarketing"
   },
   {
-    name: "Public Reactions",
+    name: "Public Relations",
     description: "Shaping public voice.",
     color: "bg-yellow-100",
-    link: "/services/cybersecurity"
+    link: "/services/publicrelations"
   },
   {
     name: "OOH",
     description: "Ads that turn heads.",
     color: "bg-pink-100",
-    link: "/services/digital-marketing"
+    link: "/services/ooh"
   }
 ];
 
@@ -100,17 +100,17 @@ const Navbar = () => {
                         }
                     >Work</NavLink></li>
                     <li 
-                        className="dropdown relative"
+                        className="relative"
                         onMouseEnter={() => setIsServicesHovered(true)}
-                        onClick={() => setIsServicesHovered(prevState => !prevState)}
                     >
                         <NavLink 
+                            to="/services"
                             className={({ isActive }) => 
-                                isActive ? "text-purple-600" : ""
+                                isActive || isServicesPage ? "text-purple-600" : ""
                             }
                         >
                             <div className="flex items-center">
-                                Services 
+                            Services
                                 {isServicesHovered ? (
                                     <svg 
                                         xmlns="http://www.w3.org/2000/svg" 
@@ -134,8 +134,8 @@ const Navbar = () => {
                         {isServicesHovered && (
                             <div className="absolute top-full left-1/2 -ml-2 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-2">
                                 {SERVICES.map((service, index) => (
-                                    <div 
-                                        key={index} 
+                                    <div
+                                        key={index}
                                         className={`${service.color} p-4 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform`}
                                         onClick={() => handleServiceClick(service.link)}
                                     >

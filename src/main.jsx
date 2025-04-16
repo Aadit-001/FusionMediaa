@@ -14,6 +14,12 @@ import Blogs from './blogs/blogs.jsx'
 import BlogDetail from './blogs/blogDetail.jsx'
 import AdminBlog from './blogs/adminBlog.jsx'
 import Branding from './services/branding.jsx'
+import ContentMarketing from './services/contentMarketing.jsx'
+import EventMarketing from './services/eventMarketing.jsx'
+import OOH from './services/OOH.jsx'  
+import PublicRelations from './services/publicRelations.jsx'
+import SocialMediaMarketing from './services/socialMediaMarketing.jsx'
+import WebsiteServices from './services/websiteServices.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,6 +36,12 @@ createRoot(document.getElementById('root')).render(
           <Route path="/blogs/:id" element={<BlogDetail />} />
           <Route path="/admin/blog" element={<AdminBlog />} />
           <Route path="/services/branding" element={<Branding />} />
+          <Route path="/services/contentmarketing" element={<ContentMarketing />} />
+          <Route path="/services/eventmarketing" element={<EventMarketing />} />
+          <Route path="/services/ooh" element={<OOH />} />
+          <Route path="/services/publicrelations" element={<PublicRelations />} />  
+          <Route path="/services/socialmediamarketing" element={<SocialMediaMarketing />} />  
+          <Route path="/services/website" element={<WebsiteServices />} />  
           </Route>
       </Routes>
     </BrowserRouter>
