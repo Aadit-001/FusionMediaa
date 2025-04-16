@@ -110,11 +110,14 @@ const Navbar = () => {
                         onMouseEnter={() => setIsServicesHovered(true)}
                     >
                         <NavLink 
-                            to="/services"
+                            to="#"
                             className={({ isActive }) => 
                                 isActive || isServicesPage ? "text-purple-600" : ""
                             }
-                            onClick={handleNavigation}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleNavigation();
+                            }}
                         >
                             <div className="flex items-center">
                             Services
