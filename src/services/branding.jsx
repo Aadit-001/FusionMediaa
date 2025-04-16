@@ -121,25 +121,15 @@ const Branding = () => {
   
   const navigate = useNavigate();
   const services = [
-    {
-      category: "Design",
-      items: [
-        { title: "Logo Creation", description: "Crafting intuitive and visually appealing user interfaces" },
-        { title: "Brand Identity", description: "Bringing designs to life with pixel-perfect implementation" },
-        { title: "Product Branding", description: "Establishing consistent design standards and patterns" },
-        { title: "Rebranding Strategy", description: "Building scalable and maintainable design frameworks" }
-      ]
-    },
-    {
-      category: "Experience",
-      items: [
-        { title: "Social Media Graphics", description: "Creating seamless and engaging user experiences" },
-        { title: "Poster and Flyer Design", description: "Understanding user needs through data-driven insights" },
-        { title: "Banner Ads", description: "Strategic guidance for optimal user experience" },
-        { title: "3D Design", description: "Crafting clear and compelling content that guides users" },
-        { title: "Animated Graphics", description: "Crafting clear and compelling content that guides users" }
-      ]
-    },
+    { title: "Logo Creation" },
+    { title: "Brand Identity" },
+    { title: "Product Branding" },
+    { title: "Rebranding Strategy" },
+    { title: "Social Media Graphics" },
+    { title: "Poster and Flyer Design" },
+    { title: "Banner Ads" },
+    { title: "3D Design" },
+    { title: "Animated Graphics" }
   ];
 
   const processSteps = [
@@ -262,37 +252,37 @@ const Branding = () => {
       name: "Content Marketing",
       description: "Engaging content that connects.",
       color: "bg-blue-100",
-      link: "/services/web-development"
+      link: "/services/contentmarketing"
     },
     {
       name: "Social Media Marketing",
       description: "Buzz where it matters.",
       color: "bg-purple-100",
-      link: "/services/ui-ux"
+      link: "/services/socialmediamarketing"
     },
     {
       name: "Website Services",
       description: "Websites that work.",
       color: "bg-indigo-100",
-      link: "/services/cloud"
+      link: "/services/website"
     },
     {
       name: "Event Marketing",
       description: "Events that pop.",
       color: "bg-red-100",
-      link: "/services/ai-ml"
+      link: "/services/eventmarketing"
     },
     {
       name: "Public Relations",
       description: "Shaping public voice.",
       color: "bg-yellow-100",
-      link: "/services/cybersecurity"
+      link: "/services/publicrelations"
     },
     {
       name: "OOH",
       description: "Ads that turn heads.",
       color: "bg-pink-100",
-      link: "/services/digital-marketing"
+      link: "/services/ooh"
     }
   ];
 
@@ -305,7 +295,7 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white smooth-scroll" ref={containerRef}>
       {/* Top Navigation */}
-      <div className="absolute top-20 right-[35%] mt-14">
+      <div className="absolute top-20 right-[30%] mt-14">
         <div className="mb-4 -ml-[5px]">
           <h1 className="text-[#FF4D6D] text-2xl font-semibold">BRANDING</h1>
         </div>
@@ -338,19 +328,19 @@ const Branding = () => {
                     </div>
                     <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
 
-                    <div className="w-1/2 flex items-center absolute right-1 top-1/3">
+                    <div className="w-1/2 flex items-center absolute right-1 top-1/3 ml-48 pl-20">
                       <div className="max-w-xl">
                         <div className="mb-4">
                           <motion.h1 
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="text-[60px] font-bold leading-tight tracking-tight"
+                            className="text-[64px] font-semibold leading-tight tracking-normal font-montserrat text-gray-900"
                           >
-                            We create<br />
-                            designs to<br />
-                            augment User<br />
-                            Experiences.
+                            We craft<br />
+                            <span className="text-[#FF4D6D]">powerful</span><br />
+                            brand<br />
+                            identities.
                           </motion.h1>
                         </div>
                       </div>
@@ -367,12 +357,12 @@ const Branding = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-[60px] font-bold leading-tight tracking-tight"
+                className="text-[64px] font-semibold leading-tight tracking-normal font-montserrat text-gray-900"
               >
-                We create<br />
-                designs to<br />
-                augment User<br />
-                Experiences.
+                We craft<br />
+                <span className="text-[#FF4D6D]">powerful</span><br />
+                brand<br />
+                identities.
               </motion.h1>
             </div>
           </div>
@@ -395,7 +385,7 @@ const Branding = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 gap-y-8 ml-8">
-            {services.flatMap(category => category.items).map((service, index) => (
+            {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -477,70 +467,72 @@ const Branding = () => {
 
       {/* Sample Work Section */}
       <div className="px-8 py-20 bg-white">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left ml-18"
+            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left ml-8"
           >
-            Design.
+            Brand Identity & Strategy
           </motion.h2>
 
-          <div className="space-y-10 max-w-4xl mx-auto">
-            {/* Project Image */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative flex justify-center"
-            >
-              <img
-                src="https://fabrikbrands.com/wp-content/uploads/Examples-Of-Corporate-Branding-01-scaled.jpg"
-                alt="Corporate Identity Project"
-                className="w-full max-w-5xl h-auto max-h-[500px] object-cover rounded-lg shadow-lg"
-              />
-            </motion.div>
+          <div className="space-y-10">
+            <div className="flex flex-col space-y-8">
+              {/* Project Image */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <img
+                  src="https://fabrikbrands.com/wp-content/uploads/Examples-Of-Corporate-Branding-01-scaled.jpg"
+                  alt="Corporate Identity Project"
+                  className="w-full max-w-5xl h-auto max-h-[500px] object-cover rounded-lg shadow-lg"
+                />
+              </motion.div>
 
-            {/* Project Details */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8 max-w-3xl ml-4"
-            >
-              <h3 className="text-4xl font-bold tracking-tight">Corporate Identity</h3>
-              <p className="text-xl text-gray-800 leading-relaxed">
-                Crafted a cohesive brand identity system that elevates business presence and connects with the target audience.
-              </p>
-              <div className="flex items-center gap-x-4 text-gray-600">
-                <span className="font-medium">Brand Strategy</span>
-                <span className="text-[#FF4D6D]">•</span>
-                <span className="font-medium">Visual Identity</span>
-                <span className="text-[#FF4D6D]">•</span>
-                <span className="font-medium">Guidelines</span>
-                <span className="text-[#FF4D6D]">•</span>
-                <span className="font-medium">Collateral</span>
-              </div>
-            </motion.div>
+              {/* Project Details */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="space-y-8 ml-8"
+              >
+                <h3 className="text-4xl font-bold">Brand Identity & Strategy</h3>
+                <p className="text-xl text-gray-800 leading-relaxed max-w-3xl">
+                  Transform your business with our comprehensive branding solutions. From market research and brand strategy to visual identity and implementation, we create distinctive brands that leave lasting impressions.
+                </p>
+                <div className="flex items-center gap-x-4 text-gray-600">
+                  <span className="font-medium">Research & Strategy</span>
+                  <span className="text-[#FF4D6D]">•</span>
+                  <span className="font-medium">Visual Design</span>
+                  <span className="text-[#FF4D6D]">•</span>
+                  <span className="font-medium">Brand Guidelines</span>
+                  <span className="text-[#FF4D6D]">•</span>
+                  <span className="font-medium">Implementation</span>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Other Services Section */}
       <div className="px-8 py-24">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left ml-18"
+            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left ml-8"
           >
             Explore Other Services.
           </motion.h2>
 
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

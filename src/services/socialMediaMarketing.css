@@ -1,0 +1,54 @@
+.container {
+    width: 80vw;
+    margin: auto;
+    padding: 0 0vw;
+  }
+
+  .services-section{
+    height: 100vh;
+  }
+
+  .circless {
+    position: absolute;
+    border-radius: 50%;
+    /* filter: drop-shadow(0 10px 5px rgba(37, 35, 34, 0.0745098039)); */
+    visibility: visible;
+    opacity: 1;
+    border-width: 4px;
+    border-style: dotted;
+    border-color: #000000;
+    /* transition: opacity 0.3s ease, visibility 0.3s ease; */
+    /* background-color: #686666; */
+    z-index: 100;
+    background-color:  transparent;
+  }
+
+
+  #circle11 {
+    width: 30vw;
+    height: 30vw;
+    top: 22%;
+    left: 14%;
+  }
+
+  #circle13{
+    /* width: 30vw; */
+    /* height: 30vw; */
+    top: 80%;
+    left: 28%;
+    visibility: hidden;
+  }
+  
+
+  .content-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* #circlex {
+    top: 0;
+    
+  }
+   */
