@@ -5,7 +5,6 @@ import airport from '../assets/airport.png';
 import billboard from '../assets/billboard.png';
 import theatre from '../assets/theatre.png';
 import metro from '../assets/metro.png';
-import busstop from '../assets/busstop.png';
 import { motion } from 'framer-motion';
 
 const Work = () => {
@@ -49,13 +48,6 @@ const Work = () => {
       title: "Metro Train Wrap",
       description: "Dynamic train exterior wraps that transform public transportation into moving canvases, delivering your message throughout metropolitan areas.",
       image: metro,
-      
-    },
-    {
-      id: 6,
-      title: "Bus Stop Ads - OOH",
-      description: "Strategically placed shelter displays that engage pedestrians and commuters with targeted messaging in high-dwell-time environments.",
-      image: busstop,
       
     }
   ];
