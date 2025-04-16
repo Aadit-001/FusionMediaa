@@ -74,7 +74,7 @@ function App() {
             
             ScrollTrigger.matchMedia({
                 // desktop
-                "(min-width: 1200px)": function () {
+                "(min-width: 1000px)": function () {
                     // first section
                     var tl = gsap.timeline({scrollTrigger:{
                         trigger: ".second-section",
@@ -91,7 +91,7 @@ function App() {
                     // Position circles 1, 3, 6 vertically on the left side
                     tl.to('#circle1', {
                         top: "230%",
-                        left: "35%",
+                        left: "31%",
                         rotate: "180deg",
                         // scale: 2,
                         duration: 2,
@@ -101,8 +101,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle3', {
-                        top: "210%",
-                        left: "25%",
+                        top: "204%",
+                        left: "22%",
                         rotate: "180deg",
                         scale: 1.5,
                         duration: 2,
@@ -112,8 +112,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle6', {
-                        top: "188%",
-                        left: "35%",
+                        top: "180%",
+                        left: "31%",
                         rotate: "180deg",
                         // scale: 0.8,
                         duration: 2,
@@ -124,8 +124,8 @@ function App() {
             
                     // Position circle 4 in the middle
                     tl.to('#circle4', {
-                        top: "207%",
-                        left: "47%",
+                        top: "203%",
+                        left: "46%",
                         rotate: "180deg",
                         scale: 1.4,
                         duration: 2,
@@ -137,7 +137,7 @@ function App() {
                     // Position circles 2, 5, 7 vertically on the right side
                     tl.to('#circle2', {
                         top: "230%",
-                        left: "60%",
+                        left: "63%",
                         rotate: "180deg",
                         // scale: 2,
                         duration: 2,
@@ -147,8 +147,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle5', {
-                        top: "210%",
-                        left: "70%",
+                        top: "204%",
+                        left: "73%",
                         rotate: "180deg",
                         scale: 1.5,
                         duration: 2,
@@ -158,8 +158,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle7', {
-                        top: "188%",
-                        left: "60%",
+                        top: "180%",
+                        left: "63%",
                         rotate: "180deg",
                         // scale: 0.7,
                         duration: 2,
@@ -817,8 +817,7 @@ function App() {
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.1 }}
-                            className="text-5xl font-bold tracking-tight leading-[1.2] font-montserrat text-gray-900f"
-                        >
+                            className="text-5xl font-bold tracking-tight leading-[1.2] font-montserrat text-gray-900f">
                             Crafting Digital Excellence Through Creative Innovation
                         </motion.h1>
                     </div>
@@ -831,8 +830,8 @@ function App() {
                             alt="Our Process" 
                             className='h-auto w-full object-contain p-8' 
                         />
-                        </div>
-                            </div>
+                    </div>
+            </div>
         </div>
 
         <div className="third-section slide slide3" id="slide3">
