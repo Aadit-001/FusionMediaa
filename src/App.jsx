@@ -811,19 +811,25 @@ function App() {
         </div>
 
         <div className="second-section slide slide2" id="slide2">
-            <div className="second-container">
-                {/* <div className="content-wrapper"> */}
-                    <div className='blocck h-[30%] w-[80%] max-w-[1200]  font-bold text-5xl mt-10'>
-                        <h1
-                            // initial={{ y: 20, opacity: 0 }}
-                            // animate={{ y: 0, opacity: 1 }}
-                            // transition={{ delay: 0.1 }}
-                        >
-                            We are a global creative agency that combines design expertise with technology and intelligence.
-                        </h1>
+            <div className="second-container flex flex-col items-center justify-center min-h-screen px-8">
+                    <div className='text-center max-w-4xl mx-auto mb-16'>
+                        <motion.h1
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-5xl font-bold tracking-tight leading-[1.2] font-montserrat text-gray-900f">
+                            Crafting Digital Excellence Through Creative Innovation
+                        </motion.h1>
                     </div>
-                    <div className='structure h-[70%] max-w-[1200] w-full  flex flex-col items-center justify-center'>
-                        <img src={image} alt="structure" className='h-auto w-auto p-20' />
+                    <div className='structure max-w-6xl w-full flex items-center justify-center'>
+                        <motion.img 
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.3 }}
+                            src={image} 
+                            alt="Our Process" 
+                            className='h-auto w-full object-contain p-8' 
+                        />
                     </div>
             </div>
         </div>
@@ -883,36 +889,35 @@ function App() {
                         </div>
                         <span className='text-4xl font-bold ml-4'>Content marketing</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  ' ref={ref}>
+                    <div className='relative flex items-center justify-around pl-8 mt-4'>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: -40 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Story Telling Campaigns</span>
+                            <span className='text-2xl'>• Copywriting</span>
+                            <span className='text-2xl'>• Blog Writing</span>
+                            <span className='text-2xl'>• Press Release</span>
+                            <span className='text-2xl'>• Content Calendar</span>
+                            <span className='text-2xl'>• SEO Friendly Content</span>
+                            <span className='text-2xl'>• White Paper</span>
+                            <span className='text-2xl'>• Info Graphics</span>
+                            <span className='text-2xl'>• Podcast Scripting</span>
+                            <span className='text-2xl'>• Industry Reports</span>
+                            <span className='text-2xl'>• Product Descriptions</span>
+                            <span className='text-2xl'>• Video Marketing</span>
                         </motion.div>
                     </div>
-                </div> 
+                </div>
                 <div className='h-[50%] absolute top-1/4 left-1/2'>  
                         <DotLottieReact
                             src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
                             loop
                             autoplay
                         />        
-                    </div>           
+                    </div>
             </div>
             <div className="sticky-section bg-white h-screen sticky-2 flex">
             <div className='left'>
@@ -920,40 +925,23 @@ function App() {
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-blue-600 rounded-full'></div>
                         </div>
-                        <span className='text-3xl font-bold ml-4'>Public Reactions</span>
+                        <span className='text-4xl font-bold ml-4'>Public Relations</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
+                    <div className='relative flex items-center justify-around pl-8 mt-4'>
                     <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 20 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Media Relation</span>
+                            <span className='text-2xl'>• Event PR</span>
+                            <span className='text-2xl'>• Crisis Management</span>
+                            <span className='text-2xl'>• Reputation Management</span>
+                            <span className='text-2xl'>• Influencer Collaboration</span>
                         </motion.div>
                     </div>
             </div>
-                {/* {inView && (
-                    <div className='right w-1/2 '>  
-                        <DotLottieReact
-                            src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                            loop={isAnimating}
-                            autoplay={isAnimating}
-                        />                
-                    </div>
-                )} */}
             </div>
             <div className="sticky-section bg-white h-screen w-full sticky-3 flex">
                 <div className='left'>
@@ -961,38 +949,28 @@ function App() {
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-green-600 rounded-full'></div>
                         </div>
-                        <span className='text-3xl font-bold ml-4'>Social Media Marketing</span>
+                        <span className='text-4xl font-bold ml-4'>Social Media Marketing</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
-                    <motion.div
+                    <div className='relative flex items-start justify-start pl-8 mt-4 ml-24'>
+                        <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: -50 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Instagram Marketing</span>
+                            <span className='text-2xl'>• Facebook Marketing</span>
+                            <span className='text-2xl'>• Youtube Marketing</span>
+                            <span className='text-2xl'>• Engagement Posting Campaign</span>
+                            <span className='text-2xl'>• Stories & Reels Creation</span>
+                            <span className='text-2xl'>• Strategy</span>
+                            <span className='text-2xl'>• Influencer Discovry</span>
+                            <span className='text-2xl'>• Partnership</span>
+                            <span className='text-2xl'>• Sponsered Post</span>
+                            <span className='text-2xl'>• Influencer Events</span>
                         </motion.div>
                     </div>
                 </div>
-                {/* {inView && <div className='right w-1/2 '>  
-                <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop={isAnimating}
-                    autoplay={isAnimating}
-                />              
-                </div>} */}
             </div>
             <div className="sticky-section bg-white h-screen w-full sticky-4 flex">
                 <div className='left'>
@@ -1000,38 +978,29 @@ function App() {
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-yellow-600 rounded-full'></div>
                         </div>
-                        <span className='text-3xl font-bold ml-4'>Website services</span>
+                        <span className='text-4xl font-bold ml-4'>Website Services</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
-                    <motion.div
+                    <div className='relative flex items-start justify-start pl-8 mt-4 ml-12'>
+                        <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Website Design</span>
+                            <span className='text-2xl'>• Website Development</span>
+                            <span className='text-2xl'>• Website Audits</span>
+                            <span className='text-2xl'>• A/B Testing</span>
+                            <span className='text-2xl'>• UI/UX Optimization</span>
+                            <span className='text-2xl'>• Speed Optimization</span>
+                            <span className='text-2xl'>• Website Maintenance</span>
+                            <span className='text-2xl'>• Interactive Design Features</span>
+                            <span className='text-2xl'>• CMS Management</span>
+                            <span className='text-2xl'>• Mobile-First Design</span>
+                            <span className='text-2xl'>• Customer-Web Tools</span>
                         </motion.div>
                     </div>
                 </div>
-                {/* {inView && <div className='right w-1/2 '>  
-                <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop={isAnimating}
-                    autoplay={isAnimating}
-                />              
-                </div>} */}
             </div>
             <div className="sticky-section bg-white h-screen w-full sticky-5 flex">
                 <div className='left'>
@@ -1039,34 +1008,28 @@ function App() {
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-orange-600 rounded-full'></div>
                         </div>
-                        <span className='text-3xl font-bold ml-4'>Event marketing</span>
+                        <span className='text-4xl font-bold ml-4'>Event Marketing</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
+                    <div className='relative flex items-center justify-around pl-8 mt-4'>
                     <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Event Planning</span>
+                            <span className='text-2xl'>• Brand Activation</span>
+                            <span className='text-2xl'>• Pop-up Shops</span>
+                            <span className='text-2xl'>• Webinar Marketing</span>
+                            <span className='text-2xl'>• Trade Show Support</span>
+                            <span className='text-2xl'>• Product Launches</span>
+                            <span className='text-2xl'>• Sponsership Promotions</span>
+                            <span className='text-2xl'>• Virtual Event Productions</span>
+                            <span className='text-2xl'>• Event Branding</span>
+                            <span className='text-2xl'>• Post-Event Reports</span>
                         </motion.div>
                     </div>
                 </div>
-                {/* {inView && <div className='right w-1/2 '>  
-                <DotLottieReact src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie" loop={isAnimating} autoplay={isAnimating} />
-                </div>} */}
             </div>
             <div className="sticky-section bg-white h-screen w-full sticky-6 flex">
                 <div className='left'>
@@ -1074,40 +1037,27 @@ function App() {
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-pink-600 rounded-full'></div>
                         </div>
-                        <span className='text-3xl font-bold ml-4'>Branding</span>
+                        <span className='text-4xl font-bold ml-4'>Branding</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
+                    <div className='relative flex items-center justify-around pl-8 mt-4'>
                     <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Logo Creation</span>
+                            <span className='text-2xl'>• Brand Identity</span>
+                            <span className='text-2xl'>• Product Branding</span>
+                            <span className='text-2xl'>• Rebranding Strategy</span>
+                            <span className='text-2xl'>• Social Media Graphics</span>
+                            <span className='text-2xl'>• Poster and Flyer Design</span>
+                            <span className='text-2xl'>• Banner Ads</span>
+                            <span className='text-2xl'>• 3D Design</span>
+                            <span className='text-2xl'>• Animated Graphics</span>
                         </motion.div>
                     </div>
                 </div>
-                {/* {inView && (
-                    <div className='right w-1/2 '>  
-                        <DotLottieReact
-                            src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                            loop={isAnimating}
-                            autoplay={isAnimating}
-                        />            
-                    </div>
-                )} */}
             </div>
             <div className="sticky-section bg-white  h-screen w-full sticky-7 flex">
                 <div className='left'>
@@ -1115,38 +1065,28 @@ function App() {
                         <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin flex items-center justify-center'>
                             <div className='h-[80%] w-[80%] bg-purple-600 rounded-full'></div>
                         </div>
-                        <span className='text-3xl font-bold ml-4'>OOH</span>
+                        <span className='text-4xl font-bold ml-4'>OOH</span>
                     </div>
-                    <div className='relative  flex items-center justify-around  '>
+                    <div className='relative flex items-center justify-around pl-8 mt-4'>
                     <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             className="flex flex-col gap-1"
                         >
-                            {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
-                            <span className='text-2xl'>--&gt; Branding</span>
-                            <span className='text-2xl'>--&gt; OOH</span>
-                            <span className='text-2xl'>--&gt; Social media marketing</span>
+                            <span className='text-2xl'>• Billboard Advertising</span>
+                            <span className='text-2xl'>• Transit Advertising</span>
+                            <span className='text-2xl'>• Street Furniture</span>
+                            <span className='text-2xl'>• Digital Billboards</span>
+                            <span className='text-2xl'>• Mall Media</span>
+                            <span className='text-2xl'>• Airport Advertising</span>
+                            <span className='text-2xl'>• Metro Station Ads</span>
+                            <span className='text-2xl'>• Bus Shelter Ads</span>
+                            <span className='text-2xl'>• Retail OOH</span>
+                            <span className='text-2xl'>• Interactive Displays</span>
                         </motion.div>
                     </div>
                 </div>
-                {/* {inView && <div className='right w-1/2 '>  
-                <DotLottieReact
-                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                    loop={isAnimating}
-                    autoplay={isAnimating}
-                />              
-                </div>} */}
             </div>
         </div>
 
@@ -1165,14 +1105,14 @@ function App() {
                             <div className='h-10 w-10 rounded-full bg-black' id='box2'></div>
                         {/* </div> */}
                     {/* </div> */}
-                </div>
+            </div>
                 <div className="cardd overflow-hidden  absolute ">
                     {/* <div className="facee face11 overflow-hidden"> */}
                         {/* <div className="contentt flex items-center overflow-hidden"> */}
                             <div className='h-10 w-10 rounded-full bg-black' id='box3'></div>
                         {/* </div> */}
                     {/* </div> */}
-                </div>
+            </div>
                 <div className="cardd overflow-hidden  absolute ">
                     {/* <div className="facee face11 overflow-hidden"> */}
                         {/* <div className="contentt flex items-center overflow-hidden"> */}
@@ -1286,7 +1226,7 @@ function App() {
                     ))}
                 </div>
                 <p className="testimonial-text">
-                Thanks to Leo9 Studio's work, the website's long checkout time has been cut down to one minute helping the client increase its business.
+                Thanks to Fusion Media's work, the website's long checkout time has been cut down to one minute helping the client increase its business.
                 </p>
             <div className="testimonial-dots">
             <span className="dot active"></span>
