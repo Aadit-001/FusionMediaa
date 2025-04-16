@@ -1184,14 +1184,11 @@ function App() {
             {/* </div> */}
         </div>
 
-        <div className="fifth-section slide slide5  flex items-center justify-center"  id="slide5" ref={ref}>
+        <div className="fifth-section slide slide5  flex items-center justify-center"  id="slide5" >
             <div className="container">
                 <div className="hero-content">
-                <div className="text-center mb-20">
-                    <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
-                        Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
-                        successful Projects
-                    </h3>
+                <div className="text-center mb-50">
+                    
                     {/* <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>     */}
                 </div>
                     <section className="bg-white fifth-inside">
@@ -1260,6 +1257,49 @@ function App() {
                 </div>
             </div>
         </div>
+
+        
+        <div className="testimonial1-section max-w-[1150px]  font-bold" style={{ fontFamily: 'Lobster, cursive' }} ref={ref}>
+            <h3 className="text-4xl md:text-5xl  font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
+                Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
+                successful Projects
+            </h3>
+        </div>
+        <div className="testimonial-section">
+            <h2 className="testimonial-title">What Clients Say</h2>
+            <div className="testimonial-content">
+                <div className="testimonial-client">
+                    <img
+                        src={leela}
+                        alt="Yevgen Sokolnikov"
+                        className="client-img"
+                    />
+                    <div className="client-info flex flex-col gap-2">
+                        <span className="client-name text-xl">Yevgen Sokolnikov</span>
+                        <span className="client-role">C.E.O. - boodmo.com</span>
+                    </div>
+                </div>
+            <div className="testimonial-main">
+            <div className="testimonial-stars">
+                <span className="quote-mark">“</span>
+                    {[...Array(5)].map((_, i) => (
+                    <span key={i} className="star">★</span>
+                    ))}
+                </div>
+                <p className="testimonial-text">
+                Thanks to Leo9 Studio's work, the website's long checkout time has been cut down to one minute helping the client increase its business.
+                </p>
+            <div className="testimonial-dots">
+            <span className="dot active"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+        
     </div>
     </div>
   )
