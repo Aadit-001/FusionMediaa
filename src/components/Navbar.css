@@ -105,3 +105,39 @@
     background-color: transparent;
     margin-top: 10vh;
   }
+
+  /* Mobile Menu Styles */
+  @media (max-width: 768px) {
+    .menuu {
+        padding: 0 5vw;
+    }
+
+    .logo-img {
+        width: 120px;
+    }
+
+    .mobile-menu {
+        overflow-y: auto;
+    }
+
+    .mobile-menu ul li a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu .btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .mobile-menu .services-dropdown {
+        padding-left: 20px;
+    }
+
+    .mobile-menu .services-dropdown div {
+        margin: 8px 0;
+        padding: 12px;
+        border-radius: 8px;
+    }
+  }

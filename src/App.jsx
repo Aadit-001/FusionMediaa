@@ -830,8 +830,8 @@ function App() {
                             alt="Our Process" 
                             className='h-auto w-full object-contain p-8' 
                         />
-                    </div>
-            </div>
+                        </div>
+                            </div>
         </div>
 
         <div className="third-section slide slide3" id="slide3">
@@ -952,7 +952,7 @@ function App() {
                         <span className='text-4xl font-bold ml-4'>Social Media Marketing</span>
                     </div>
                     <div className='relative flex items-start justify-start pl-8 mt-4 ml-24'>
-                        <motion.div
+                    <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: -50 }}
                             transition={{ duration: 0.8 }}
@@ -981,7 +981,7 @@ function App() {
                         <span className='text-4xl font-bold ml-4'>Website Services</span>
                     </div>
                     <div className='relative flex items-start justify-start pl-8 mt-4 ml-12'>
-                        <motion.div
+                    <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
