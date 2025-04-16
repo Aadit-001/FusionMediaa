@@ -562,7 +562,7 @@ function App() {
                     //11
                     var t11 = gsap.timeline({scrollTrigger:{
                         trigger: ".fifth-section",
-                        start: "60% 100%",
+                        start: "10% 90%",
                         end: "40% 50%",
                         // duration: "10",
                         ease: "power3.out",

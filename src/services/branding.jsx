@@ -1,10 +1,124 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import LocomotiveScroll from 'locomotive-scroll';
+import CountUp from 'react-countup';
+import { motion } from 'framer-motion';
+import './branding.css';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Branding = () => {
-  const navigate = useNavigate();
+  const containerRef = useRef(null);
 
+  useEffect(() => {
+          const locoScroll = new LocomotiveScroll({
+              el: document.querySelector(".smooth-scroll"),
+                  smooth: false,
+                  multiplier: 0.1
+              });
+              // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+              locoScroll.on("scroll", ScrollTrigger.update);
+              
+              // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+              ScrollTrigger.scrollerProxy(".smooth-scroll", {
+              scrollTop(value) {
+                  return arguments.length ? locoScroll.scrollTo(value, {duration: 0, disableLerp: true}) : locoScroll.scroll.instance.scroll.y;
+              }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+              getBoundingClientRect() {
+                  return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+              },
+              // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+              pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+              });
+              
+              // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+              ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+              ScrollTrigger.defaults({ scroller: ".smooth-scroll" });
+              // --- SETUP END ---
+                
+              
+              // scroll trigger start
+              
+              ScrollTrigger.matchMedia({
+                  // desktop
+                  "(min-width: 1200px)": function () {
+                      // first section
+                      var tl = gsap.timeline({scrollTrigger:{
+                          trigger: ".service-section",
+                          start: "0% 100%",
+                          end: "100% 100%",
+                          scrub: true,
+                          // visibility: "visible",
+                          // markers: true
+                      }})
+              
+                      // Animate all circles together
+                      // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
+                      
+                      // Position circles 1, 3, 6 vertically on the left side
+                      tl.to('#circle11', {
+                          // top: "230%",
+                          // left: "35%",
+                          rotate: "360deg",
+                          // scale: 2,
+                          duration: 8,
+                          visibility: "visible",
+                          opacity: 1,
+                          background: "transparent"
+                      }, 'circles');
+
+                      var t2 = gsap.timeline({scrollTrigger:{
+                        trigger: ".service1-section",
+                        start: "30% 100%",
+                        end: "40% 100%",
+                        scrub: true,
+                        // visibility: "visible",
+                        // markers: true
+                    }})
+
+                    t2.to('#circle13', {
+                        top: "160%",
+                        left: "50%",
+                        rotate: "360deg",
+                        scale: 4,
+                        duration: 1,
+                        visibility: "visible",
+                        opacity: 1,
+                        // background: "transparent"
+                    }, 'circles');
+                      
+                      
+                  }
+              })
+              gsap.to("#box1", {
+                  scale: 20,
+                  transformOrigin: "50% 50%",
+                  background: "#222",
+                  duration: 1,
+                  ease: "power2.out",
+                  // visibility: "visible",
+                  scrollTrigger: {
+                      trigger: ".fourth-section",
+                      start: "10% 80%",
+                      onEnter: () => gsap.to("#box1", { scale: 20, duration: 1.3, ease: "expo.inOut" }),
+                      onLeaveBack: () => gsap.to("#box1", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
+                      onLeave: () => gsap.to("#box1", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
+                      onEnterBack: () => gsap.to("#box1", { scale: 20, duration: 1.3, ease: "expo.inOut" })
+                  }
+              });
+  
+          // Cleanup function
+          return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            locoScroll.destroy();
+        };
+      }, []);
+  
+  const navigate = useNavigate();
   const services = [
     {
       category: "Design",
@@ -185,10 +299,12 @@ const Branding = () => {
     navigate(link);
   };
 
+
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white smooth-scroll" ref={containerRef}>
       {/* Top Navigation */}
-      <div className="absolute top-8 right-[35%] mt-14">
+      <div className="absolute top-20 right-[35%] mt-14">
         <div className="mb-4 -ml-[5px]">
           <h1 className="text-[#FF4D6D] text-2xl font-semibold">BRANDING</h1>
         </div>
@@ -201,40 +317,42 @@ const Branding = () => {
         </nav>
       </div>
 
-      <div className="flex min-h-screen mt-2">
-        {/* Left Side - Animation Space */}
-        <div className="w-1/2 flex items-center justify-center">
-          {/* Space for animation */}
-          <div className="relative">
-            <div className="w-[400px] h-[400px]">
-              {/* Dotted circle */}
-              <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-full animate-spin-slow"></div>
-              {/* Red dots */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#FF4D6D] rounded-full"></div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#FF4D6D] rounded-full"></div>
-              {/* Center icon */}
-              <div className="absolute inset-0 m-auto w-32 h-32">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 border-2 border-gray-800 rounded-full"></div>
-                  {/* Brain circuit lines */}
-                  <div className="absolute inset-8 flex items-center justify-center">
-                    <div className="w-12 h-12 border-2 border-gray-800 rounded-full flex items-center justify-center">
-                      {/* Add small red dots here */}
-                      <div className="grid grid-cols-2 gap-1">
-                        <div className="w-1.5 h-1.5 bg-[#FF4D6D] rounded-full"></div>
-                        <div className="w-1.5 h-1.5 bg-[#FF4D6D] rounded-full"></div>
-                        <div className="w-1.5 h-1.5 bg-[#FF4D6D] rounded-full"></div>
-                        <div className="w-1.5 h-1.5 bg-[#FF4D6D] rounded-full"></div>
+      <div className="services-section flex min-h-screen mt-2">
+            {/* <div className="container"> */}
+                {/* <div className="hero-content"> */}
+                    <div className="circless" id="circle11">
+                    {/* <div className="absolute bg-amber-400 w-4 h-4 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
+                    <div className="absolute bg-amber-400 w-4 h-4 rounded-full  top-1/2 -translate-x-1/2 -translate-y-1/2">3</div> */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 -ml-24 h-12 bg-[#FF4D6D] rounded-full"></div>
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 ml-24 h-12 bg-[#FF4D6D] rounded-full" ></div>
+                    
+                    {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id='circle2'></div> */}
+                    {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id="circle3"></div> */}
+                    </div>
+                    <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
+
+                    <div className="w-1/2 flex items-center absolute right-1 top-1/3">
+                      <div className="max-w-xl">
+                        <div className="mb-4">
+                          <motion.h1 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-[60px] font-bold leading-tight tracking-tight"
+                          >
+                            We create<br />
+                            designs to<br />
+                            augment User<br />
+                            Experiences.
+                          </motion.h1>
+                        </div>
                       </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            {/* </div> */}
+        {/* // </div> */}
 
-        {/* Right Side - Content 7*/}
+      {/* <div className="flex min-h-screen mt-2">
         <div className="w-1/2 flex items-center ">
           <div className="max-w-xl">
             <div className="mb-4">
@@ -252,10 +370,10 @@ const Branding = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Services Section */}
-      <div className="px-8 py-16  ">
+      <div className="px-8 py-16 services1-section ">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
