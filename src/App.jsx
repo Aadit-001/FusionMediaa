@@ -74,7 +74,7 @@ function App() {
             
             ScrollTrigger.matchMedia({
                 // desktop
-                "(min-width: 1200px)": function () {
+                "(min-width: 1000px)": function () {
                     // first section
                     var tl = gsap.timeline({scrollTrigger:{
                         trigger: ".second-section",
@@ -91,7 +91,7 @@ function App() {
                     // Position circles 1, 3, 6 vertically on the left side
                     tl.to('#circle1', {
                         top: "230%",
-                        left: "35%",
+                        left: "31%",
                         rotate: "180deg",
                         // scale: 2,
                         duration: 2,
@@ -101,8 +101,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle3', {
-                        top: "210%",
-                        left: "25%",
+                        top: "204%",
+                        left: "22%",
                         rotate: "180deg",
                         scale: 1.5,
                         duration: 2,
@@ -112,8 +112,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle6', {
-                        top: "188%",
-                        left: "35%",
+                        top: "180%",
+                        left: "31%",
                         rotate: "180deg",
                         // scale: 0.8,
                         duration: 2,
@@ -124,8 +124,8 @@ function App() {
             
                     // Position circle 4 in the middle
                     tl.to('#circle4', {
-                        top: "207%",
-                        left: "47%",
+                        top: "203%",
+                        left: "46%",
                         rotate: "180deg",
                         scale: 1.4,
                         duration: 2,
@@ -137,7 +137,7 @@ function App() {
                     // Position circles 2, 5, 7 vertically on the right side
                     tl.to('#circle2', {
                         top: "230%",
-                        left: "60%",
+                        left: "63%",
                         rotate: "180deg",
                         // scale: 2,
                         duration: 2,
@@ -147,8 +147,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle5', {
-                        top: "210%",
-                        left: "70%",
+                        top: "204%",
+                        left: "73%",
                         rotate: "180deg",
                         scale: 1.5,
                         duration: 2,
@@ -158,8 +158,8 @@ function App() {
                     }, 'circles');
                     
                     tl.to('#circle7', {
-                        top: "188%",
-                        left: "60%",
+                        top: "180%",
+                        left: "63%",
                         rotate: "180deg",
                         // scale: 0.7,
                         duration: 2,
@@ -813,7 +813,7 @@ function App() {
         <div className="second-section slide slide2" id="slide2">
             <div className="second-container">
                 {/* <div className="content-wrapper"> */}
-                    <div className='blocck h-[30%] w-full  font-bold text-5xl mt-10'>
+                    <div className='blocck h-[30%] w-[80%] max-w-[1200]  font-bold text-5xl mt-10'>
                         <h1
                             // initial={{ y: 20, opacity: 0 }}
                             // animate={{ y: 0, opacity: 1 }}
@@ -822,9 +822,8 @@ function App() {
                             We are a global creative agency that combines design expertise with technology and intelligence.
                         </h1>
                     </div>
-                    <div className='structure h-[70%] max-w-[1200] w-full  flex flex-col items-center justify-center gap-5'>
+                    <div className='structure h-[70%] max-w-[1200] w-full  flex flex-col items-center justify-center'>
                         <img src={image} alt="structure" className='h-auto w-auto p-20' />
-                        
                     </div>
             </div>
         </div>
