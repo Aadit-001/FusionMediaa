@@ -13,6 +13,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Blogs from './blogs/blogs.jsx'
 import BlogDetail from './blogs/blogDetail.jsx'
 import AdminBlog from './blogs/adminBlog.jsx'
+import AdminView from './blogs/adminView.jsx'
+import EditBlog from './blogs/editBlog.jsx'
 import Branding from './services/branding.jsx'
 import ContentMarketing from './services/contentMarketing.jsx'
 import EventMarketing from './services/eventMarketing.jsx'
@@ -35,6 +37,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:id" element={<BlogDetail />} />
           <Route path="/admin/blog" element={<AdminBlog />} />
+          <Route path="/admin/view" element={<AdminView />} />
+          <Route path="/admin/blog/edit/:id" element={<EditBlog />} />
           <Route path="/services/branding" element={<Branding />} />
           <Route path="/services/contentmarketing" element={<ContentMarketing />} />
           <Route path="/services/eventmarketing" element={<EventMarketing />} />

@@ -168,16 +168,16 @@ const Clients = () => {
           {/* Testimonial Content */}
           <div className="max-w-[1000px] mx-auto flex flex-col items-center relative">
             {/* Quote Mark */}
-            <span className="absolute -left-20 top-0 text-[#FF3366] text-[180px] font-serif leading-none">"</span>
+            <span className="absolute -left-20 top-0 text-[#FF3366] text-[180px] md:text-[180px] font-serif leading-none hidden md:block">"</span>
             
             {/* Testimonial Text */}
             <div className="text-center w-full">
-              <p className="text-3xl md:text-4xl font-normal mb-20 leading-relaxed text-left pl-12">
+              <p className="text-xl md:text-4xl font-normal mb-8 md:mb-20 leading-relaxed text-left md:pl-12 px-4">
                 {testimonials[currentTestimonial].text}
               </p>
               {/* Author Info */}
-              <div className="flex items-center justify-start w-full gap-6 mb-4 pl-12">
-                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-200">
+              <div className="flex items-center justify-start w-full gap-4 md:gap-6 mb-4 md:pl-12 px-4">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gray-200">
                   <img 
                     src={testimonials[currentTestimonial].image}
                     alt={testimonials[currentTestimonial].name}
@@ -185,18 +185,18 @@ const Clients = () => {
                   />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-2xl font-bold">{testimonials[currentTestimonial].name}</h4>
-                  <p className="text-xl text-gray-600">{testimonials[currentTestimonial].position}</p>
+                  <h4 className="text-lg md:text-2xl font-bold">{testimonials[currentTestimonial].name}</h4>
+                  <p className="text-base md:text-xl text-gray-600">{testimonials[currentTestimonial].position}</p>
                 </div>
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center gap-4 mt-8">
+              <div className="flex justify-center gap-3 md:gap-4 mt-4 md:mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
+                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
                       currentTestimonial === index ? 'bg-[#FF3366]' : 'bg-gray-300'
                     }`}
                   />
@@ -206,8 +206,8 @@ const Clients = () => {
           </div>
         </div>
         {/* Bottom CTA Section */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-60 rounded-lg mt-22 h-[300px] flex items-center justify-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-10 md:py-20 rounded-lg mt-22 h-[200px] md:h-[280px] flex items-center justify-center px-4 md:px-0">
+          <h2 className="text-3xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>
             Ready to transform<br />
             your digital presence?
           </h2>

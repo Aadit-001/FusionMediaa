@@ -828,7 +828,7 @@ function App() {
                         {/* <div className="absolute inset-0 bg-black/40 z-0"></div> */}
                         <div className='blocck w-full  font-bold text-3xl md:text-4xl lg:text-5xl text-black text-center'>
                             <h1>
-                                We are a global creative agency that combines design expertise with technology and intelligence.
+                            Crafting Digital Excellence Through Creative Innovation
                             </h1>
                         </div>
                         {/* <div className='structure h-[70%] bg-amber-950 w-full  flex flex-col items-center justify-center'>

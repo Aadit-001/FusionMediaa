@@ -76,6 +76,12 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
         setIsMobileServicesOpen(false);
         navigate(link);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleNavigation = (e) => {
+        setIsMobileMenuOpen(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const isServicesPage = location.pathname === '/services' || location.pathname.startsWith('/services/');
@@ -89,7 +95,7 @@ const Navbar = () => {
         > 
             <div className="menuu w-full flex items-center justify-between ">
                 {/* Logo */}
-                <Link to="/" className="inline-block w-[100%] md:w-[15%]">
+                <Link to="/" className="inline-block w-[100%] md:w-[15%]" onClick={handleNavigation}>
                     <img 
                         src={logo} 
                         alt="Logo" 
@@ -103,16 +109,21 @@ const Navbar = () => {
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
+                        onClick={handleNavigation}
                     >Work</NavLink></li>
                     <li 
                         className="relative"
                         onMouseEnter={() => setIsServicesHovered(true)}
                     >
                         <NavLink 
-                            to="/services"
+                            to="#"
                             className={({ isActive }) => 
                                 isActive || isServicesPage ? "text-purple-600" : ""
                             }
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleNavigation();
+                            }}
                         >
                             <div className="flex items-center">
                             Services
@@ -172,24 +183,28 @@ const Navbar = () => {
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
+                        onClick={handleNavigation}
                     >Clients</NavLink></li>
                     <li><NavLink 
                         to="/about" 
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
+                        onClick={handleNavigation}
                     >About</NavLink></li>
                     <li><NavLink 
                         to="/blogs" 
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
+                        onClick={handleNavigation}
                     >Blogs</NavLink></li>
                     <li><NavLink 
-                        to="/admin/blog" 
+                        to="/admin/view" 
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
+                        onClick={handleNavigation}
                     >Admin</NavLink></li>
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
@@ -200,7 +215,7 @@ const Navbar = () => {
                         loop
                         autoplay
                     />
-                    <Link to="/contact">
+                    <Link to="/contact" onClick={handleNavigation}>
                         <button className={`${isScrolled ? 'btnScrolled liquid' : 'btn liquid'}`}><span>contact</span></button>
                     </Link>
                 </ul>

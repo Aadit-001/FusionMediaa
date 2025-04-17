@@ -387,16 +387,16 @@ const Branding = () => {
       </div>
 
       {/* How We Do It Section */}
-      <div className="px-8 py-24">
-        <div className="max-w-6xl mx-auto">
+      <div className="py-24">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="flex flex-col items-center mb-20"
           >
-            <h2 className="text-[#FF4D6D] text-2xl font-bold mb-6">HOW WE DO IT ?</h2>
-            <h3 className="text-4xl font-bold">
+            <h2 className="how-we-do-it-title text-[#FF4D6D] text-3xl md:text-2xl font-bold mb-6 text-center ml-4 md:ml-0">HOW WE DO IT ?</h2>
+            <h3 className="how-we-do-it-subtitle text-5xl md:text-4xl font-bold max-w-[300px] md:max-w-none text-center ml-4 md:ml-0">
               Creating Content That Connects & Converts
             </h3>
           </motion.div>
@@ -410,7 +410,7 @@ const Branding = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="relative"
               >
-                <div className="flex flex-col items-center text-center group">
+                <div className="flex flex-col items-center text-center group ml-4 md:ml-0">
                   <div className="relative">
                     {step.icon}
                     <motion.div
@@ -420,8 +420,8 @@ const Branding = () => {
                       transition={{ duration: 0.3 }}
                     />
                   </div>
-                  <h4 className="text-xl font-semibold mb-4">{step.title}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h4 className="text-2xl md:text-xl font-semibold mb-4 text-center ml-4 md:ml-0">{step.title}</h4>
+                  <p className="text-base md:text-sm text-gray-600 leading-relaxed max-w-[250px] md:max-w-none text-center ml-4 md:ml-0">
                     {step.description}
                   </p>
                 </div>
