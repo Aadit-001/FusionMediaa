@@ -6,9 +6,11 @@ import billboard from '../assets/billboard.png';
 import theatre from '../assets/theatre.png';
 import metro from '../assets/metro.png';
 import { motion } from 'framer-motion';
+import { useDarkMode } from '../context/DarkModeContext';
 
 const Work = () => {
   const navigate = useNavigate();
+  const { isDarkMode } = useDarkMode();
 
   const handleNavigation = () => {
     navigate('/contact');
@@ -59,17 +61,15 @@ const Work = () => {
   };
 
   return (
-    <div className="main-container" style={{ fontFamily: 'Roboto, sans-serif' }}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="h-[60px]"></div>
-        <p className="text-gray-500 uppercase tracking-wider mb-4">WORK</p>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`} style={{ fontFamily: 'Roboto, sans-serif' }}>
+      <div className="container mx-auto px-4 md:px-6 pt-[200px]">
         
         <div className="mb-24">
           <motion.h1
             initial="hidden"
             animate="visible"
             transition={{ staggerChildren: 0.3 }}
-            className="text-5xl md:text-6xl font-normal mb-4 leading-tight"
+            className={`text-5xl md:text-6xl font-normal mb-4 leading-tight ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             <motion.div variants={textRevealVariants}>
@@ -95,17 +95,17 @@ const Work = () => {
                 />
               </div>
               <div className="space-y-3">
-                <h3 className="text-2xl font-normal" style={{ fontFamily: 'Playfair Display, serif' }}>{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
-                <p className="text-gray-500">{project.category}</p>
-                <p className="text-gray-500 hover:text-black transition-colors">{project.viewLink}</p>
+                <h3 className={`text-2xl font-normal ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Playfair Display, serif' }}>{project.title}</h3>
+                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{project.description}</p>
+                <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{project.category}</p>
+                <p className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-black'} transition-colors`}>{project.viewLink}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="border border-gray-300 rounded-lg py-10 px-16 flex justify-between items-center h-32"> 
-          <p className="text-gray-700 text-4xl font-medium ml-[100px]">We have more awesome work to show</p>
+        <div className={`border ${isDarkMode ? 'border-gray-700' : 'border-gray-300'} rounded-lg py-10 px-16 flex justify-between items-center h-32`}> 
+          <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-4xl font-medium ml-[100px]`}>We have more awesome work to show</p>
           <div
             onClick={handleNavigation}
             className="bg-[#6366F1] text-white rounded-full p-4 hover:bg-[#5558DD] transition-colors cursor-pointer mr-[100px]"

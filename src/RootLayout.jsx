@@ -5,9 +5,11 @@ import Footer from './components/footer'
 
 export const RootLayout = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <Navbar />
-      <Outlet />
+      <main className="pt-16">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )

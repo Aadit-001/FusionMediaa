@@ -19,6 +19,7 @@ import CountUp from 'react-countup';
 import { useState } from 'react';
 import tt from './assets/testimonial/tt.png';
 import image from './assets/image.png';
+import { useDarkMode } from './context/DarkModeContext';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +27,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
     const [isAnimating, setIsAnimating] = useState(false);
+    const { isDarkMode } = useDarkMode();
 
     const { ref, inView } = useInView({
         triggerOnce: false, // Trigger only once
@@ -727,18 +729,18 @@ function App() {
     }, []);
 
   return (
-    <div ref={containerRef} className="smooth-scroll">
-      <div className="app-max-container">
-        <div className="hero-section slide slide1" id="slide1">
-            <div className="container">
+    <div ref={containerRef} className={`smooth-scroll ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      <div className={`app-max-container ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+      <div className={`hero-section slide slide1 ${isDarkMode ? 'bg-gray-900' : 'bg-white'} min-h-screen relative`} id="slide1">
+      <div className="container relative z-10">
                 <div className="hero-content">
-                    <div className="circle" id="circle1">1</div>
-                    <div className="circle" id="circle2">2</div>
-                    <div className="circle" id="circle3">3</div>
-                    <div className="circle" id="circle4">4</div>
-                    <div className="circle" id="circle5">5</div>
-                    <div className="circle" id="circle6">6</div>
-                    <div className="circle" id="circle7">7</div>
+                <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle1">1</div>
+                    <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle2">2</div>
+                    <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle3">3</div>
+                    <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle4">4</div>
+                    <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle5">5</div>
+                    <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle6">6</div>
+                    <div className={`circle ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`} id="circle7">7</div>
                     <div className="main-container">
                         {/* <div className='w-[60%] h-full bg-red-600 flex items-center justify-center -ml-10'>
                             <DotLottieReact
@@ -762,7 +764,6 @@ function App() {
                             <div className=" -ml-60">
                                 <DotLottieReact
                                     src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
-                                    // background="red"
                                     speed="1"
                                     style={{width: 800, height: 800}}
                                     loop
@@ -770,16 +771,16 @@ function App() {
                                 />
                             </div>
                             <div className="right-container -ml-10">
-                                <h1 className="font-extrabold text-7xl">Design</h1>
-                                <h1 className="font-extrabold text-7xl">Thinking</h1>
-                                <h1 className="font-extrabold text-7xl">Accelarate</h1>
-                                <div className="text-xl font-normal">
+                                <h1 className={`font-extrabold text-7xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Design</h1>
+                                <h1 className={`font-extrabold text-7xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Thinking</h1>
+                                <h1 className={`font-extrabold text-7xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Accelarate</h1>
+                                <div className={`text-xl font-normal ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                     We Revolutionize User Experience Using Behavioural Science.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="clients absolute top-[100%] h-[10%] w-full">
+                    <div className={`clients absolute top-[100%] h-[10%] w-full ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
                     <div className='h-full w-full flex items-center justify-center'>
                     <div className="marquee h-full w-full">
                         <div className="marquee-content h-full w-full">
@@ -810,14 +811,14 @@ function App() {
             </div>
         </div>
 
-        <div className="second-section slide slide2" id="slide2">
+        <div className={`second-section slide slide2 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`} id="slide2">
             <div className="second-container flex flex-col items-center justify-center min-h-screen px-8">
                     <div className='text-center max-w-4xl mx-auto mb-16'>
                         <motion.h1
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.1 }}
-                            className="text-5xl font-bold tracking-tight leading-[1.2] font-montserrat text-gray-900f">
+                            className={`text-5xl font-bold tracking-tight leading-[1.2] font-montserrat ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                             Crafting Digital Excellence Through Creative Innovation
                         </motion.h1>
                     </div>
@@ -834,45 +835,45 @@ function App() {
                             </div>
         </div>
 
-        <div className="third-section slide slide3" id="slide3">
+        <div className={`third-section slide slide3 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`} id="slide3">
             <div className="container">
                 <div className="content-wrapper">
                    <div className='h-[100%] w-[100%] flex flex-col justify-center items-center gap-12'>
-                        <div className='relative  flex items-center justify-around '>
-                            <div className='h-20 w-96 flex items-center  '>
-                                <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin'></div>
-                                <span className='text-3xl font-bold ml-4'>Content marketing</span>
+                        <div className='relative flex items-center justify-around'>
+                            <div className='h-20 w-96 flex items-center'>
+                                <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                                <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Content marketing</span>
                             </div>
-                            <div className='h-20 w-88 flex items-center   '>
-                                <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                <span className='text-3xl font-bold ml-4'>Public Reactions</span>
+                            <div className='h-20 w-88 flex items-center'>
+                                <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                                <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Public Reactions</span>
 
                             </div>
                         </div>
-                        <div className='relative  flex items-center justify-center'>
-                            <div className='h-20 w-128  flex items-center '>
-                            <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                            <span className='text-3xl font-bold ml-4'>Social media marketing</span>
+                        <div className='relative flex items-center justify-center'>
+                            <div className='h-20 w-128 flex items-center'>
+                            <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                            <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Social media marketing</span>
                             </div>
                         </div>
-                        <div className='relative  flex items-center justify-around '>
-                            <div className='h-20 w-100 flex items-center  '>
-                                <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                <span className='text-3xl font-bold ml-4'>Website services</span>
+                        <div className='relative flex items-center justify-around'>
+                            <div className='h-20 w-100 flex items-center'>
+                                <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                                <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Website services</span>
                             </div>
-                            <div className='h-20 w-100 flex items-center  '>
-                                <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                <span className='text-3xl font-bold ml-4'>Event marketing</span>
+                            <div className='h-20 w-100 flex items-center'>
+                                <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                                <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Event marketing</span>
                             </div>
                         </div>
-                        <div className='relative  flex items-center justify-around  '>
-                            <div className='h-20 w-80 flex items-center ml-28  '>
-                                <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                <span className='text-3xl font-bold ml-4'>Branding</span>
+                        <div className='relative flex items-center justify-around'>
+                            <div className='h-20 w-80 flex items-center ml-28'>
+                                <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                                <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Branding</span>
                             </div>
-                            <div className='h-20 w-80 flex items-center  '>
-                                <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                <span className='text-3xl font-bold ml-4'>OOH</span>
+                            <div className='h-20 w-80 flex items-center'>
+                                <div className={`h-full w-20 rounded-full border-3 border-dotted ${isDarkMode ? 'border-gray-300' : 'border-black'} myCustomSpin`}></div>
+                                <span className={`text-3xl font-bold ml-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>OOH</span>
                             </div>
                         </div>
                    </div>
@@ -880,7 +881,7 @@ function App() {
             </div>
         </div>
 
-        <div className="sticky-sections slide flex flex-col" id='slide5'>
+        <div className={`sticky-sections slide flex flex-col ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`} id='slide5'>
             <div className="sticky-section1 bg-white h-screen w-full sticky-1 flex">
                 <div className='left'>
                     <div className='h-20 w-128 flex items-center mt-20 '>
@@ -1090,7 +1091,7 @@ function App() {
             </div>
         </div>
 
-        <div className="fourth-section slide slide4  flex items-center justify-center" id="slide4">
+        <div className={`fourth-section slide slide4 flex items-center justify-center ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`} id="slide4">
             {/* <div className="containerr"> */}
                 <div className="cardd overflow-hidden  absolute ">
                     {/* <div className="facee face11 overflow-hidden"> */}
@@ -1123,14 +1124,14 @@ function App() {
             {/* </div> */}
         </div>
 
-        <div className="fifth-section slide slide5  flex items-center justify-center"  id="slide5" >
+        <div className={`fifth-section slide slide5 flex items-center justify-center ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`} id="slide5">
             <div className="container">
                 <div className="hero-content">
                 <div className="text-center mb-50">
                     
                     {/* <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>     */}
                 </div>
-                    <section className="bg-white fifth-inside">
+                    <section className={`fifth-inside ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                             <div className="container mx-auto px-4">
                               <div className="max-w-6xl mx-auto">
                                 {/* Quote Card */}
@@ -1198,13 +1199,13 @@ function App() {
         </div>
 
         
-        <div className="testimonial1-section max-w-[1150px]  font-bold" style={{ fontFamily: 'Lobster, cursive' }} ref={ref}>
+        <div className={`testimonial1-section max-w-[1150px] font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Lobster, cursive' }} ref={ref}>
             <h3 className="text-4xl md:text-5xl  font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
                 Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
                 successful Projects
             </h3>
         </div>
-        <div className="testimonial-section">
+        <div className={`testimonial-section ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
             <h2 className="testimonial-title">What Clients Say</h2>
             <div className="testimonial-content">
                 <div className="testimonial-client">
@@ -1237,8 +1238,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
-        
+    </div>     
     </div>
     </div>
   )
