@@ -55,6 +55,7 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isServicesHovered, setIsServicesHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
     const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -72,6 +73,7 @@ const Navbar = () => {
     const handleServiceClick = (link) => {
         setIsServicesHovered(false);
         setIsMobileMenuOpen(false);
+        setIsMobileServicesOpen(false);
         navigate(link);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -98,12 +100,14 @@ const Navbar = () => {
 
     return (
         <div 
-            className={`fixed top-0 w-full transition-all duration-300 ${
+            className={`fixed md:pl-[4%] md:pr-[8%] w-screen top-0 transition-all duration-300 ${
                 isScrolled ? "h-[8%]" : "h-[10%]"
             } ${isDarkMode ? 'bg-black border-b border-gray-800' : 'bg-white border-b border-gray-200'} w-full z-50 align-middle items-center flex`}
         > 
-            <div className={`menuu w-full ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                <Link to="/" className="inline-block w-[50%] pl-4 flex items-center justify-center" onClick={handleNavigation}>
+
+            <div className={`menuu w-full flex items-center justify-between ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                {/* Logo */}
+                <Link to="/" className="inline-block w-[100%] md:w-[15%]" onClick={handleNavigation}>
                     <img 
                         src={isDarkMode ? logoWhite : logo} 
                         alt="Logo" 
@@ -138,7 +142,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Desktop Navigation */}
-                <ul className={`nav-links hidden md:flex ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <ul className={`nav-links  relative hidden md:flex items-center gap-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                     <li><NavLink 
                         to="/work" 
                         className={({ isActive }) => 
@@ -185,9 +189,9 @@ const Navbar = () => {
                         </NavLink>
                         {isServicesHovered && (
                             <div 
-                                className={`absolute top-full left-1/2 transform -translate-x-1/2 w-[800px] grid grid-cols-3 gap-4 p-6 ${
+                                className={`absolute top-full left-1/2 -ml-2 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-2 z-50 ${
                                     isDarkMode ? 'bg-gray-900 border border-gray-800' : 'bg-white border border-gray-200'
-                                } shadow-2xl rounded-lg mt-2`}
+                                } `}
                                 onMouseEnter={handleServicesMouseEnter}
                                 onMouseLeave={handleServicesMouseLeave}
                             >
@@ -275,131 +279,61 @@ const Navbar = () => {
                     </Link>
                 </ul>
 
-                {/* Mobile Navigation Menu */}
-                <div className={`mobile-menu md:hidden fixed top-0 left-0 w-full h-full ${
-                    isDarkMode ? 'bg-black text-white' : 'bg-white text-black'
-                } z-50 transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    <div className="p-4">
-                        <div className="flex justify-between items-center mb-8">
-                            <Link to="/" onClick={handleNavigation}>
-                                <img src={isDarkMode ? logoWhite : logo} alt="Logo" className="w-32" />
-                            </Link>
-                            <button 
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={`p-2 hover:opacity-75 transition-opacity ${isDarkMode ? 'text-white' : 'text-black'}`}
-                            >
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    className="h-6 w-6" 
-                                    fill="none" 
-                                    viewBox="0 0 24 24" 
-                                    stroke="currentColor"
-                                >
-                                    <path 
-                                        strokeLinecap="round" 
-                                        strokeLinejoin="round" 
-                                        strokeWidth={2} 
-                                        d="M6 18L18 6M6 6l12 12" 
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        <ul className="space-y-4">
-                            <li>
-                                <NavLink 
-                                    to="/work" 
-                                    className={`block text-xl py-2 transition-colors ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'}`}
-                                    onClick={handleNavigation}
-                                >Work</NavLink>
-                            </li>
-                            <li>
-                                <div className="text-xl py-2">
-                                    <div 
-                                        className={`flex items-center cursor-pointer transition-colors ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'}`}
-                                        onClick={() => setIsServicesHovered(!isServicesHovered)}
-                                    >
-                                        Services
-                                        <svg 
-                                            xmlns="http://www.w3.org/2000/svg" 
-                                            className={`h-4 w-4 ml-1 transition-transform ${isServicesHovered ? 'rotate-180' : ''}`}
-                                            fill="none" 
-                                            viewBox="0 0 24 24" 
-                                            stroke="currentColor"
-                                        >
-                                            <path 
-                                                strokeLinecap="round" 
-                                                strokeLinejoin="round" 
-                                                strokeWidth={2} 
-                                                d="M19 9l-7 7-7-7" 
-                                            />
-                                        </svg>
-                                    </div>
-                                    {isServicesHovered && (
-                                        <div className={`mt-2 space-y-2 pl-4 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} p-4 rounded-lg transition-colors`}>
-                                            {SERVICES.map((service, index) => (
-                                                <div
-                                                    key={index}
-                                                    className={`p-3 rounded-lg cursor-pointer transition-colors hover:opacity-90 ${
-                                                        isDarkMode ? 'bg-gray-900 hover:bg-gray-800' : service.lightColor
-                                                    }`}
-                                                    onClick={() => handleServiceClick(service.link)}
-                                                >
-                                                    <h3 className={`font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{service.name}</h3>
-                                                    <p className={`text-sm ${isDarkMode ? 'text-gray-200' : 'text-gray-600'}`}>{service.description}</p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </li>
-                            <li>
-                                <NavLink 
-                                    to="/clients" 
-                                    className={`block text-xl py-2 transition-colors ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'}`}
-                                    onClick={handleNavigation}
-                                >Clients</NavLink>
-                            </li>
-                            <li>
-                                <NavLink 
-                                    to="/about" 
-                                    className={`block text-xl py-2 transition-colors ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'}`}
-                                    onClick={handleNavigation}
-                                >About</NavLink>
-                            </li>
-                            <li>
-                                <NavLink 
-                                    to="/blogs" 
-                                    className={`block text-xl py-2 transition-colors ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'}`}
-                                    onClick={handleNavigation}
-                                >Blogs</NavLink>
-                            </li>
-                            <li>
-                                <NavLink 
-                                    to="/admin/view" 
-                                    className={`block text-xl py-2 transition-colors ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'}`}
-                                    onClick={handleNavigation}
-                                >Admin</NavLink>
-                            </li>
-                            <li>
-                                <button
-                                    onClick={toggleDarkMode}
-                                    className={`p-2 rounded-full transition-colors ${isDarkMode ? 'hover:bg-gray-900 text-yellow-400' : 'hover:bg-gray-100 text-gray-700'}`}
-                                    title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-                                >
-                                    {isDarkMode ? (
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                                        </svg>
-                                    ) : (
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                                        </svg>
-                                    )}
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+
+                {/* Mobile Nav */}
+                <div className="flex items-center justify-end w-full md:hidden">
+                    <DotLottieReact
+                        src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
+                        background="transparent"
+                        color="#fff"
+                        speed="1"
+                        style={isScrolled ? {width: 40, height: 30} : {width: 40, height: 40}}
+                        loop
+                        autoplay
+                    />
+                    <button
+                        className="ml-2 p-2 focus:outline-none"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Open menu"
+                    >
+                        {/* Hamburger Icon */}
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
+
+                {/* Mobile Dropdown */}
+                {isMobileMenuOpen && (
+                    <div className="absolute top-full left-0 w-full bg-white shadow-2xl z-50 flex flex-col p-4 animate-fadeIn">
+                        <NavLink to="/work" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Work</NavLink>
+                        <button className="py-2 flex items-center w-full" onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}>
+                            <span>Services</span>
+                            <svg className={`ml-2 w-4 h-4 transform transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        {isMobileServicesOpen && (
+                            <div className="pl-4 flex flex-col">
+                                {SERVICES.map((service, idx) => (
+                                    <button
+                                        key={idx}
+                                        className="py-2 text-left hover:bg-gray-100 rounded"
+                                        onClick={() => handleServiceClick(service.link)}
+                                    >
+                                        <span className="font-bold">{service.name}</span>
+                                        <span className="block text-xs text-gray-500">{service.description}</span>
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                        <NavLink to="/clients" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Clients</NavLink>
+                        <NavLink to="/about" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>About</NavLink>
+                        <NavLink to="/blogs" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Blogs</NavLink>
+                        <NavLink to="/admin/blog" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Admin</NavLink>
+                        <Link to="/contact" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                            <button className="btn liquid w-full"><span>Contact</span></button>
+                        </Link>
+                    </div>
+                )}
             </div>
         </div>
     )

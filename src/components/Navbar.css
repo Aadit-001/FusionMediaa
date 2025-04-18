@@ -18,7 +18,7 @@
   
   .nav-links{
     list-style-type: none;
-    display: flex;
+    /* display: flex; */
     gap: 4vw;
     align-items: center;
   
@@ -86,7 +86,7 @@
   
   .menuu{
     width: 100%;
-    padding: 0 10vw;
+    padding: 0;
     /* background-color: #3e3e3e; */
     display: flex;
     flex-direction: row;
