@@ -16,109 +16,250 @@ const Branding = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-          const locoScroll = new LocomotiveScroll({
-              el: document.querySelector(".smooth-scroll"),
-                  smooth: false,
-                  multiplier: 0.1
-              });
-              // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-              locoScroll.on("scroll", ScrollTrigger.update);
-              
-              // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
-              ScrollTrigger.scrollerProxy(".smooth-scroll", {
-              scrollTop(value) {
-                  return arguments.length ? locoScroll.scrollTo(value, {duration: 0, disableLerp: true}) : locoScroll.scroll.instance.scroll.y;
-              }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-              getBoundingClientRect() {
-                  return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-              },
-              // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-              pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
-              });
-              
-              // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-              ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-              ScrollTrigger.defaults({ scroller: ".smooth-scroll" });
-              // --- SETUP END ---
-                
-              
-              // scroll trigger start
-              
-              ScrollTrigger.matchMedia({
-                  // desktop
-                  "(min-width: 1200px)": function () {
-                      // first section
-                      var tl = gsap.timeline({scrollTrigger:{
-                          trigger: ".service-section",
-                          start: "0% 100%",
-                          end: "100% 100%",
-                          scrub: true,
-                          // visibility: "visible",
-                          // markers: true
-                      }})
-              
-                      // Animate all circles together
-                      // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
-                      
-                      // Position circles 1, 3, 6 vertically on the left side
-                      tl.to('#circle11', {
-                          // top: "230%",
-                          // left: "35%",
-                          rotate: "360deg",
-                          // scale: 2,
-                          duration: 8,
-                          visibility: "visible",
-                          opacity: 1,
-                          background: "transparent"
-                      }, 'circles');
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector(".smooth-scroll"),
+      smooth: false,
+      multiplier: 0.1
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
 
-                      var t2 = gsap.timeline({scrollTrigger:{
-                        trigger: ".service1-section",
-                        start: "30% 100%",
-                        end: "40% 100%",
-                        scrub: true,
-                        // visibility: "visible",
-                        // markers: true
-                    }})
+    // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".smooth-scroll", {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true }) : locoScroll.scroll.instance.scroll.y;
+      }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+      getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+      },
+      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+      pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+    });
 
-                    t2.to('#circle13', {
-                        top: "160%",
-                        left: "50%",
-                        rotate: "360deg",
-                        scale: 4,
-                        duration: 1,
-                        visibility: "visible",
-                        opacity: 1,
-                        // background: "transparent"
-                    }, 'circles');
-                      
-                      
-                  }
-              })
-              gsap.to("#box1", {
-                  scale: 20,
-                  transformOrigin: "50% 50%",
-                  background: "#222",
-                  duration: 1,
-                  ease: "power2.out",
-                  // visibility: "visible",
-                  scrollTrigger: {
-                      trigger: ".fourth-section",
-                      start: "10% 80%",
-                      onEnter: () => gsap.to("#box1", { scale: 20, duration: 1.3, ease: "expo.inOut" }),
-                      onLeaveBack: () => gsap.to("#box1", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
-                      onLeave: () => gsap.to("#box1", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
-                      onEnterBack: () => gsap.to("#box1", { scale: 20, duration: 1.3, ease: "expo.inOut" })
-                  }
-              });
-  
-          // Cleanup function
-          return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-            locoScroll.destroy();
-        };
-      }, []);
-  
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.defaults({ scroller: ".smooth-scroll" });
+    // --- SETUP END ---
+
+
+    // scroll trigger start
+
+    ScrollTrigger.matchMedia({
+      // desktop
+      "(min-width: 1200px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 100%",
+            end: "100% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        // Animate all circles together
+        // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
+
+        // Position circles 1, 3, 6 vertically on the left side
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service1-section",
+            start: "30% 120%",
+            end: "40% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "160%",
+          left: "50%",
+          rotate: "360deg",
+          scale: 4,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+
+
+      },
+
+
+      // mobile
+      "(min-width: 400px) and (max-width: 600px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 0%",
+            end: "70% 80%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "15% 100%",
+            end: "30% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "150%",
+          left: "20%",
+          rotate: "360deg",
+          scale: 4,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+
+
+      },
+
+
+      "(min-width: 601px) and (max-width: 800px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 10%",
+            end: "20% 80%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "10% 90%",
+            end: "30% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "200%",
+          left: "20%",
+          rotate: "360deg",
+          scale: 4,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+
+
+      },
+
+      "(min-width: 801px) and (max-width: 1190px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 50%",
+            end: "30% 80%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "20% 90%",
+            end: "40% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "170%",
+          left: "60%",
+          rotate: "360deg",
+          scale: 4,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+
+
+      }
+
+
+
+    })
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      locoScroll.destroy();
+    };
+  }, []);
+
   const navigate = useNavigate();
   const services = [
     { title: "Logo Creation" },
@@ -135,7 +276,7 @@ const Branding = () => {
   const processSteps = [
     {
       icon: (
-        <motion.svg 
+        <motion.svg
           className="w-16 h-16 mb-6"
           viewBox="0 0 48 48"
           initial={{ scale: 0 }}
@@ -167,7 +308,7 @@ const Branding = () => {
     },
     {
       icon: (
-        <motion.svg 
+        <motion.svg
           className="w-16 h-16 mb-6"
           viewBox="0 0 48 48"
           initial={{ scale: 0 }}
@@ -190,7 +331,7 @@ const Branding = () => {
     },
     {
       icon: (
-        <motion.svg 
+        <motion.svg
           className="w-16 h-16 mb-6"
           viewBox="0 0 48 48"
           initial={{ scale: 0 }}
@@ -224,7 +365,7 @@ const Branding = () => {
     },
     {
       icon: (
-        <motion.svg 
+        <motion.svg
           className="w-16 h-16 mb-6"
           viewBox="0 0 48 48"
           initial={{ scale: 0 }}
@@ -295,82 +436,54 @@ const Branding = () => {
   return (
     <div className="min-h-screen bg-white smooth-scroll" ref={containerRef}>
       {/* Top Navigation */}
-      <div className="absolute top-20 right-[30%] mt-14">
-        <div className="mb-4 -ml-[5px]">
-          <h1 className="text-[#FF4D6D] text-2xl font-semibold">BRANDING</h1>
-        </div>
-        <nav className="flex items-center gap-2 text-lg justify-end">
-          <Link to="/" className="text-gray-900 hover:text-gray-600">Home</Link>
-          <span className="text-gray-400">•</span>
-          <Link to="/services" className="text-gray-900 hover:text-gray-600">Services</Link>
-          <span className="text-gray-400">•</span>
-          <span className="text-gray-400">Branding</span>
-        </nav>
-      </div>
 
-      <div className="services-section flex min-h-screen mt-2">
-            {/* <div className="container"> */}
-                {/* <div className="hero-content"> */}
-                    <div className="circless" id="circle11">
-                    <DotLottieReact
-      src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
-      loop
-      autoplay
-    />
+      <div className="flex flex-col justify-center items-center md:min-h-screen md:mt-2">
+        <div className="container">
+          <div className="relative mt-30 md:mt-0 lg:mt-0 px-0 lg:px-[10%] ">
+            <div className="">
+              <h1 className="text-[#FF4D6D] text-2xl font-bold lg:font-semibold">BRANDING</h1>
+            </div>
+            <nav className="flex items-center gap-2 text-lg">
+              <Link to="/" className="text-gray-900 hover:text-gray-600">Home</Link>
+              <span className="text-gray-400">•</span>
+              <Link to="/services" className="text-gray-900 hover:text-gray-600">Services</Link>
+              <span className="text-gray-400">•</span>
+              <span className="text-gray-400">Branding</span>
+            </nav>
+          </div>
+          <div className='h-full w-full md:flex md:flex-row md:justify-between md:items-center'>
+            {/* <div className="hero-content"> */}
+            <div className="relative circless mt-10 ml-[16%] md:ml-[0%] " id="circle11">
+              <DotLottieReact
+                src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
+                loop
+                autoplay
+              />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 -ml-16 md:-ml-24 md:h-12 bg-[#FF4D6D] rounded-full"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 ml-16 md:ml-24 md:h-12 bg-[#FF4D6D] rounded-full" ></div>
+            </div>
+            <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
 
-                    {/* <div className="absolute bg-amber-400 w-4 h-4 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
-                    <div className="absolute bg-amber-400 w-4 h-4 rounded-full  top-1/2 -translate-x-1/2 -translate-y-1/2">3</div> */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 -ml-24 h-12 bg-[#FF4D6D] rounded-full"></div>
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 ml-24 h-12 bg-[#FF4D6D] rounded-full" ></div>
-                    
-                    {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id='circle2'></div> */}
-                    {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id="circle3"></div> */}
-                    </div>
-                    <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
-
-                    <div className="w-1/2 flex items-center absolute right-1 top-1/3 ml-48 pl-20">
-                      <div className="max-w-xl">
-                        <div className="mb-4">
-                          <motion.h1 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="text-[64px] font-semibold leading-tight tracking-normal font-montserrat text-gray-900"
-                          >
-                            We craft<br />
-                            <span className="text-[#FF4D6D]">powerful</span><br />
-                            brand<br />
-                            identities.
-                          </motion.h1>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            {/* </div> */}
-        {/* // </div> */}
-
-      {/* <div className="flex min-h-screen mt-2">
-        <div className="w-1/2 flex items-center ">
-          <div className="max-w-xl">
-            <div className="mb-4">
-              <motion.h1 
+            <div className="w-full md:w-1/2 flex items-center lg:justify-start justify-center  md:right-1 md:top-1/3 lg:pl-20">
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-[64px] font-semibold leading-tight tracking-normal font-montserrat text-gray-900"
+                className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-normal font-montserrat text-gray-900 mt-10 lg:mt-0"
               >
-                We craft<br />
-                <span className="text-[#FF4D6D]">powerful</span><br />
-                brand<br />
+                We craft
+                <span className="text-[#FF4D6D]"> powerful </span>
+                brand
                 identities.
               </motion.h1>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      {/* // </div> */}
 
       {/* Services Section */}
-      <div className="px-8 py-16 services1-section ">
+      <div className="px-8 py-16  ">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -378,13 +491,13 @@ const Branding = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left ml-8">What Do We Serve ?</h1>
-            <h3 className="text-4xl font-bold max-w-3xl leading-tight text-left ml-8">
+            <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
+            <h3 className="text-4xl font-bold max-w-3xl leading-tight text-left">
               We help you translate a simple idea into an exotic Digital design transformation vision.
             </h3>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 gap-y-8 ml-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 gap-y-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -472,7 +585,7 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left ml-8"
+            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left"
           >
             Brand Identity & Strategy
           </motion.h2>
@@ -498,13 +611,13 @@ const Branding = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="space-y-8 ml-8"
+                className="space-y-8"
               >
                 <h3 className="text-4xl font-bold">Brand Identity & Strategy</h3>
                 <p className="text-xl text-gray-800 leading-relaxed max-w-3xl">
                   Transform your business with our comprehensive branding solutions. From market research and brand strategy to visual identity and implementation, we create distinctive brands that leave lasting impressions.
                 </p>
-                <div className="flex items-center gap-x-4 text-gray-600">
+                <div className="flex md:flex-row  flex-col items-center gap-x-4 text-gray-600">
                   <span className="font-medium">Research & Strategy</span>
                   <span className="text-[#FF4D6D]">•</span>
                   <span className="font-medium">Visual Design</span>
@@ -526,13 +639,13 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left ml-8"
+            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left"
           >
             Explore Other Services.
           </motion.h2>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-8"
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

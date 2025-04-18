@@ -95,7 +95,7 @@ const Navbar = () => {
         > 
             <div className="menuu w-full flex items-center justify-between ">
                 {/* Logo */}
-                <Link to="/" className="inline-block w-[100%] md:w-[15%]" onClick={handleNavigation}>
+                <Link to="/" className="inline-block w-[100%] md:w-[25%]" onClick={handleNavigation}>
                     <img 
                         src={logo} 
                         alt="Logo" 
@@ -103,7 +103,7 @@ const Navbar = () => {
                     />
                 </Link>
                 {/* Desktop Nav */}
-                <ul className="nav-links  relative hidden md:flex items-center gap-3">
+                <ul className="nav-links  relative hidden lg:flex items-center gap-1">
                     <li><NavLink 
                         to="/work" 
                         className={({ isActive }) => 
@@ -111,19 +111,20 @@ const Navbar = () => {
                         }
                         onClick={handleNavigation}
                     >Work</NavLink></li>
+                        <li><NavLink 
+                            to="/clients" 
+                            className={({ isActive }) => 
+                                isActive ? "text-purple-600" : ""
+                            }
+                            onClick={handleNavigation}
+                        >Clients</NavLink></li>
                     <li 
                         className="relative"
                         onMouseEnter={() => setIsServicesHovered(true)}
                     >
                         <NavLink 
                             to="#"
-                            className={({ isActive }) => 
-                                isActive || isServicesPage ? "text-purple-600" : ""
-                            }
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleNavigation();
-                            }}
+                            
                         >
                             <div className="flex items-center">
                             Services
@@ -134,7 +135,7 @@ const Navbar = () => {
                                         fill="none" 
                                         viewBox="0 0 24 24" 
                                         stroke="currentColor"
-                                    >
+                                        >
                                         <path 
                                             strokeLinecap="round" 
                                             strokeLinejoin="round" 
@@ -148,7 +149,7 @@ const Navbar = () => {
                             </div>
                         </NavLink>
                         {isServicesHovered && (
-                            <div className="absolute top-full left-1/2 -ml-2 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-2 z-50">
+                            <div className="absolute top-full left-1/2 -ml-20 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-2 z-50">
                                 {SERVICES.map((service, index) => (
                                     <div
                                         key={index}
@@ -179,13 +180,6 @@ const Navbar = () => {
                         )}
                     </li>
                     <li><NavLink 
-                        to="/clients" 
-                        className={({ isActive }) => 
-                            isActive ? "text-purple-600" : ""
-                        }
-                        onClick={handleNavigation}
-                    >Clients</NavLink></li>
-                    <li><NavLink 
                         to="/about" 
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
@@ -199,13 +193,13 @@ const Navbar = () => {
                         }
                         onClick={handleNavigation}
                     >Blogs</NavLink></li>
-                    <li><NavLink 
+                    {/* <li><NavLink 
                         to="/admin/view" 
                         className={({ isActive }) => 
                             isActive ? "text-purple-600" : ""
                         }
                         onClick={handleNavigation}
-                    >Admin</NavLink></li>
+                    >Admin</NavLink></li> */}
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
                         background="transparent"
@@ -221,7 +215,7 @@ const Navbar = () => {
                 </ul>
 
                 {/* Mobile Nav */}
-                <div className="flex items-center justify-end w-full md:hidden">
+                <div className="flex items-center justify-end w-full lg:hidden">
                     <DotLottieReact
                         src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
                         background="transparent"
