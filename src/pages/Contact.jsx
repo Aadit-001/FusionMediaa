@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import india from '../assets/india.png';
+import { useDarkMode } from '../context/DarkModeContext';
 
 const Contact = () => {
+  const { isDarkMode } = useDarkMode();
   const [currentTime, setCurrentTime] = useState('');
   const [formData, setFormData] = useState({
     name: '',
@@ -61,11 +63,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-white pt-16" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <div className={`${isDarkMode ? 'bg-black text-white' : 'bg-white text-gray-900'} pt-2`} style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Header with Lottie Animation */}
         <div className="flex justify-between items-center mb-2">
-          <h1 className="text-6xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>Let's Talk!</h1>
+          <h1 className={`text-6xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Lobster, cursive' }}>Let's Talk!</h1>
           <div className="flex justify-center items-center">
             <DotLottieReact
               src="https://lottie.host/7a0c5038-5aac-4894-8862-ca95b5c881db/Bq1sqF1zaA.lottie"
@@ -84,7 +86,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className={`w-full border ${isDarkMode ? 'border-gray-700 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-300 bg-white text-gray-900'} px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -95,7 +97,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className={`w-full border ${isDarkMode ? 'border-gray-700 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-300 bg-white text-gray-900'} px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -106,7 +108,7 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className={`w-full border ${isDarkMode ? 'border-gray-700 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-300 bg-white text-gray-900'} px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 value={formData.subject}
                 onChange={handleChange}
               />
@@ -116,13 +118,16 @@ const Contact = () => {
               <textarea
                 name="message"
                 placeholder="Your Message"
-                className="w-full border border-gray-300 px-4 py-2 h-32 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className={`w-full border ${isDarkMode ? 'border-gray-700 bg-gray-800 text-white placeholder-gray-400' : 'border-gray-300 bg-white text-gray-900'} px-4 py-2 h-32 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500`}
                 value={formData.message}
                 onChange={handleChange}
               />
               {errors.message && <p className="text-red-500 mt-1">{errors.message}</p>}
             </div>
-            <button type="submit" className="btn liquid px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">
+            <button 
+              type="submit" 
+              className={`btn liquid px-6 py-3 rounded-lg ${isDarkMode ? 'bg-indigo-700 hover:bg-indigo-800' : 'bg-indigo-600 hover:bg-indigo-700'} text-white transition-colors`}
+            >
               Send
             </button>
           </form>
@@ -133,19 +138,19 @@ const Contact = () => {
           <div className="mb-8 md:mb-0 flex items-center">
             <img src={india} alt="India" className="w-50 h-50 mr-4" />
             <div>
-              <h3 className="text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>India</h3>
-              <p className="text-gray-900 mb-2">{currentTime}</p>
-              <p>
+              <h3 className={`text-5xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Lobster, cursive' }}>India</h3>
+              <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-900'} mb-2`}>{currentTime}</p>
+              <p className={isDarkMode ? 'text-gray-400' : 'text-gray-700'}>
                 TIRUPATI UDYOG, 208-209, IB Patel Rd, Jay Prakash Nagar,<br />
                 Goregaon, Mumbai, Maharashtra 400063
               </p>
             </div>
-            <div className="h-40 w-[1px] ml-8 bg-gray-300 mx-2 hidden md:block"></div>
+            <div className={`h-40 w-[1px] ml-8 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'} mx-2 hidden md:block`}></div>
           </div>
           {/* Contact Info */}
           <div className="flex-1 ml-8">
-            <p className="text-blue-600">Pratham.Fusionmarketing@gmail.com</p>
-            <p>IND: +91 81045 11574</p>
+            <p className={`${isDarkMode ? 'text-indigo-400' : 'text-blue-600'}`}>Pratham.Fusionmarketing@gmail.com</p>
+            <p className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>IND: +91 81045 11574</p>
           </div>
         </div>
       </div>

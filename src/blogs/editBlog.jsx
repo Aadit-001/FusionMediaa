@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useDarkMode } from '../context/DarkModeContext';
 
 const EditBlog = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
+  const { isDarkMode } = useDarkMode();
   const [formData, setFormData] = useState({
     title: '',
     excerpt: '',
@@ -62,126 +64,126 @@ const EditBlog = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-gray-50'} pt-24 pb-12 px-4 sm:px-6 lg:px-8`}>
         <div className="max-w-4xl mx-auto">
-          <div className="text-center">Loading...</div>
+          <div className={`text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Loading...</div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-gray-50'} pt-24 pb-12 px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-          <div className="px-6 py-8 border-b border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-900">Edit Blog Post</h2>
-            <p className="mt-2 text-sm text-gray-600">Update the details below to edit your blog post.</p>
+        <div className={`shadow-xl rounded-lg overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+          <div className={`px-6 py-8 border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+            <h2 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Edit Blog Post</h2>
+            <p className={`mt-2 text-sm ${isDarkMode ? 'text-gray-200' : 'text-gray-600'}`}>Update the details below to edit your blog post.</p>
           </div>
           
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Title</label>
                 <input
                   type="text"
                   name="title"
                   value={formData.title}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                   placeholder="Enter blog title"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Category</label>
                 <input
                   type="text"
                   name="category"
                   value={formData.category}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                   placeholder="e.g., Technology, Business"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Author</label>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Author</label>
                 <input
                   type="text"
                   name="author"
                   value={formData.author}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                   placeholder="Author's name"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Date</label>
                 <input
                   type="text"
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                   placeholder="e.g., March 15, 2024"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Read Time</label>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Read Time</label>
                 <input
                   type="text"
                   name="readTime"
                   value={formData.readTime}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                   placeholder="e.g., 5 min read"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
+                <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Image URL</label>
                 <input
                   type="text"
                   name="image"
                   value={formData.image}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                   placeholder="Enter image URL"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Excerpt</label>
+              <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Excerpt</label>
               <textarea
                 name="excerpt"
                 value={formData.excerpt}
                 onChange={handleChange}
                 required
                 rows="3"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                 placeholder="A brief summary of the blog post"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Content</label>
+              <label className={`block text-sm font-medium ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} mb-1`}>Content</label>
               <textarea
                 name="content"
                 value={formData.content}
                 onChange={handleChange}
                 required
                 rows="10"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                className={`w-full px-4 py-2 ${isDarkMode ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900'} border rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors`}
                 placeholder="Write your blog content here"
               />
             </div>
@@ -189,8 +191,8 @@ const EditBlog = () => {
             <div className="flex justify-end space-x-4">
               <button
                 type="button"
-                onClick={() => navigate('/admin/blogs')}
-                className="px-6 py-3 bg-gray-200 text-gray-700 font-medium rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors"
+                onClick={() => navigate('/admin/view')}
+                className={`px-6 py-3 ${isDarkMode ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode ? 'focus:ring-gray-500' : 'focus:ring-gray-500'} transition-colors`}
               >
                 Cancel
               </button>

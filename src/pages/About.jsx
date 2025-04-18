@@ -4,7 +4,9 @@ import { useInView } from 'react-intersection-observer';
 import tt from '../assets/testimonial/tt.png';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import logo from '../assets/logo.png';
+import logoWhite from '../assets/logoWhite.png';
 import { Briefcase, BarChart2, Settings, Target } from 'lucide-react';
+import { useDarkMode } from '../context/DarkModeContext';
 
 const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -12,6 +14,7 @@ const About = () => {
     triggerOnce: true,
     threshold: 0.1
   });
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +28,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-full bg-white">
+    <div className={`w-full ${isDarkMode ? 'bg-black text-white' : 'bg-white text-gray-900'}`}>
       {/* Hero Section */}
-      <section className="min-h-screen relative overflow-hidden bg-white pt-30 md:pt-0">
+      <section className={`min-h-screen relative overflow-hidden ${isDarkMode ? 'bg-black' : 'bg-white'} pt-30 md:pt-0`}>
         <div className="container mx-auto px-0 md:px-4 relative">
           <div className="flex flex-col md:grid md:grid-cols-12 min-h-[90vh] md:min-h-screen items-center">
             {/* Left Content */}
@@ -46,15 +49,22 @@ const About = () => {
                 <div className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
                   Welcome To
                 </div>
-                <div className="mt-4">
-                  <img src={logo} alt="Fusion Media" className="w-full md:w-[700px] h-auto mx-auto md:mx-0 md:-ml-22" />
+                <div className="mt-4 h-[120px] md:h-[180px] flex items-center">
+                  <img 
+                    src={isDarkMode ? logoWhite : logo} 
+                    alt="Fusion Media" 
+                    className="w-full md:w-[700px] h-full mx-auto md:mx-0 md:-ml-22"
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="text-lg md:text-xl text-gray-600 max-w-xl text-center md:text-left mx-auto md:mx-0 mt-4"
+                className={`text-lg md:text-xl max-w-xl text-center md:text-left mx-auto md:mx-0 mt-4 ${
+                  isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                }`}
               >
                 Transforming ideas into exceptional digital experiences through innovation, 
                 creativity, and strategic excellence.
@@ -73,7 +83,7 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="relative bg-white -mt-10 md:mt-0">
+      <section className={`relative ${isDarkMode ? 'bg-black' : 'bg-white'} -mt-10 md:mt-0`}>
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -81,10 +91,14 @@ const About = () => {
             transition={{ duration: 1 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-8 text-center text-gray-900">
+            <h2 className={`text-2xl md:text-3xl font-semibold mb-4 md:mb-8 text-center ${
+              isDarkMode ? 'text-white' : 'text-gray-900'
+            }`}>
               <span className="text-red-600">WHO WE ARE</span>
             </h2>
-            <p className="text-2xl md:text-6xl font-semibold leading-normal md:leading-tight text-center text-gray-800 px-4 md:px-0">
+            <p className={`text-2xl md:text-6xl font-semibold leading-normal md:leading-tight text-center px-4 md:px-0 ${
+              isDarkMode ? 'text-gray-300' : 'text-gray-800'
+            }`}>
               A collective of creative minds, tech enthusiasts, and strategic thinkers
             </p>
           </motion.div>
@@ -92,7 +106,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-12 md:py-16 relative bg-white">
+      <section className={`py-12 md:py-16 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
             {/* Vision */}
@@ -104,20 +118,26 @@ const About = () => {
             >
               <div className="space-y-4 md:space-y-6">
                 <h3 className="text-red-600 text-xl md:text-2xl font-bold">OUR VISION</h3>
-                <p className="text-2xl md:text-3xl font-semibold leading-relaxed text-gray-900">
+                <p className={`text-2xl md:text-3xl font-semibold leading-relaxed ${
+                  isDarkMode ? 'text-gray-300' : 'text-gray-900'
+                }`}>
                   At Fusion Media, our vision is to transform the way brands communicate with their audiences
                   by blending human creativity with advanced technology.
                 </p>
-                <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                <p className={`text-lg md:text-2xl leading-relaxed ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                }`}>
                   We strive to push the limits of innovation, crafting campaigns that not only capture
                   attention but also resonate deeply, creating lasting emotional connections.
                 </p>
-                <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                <p className={`text-lg md:text-2xl leading-relaxed ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                }`}>
                   Our goal is to be the driving force behind groundbreaking brand experiences that inspire,
                   engage, and shape the future of storytelling.
                 </p>
               </div>
-              <div className="h-px w-full bg-red-200" />
+              <div className={`h-px w-full ${isDarkMode ? 'bg-gray-700' : 'bg-red-200'}`} />
             </motion.div>
 
             {/* Mission */}
@@ -129,27 +149,33 @@ const About = () => {
             >
               <div className="space-y-4 md:space-y-6">
                 <h3 className="text-blue-600 text-xl md:text-2xl font-bold">OUR MISSION</h3>
-                <p className="text-2xl md:text-3xl font-semibold leading-relaxed text-gray-900">
+                <p className={`text-2xl md:text-3xl font-semibold leading-relaxed ${
+                  isDarkMode ? 'text-gray-300' : 'text-gray-900'
+                }`}>
                   Our mission is to empower brands by harnessing the power of creativity and technology
                   to deliver impactful, forward-thinking campaigns.
                 </p>
-                <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                <p className={`text-lg md:text-2xl leading-relaxed ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                }`}>
                   Through close collaboration and a deep understanding of each brand's unique essence,
                   we aim to craft strategies that are bold, authentic, and memorable.
                 </p>
-                <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
+                <p className={`text-lg md:text-2xl leading-relaxed ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                }`}>
                   We ensure every project leaves a meaningful and lasting impression on both the brand
                   and its audience.
                 </p>
               </div>
-              <div className="h-px w-full bg-blue-200" />
+              <div className={`h-px w-full ${isDarkMode ? 'bg-gray-700' : 'bg-blue-200'}`} />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Founder Section */}
-      <section className="min-h-screen py-16 md:py-32 relative bg-white">
+      <section className={`min-h-screen py-16 md:py-32 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Quote Card */}
@@ -157,7 +183,7 @@ const About = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative bg-white"
+              className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
             >
               {/* Large Quote Mark */}
               <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
@@ -165,10 +191,12 @@ const About = () => {
               </div>
 
               {/* Card Content */}
-              <div className="relative border border-black rounded-sm p-6 md:p-12">
+              <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12`}>
                 {/* Quote Content */}
                 <div className="relative z-10">
-                  <p className="text-xl md:text-3xl font-medium text-gray-900 mb-2 max-w-[650px] leading-normal">
+                  <p className={`text-xl md:text-3xl font-medium mb-2 max-w-[650px] leading-normal ${
+                    isDarkMode ? 'text-gray-300' : 'text-gray-900'
+                  }`}>
                     Jugal Shah is the founder, CXO, and<br className="hidden md:block" />
                     growth hacker at Leo9 Studio headquartered<br className="hidden md:block" />
                     in Mumbai, India, and an office in N.J., U.S.A.
@@ -186,8 +214,12 @@ const About = () => {
 
                 {/* Founder Info */}
                 <div className="mt-6 md:mt-40">
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Jugal Shah</h3>
-                  <p className="text-lg md:text-xl text-gray-600 mt-1 max-w-[500px] leading-normal">
+                  <h3 className={`text-2xl md:text-3xl font-bold ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Jugal Shah</h3>
+                  <p className={`text-lg md:text-xl mt-1 max-w-[500px] leading-normal ${
+                    isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                  }`}>
                     Founder, Head of UX at Leo9 Studio.<br className="hidden md:block" />
                     Behavioral science and
                     Neuromarketing expert.

@@ -19,6 +19,7 @@ import CountUp from 'react-countup';
 import { useState } from 'react';
 import tt from './assets/testimonial/tt.png';
 import image from './assets/image.png';
+import { useDarkMode } from './context/DarkModeContext';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +27,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
     const [isAnimating, setIsAnimating] = useState(false);
+    const { isDarkMode } = useDarkMode();
 
     const { ref, inView } = useInView({
         triggerOnce: false, // Trigger only once
@@ -747,6 +749,7 @@ function App() {
         };
     }, []);
 
+
     return (
         <div ref={containerRef} className="smooth-scroll">
             <div className="app-max-container">
@@ -821,6 +824,7 @@ function App() {
                     </div>
                 </div>
 
+
                 <div className="second-section slide slide2 flex items-center justify-center" id="slide2">
                     
                     <div style={{ backgroundImage: `url(${image})` }}
@@ -848,6 +852,7 @@ function App() {
                                     <div className='md:h-20 md:w-88 flex items-center   '>
                                         <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
                                         <span className='text-2xl md:text-3xl font-bold ml-4'>Public Reactions</span>
+
 
                                     </div>
                                 </div>
@@ -1117,10 +1122,10 @@ function App() {
                     </div>
                 </div>
 
-                <div className="fourth-section mx-1 slide slide4 flex items-center gap-2" id="slide4">
-                    {/* <div className="containerr"> */}
-                    <div className="cardd overflow-hidden  absolute ">
-                        {/* <div className="facee face11 overflow-hidden"> */}
+        <div className={`fourth-section mx-1 slide slide4 flex items-center justify-center gap-2 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`} id="slide4">
+            {/* <div className="containerr"> */}
+                <div className="cardd overflow-hidden  absolute ">
+                    {/* <div className="facee face11 overflow-hidden"> */}
                         {/* <div className="contentt flex items-center overflow-hidden"> */}
                         <div className='h-10 w-10 rounded-full bg-black' id='box1'></div>
                         {/* </div> */}
@@ -1149,6 +1154,7 @@ function App() {
                     </div>
                     {/* </div> */}
                 </div>
+
 
                 <div className="fifth-section slide slide5  flex items-center justify-center" id="slide5" >
                     <div className="container">
@@ -1210,6 +1216,7 @@ function App() {
                             {/* </div> */}
                         {/* </div> */}
                     </div>
+
                 </div>
 
                 <div className="testimonial1-section   font-bold" style={{ fontFamily: 'Lobster, cursive' }} ref={ref}>

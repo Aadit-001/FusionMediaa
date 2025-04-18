@@ -16,10 +16,10 @@ import jp from '../assets/clients/JP.png';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-
-
+import { useDarkMode } from '../context/DarkModeContext';
 
 const Clients = () => {
+  const { isDarkMode } = useDarkMode();
   const clientLogos = [
     { id: 1, name: 'Horeca', logo: horeca },
     { id: 2, name: 'Healthy Meal', logo: healthyMeal },
@@ -92,24 +92,24 @@ const Clients = () => {
   };
 
   return (
-    <div className="main-container" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-gray-900'}`} style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="h-[60px]"></div>
         
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center gap-2 text-2xl text-gray-500 mb-8 justify-center">
+        <div className={`flex items-center gap-2 text-2xl mb-8 justify-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
           <span>Home</span>
           <span>•</span>
-          <span className="text-gray-400">Clients</span>
+          <span className={isDarkMode ? 'text-gray-300' : 'text-gray-400'}>Clients</span>
         </div>
 
-        {/* Title Section with Text Reveal Animation */}
-        <div className="flex flex-col items-center justify-center text-center ">
+        {/* Title Section */}
+        <div className="flex flex-col items-center justify-center text-center">
           <motion.h2
             initial="hidden"
             animate="visible"
             transition={{ staggerChildren: 0.3 }}
-            className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto"
+            className={`text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
             style={{ fontFamily: 'Lobster, cursive' }}
           >
             <motion.div variants={textRevealVariants}>
@@ -144,7 +144,9 @@ const Clients = () => {
           {clientLogos.map((client) => (
             <div 
               key={client.id} 
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+              className={`flex items-center justify-center p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 ${
+                isDarkMode ? 'bg-gray-800' : 'bg-white'
+              }`}
             >
               <img 
                 src={client.logo} 
@@ -159,7 +161,7 @@ const Clients = () => {
         <div className="flex flex-col items-center mt-[200px]" ref={ref}>
           {/* Testimonial Header */}
           <div className="text-center mb-20">
-            <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
+            <h3 className={`text-4xl md:text-5xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Lobster, cursive' }}>
               Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
               successful Projects
             </h3>
@@ -172,7 +174,9 @@ const Clients = () => {
             
             {/* Testimonial Text */}
             <div className="text-center w-full">
-              <p className="text-xl md:text-4xl font-normal mb-8 md:mb-20 leading-relaxed text-left md:pl-12 px-4">
+              <p className={`text-xl md:text-4xl font-normal mb-8 md:mb-20 leading-relaxed text-left md:pl-12 px-4 ${
+                isDarkMode ? 'text-gray-300' : 'text-gray-900'
+              }`}>
                 {testimonials[currentTestimonial].text}
               </p>
               {/* Author Info */}
@@ -185,8 +189,12 @@ const Clients = () => {
                   />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-lg md:text-2xl font-bold">{testimonials[currentTestimonial].name}</h4>
-                  <p className="text-base md:text-xl text-gray-600">{testimonials[currentTestimonial].position}</p>
+                  <h4 className={`text-lg md:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                    {testimonials[currentTestimonial].name}
+                  </h4>
+                  <p className={`text-base md:text-xl ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {testimonials[currentTestimonial].position}
+                  </p>
                 </div>
               </div>
 
@@ -197,7 +205,7 @@ const Clients = () => {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
-                      currentTestimonial === index ? 'bg-[#FF3366]' : 'bg-gray-300'
+                      currentTestimonial === index ? 'bg-[#FF3366]' : isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
                     }`}
                   />
                 ))}
