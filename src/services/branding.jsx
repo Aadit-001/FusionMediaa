@@ -441,7 +441,7 @@ const Branding = () => {
 
       <div className="flex flex-col justify-center items-center md:min-h-screen md:mt-2">
         <div className="container">
-          <div className="relative mt-30 md:mt-0 lg:mt-0 px-0 lg:px-[10%] ">
+          <div className="relative mt-30 md:mt-0 px-0 lg:px-[10%] ">
             <div className="">
               <h1 className="text-[#FF4D6D] text-2xl font-bold lg:font-semibold">BRANDING</h1>
             </div>
@@ -455,7 +455,7 @@ const Branding = () => {
           </div>
           <div className='h-full w-full md:flex md:flex-row md:justify-between md:items-center'>
             {/* <div className="hero-content"> */}
-            <div className="relative circless mt-10 ml-[16%] md:ml-[0%] " id="circle11">
+            <div className={`relative circless border-4 ${isDarkMode ? 'border-white' : 'border-slate-900'} mt-10 ml-[16%] md:ml-[0%]`} id="circle11">
               <DotLottieReact
                 src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
                 loop
@@ -494,7 +494,7 @@ const Branding = () => {
             className="mb-16"
           >
             <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
-            <h3 className="text-4xl font-bold max-w-3xl leading-tight text-left">
+            <h3 className={`text-4xl font-bold max-w-3xl leading-tight text-left ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               We help you translate a simple idea into an exotic Digital design transformation vision.
             </h3>
           </motion.div>

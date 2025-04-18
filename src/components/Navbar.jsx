@@ -100,7 +100,7 @@ const Navbar = () => {
 
     return (
         <div 
-            className={`fixed md:pl-[4%] md:pr-[8%] w-screen top-0 transition-all duration-300 ${
+            className={`fixed md:pl-[4%] md:pr-[8%] w-screen top-0 transition-all duration-300 z-214748378 ${
                 isScrolled ? "h-[8%]" : "h-[10%]"
             } ${isDarkMode ? 'bg-black border-b border-gray-800' : 'bg-white border-b border-gray-200'} w-full z-50 align-middle items-center flex`}
         > 
@@ -121,28 +121,10 @@ const Navbar = () => {
                 </Link>
                 
                 {/* Mobile Menu Button */}
-                <button 
-                    className={`md:hidden p-2 ${isDarkMode ? 'text-white hover:text-gray-200' : 'text-black hover:text-gray-600'}`}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="h-6 w-6" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                    >
-                        <path 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth={2} 
-                            d="M4 6h16M4 12h16M4 18h16" 
-                        />
-                    </svg>
-                </button>
+            
 
                 {/* Desktop Navigation */}
-                <ul className={`nav-links  relative hidden md:flex items-center gap-1 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <ul className={`nav-links  relative hidden  md:flex items-center gap-1 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                     <li><NavLink 
                         to="/work" 
                         className={({ isActive }) => 
@@ -150,13 +132,6 @@ const Navbar = () => {
                         }
                         onClick={handleNavigation}
                     >Work</NavLink></li>
-                        <li><NavLink 
-                            to="/clients" 
-                            className={({ isActive }) => 
-                                isActive ? "text-purple-600" : ""
-                            }
-                            onClick={handleNavigation}
-                        >Clients</NavLink></li>
                     <li 
                         className="relative"
                         onMouseEnter={handleServicesMouseEnter}
@@ -196,7 +171,7 @@ const Navbar = () => {
                         </NavLink>
                         {isServicesHovered && (
                             <div 
-                                className={`absolute top-full left-1/2 -ml-20 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-2 z-50 ${
+                                className={`absolute top-full ml-16 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-8 z-50 ${
                                     isDarkMode ? 'bg-gray-900 border border-gray-800' : 'bg-white border border-gray-200'
                                 } `}
                                 onMouseEnter={handleServicesMouseEnter}
@@ -264,7 +239,7 @@ const Navbar = () => {
                     <li>
                         <button
                             onClick={toggleDarkMode}
-                            className={`p-2 rounded-full ${isDarkMode ? 'text-yellow-400 hover:text-yellow-300' : 'text-gray-700 hover:text-gray-900'}`}
+                            className={`p-2 rounded-full hover:scale-105 cursor-pointer ${isDarkMode ? 'text-yellow-400 hover:text-yellow-300' : 'text-gray-700 hover:text-gray-900'}`}
                         >
                             {isDarkMode ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -278,9 +253,7 @@ const Navbar = () => {
                         </button>
                     </li>
                     <Link to="/contact" onClick={handleNavigation}>
-                        <button className={`${isScrolled ? 'btnScrolled liquid' : 'btn liquid'} ${
-                            isDarkMode ? 'text-white border-white hover:bg-white hover:text-black' : 'text-gray-900 border-gray-900 hover:bg-gray-900 hover:text-white'
-                        }`}>
+                        <button className={`${isScrolled ? `${isDarkMode ? 'btnScrolledWhite liquidWhite' : 'btnScrolled liquid'}` : `${isDarkMode ? 'btnWhite liquidWhite' : 'btn liquid'}`}`}>
                             <span>contact</span>
                         </button>
                     </Link>
@@ -288,16 +261,21 @@ const Navbar = () => {
 
 
                 {/* Mobile Nav */}
-                <div className="flex items-center justify-end w-full lg:hidden">
-                    <DotLottieReact
-                        src="https://lottie.host/c594baa9-4246-49fb-b68d-f0fad72835da/X2IXoQ5QMS.lottie"
-                        background="transparent"
-                        color="#fff"
-                        speed="1"
-                        style={isScrolled ? {width: 40, height: 30} : {width: 40, height: 40}}
-                        loop
-                        autoplay
-                    />
+                <div className="flex items-center justify-end w-full md:hidden">
+                        <button
+                            onClick={toggleDarkMode}
+                            className={`p-2 rounded-full ${isDarkMode ? 'text-yellow-400 hover:text-yellow-300' : 'text-gray-700 hover:text-gray-900'}`}
+                        >
+                            {isDarkMode ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            ) : (
+                                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                </svg>
+                            )}
+                        </button>
                     <button
                         className="ml-2 p-2 focus:outline-none"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
