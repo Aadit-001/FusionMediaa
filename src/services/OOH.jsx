@@ -8,12 +8,14 @@ import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import './branding.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useDarkMode } from '../context/DarkModeContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const Branding = () => {
   const containerRef = useRef(null);
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
           const locoScroll = new LocomotiveScroll({
@@ -279,18 +281,18 @@ const Branding = () => {
 
 
   return (
-    <div className="min-h-screen bg-white smooth-scroll" ref={containerRef}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'} smooth-scroll`} ref={containerRef}>
       {/* Top Navigation */}
       <div className="absolute top-20 right-[32%] mt-14">
         <div className="mb-4 -ml-[5px]">
           <h1 className="text-[#FF4D6D] text-2xl font-semibold">OOH</h1>
         </div>
         <nav className="flex items-center gap-2 text-lg justify-end">
-          <Link to="/" className="text-gray-900 hover:text-gray-600">Home</Link>
-          <span className="text-gray-400">•</span>
-          <Link to="/services" className="text-gray-900 hover:text-gray-600">Services</Link>
-          <span className="text-gray-400">•</span>
-          <span className="text-gray-400">OOH</span>
+          <Link to="/" className={`${isDarkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'}`}>Home</Link>
+          <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>•</span>
+          <Link to="/services" className={`${isDarkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'}`}>Services</Link>
+          <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>•</span>
+          <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>OOH</span>
         </nav>
       </div>
 
@@ -321,7 +323,7 @@ const Branding = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="text-[64px] font-semibold leading-tight tracking-normal font-montserrat text-gray-900"
+                            className={`text-[64px] font-semibold leading-tight tracking-normal font-montserrat ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
                           >
                             We create<br />
                             <span className="text-[#FF4D6D]">impactful</span><br />
@@ -356,7 +358,7 @@ const Branding = () => {
       </div> */}
 
       {/* Services Section */}
-      <div className="px-8 py-16 services1-section ">
+      <div className={`px-8 py-16 services1-section ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -365,7 +367,7 @@ const Branding = () => {
             className="mb-16"
           >
             <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left ml-8">What Do We Serve ?</h1>
-            <h3 className="text-4xl font-bold max-w-3xl leading-tight text-left ml-8">
+            <h3 className={`text-4xl font-bold max-w-3xl leading-tight text-left ml-8 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               We deliver high-impact outdoor advertising that captures attention and drives engagement in the real world.
             </h3>
           </motion.div>
@@ -380,10 +382,10 @@ const Branding = () => {
                 className="group"
               >
                 <div className="relative pb-4">
-                  <h3 className="text-[28px] font-medium text-black mb-3">
+                  <h3 className={`text-[28px] font-medium mb-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                     {service.title}
                   </h3>
-                  <div className="absolute bottom-0 left-0 w-full border-b-[3px] border-dotted border-black opacity-70" style={{ borderBottomWidth: '3px', borderStyle: 'dotted', borderSpacing: '4px' }}></div>
+                  <div className={`absolute bottom-0 left-0 w-full border-b-[3px] border-dotted ${isDarkMode ? 'border-white opacity-50' : 'border-black opacity-70'}`} style={{ borderBottomWidth: '3px', borderStyle: 'dotted', borderSpacing: '4px' }}></div>
                 </div>
               </motion.div>
             ))}
@@ -392,7 +394,7 @@ const Branding = () => {
       </div>
 
       {/* How We Do It Section */}
-      <div className="px-8 py-24">
+      <div className={`px-8 py-24 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -401,7 +403,7 @@ const Branding = () => {
             className="text-center mb-20"
           >
             <h2 className="text-[#FF4D6D] text-2xl font-bold mb-6">HOW WE DO IT ?</h2>
-            <h3 className="text-4xl font-bold">
+            <h3 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               From Strategy to Street Impact
             </h3>
           </motion.div>
@@ -419,20 +421,20 @@ const Branding = () => {
                   <div className="relative">
                     {step.icon}
                     <motion.div
-                      className="absolute inset-0 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                      className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${isDarkMode ? 'bg-pink-300' : 'bg-pink-100'}`}
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 0.3 }}
                     />
                   </div>
-                  <h4 className="text-xl font-semibold mb-4">{step.title}</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <h4 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{step.title}</h4>
+                  <p className={`text-sm leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                     {step.description}
                   </p>
                 </div>
                 {index < processSteps.length - 1 && (
                   <motion.div
-                    className="hidden lg:block absolute top-8 left-full w-full h-[2px] bg-gray-200"
+                    className={`hidden lg:block absolute top-8 left-full w-full h-[2px] ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`}
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 0.8, delay: 1 }}
@@ -452,7 +454,7 @@ const Branding = () => {
       </div>
 
       {/* Sample Work Section */}
-      <div className="px-8 py-20 bg-white">
+      <div className={`px-8 py-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -473,7 +475,7 @@ const Branding = () => {
                 className="relative"
               >
                 <img
-                  src="https://swotandpestleanalysis.com/wp-content/uploads/2022/09/What-is-OOH-advertising.jpg"
+                  src="https://goodmockups.com/wp-content/uploads/2022/03/Free-Bus-Stop-Advertising-Mockup-PSD-1.jpg"
                   alt="Corporate Identity Project"
                   className="w-full max-w-5xl h-auto max-h-[500px] object-cover rounded-lg shadow-lg"
                 />
@@ -486,11 +488,11 @@ const Branding = () => {
                 transition={{ duration: 0.8 }}
                 className="space-y-8 ml-8"
               >
-                <h3 className="text-4xl font-bold">Outdoor Advertising Excellence</h3>
-                <p className="text-xl text-gray-800 leading-relaxed max-w-3xl">
+                <h3 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Outdoor Advertising Excellence</h3>
+                <p className={`text-xl leading-relaxed max-w-3xl ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
                   Transform your outdoor advertising into powerful marketing opportunities. We combine strategic planning, digital innovation, and data-driven insights to maximize your outdoor advertising's impact and ROI.
                 </p>
-                <div className="flex items-center gap-x-4 text-gray-600">
+                <div className={`flex items-center gap-x-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   <span className="font-medium">Location Analysis</span>
                   <span className="text-[#FF4D6D]">•</span>
                   <span className="font-medium">Billboard Design</span>
@@ -506,7 +508,7 @@ const Branding = () => {
       </div>
 
       {/* Other Services Section */}
-      <div className="px-8 py-24">
+      <div className={`px-8 py-24 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -526,19 +528,21 @@ const Branding = () => {
             {otherServices.map((service, index) => (
               <motion.div
                 key={index}
-                className={`${service.color} p-8 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform`}
+                className={`p-8 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform ${
+                  isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : service.color
+                }`}
                 onClick={() => handleServiceClick(service.link)}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <div>
-                  <h3 className="font-bold text-xl mb-2">{service.name}</h3>
-                  <p className="text-sm text-gray-700">{service.description}</p>
+                  <h3 className={`font-bold text-xl mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{service.name}</h3>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>{service.description}</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
