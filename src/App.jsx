@@ -3659,16 +3659,18 @@ function App() {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className={` h-[50%] absolute top-1/4 left-1/2 hidden md:block`}>
+                        <div className={` h-[60%] absolute top-1/4 left-1/2 hidden md:block`}>
                             {isDarkMode ? (
                                 <DotLottieReact
-                                    src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                                    // src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                                    src="https://lottie.host/8bedc466-87d9-482e-a5bf-333308a85012/jQHhLK7eOX.lottie"
                                     loop
                                     autoplay
                                 />
                             ) : (
                                 <DotLottieReact
-                                    src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
+                                    // src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
+                                    src="https://lottie.host/8bedc466-87d9-482e-a5bf-333308a85012/jQHhLK7eOX.lottie"
                                     loop
                                     autoplay
                                 />
