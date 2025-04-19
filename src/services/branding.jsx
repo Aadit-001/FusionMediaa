@@ -473,10 +473,10 @@ const Branding = () => {
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-normal font-montserrat text-gray-900 mt-10 lg:mt-0"
               >
-                We craft
-                <span className="text-[#FF4D6D]"> powerful </span>
-                brand
-                identities.
+                WE CRAFT
+                <span className="text-[#FF4D6D]"> POWERFUL </span>
+                BRAND
+                IDENTITIES.
               </motion.h1>
             </div>
           </div>
