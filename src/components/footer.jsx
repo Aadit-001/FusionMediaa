@@ -15,8 +15,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className={`py-16 px-4 md:px-8 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-      <div className="container mx-auto max-w-6xl">
+    <footer className={`py-16 px-4 md:px-8 ${isDarkMode ? 'bg-black' : 'bg-white'} z-214748378`}>
+      <div className=" mx-auto max-w-6xl">
         {/* Top Section: Flex instead of Grid */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-y-10 md:gap-x-6">
           {/* Logo and Social Section */}
