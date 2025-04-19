@@ -3644,18 +3644,18 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Story Telling Campaigns</span>
+                                    <span className='md:text-2xl text-1xl'>• Copywriting</span>
+                                    <span className='md:text-2xl text-1xl'>• Blog Writing</span>
+                                    <span className='md:text-2xl text-1xl'>• Press Release</span>
+                                    <span className='md:text-2xl text-1xl'>• Content Calander</span>
+                                    <span className='md:text-2xl text-1xl'>• SEO Friendly Content</span>
+                                    <span className='md:text-2xl text-1xl'>• White Paper</span>
+                                    <span className='md:text-2xl text-1xl'>• Info Graphics</span>
+                                    <span className='md:text-2xl text-1xl'>• Podcast Scripting</span>
+                                    <span className='md:text-2xl text-1xl'>• Industry Reports</span>
+                                    <span className='md:text-2xl text-1xl'>• Product Descriptions</span>
+                                    <span className='md:text-2xl text-1xl'>• Video Marketing</span>
                                 </motion.div>
                             </div>
                         </div>
@@ -3681,7 +3681,7 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Public Relations</span>
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
@@ -3691,18 +3691,11 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Media Relation</span>
+                                    <span className='md:text-2xl text-1xl'>• Event PR</span>
+                                    <span className='md:text-2xl text-1xl'>• Crisis Management</span>
+                                    <span className='md:text-2xl text-1xl'>• Reputation Management</span>
+                                    <span className='md:text-2xl text-1xl'>• Influencer Collaboration</span>
                                 </motion.div>
                             </div>
                         </div>
@@ -3713,7 +3706,7 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
@@ -3723,18 +3716,17 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                   <span className='md:text-2xl text-1xl'>• Instagram Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Facebook Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Youtube Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Engagement Posting Campaign</span>
+                                    <span className='md:text-2xl text-1xl'>• Stories & Reels Creation</span>
+                                    <span className='md:text-2xl text-1xl'>• Strategy</span>
+                                    <span className='md:text-2xl text-1xl'>• Influencer Discovery</span>
+                                    <span className='md:text-2xl text-1xl'>• Partnership</span>
+                                    <span className='md:text-2xl text-1xl'>• Sponsored Post</span>
+                                    <span className='md:text-2xl text-1xl'>• Influencer Events</span>
+
                                 </motion.div>
                             </div>
                         </div>
@@ -3745,7 +3737,7 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Website Services</span>
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
@@ -3755,18 +3747,18 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Development</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Audits</span>
+                                    <span className='md:text-2xl text-1xl'>• A/B Testing</span>
+                                    <span className='md:text-2xl text-1xl'>• UI/UX Optimization</span>
+                                    <span className='md:text-2xl text-1xl'>• Speed Optimization</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Maintenance</span>
+                                    <span className='md:text-2xl text-1xl'>• Interactive Design Features</span>
+                                    <span className='md:text-2xl text-1xl'>• CMS Management</span>
+                                    <span className='md:text-2xl text-1xl'>• Mobile-First Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Customer-Web Tools</span>
+
                                 </motion.div>
                             </div>
                         </div>
@@ -3777,7 +3769,7 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Event Marketing</span>
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
@@ -3787,18 +3779,17 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Event Planning</span>
+                                    <span className='md:text-2xl text-1xl'>• Brand Activation</span>
+                                    <span className='md:text-2xl text-1xl'>• Pop-up Shops</span>
+                                    <span className='md:text-2xl text-1xl'>• Webinar Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Trade Show Support</span>
+                                    <span className='md:text-2xl text-1xl'>• Product Launches</span>
+                                    <span className='md:text-2xl text-1xl'>• Sponsorship Promotions</span>
+                                    <span className='md:text-2xl text-1xl'>• Virtual Event Productions</span>
+                                    <span className='md:text-2xl text-1xl'>• Event Branding</span>
+                                    <span className='md:text-2xl text-1xl'>• Post-Event Reports</span>
+
                                 </motion.div>
                             </div>
                         </div>
@@ -3809,7 +3800,7 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Branding</span>
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
@@ -3819,18 +3810,16 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Logo Creation</span>
+                                    <span className='md:text-2xl text-1xl'>• Brand Identity</span>
+                                    <span className='md:text-2xl text-1xl'>• Product Branding</span>
+                                    <span className='md:text-2xl text-1xl'>• Rebranding Strategy</span>
+                                    <span className='md:text-2xl text-1xl'>• Social Media Graphics</span>
+                                    <span className='md:text-2xl text-1xl'>• Poster and Flyer Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Banner Ads</span>
+                                    <span className='md:text-2xl text-1xl'>• 3D Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Animated Graphics</span>
+
                                 </motion.div>
                             </div>
                         </div>
@@ -3841,7 +3830,7 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>OOH</span>
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
@@ -3851,18 +3840,17 @@ function App() {
                                     className="flex flex-col gap-1"
                                 >
                                     {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Branding</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; OOH</span>
-                                    <span className='md:text-2xl text-1xl'>--&gt; Social media marketing</span>
+                                   <span className='md:text-2xl text-1xl'>• Billboard Advertising</span>
+                                    <span className='md:text-2xl text-1xl'>• Transit Advertising</span>
+                                    <span className='md:text-2xl text-1xl'>• Street Furniture</span>
+                                    <span className='md:text-2xl text-1xl'>• Digital Billboards</span>
+                                    <span className='md:text-2xl text-1xl'>• Mall Media</span>
+                                    <span className='md:text-2xl text-1xl'>• Airport Advertising</span>
+                                    <span className='md:text-2xl text-1xl'>• Metro Station Ads</span>
+                                    <span className='md:text-2xl text-1xl'>• Bus Shelter Ads</span>
+                                    <span className='md:text-2xl text-1xl'>• Retail OOH</span>
+                                    <span className='md:text-2xl text-1xl'>• Interactive Displays</span>
+
                                 </motion.div>
                             </div>
                         </div>
