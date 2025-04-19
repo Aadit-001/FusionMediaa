@@ -284,82 +284,50 @@ const Branding = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'} smooth-scroll`} ref={containerRef}>
       {/* Top Navigation */}
-      <div className="absolute top-20 right-[26%] mt-14">
-        <div className="mb-4 -ml-[5px]">
-          <h1 className="text-[#FF4D6D] text-2xl font-semibold">Website Services</h1>
-        </div>
-        <nav className="flex items-center gap-2 text-lg justify-end">
-          <Link to="/" className={`${isDarkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'}`}>Home</Link>
-          <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>•</span>
-          <Link to="/services" className={`${isDarkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'}`}>Services</Link>
-          <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>•</span>
-          <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>Website Services</span>
-        </nav>
-      </div>
+      <div className="flex flex-col justify-center items-center md:min-h-screen md:mt-2">
+        <div className="container">
+          <div className="relative mt-30 md:mt-0 px-0 lg:px-[10%] ">
+            <div className="">
+              <h1 className="text-[#FF4D6D] text-2xl font-bold lg:font-semibold">WEBSITE SERVICES</h1>
+            </div>
+            <nav className="flex items-center gap-2 text-lg">
+              <Link to="/" className={`${isDarkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'}`}>Home</Link>
+              <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>•</span>
+              <Link to="/services" className={`${isDarkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'}`}>Services</Link>
+              <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>•</span>
+              <span className={`${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>Website Services</span>
+            </nav>
+          </div>
+          <div className='h-full w-full md:flex md:flex-row md:justify-between md:items-center'>
+            <div className={`relative circless border-4 ${isDarkMode ? 'border-white' : 'border-slate-900'} mt-10 ml-[16%] md:ml-[0%]`} id="circle11">
+              <DotLottieReact
+                src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
+                loop
+                autoplay
+              />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 -ml-16 md:-ml-24 md:h-12 bg-[#FF4D6D] rounded-full"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 ml-16 md:ml-24 md:h-12 bg-[#FF4D6D] rounded-full" ></div>
+            </div>
+            <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
 
-      <div className="services-section flex min-h-screen mt-2">
-            {/* <div className="container"> */}
-                {/* <div className="hero-content"> */}
-                    <div className="circless" id="circle11">
-                    <DotLottieReact
-      src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
-      loop
-      autoplay
-    />
-
-                    {/* <div className="absolute bg-amber-400 w-4 h-4 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2">2</div>
-                    <div className="absolute bg-amber-400 w-4 h-4 rounded-full  top-1/2 -translate-x-1/2 -translate-y-1/2">3</div> */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 -ml-24 h-12 bg-[#FF4D6D] rounded-full"></div>
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 ml-24 h-12 bg-[#FF4D6D] rounded-full" ></div>
-                    
-                    {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id='circle2'></div> */}
-                    {/* <div className="absolute w-12 ml-56 h-12 bg-[#FF4D6D] rounded-full" id="circle3"></div> */}
-                    </div>
-                    <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
-
-                    <div className="w-1/2 flex items-center absolute right-1 top-1/3 ml-48 pl-20">
-                      <div className="max-w-xl">
-                        <div className="mb-4">
-                          <motion.h1 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className={`text-[64px] font-semibold leading-tight tracking-normal font-montserrat ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
-                          >
-                            We build<br />
-                            <span className="text-[#FF4D6D]">powerful</span><br />
-                            digital<br />
-                            experiences.
-                          </motion.h1>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            {/* </div> */}
-        {/* // </div> */}
-
-      {/* <div className="flex min-h-screen mt-2">
-        <div className="w-1/2 flex items-center ">
-          <div className="max-w-xl">
-            <div className="mb-4">
-              <motion.h1 
+            <div className="w-full md:w-1/2 flex items-center lg:justify-start justify-center  md:right-1 md:top-1/3 lg:pl-20">
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-[64px] font-semibold leading-tight tracking-normal font-montserrat text-gray-900"
+                className={`text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-normal font-montserrat ${isDarkMode ? 'text-white' : 'text-gray-900'} mt-10 lg:mt-0`}
               >
-                We build<br />
-                <span className="text-[#FF4D6D]">powerful</span><br />
-                digital<br />
-                experiences.
+                WE BUILD
+                <span className="text-[#FF4D6D]"> POWERFUL </span>
+                DIGITAL EXPERIENCES.
               </motion.h1>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Services Section */}
-      <div className={`px-8 py-16 services1-section ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+      <div className={`px-8 py-16 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -367,13 +335,13 @@ const Branding = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left ml-8">What Do We Serve ?</h1>
-            <h3 className={`text-4xl font-bold max-w-3xl leading-tight text-left ml-8 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-              We create modern, responsive websites that deliver exceptional user experiences and drive business growth through innovative digital solutions.
+            <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
+            <h3 className={`text-4xl font-bold max-w-3xl leading-tight text-left ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+              We create modern, responsive websites that deliver exceptional user experiences and drive business growth.
             </h3>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 gap-y-8 ml-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 gap-y-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -383,9 +351,9 @@ const Branding = () => {
                 className="group"
               >
                 <div className="relative pb-4">
-                  <h3 className={`text-[28px] font-medium mb-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                    {service.title}
-                  </h3>
+                  <span className={`text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                    • {service.title}
+                  </span>
                   <div className={`absolute bottom-0 left-0 w-full border-b-[3px] border-dotted ${isDarkMode ? 'border-white opacity-50' : 'border-black opacity-70'}`} style={{ borderBottomWidth: '3px', borderStyle: 'dotted', borderSpacing: '4px' }}></div>
                 </div>
               </motion.div>
@@ -403,9 +371,9 @@ const Branding = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className="text-[#FF4D6D] text-2xl font-bold mb-6">HOW WE DO IT ?</h2>
+            <h2 className={`text-[#FF4D6D] text-2xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>HOW WE DO IT ?</h2>
             <h3 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-              From Concept to Digital Reality
+              Building Digital Excellence
             </h3>
           </motion.div>
 
@@ -461,9 +429,9 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left ml-8"
+            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left"
           >
-            Professional Web Development
+            Website Development
           </motion.h2>
 
           <div className="space-y-10">
@@ -476,31 +444,31 @@ const Branding = () => {
                 className="relative"
               >
                 <img
-                  src="https://www.stunningmesh.com/wp-content/uploads/What-is-the-Importance-of-Web-Designing-Service.jpg"
-                  alt="Web Development"
+                  src="https://www.istats.com/wp-content/uploads/2018/01/best-website-builder.jpeg"
+                  alt="Website Development Project"
                   className="w-full max-w-5xl h-auto max-h-[500px] object-cover rounded-lg shadow-lg"
                 />
               </motion.div>
 
-              {/* Marketing Services Details */}
+              {/* Project Details */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="space-y-8 ml-8"
+                className="space-y-8"
               >
-                <h3 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Professional Web Development</h3>
+                <h3 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Modern Web Solutions</h3>
                 <p className={`text-xl leading-relaxed max-w-3xl ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
-                  We create stunning, responsive websites that combine cutting-edge technology with intuitive design. Our solutions are tailored to your business needs, ensuring optimal performance, security, and user experience.
+                  Creating modern, responsive websites that deliver exceptional user experiences and drive business growth.
                 </p>
                 <div className={`flex items-center gap-x-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <span className="font-medium">Responsive Design</span>
+                  <span className="font-medium">Web Design</span>
                   <span className="text-[#FF4D6D]">•</span>
-                  <span className="font-medium">Custom Development</span>
+                  <span className="font-medium">Development</span>
                   <span className="text-[#FF4D6D]">•</span>
-                  <span className="font-medium">SEO Optimization</span>
+                  <span className="font-medium">E-commerce</span>
                   <span className="text-[#FF4D6D]">•</span>
-                  <span className="font-medium">Performance</span>
+                  <span className="font-medium">Maintenance</span>
                 </div>
               </motion.div>
             </div>
@@ -515,13 +483,13 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left ml-8"
+            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left"
           >
             Explore Other Services.
           </motion.h2>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-8"
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

@@ -3502,11 +3502,11 @@ function App() {
                                     whileInView={{ opacity: 1, x: 0, y: -20 }}
                                     transition={{ duration: 0.8 }}
                                     className="right-container w-full md:w-1/2 flex flex-col justify-center items-start -mt-20 md:mt-0">
-                                    <h1 className="font-extrabold text-6xl  md:text-6xl lg:text-7xl">Design</h1>
-                                    <h1 className="font-extrabold text-6xl md:text-6xl lg:text-7xl">Thinking</h1>
-                                    <h1 className="font-extrabold text-6xl md:text-6xl lg:text-7xl">Accelarate</h1>
+                                    <h1 className="font-extrabold text-6xl  md:text-6xl lg:text-7xl">Content</h1>
+                                    <h1 className="font-extrabold text-6xl md:text-6xl lg:text-7xl">Marketing</h1>
+                                    <h1 className="font-extrabold text-6xl md:text-6xl lg:text-7xl">Excellence</h1>
                                     <div className="text-lg md:text-base lg:text-2xl font-normal mt-4">
-                                        We Revolutionize User Experience Using Behavioural Science.
+                                        We Create Engaging Content That Drives Results.
                                     </div>
                                 </motion.div>
                             </div>
