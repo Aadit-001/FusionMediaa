@@ -784,7 +784,7 @@ function App() {
 
 
             },
-            "(min-width: 1000px) and (max-width: 1439px) and (min-height: 768px)": function () {
+            "(min-width: 1024px) and (max-width: 1439px) and (min-height: 768px)": function () {
                 // first section
                 var tl = gsap.timeline({
                     scrollTrigger: {
@@ -1854,8 +1854,8 @@ function App() {
                 })
 
                 t10.to('#circle1', {
-                    top: "912%",
-                    left: "5%",
+                    top: "920%",
+                    left: "8%",
                     rotate: "180deg",
                     // scale: 0.8,
                     // duration: 2,
@@ -1866,8 +1866,8 @@ function App() {
                 }, 'circles');
 
                 t10.to('#circle2', {
-                    top: "912%",
-                    left: "100%",
+                    top: "920%",
+                    left: "90%",
                     rotate: "180deg",
                     // scale: 0.8,
                     // duration: 2,
@@ -1878,7 +1878,7 @@ function App() {
                 }, 'circles');
 
                 t10.to('#circle3', {
-                    top: "912%",
+                    top: "920%",
                     left: "35%",
                     rotate: "180deg",
                     scale: 1,
@@ -1890,7 +1890,7 @@ function App() {
                 }, 'circles');
 
                 t10.to('#circle4', {
-                    top: "912%",
+                    top: "920%",
                     left: "46.6%",
                     rotate: "180deg",
                     scale: 1.8,
@@ -1902,8 +1902,8 @@ function App() {
                 }, 'circles');
 
                 t10.to('#circle5', {
-                    top: "912%",
-                    left: "68%",
+                    top: "920%",
+                    left: "60%",
                     rotate: "180deg",
                     scale: 1,
                     // duration: 2,
@@ -1914,7 +1914,7 @@ function App() {
                 }, 'circles');
 
                 t10.to('#circle6', {
-                    top: "912%",
+                    top: "920%",
                     left: "48%",
                     rotate: "180deg",
                     scale: 1.6,
@@ -1926,7 +1926,7 @@ function App() {
                 }, 'circles');
 
                 t10.to('#circle7', {
-                    top: "912%",
+                    top: "920%",
                     left: "48%",
                     rotate: "180deg",
                     scale: 1.4,
@@ -2092,7 +2092,7 @@ function App() {
 
 
             },
-            "(min-width: 1910px) and (max-width: 2559px) and (min-height: 1070px) and (max-height: 1439px)": function () {
+            "(min-width: 1600px) and (max-width: 2559px) and (min-height: 900px) and (max-height: 1440px)": function () {
                 // first section
                 var tl = gsap.timeline({
                     scrollTrigger: {
@@ -3400,6 +3400,661 @@ function App() {
 
 
             },
+            // "all": function () {
+            //     // first section
+            //     var tl = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".second-section",
+            //             start: "50% 100%",
+            //             end: "100% 100%",
+            //             scrub: true,
+            //             // visibility: "visible",
+            //             // markers: true
+            //             // scroll: true
+            //         }
+            //     })
+
+            //     // Animate all circles together
+            //     // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
+
+            //     // Position circles 1, 3, 6 vertically on the left side
+            //     tl.to('#circle2', {
+            //         top: "160%",
+            //         left: "35%",
+            //         rotate: "180deg",
+            //         scale: 0.8,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#FF9999"
+            //     }, 'circles');
+
+            //     tl.to('#circle1', {
+            //         top: "146%",
+            //         left: "28%",
+            //         rotate: "180deg",
+            //         scale: 1,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#D4A5A5"
+            //     }, 'circles');
+
+            //     tl.to('#circle6', {
+            //         top: "131%",
+            //         left: "35%",
+            //         rotate: "180deg",
+            //         scale: 0.8,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#FFEEAD"
+            //     }, 'circles');
+
+            //     // Position circle 4 in the middle
+            //     tl.to('#circle4', {
+            //         top: "144%",
+            //         left: "47%",
+            //         rotate: "180deg",
+            //         scale: 1.2,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#9DE0AD"
+            //     }, 'circles');
+
+            //     // Position circles 2, 5, 7 vertically on the right side
+            //     tl.to('#circle7', {
+            //         top: "131%",
+            //         left: "60%",
+            //         rotate: "180deg",
+            //         scale: 0.8,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#FFEEAD"
+            //     }, 'circles');
+
+            //     tl.to('#circle3', {
+            //         top: "146%",
+            //         left: "68%",
+            //         rotate: "180deg",
+            //         scale: 1,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#45B7D1"
+            //     }, 'circles');
+
+            //     tl.to('#circle5', {
+            //         top: "160%",
+            //         left: "60%",
+            //         rotate: "180deg",
+            //         scale: 0.8,
+            //         duration: 2,
+            //         visibility: "visible",
+            //         opacity: 1,
+            //         background: "#FF9999"
+            //         // transition: "all 2s",
+            //     }, 'circles');
+
+            //     // second section animation
+            //     // var t2 = gsap.timeline({
+            //     //     scrollTrigger: {
+            //     //         trigger: ".sticky-section",
+            //     //         start: "0% 100%",
+            //     //         end: "0% 100%",
+            //     //         scrub: true
+            //     //     }
+            //     // })
+
+            //     // t2.to('#circle1', {
+            //     //     top: "220%",
+            //     //     left: "12%",
+            //     //     rotate: "180deg",
+            //     //     scale: 1,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // t2.to('#circle3', {
+            //     //     top: "327%",
+            //     //     left: "18%",
+            //     //     rotate: "180deg",
+            //     //     scale: 1,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // t2.to('#circle6', {
+            //     //     top: "350%",
+            //     //     left: "29%",
+            //     //     rotate: "180deg",
+            //     //     scale: 1,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // // Position circle 4 in the middle
+            //     // t2.to('#circle4', {
+            //     //     top: "303%",
+            //     //     left: "29%",
+            //     //     rotate: "180deg",
+            //     //     scale: 0.8,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // // Position circles 2, 5, 7 vertically on the right side
+            //     // t2.to('#circle2', {
+            //     //     top: "283%",
+            //     //     left: "52%",
+            //     //     rotate: "180deg",
+            //     //     scale: 1,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // t2.to('#circle5', {
+            //     //     top: "327%",
+            //     //     left: "51%",
+            //     //     rotate: "180deg",
+            //     //     scale: 1,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // t2.to('#circle7', {
+            //     //     top: "350%",
+            //     //     left: "55%",
+            //     //     rotate: "180deg",
+            //     //     scale: 1,
+            //     //     duration: 1
+            //     // }, 'circles');
+
+            //     // third section animation
+            //     var t3 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-1",
+            //             start: "10% 100%",
+            //             end: "50% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t3.to('#circle1,#circle2,#circle3,#circle6,#circle5,#circle7', {
+            //         top: "214%",
+            //         left: "6%",
+            //         rotate: "180deg",
+            //         scale: 1,
+            //         duration: 2,
+            //         ease: "power3.out",
+            //         opacity: 0,
+            //         // display: "hidden",
+            //     }, 'circles');
+
+
+            //     t3.to('#circle4', {
+            //         top: "212%",
+            //         left: "5%",
+            //         rotate: "180deg",
+            //         scale: 0.8,
+            //         duration: 2,
+            //         ease: "power3.out",
+            //         opacity: 0,
+
+            //         // display: "hidden",
+            //     }, 'circles');
+
+
+            //     var t4 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-1",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+
+            //     t4.to('#circle4', {
+            //         top: "312%",
+            //         left: "49%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         // visibility: "hidden",
+            //         // opacity: 0,
+
+            //     }, 'circles');
+
+
+            //     t4.to('#circle1', {
+            //         top: "312%",
+            //         left: "10%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // visibility: "hidden",
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //     }, 'circles');
+
+
+            //     t4.to('#circle2', {
+            //         top: "312%",
+            //         left: "25%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // visibility: "hidden",
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //     }, 'circles');
+
+            //     t4.to('#circle3', {
+            //         top: "312%",
+            //         left: "35%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // visibility: "hidden",
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //     }, 'circles');
+
+            //     t4.to('#circle5', {
+            //         top: "312%",
+            //         left: "65%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // visibility: "hidden",
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //     }, 'circles');
+
+            //     t4.to('#circle6', {
+            //         top: "312%",
+            //         left: "80%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // visibility: "hidden",
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //     }, 'circles');
+
+            //     t4.to('#circle7', {
+            //         top: "312%",
+            //         left: "96%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         duration: 20,
+            //         opacity: 0,
+            //         // visibility: "hidden",
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //     }, 'circles');
+
+
+
+            //     var t5 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-2",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t5.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
+            //         top: "412%",
+            //         left: "10%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         // opacity: 1,
+            //     }, 'circles');
+
+
+            //     var t6 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-3",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t6.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
+            //         top: "512%",
+            //         left: "10%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         // opacity: 1,
+            //     }, 'circles');
+
+
+            //     var t7 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-4",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t7.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
+            //         top: "612%",
+            //         left: "10%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         // opacity: 1,
+            //     }, 'circles');
+
+
+            //     var t8 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-5",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t8.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
+            //         top: "712%",
+            //         left: "10%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         // opacity: 1,
+            //     }, 'circles');
+
+            //     var t9 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-6",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t9.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
+            //         top: "812%",
+            //         left: "10%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         // opacity: 1,
+            //     }, 'circles');
+
+
+            //     var t10 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".sticky-7",
+            //             start: "90% 100%",
+            //             end: "100% 50%",
+            //             // duration: 10,
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t10.to('#circle1', {
+            //         top: "920%",
+            //         left: "8%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         opacity: 1,
+            //         zIndex: 100,
+            //     }, 'circles');
+
+            //     t10.to('#circle2', {
+            //         top: "920%",
+            //         left: "90%",
+            //         rotate: "180deg",
+            //         // scale: 0.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t10.to('#circle3', {
+            //         top: "920%",
+            //         left: "35%",
+            //         rotate: "180deg",
+            //         scale: 1,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t10.to('#circle4', {
+            //         top: "920%",
+            //         left: "46.6%",
+            //         rotate: "180deg",
+            //         scale: 1.8,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 0,
+            //     }, 'circles');
+
+            //     t10.to('#circle5', {
+            //         top: "920%",
+            //         left: "60%",
+            //         rotate: "180deg",
+            //         scale: 1,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t10.to('#circle6', {
+            //         top: "920%",
+            //         left: "48%",
+            //         rotate: "180deg",
+            //         scale: 1.6,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 0,
+            //     }, 'circles');
+
+            //     t10.to('#circle7', {
+            //         top: "920%",
+            //         left: "48%",
+            //         rotate: "180deg",
+            //         scale: 1.4,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 0,
+            //     }, 'circles');
+
+
+
+
+
+            //     //11
+            //     var t11 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".fifth-section",
+            //             start: "0% 100%",
+            //             end: "100% 30%",
+            //             // duration: "10",
+            //             ease: "power3.out",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t11.to('#circle1', {
+            //         top: "1100%",
+            //         left: "5%",
+            //         rotate: "180deg",
+            //         // scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         opacity: 1,
+            //         zIndex: 1,
+            //         // backgroundColor: "",
+            //     }, 'circles');
+
+            //     t11.to('#circle3', {
+            //         top: "1100%",
+            //         left: "15%",
+            //         rotate: "180deg",
+            //         // scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t11.to('#circle6', {
+            //         top: "1100%",
+            //         left: "25%",
+            //         rotate: "180deg",
+            //         // scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t11.to('#circle4', {
+            //         top: "1100%",
+            //         left: "47%",
+            //         rotate: "180deg",
+            //         scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t11.to('#circle7', {
+            //         top: "1100%",
+            //         left: "70%",
+            //         rotate: "180deg",
+            //         scale: 1.7,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t11.to('#circle5', {
+            //         top: "1100%",
+            //         left: "80%",
+            //         rotate: "180deg",
+            //         // scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     t11.to('#circle2', {
+            //         top: "1100%",
+            //         left: "90%",
+            //         rotate: "180deg",
+            //         // scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         zIndex: 100,
+            //         opacity: 1,
+            //     }, 'circles');
+
+            //     var t12 = gsap.timeline({
+            //         scrollTrigger: {
+            //             trigger: ".testimonial-section",
+            //             start: "40% 100%",
+            //             end: "100% 30%",
+            //             // duration: "10",
+            //             ease: "power3.out",
+            //             scrub: true
+            //         }
+            //     })
+
+            //     t12.to('#circle1', {
+            //         top: "1240%",
+            //         left: "90%",
+            //         rotate: "180deg",
+            //         // scale: 2,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         opacity: 1,
+            //         zIndex: 1,
+            //         // backgroundColor: "",
+            //     }, 'circles');
+
+            //     t12.to('#circle2', {
+            //         top: "1240%",
+            //         left: "5%",
+            //         rotate: "180deg",
+            //         // scale: 2
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         opacity: 1,
+            //         zIndex: 1,
+            //         // backgroundColor: "",
+            //     }, 'circles');
+
+            //     t12.to('#circle4', {
+            //         top: "1240%",
+            //         left: "46%",
+            //         rotate: "180deg",
+            //         scale: 0.6,
+            //         // duration: 2,
+            //         // ease: "power3.out",
+            //         // display: "hidden",
+            //         opacity: 1,
+            //         zIndex: 1,
+            //         // backgroundColor: "",
+            //     }, 'circles');
+
+                
+
+
+            // },
+            
             
         })
         gsap.to("#box1", {
