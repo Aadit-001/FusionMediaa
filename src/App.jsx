@@ -168,7 +168,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#D4A5A5"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -179,7 +179,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFEEAD"
                 }, 'circles');
 
                 // Position circle 4 in the middle

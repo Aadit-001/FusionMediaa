@@ -99,7 +99,7 @@ const Blog = () => {
             className="text-center"
           >
             <h1 className={`text-4xl md:text-5xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-6`}>
-              Insights & Perspectives
+              INSIGHTS & PERSPECTIVES
             </h1>
             <p className={`text-xl ${isDarkMode ? 'text-gray-200' : 'text-gray-700'} max-w-2xl mx-auto mb-8`}>
               Discover the latest trends, expert analysis, and innovative ideas in technology, business, and beyond.
