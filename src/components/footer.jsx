@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-y-10 md:gap-x-6">
           {/* Logo and Social Section */}
           <div className="mb-8 md:mb-0 md:w-1/4 flex-shrink-0">
-            <div className="h-[60px] flex items-start">
+            <div className="h-[60px] flex items-start pl-8 md:pl-0">
               <img 
                 src={isDarkMode ? logoWhite : logo} 
                 alt="Fusion Media Logo" 
@@ -29,7 +29,7 @@ const Footer = () => {
                 style={{ position: 'relative', left: 0 }}
               />
             </div>
-            <div className="mt-4">
+            <div className="mt-4 pl-8 md:pl-0">
               <p className={`${isDarkMode ? 'text-gray-200' : 'text-gray-600'} max-w-xs mb-6`}>
                 Transforming ideas into exceptional digital experiences through innovative design and technology.
               </p>
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           {/* Services Section */}
-          <div className="mb-8 md:mb-0 md:w-1/4">
+          <div className="mb-8 md:mb-0 md:w-1/4 pl-8 md:pl-0 items-start flex flex-col">
             <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Services</h3>
             <ul className="space-y-2">
               <li><Link to="/services/content-marketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Content Marketing</Link></li>
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Section */}
-          <div className="mb-8 md:mb-0 md:w-1/5">
+          <div className="mb-8 md:mb-0 md:w-1/5 pl-8 md:pl-0 items-start flex flex-col">
             <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/about" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>About Us</Link></li>
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info Section */}
-          <div className="md:w-1/4">
+          <div className="md:w-1/4 pl-6 md:pl-0 items-start flex flex-col">
             <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3 ml-2`}>Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-start space-x-3">

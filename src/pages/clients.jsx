@@ -97,7 +97,7 @@ const Clients = () => {
         <div className="h-[60px]"></div>
         
         {/* Breadcrumb Navigation */}
-        <div className={`flex items-center gap-2 text-2xl mb-8 justify-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+        <div className={`flex items-center gap-2 mt-6 text-2xl mb-8 justify-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
           <span>Home</span>
           <span>•</span>
           <span className={isDarkMode ? 'text-gray-300' : 'text-gray-400'}>Clients</span>
