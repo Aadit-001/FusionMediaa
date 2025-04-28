@@ -156,7 +156,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FF9999"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -167,7 +167,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#D4A5A5"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -178,7 +178,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FFEEAD"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -190,7 +190,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#9DE0AD"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -202,7 +202,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FFEEAD"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -213,7 +213,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#45B7D1"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -224,7 +224,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FF9999"
+                    background: "#f3b2e8"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -810,7 +810,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FF9999"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -821,7 +821,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#D4A5A5"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -832,7 +832,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FFEEAD"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -844,7 +844,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#9DE0AD"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -856,7 +856,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FFEEAD"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -867,7 +867,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#45B7D1"
+                    background: "#f3b2e8"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -878,7 +878,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FF9999"
+                    background: "#f3b2e8"
                     // transition: "all 2s",
                 }, 'circles');
 

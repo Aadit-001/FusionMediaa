@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bus from '../assets/bus.png';  
-import airport from '../assets/airport.png';
-import billboard from '../assets/billboard.png';
-import theatre from '../assets/theatre.png';
-import metro from '../assets/metro.png';
 import { motion } from 'framer-motion';
 import { useDarkMode } from '../context/DarkModeContext';
+import beyondGames from '../assets/work/beyond_games.mp4';
+import mountainWoods from '../assets/work/mountain_woods.mp4';
+import fusion_events1 from '../assets/work/fusion_events1.mp4';
+import fusion_events2 from '../assets/work/fusion_events2.mp4';
+import fusion_events3 from '../assets/work/fusion_events3.mp4';
+import fusion_fly from '../assets/work/fusion_fly.mp4';
 
 const Work = () => {
   const navigate = useNavigate();
@@ -14,45 +15,10 @@ const Work = () => {
 
   const handleNavigation = () => {
     navigate('/contact');
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
-
-  const projects = [
-    {
-      id: 1,
-      title: "Bus Wrap Ads - OOH",
-      description: "Eye-catching full vehicle wraps that transform city buses into moving brand experiences, capturing attention across urban environments.",
-      image: bus,
-      
-    },
-    {
-      id: 2,
-      title: "Airport Ads",
-      description: "Strategic advertising placements targeting high-value travelers in premium airport locations for maximum brand visibility and impact.",
-      image: airport,
-      
-    },
-    {
-      id: 3,
-      title: "Billboard & Hoarding",
-      description: "Commanding large-format outdoor displays designed to make bold statements and create lasting impressions on high-traffic roadways.",
-      image: billboard,
-      
-    },
-    {
-      id: 4,
-      title: "Theatre Ads",
-      description: "Immersive cinema advertising that engages captive audiences in a distraction-free environment, creating memorable brand moments.",
-      image: theatre,
-      
-    },
-    {
-      id: 5,
-      title: "Metro Train Wrap",
-      description: "Dynamic train exterior wraps that transform public transportation into moving canvases, delivering your message throughout metropolitan areas.",
-      image: metro,
-      
-    }
-  ];
 
   // Variants for the text reveal animation
   const textRevealVariants = {
@@ -62,9 +28,9 @@ const Work = () => {
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`} style={{ fontFamily: 'Roboto, sans-serif' }}>
-      <div className="container mx-auto px-4 md:px-6 pt-[200px]">
+      <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-[200px]">
         
-        <div className="mb-24">
+        <div className="mb-24 text-center mt-6 md:mt-22">
           <motion.h1
             initial="hidden"
             animate="visible"
@@ -73,53 +39,109 @@ const Work = () => {
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             <motion.div variants={textRevealVariants}>
-              We Have
+              We Create
             </motion.div>
             <motion.div variants={textRevealVariants}>
-              Designed Experiences
+              Memorable Brand Experiences
             </motion.div>
             <motion.div variants={textRevealVariants}>
-              For Over 100 Projects.
+              That Inspire & Engage
             </motion.div>
           </motion.h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 mb-24">
-          {projects.map((project) => (
-            <div key={project.id} className="group cursor-pointer">
-              <div className="relative overflow-hidden mb-6">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-[400px] object-cover" 
-                />
+        {/* Professional Minimalist Video Gallery Section */}
+        <div className="mb-24">
+          <h2 className={`text-4xl md:text-5xl font-semibold mb-10 text-center ${isDarkMode ? 'text-white' : 'text-purple-600'}`}
+              style={{ fontFamily: 'Playfair Display, serif', letterSpacing: '0.02em' }}>
+            Featured Video Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 xl:gap-20">
+            {/* Video 1 */}
+            <div className="flex flex-col items-center group">
+              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
+                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={beyondGames} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/beyond_games.jpg" />
               </div>
-              <div className="space-y-3">
-                <h3 className={`text-2xl font-normal ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Playfair Display, serif' }}>{project.title}</h3>
-                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{project.description}</p>
-                <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{project.category}</p>
-                <p className={`${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-black'} transition-colors`}>{project.viewLink}</p>
+              <div className="mt-3 w-full">
+                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Beyond Games Activation</p>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Immersive brand event for gaming enthusiasts</p>
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className={`border ${isDarkMode ? 'border-gray-700' : 'border-gray-300'} rounded-lg py-10 px-16 flex justify-between items-center h-32`}> 
-          <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-4xl font-medium ml-[100px]`}>We have more awesome work to show</p>
-          <div
-            onClick={handleNavigation}
-            className="bg-[#6366F1] text-white rounded-full p-4 hover:bg-[#5558DD] transition-colors cursor-pointer mr-[100px]"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            {/* Video 2 */}
+            <div className="flex flex-col items-center group">
+              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
+                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={mountainWoods} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/mountain_woods.jpg" />
+              </div>
+              <div className="mt-3 w-full">
+                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Mountain Woods Launch</p>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Nature-inspired product launch campaign</p>
+              </div>
+            </div>
+            {/* Video 3 */}
+            <div className="flex flex-col items-center group">
+              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
+                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events1} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events1.jpg" />
+              </div>
+              <div className="mt-3 w-full">
+                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events – Corporate Event</p>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Corporate events and experiences</p>
+              </div>
+            </div>
+            {/* Video 4 */}
+            <div className="flex flex-col items-center group">
+              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
+                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events2} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events2.jpg" />
+              </div>
+              <div className="mt-3 w-full">
+                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events </p>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Innovative displays and audience interaction</p>
+              </div>
+            </div>
+            {/* Video 5 */}
+            <div className="flex flex-col items-center group">
+              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
+                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events3} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events3.jpg" />
+              </div>
+              <div className="mt-3 w-full">
+                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events</p>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Memorable events and experiences</p>
+              </div>
+            </div>
+            {/* Video 6 */}
+            <div className="flex flex-col items-center group">
+              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
+                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_fly} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_fly.jpg" />
+              </div>
+              <div className="mt-3 w-full">
+                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Fly – Outdoor Campaign</p>
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Creative outdoor visuals and placements</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="h-[80px]"></div>
+        {/* Decent, Neutral CTA Section */}
+        <div className={`relative rounded-2xl py-12 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mb-8 border ${isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'} shadow-sm`}> 
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+            <h3 className={`text-2xl md:text-4xl font-bold mb-2 ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`} style={{fontFamily: 'Playfair Display, serif'}}>We have more awesome work to show</h3>
+            <p className={`text-base md:text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-700'} max-w-xl`}>Discover more of our impactful campaigns and creative solutions. Reach out to see how we can elevate your brand.</p>
+          </div>
+          <button
+            onClick={handleNavigation}
+            className="flex items-center gap-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 font-semibold rounded-full px-8 py-4 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-all text-lg md:mr-[100px] mx-auto md:mx-0"            
+            style={{ boxShadow: '0 2px 10px 0 rgba(0,0,0,0.05)' }}
+          >
+            Contact Us
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
 
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 rounded-lg mt-22 h-[280px] flex items-center justify-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className="h-12 md:h-[80px]"></div>
+
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-14 md:py-20 rounded-lg mt-14 md:mt-22 min-h-[220px] md:min-h-[280px] flex items-center justify-center">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center max-w-3xl md:max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Playfair Display, serif', letterSpacing: '0.01em' }}>
             Let's create a measurable<br />
             impact on your business.
           </h2>
