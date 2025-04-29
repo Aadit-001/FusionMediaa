@@ -47,6 +47,7 @@
 /* Hero Section */
 .hero-section {
   height: 100vh;
+  
   /* background-color: #ffeb3b; */
 }
 
@@ -387,6 +388,7 @@ a:hover {
 .cardd {
   flex: 0 0 auto;
   scroll-snap-align: start;
+  /* background-color: purple; */
 }
 
 
@@ -612,14 +614,50 @@ a:hover {
   z-index: -140;
 
 } */
-#box1 ,#box2 ,#box3 ,#box4{
+#box1{
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background: #000;
+  background: purple;
   margin: 0 auto;
   display: block;
   /* visibility: hidden; */
+  /* z-index: 110; */
+}
+
+
+#box2{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: purple  ;
+  margin: 0 auto;
+  display: block;
+  /* visibility: hidden; */
+  /* z-index: 110; */
+}
+
+
+#box3{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: purple;
+  margin: 0 auto;
+  display: block;
+  /* visibility: hidden; */
+  /* z-index: 110; */
+}
+
+
+#box4{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: purple;
+  margin: 0 auto;
+  display: block;
+  /* visibility: hidden; */ 
   /* z-index: 110; */
 }
 

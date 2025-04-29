@@ -27,10 +27,10 @@ const Work = () => {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-black' : 'bg-white'}`} style={{ fontFamily: 'Roboto, sans-serif' }}>
+    <div className={`min-h-screen -mt-5 ${isDarkMode ? 'bg-black' : 'bg-white'}`} style={{ fontFamily: 'Roboto, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-[200px]">
         
-        <div className="mb-24 text-center mt-6 md:mt-22">
+        <div className="mb-24 text-center mt-10 pt-10 md:mt-22">
           <motion.h1
             initial="hidden"
             animate="visible"
@@ -128,7 +128,7 @@ const Work = () => {
           </div>
           <button
             onClick={handleNavigation}
-            className="flex items-center gap-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 font-semibold rounded-full px-8 py-4 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-all text-lg md:mr-[100px] mx-auto md:mx-0"            
+            className="flex cursor-pointer items-center gap-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 font-semibold rounded-full px-8 py-4 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-all text-lg md:mr-[100px] mx-auto md:mx-0"            
             style={{ boxShadow: '0 2px 10px 0 rgba(0,0,0,0.05)' }}
           >
             Contact Us
