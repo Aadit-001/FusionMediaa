@@ -107,7 +107,7 @@ const Navbar = () => {
 
             <div className={`menuu w-full flex items-center justify-between ${isDarkMode ? 'text-white' : 'text-black'}`}>
                 {/* Logo */}
-                <Link to="/" className="inline-block w-[100%] md:w-[25%]" onClick={handleNavigation}>
+                <Link to="/" className="inline-block w-[100%] scale-125 md:w-[25%]" onClick={handleNavigation}>
                     <img 
                         src={isDarkMode ? logoWhite : logo} 
                         alt="Logo" 
@@ -171,7 +171,7 @@ const Navbar = () => {
                         </NavLink>
                         {isServicesHovered && (
                             <div 
-                                className={`absolute top-full ml-16 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6 bg-white shadow-2xl rounded-lg mt-8 z-50 ${
+                                className={`absolute top-full ml-16 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6  shadow-2xl rounded-lg mt-8 z-50 ${
                                     isDarkMode ? 'bg-gray-900 border border-gray-800' : 'bg-white border border-gray-200'
                                 } `}
                                 onMouseEnter={handleServicesMouseEnter}
@@ -180,18 +180,16 @@ const Navbar = () => {
                                 {SERVICES.map((service, index) => (
                                     <div
                                         key={index}
-                                        className={`p-4 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform ${
-                                            isDarkMode ? 'bg-gray-900 hover:bg-gray-800' : service.lightColor
-                                        }`}
+                                        className={`p-4 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform  ${service.lightColor}`}
                                         onClick={() => handleServiceClick(service.link)}
                                     >
                                         <div>
-                                            <h3 className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{service.name}</h3>
-                                            <p className={`text-sm ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>{service.description}</p>
+                                            <h3 className={`font-bold text-lg ${isDarkMode ? 'text-black' : 'text-gray-900'}`}>{service.name}</h3>
+                                            <p className={`text-sm ${isDarkMode ? 'text-black' : 'text-gray-700'}`}>{service.description}</p>
                                         </div>
                                         <svg 
                                             xmlns="http://www.w3.org/2000/svg" 
-                                            className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-gray-600'}`}
+                                            className={`h-6 w-6 ${isDarkMode ? 'text-black' : 'text-gray-600'}`}
                                             fill="none" 
                                             viewBox="0 0 24 24" 
                                             stroke="currentColor"
@@ -239,7 +237,7 @@ const Navbar = () => {
                     <li>
                         <button
                             onClick={toggleDarkMode}
-                            className={`p-2 rounded-full hover:scale-105 cursor-pointer ${isDarkMode ? 'text-yellow-400 hover:text-yellow-300' : 'text-gray-700 hover:text-gray-900'}`}
+                            className={`p-2 rounded-full hover:scale-105 cursor-pointer ${isDarkMode ? 'text-white hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
                         >
                             {isDarkMode ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -264,7 +262,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-end w-full md:hidden">
                         <button
                             onClick={toggleDarkMode}
-                            className={`p-2 rounded-full ${isDarkMode ? 'text-yellow-400 hover:text-yellow-300' : 'text-gray-700 hover:text-gray-900'}`}
+                            className={`p-2 rounded-full ${isDarkMode ? 'text-white hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
                         >
                             {isDarkMode ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -290,7 +288,7 @@ const Navbar = () => {
 
                 {/* Mobile Dropdown */}
                 {isMobileMenuOpen && (
-                    <div className="absolute top-full left-0 w-full bg-white shadow-2xl z-50 flex flex-col p-4 animate-fadeIn">
+                    <div className={`absolute top-full right-0 w-[70%] ${isDarkMode ? 'bg-gray-900 border border-gray-800 shadow-amber-100/20 shadow-lg' : 'bg-white border border-gray-200'} shadow-2xl z-50 flex flex-col p-4 animate-fadeIn`}>
                         <NavLink to="/work" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Work</NavLink>
                         <button className="py-2 flex items-center w-full" onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}>
                             <span>Services</span>
@@ -315,7 +313,7 @@ const Navbar = () => {
                         <NavLink to="/blogs" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Blogs</NavLink>
                         <NavLink to="/admin/blog" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Admin</NavLink>
                         <Link to="/contact" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>
-                            <button className="btn liquid w-full"><span>Contact</span></button>
+                            <button className={`${isDarkMode ? 'btnWhite liquidWhite' : 'btn liquid'} w-full`}><span>Contact</span></button>
                         </Link>
                     </div>
                 )}
