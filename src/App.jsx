@@ -4291,7 +4291,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className={`h-20 w-72 md:w-128 flex items-center mt-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-purple-900 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
                                 </div>
@@ -4340,7 +4340,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Public Relations</span>
                                 </div>
@@ -4365,7 +4365,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
                                 </div>
@@ -4396,7 +4396,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Website Services</span>
                                 </div>
@@ -4428,7 +4428,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Event Marketing</span>
                                 </div>
@@ -4459,7 +4459,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Branding</span>
                                 </div>
@@ -4489,7 +4489,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>OOH</span>
                                 </div>
