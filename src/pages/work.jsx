@@ -30,7 +30,7 @@ const Work = () => {
     <div className={`min-h-screen -mt-5 ${isDarkMode ? 'bg-black' : 'bg-white'}`} style={{ fontFamily: 'Roboto, sans-serif' }}>
       <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-[200px]">
         
-        <div className="mb-24 text-center mt-10 pt-10 md:mt-22">
+        <div className="mb-24 text-center mt-10 pt-20 md:pt-10  md:mt-22">
           <motion.h1
             initial="hidden"
             animate="visible"
