@@ -22,10 +22,13 @@ import White_image from './assets/White_image.png';
 import horeca from './assets/clients/horeca.jpg';
 import healthyMeal from './assets/clients/healthyMeal.jpg';
 import mountainWood from './assets/clients/mountainWood.png';
-import fusionEvent from './assets/clients/fusionEvent.png';
+import fusionEvent from './assets/parentCompany/fusionEvent.png';
+import fusion_fly from './assets/parentCompany/fusion_fly.png';
+import fusion_horeca from './assets/parentCompany/fusion_horeca.png';
+import fusion_vector from './assets/parentCompany/fusion_vector.png';
 import { useDarkMode } from './context/DarkModeContext';
 import Black_image from './assets/Black_image.png';
-import LOGO1 from './assets/LOGO-FUSION-EVENTS[2].png';
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -4288,7 +4291,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className={`h-20 w-72 md:w-128 flex items-center mt-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-purple-900 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
                                 </div>
@@ -4315,18 +4318,18 @@ function App() {
                                     </motion.div>
                                 </div>
                             </div>
-                            <div className={` h-[60%] absolute top-1/4 left-1/2 hidden md:block`}>
+                            <div className={` h-[60%] absolute top-1/6 left-1/2 hidden md:block`}>
                                 {isDarkMode ? (
                                     <DotLottieReact
                                         // src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                                        src="https://lottie.host/8bedc466-87d9-482e-a5bf-333308a85012/jQHhLK7eOX.lottie"
+                                        src="https://lottie.host/5395e9ab-d434-4578-9b07-11314eb07be9/ZIGmC9zQ7a.lottie"
                                         loop
                                         autoplay
                                     />
                                 ) : (
                                     <DotLottieReact
                                         // src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
-                                        src="https://lottie.host/8bedc466-87d9-482e-a5bf-333308a85012/jQHhLK7eOX.lottie"
+                                        src="https://lottie.host/5395e9ab-d434-4578-9b07-11314eb07be9/ZIGmC9zQ7a.lottie"
                                         loop
                                         autoplay
                                     />
@@ -4337,7 +4340,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Public Relations</span>
                                 </div>
@@ -4362,7 +4365,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
                                 </div>
@@ -4393,7 +4396,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Website Services</span>
                                 </div>
@@ -4425,7 +4428,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Event Marketing</span>
                                 </div>
@@ -4456,7 +4459,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Branding</span>
                                 </div>
@@ -4486,7 +4489,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-red-600 rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>OOH</span>
                                 </div>
@@ -4531,7 +4534,7 @@ function App() {
                                 <li>• UI/UX</li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
-                                <img src={LOGO1} alt="logo" className="contain h-full w-full" />
+                                <img src={fusion_vector} alt="logo" className="contain h-full w-full" />
                             </div>
                         </div>
                         {/* </div> */}
@@ -4542,15 +4545,17 @@ function App() {
                         {/* <div className="contentt flex items-center overflow-hidden"> */}
                         <div className='h-10 w-10 rounded-full ' id='box2'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
-                            <div className='pt-20 text-4xl font-bold mb-5'>Fusion Vector</div>
+                            <div className='pt-20 text-4xl font-bold mb-5'>Fusion Events</div>
                             <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Designing the Web, Defining Success</li>
-                                <li>• HTML, CSS, JavaScript</li>
-                                <li>• Web Development</li>
-                                <li>• UI/UX</li>
+                                <li>• Turning Events into Memories</li>
+                                <li>• Corporate Events</li>
+                                <li>• Wedding Events</li>
+                                <li>• ATL\BTL Activation</li>
+                                <li>• Exhibitions</li>
+                                <li>• Talent Management</li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
-                                <img src={LOGO1} alt="logo" className="contain h-full w-full" />
+                                <img src={fusionEvent} alt="logo" className="contain h-full w-full" />
                             </div>
                         </div>
                         {/* </div> */}
@@ -4561,15 +4566,15 @@ function App() {
                         {/* <div className="contentt flex items-center overflow-hidden"> */}
                         <div className='h-10 w-10 rounded-full ' id='box3'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
-                            <div className='pt-20 text-4xl font-bold mb-5'>Fusion Vector</div>
+                            <div className='pt-20 text-4xl font-bold mb-5'>Fusion Horeca</div>
                             <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Designing the Web, Defining Success</li>
-                                <li>• HTML, CSS, JavaScript</li>
-                                <li>• Web Development</li>
-                                <li>• UI/UX</li>
+                                <li>• Where Luxury Meets Comfort</li>
+                                <li>• Air BNB</li>
+                                <li>• Stay</li>
+                                <li>• Plush Rooms</li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
-                                <img src={LOGO1} alt="logo" className="contain h-full w-full" />
+                                <img src={fusion_horeca} alt="logo" className="contain h-full w-full" />
                             </div>
                         </div>
                         {/* </div> */}
@@ -4580,15 +4585,14 @@ function App() {
                         {/* <div className="contentt flex items-center overflow-hidden"> */}
                         <div className='h-10 w-10 rounded-full ' id='box4'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
-                            <div className='pt-20 text-4xl font-bold mb-5'>Fusion Vector</div>
+                            <div className='pt-20 text-4xl font-bold mb-5'>Fusion Fly</div>
                             <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Designing the Web, Defining Success</li>
-                                <li>• HTML, CSS, JavaScript</li>
-                                <li>• Web Development</li>
-                                <li>• UI/UX</li>
+                                <li>• Travel With Passion</li>
+                                <li>• Fly Global</li>
+                                <li>• Hospitatily</li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
-                                <img src={LOGO1} alt="logo" className="contain h-full w-full" />
+                                <img src={fusion_fly} alt="logo" className="contain h-full w-full" />
                             </div>
                         </div>
                         {/* </div> */}

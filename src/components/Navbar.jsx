@@ -10,43 +10,43 @@ const SERVICES = [
   {
     name: "Content Marketing",
     description: "Engaging content that connects.",
-    lightColor: "bg-blue-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/contentmarketing"
   },
   {
     name: "Branding",
     description: "Identity that stands out.",
-    lightColor: "bg-green-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/branding"
   },
   {
     name: "Social Media Marketing",
     description: "Buzz where it matters.",
-    lightColor: "bg-purple-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/socialmediamarketing"
   },
   {
     name: "Website Services",
     description: "Websites that work.",
-    lightColor: "bg-indigo-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/website"
   },
   {
     name: "Event Marketing",
     description: "Events that pop.",
-    lightColor: "bg-red-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/eventmarketing"
   },
   {
     name: "Public Relations",
     description: "Shaping public voice.",
-    lightColor: "bg-yellow-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/publicrelations"
   },
   {
     name: "OOH",
     description: "Ads that turn heads.",
-    lightColor: "bg-pink-100",
+    lightColor: "bg-[#8F87F1]",
     link: "/services/ooh"
   }
 ];
