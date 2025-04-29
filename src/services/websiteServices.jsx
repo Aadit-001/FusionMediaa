@@ -246,31 +246,31 @@ const Branding = () => {
     {
       name: "Public Relations",
       description: "Buzz where it matters.",
-      color: "bg-purple-100",
+      color: "bg-yellow-100",
       link: "/services/publicrelations"
     },
     {
       name: "Social Media Marketing",
       description: "Websites that work.",
-      color: "bg-indigo-100",
+      color: "bg-purple-100",
       link: "/services/socialmediamarketing"
     },
     {
       name: "Branding",
       description: "Events that pop.",
-      color: "bg-red-100",
+      color: "bg-green-100",
       link: "/services/branding"
     },
     {
       name: "OOH",
       description: "Ads that turn heads.",
-      color: "bg-yellow-100",
+      color: "bg-pink-100",
       link: "/services/ooh"
     },
     {
       name: "Event Marketing",
       description: "Ads that turn heads.",
-      color: "bg-pink-100",
+      color: "bg-red-100",
       link: "/services/eventmarketing"
     }
   ];
