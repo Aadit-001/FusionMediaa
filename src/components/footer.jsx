@@ -47,12 +47,12 @@ const Footer = () => {
           <div className="mb-8 md:mb-0 md:w-1/4 pl-8 md:pl-0 items-start flex flex-col">
             <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'} mb-3`}>Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services/content-marketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Content Marketing</Link></li>
+              <li><Link to="/services/contentmarketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Content Marketing</Link></li>
               <li><Link to="/services/branding" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Branding</Link></li>
-              <li><Link to="/services/social-media-marketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Social Media Marketing</Link></li>
-              <li><Link to="/services/website-services" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Website Services</Link></li>
-              <li><Link to="/services/event-marketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Event Marketing</Link></li>
-              <li><Link to="/services/public-relations" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Public Relations</Link></li>
+              <li><Link to="/services/socialmediamarketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Social Media Marketing</Link></li>
+              <li><Link to="/services/website" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Website Services</Link></li>
+              <li><Link to="/services/eventmarketing" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Event Marketing</Link></li>
+              <li><Link to="/services/publicrelations" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>Public Relations</Link></li>
               <li><Link to="/services/ooh" onClick={handleLinkClick} className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>OOH</Link></li>
             </ul>
           </div>
