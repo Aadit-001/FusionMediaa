@@ -31,6 +31,7 @@ import Black_image from './assets/Black_image.png';
 
 
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 
