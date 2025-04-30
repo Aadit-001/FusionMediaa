@@ -266,7 +266,7 @@ const Branding = () => {
     gsap.to("#box10", {
       scale: 400,
       transformOrigin: "50% 50%",
-      background: "purple",
+      background: "#C8E6C9",
       duration: 1,
       ease: "power2.out",
       // visibility: "visible",
@@ -315,7 +315,7 @@ const Branding = () => {
         >
           <motion.path
             d="M8 12h32v4H8zm0 10h32v4H8zm0 10h32v4H8z"
-            stroke="#FF4D6D"
+            stroke="#C8E6C9"
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
@@ -326,7 +326,7 @@ const Branding = () => {
             cx="36"
             cy="14"
             r="6"
-            fill="#FF4D6D"
+            fill="#C8E6C9"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.3, delay: 1.5 }}
@@ -347,7 +347,7 @@ const Branding = () => {
         >
           <motion.path
             d="M24 6L4 26l20 20 20-20L24 6z"
-            stroke="#FF4D6D"
+            stroke="#C8E6C9"
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
@@ -372,7 +372,7 @@ const Branding = () => {
             cx="24"
             cy="24"
             r="20"
-            stroke="#FF4D6D"
+            stroke="#C8E6C9"
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
@@ -381,7 +381,7 @@ const Branding = () => {
           />
           <motion.path
             d="M12 24l8 8 16-16"
-            stroke="#FF4D6D"
+            stroke="#C8E6C9"
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
@@ -404,7 +404,7 @@ const Branding = () => {
         >
           <motion.path
             d="M6 6l36 36M6 42l36-36"
-            stroke="#FF4D6D"
+            stroke="#C8E6C9"
             strokeWidth="2"
             fill="none"
             initial={{ pathLength: 0 }}
@@ -471,14 +471,14 @@ const Branding = () => {
         <div className="container">
           <div className="relative mt-30 md:mt-0 px-0 lg:px-[10%] ">
             <div className="">
-              <h1 className="text-[#FF4D6D] text-2xl font-bold lg:font-semibold">BRANDING</h1>
+              <h1 className="text-[#C8E6C9] text-2xl font-bold lg:font-semibold">BRANDING</h1>
             </div>
             <nav className="flex items-center gap-2 text-lg">
-              <Link to="/" className="text-gray-900 hover:text-gray-600">Home</Link>
+              <Link to="/" className={`text-gray-900 hover:text-gray-600 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Home</Link>
               <span className="text-gray-400">•</span>
-              <Link to="/services" className="text-gray-900 hover:text-gray-600">Services</Link>
+              <Link to="/services" className={`text-gray-900 hover:text-gray-600 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Services</Link>
               <span className="text-gray-400">•</span>
-              <span className="text-gray-400">Branding</span>
+              <span className={`text-gray-400 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Branding</span>
             </nav>
           </div>
           <div className='h-full w-full md:flex md:flex-row md:justify-between md:items-center'>
@@ -489,20 +489,20 @@ const Branding = () => {
                 loop
                 autoplay
               />
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 -ml-16 md:-ml-24 md:h-12 bg-[#FF4D6D] rounded-full"></div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 ml-16 md:ml-24 md:h-12 bg-[#FF4D6D] rounded-full" ></div>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 -ml-16 md:-ml-24 md:h-12 bg-[#C8E6C9] rounded-full"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 ml-16 md:ml-24 md:h-12 bg-[#C8E6C9] rounded-full" ></div>
             </div>
-            <div className="absolute w-12 h-12 bg-[#FF4D6D] rounded-full" id="circle13"></div>
+            <div className="absolute w-12 h-12 bg-[#C8E6C9] rounded-full" id="circle13"></div>
 
-            <div className="w-full md:w-1/2 flex items-center lg:justify-start justify-center  md:right-1 md:top-1/3 lg:pl-20">
+            <div className={`w-full md:w-1/2 flex items-center lg:justify-start justify-center  md:right-1 md:top-1/3 lg:pl-20 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-normal font-montserrat text-gray-900 mt-10 lg:mt-0"
+                className={`text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-normal font-montserrat ${isDarkMode ? 'text-white' : 'text-gray-900'} mt-10 lg:mt-0`}
               >
                 WE CRAFT
-                <span className="text-[#FF4D6D]"> POWERFUL </span>
+                <span className="text-[#C8E6C9]"> POWERFUL </span>
                 BRAND
                 IDENTITIES.
               </motion.h1>
@@ -521,7 +521,7 @@ const Branding = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="text-[#FF4D6D] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
+            <h1 className="text-[#C8E6C9] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
             <h3 className={`text-4xl font-bold max-w-3xl leading-tight text-left ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
               We help you translate a simple idea into an exotic Digital design transformation vision.
             </h3>
@@ -602,7 +602,7 @@ const Branding = () => {
                     transition={{ duration: 0.8, delay: 1 }}
                   >
                     <motion.div
-                      className="absolute right-0 -top-1 w-2 h-2 bg-[#FF4D6D] rounded-full"
+                      className="absolute right-0 -top-1 w-2 h-2 bg-[#C8E6C9] rounded-full"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 0.3, delay: 1.5 }}
@@ -622,7 +622,7 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-12 text-left"
+            className="text-[#C8E6C9] text-4xl font-medium mb-12 text-left"
           >
             Brand Identity & Strategy
           </motion.h2>
@@ -656,11 +656,11 @@ const Branding = () => {
                 </p>
                 <div className="flex md:flex-row  flex-col items-center gap-x-4 text-gray-600">
                   <span className="font-medium">Research & Strategy</span>
-                  <span className="text-[#FF4D6D]">•</span>
+                  <span className="text-[#C8E6C9]">•</span>
                   <span className="font-medium">Visual Design</span>
-                  <span className="text-[#FF4D6D]">•</span>
+                  <span className="text-[#C8E6C9]">•</span>
                   <span className="font-medium">Brand Guidelines</span>
-                  <span className="text-[#FF4D6D]">•</span>
+                  <span className="text-[#C8E6C9]">•</span>
                   <span className="font-medium">Implementation</span>
                 </div>
               </motion.div>
@@ -676,7 +676,7 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FF4D6D] text-4xl font-medium mb-16 text-left"
+            className="text-[#C8E6C9] text-4xl font-medium mb-16 text-left"
           >
             Explore Other Services.
           </motion.h2>
@@ -690,20 +690,19 @@ const Branding = () => {
             {otherServices.map((service, index) => (
               <motion.div
                 key={index}
-                className={`p-8 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : service.color
-                  }`}
+                className={`p-8 rounded-lg flex justify-between items-center cursor-pointer hover:scale-105 transition-transform ${service.color}`}
                 onClick={() => handleServiceClick(service.link)}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <div>
-                  <h3 className={`font-bold text-xl mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{service.name}</h3>
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>{service.description}</p>
+                  <h3 className={`font-bold text-xl mb-2 ${isDarkMode ? 'text-black' : 'text-gray-900'}`}>{service.name}</h3>
+                  <p className={`text-sm ${isDarkMode ? 'text-black' : 'text-gray-700'}`}>{service.description}</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-6 w-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
+                  className={`h-6 w-6 ${isDarkMode ? 'text-black' : 'text-gray-900'}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

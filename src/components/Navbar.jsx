@@ -10,43 +10,43 @@ const SERVICES = [
   {
     name: "Content Marketing",
     description: "Engaging content that connects.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-blue-100",
     link: "/services/contentmarketing"
   },
   {
     name: "Branding",
     description: "Identity that stands out.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-green-100",
     link: "/services/branding"
   },
   {
     name: "Social Media Marketing",
     description: "Buzz where it matters.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-purple-100",
     link: "/services/socialmediamarketing"
   },
   {
     name: "Website Services",
     description: "Websites that work.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-indigo-100",
     link: "/services/website"
   },
   {
     name: "Event Marketing",
     description: "Events that pop.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-red-100",
     link: "/services/eventmarketing"
   },
   {
     name: "Public Relations",
     description: "Shaping public voice.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-yellow-100",
     link: "/services/publicrelations"
   },
   {
     name: "OOH",
     description: "Ads that turn heads.",
-    lightColor: "bg-[#8F87F1]",
+    lightColor: "bg-pink-100",
     link: "/services/ooh"
   }
 ];
@@ -172,7 +172,7 @@ const Navbar = () => {
                         {isServicesHovered && (
                             <div 
                                 className={`absolute top-full ml-16 transform -translate-x-1/2 w-[1500%] grid grid-cols-3 gap-4 p-6  shadow-2xl rounded-lg mt-8 z-50 ${
-                                    isDarkMode ? 'bg-gray-900 border border-gray-800' : 'bg-white border border-gray-200'
+                                    isDarkMode ? 'bg-black border' : 'bg-white border border-gray-200'
                                 } `}
                                 onMouseEnter={handleServicesMouseEnter}
                                 onMouseLeave={handleServicesMouseLeave}

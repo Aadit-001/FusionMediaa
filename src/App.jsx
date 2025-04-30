@@ -160,7 +160,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -171,7 +171,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#D4A5A5"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -182,7 +182,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "#FFEEAD"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -194,7 +194,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -206,7 +206,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -217,7 +217,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -228,7 +228,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -814,7 +814,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -825,7 +825,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -836,7 +836,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -848,7 +848,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -860,7 +860,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -871,7 +871,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -882,7 +882,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -1468,7 +1468,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -1479,7 +1479,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -1490,7 +1490,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -1502,7 +1502,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -1514,7 +1514,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -1525,7 +1525,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -1536,7 +1536,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -2112,7 +2112,7 @@ function App() {
 
                 // Animate all circles together
                 // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
-
+                // kaif PC size
                 // Position circles 1, 3, 6 vertically on the left side
                 tl.to('#circle2', {
                     top: "160%",
@@ -2122,7 +2122,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -2133,7 +2133,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -2144,7 +2144,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -2156,7 +2156,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -2168,7 +2168,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -2179,7 +2179,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -2190,7 +2190,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -2776,7 +2776,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -2787,7 +2787,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -2798,7 +2798,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -2810,7 +2810,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -2822,7 +2822,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -2833,7 +2833,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -2844,7 +2844,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -4064,7 +4064,7 @@ function App() {
         gsap.to("#box1", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "purple",
+            background: "#8e44ad",
             duration: 1,
             ease: "power2.out",
             // visibility: "visible",
@@ -4080,7 +4080,7 @@ function App() {
         gsap.to("#box2", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "purple",
+            background: "#8e44ad",
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -4095,7 +4095,7 @@ function App() {
         gsap.to("#box3", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "purple",
+            background: "#8e44ad",
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -4110,7 +4110,7 @@ function App() {
         gsap.to("#box4", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "purple",
+            background: "#8e44ad",
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -4291,7 +4291,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className={`h-20 w-72 md:w-128 flex items-center mt-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#BBDEFB] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
                                 </div>
@@ -4340,7 +4340,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#FFF9C4] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Public Relations</span>
                                 </div>
@@ -4365,7 +4365,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#E1BEE7] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
                                 </div>
@@ -4396,7 +4396,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#C5CAE9] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Website Services</span>
                                 </div>
@@ -4428,7 +4428,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#FFCDD2] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Event Marketing</span>
                                 </div>
@@ -4459,7 +4459,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#C8E6C9] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Branding</span>
                                 </div>
@@ -4489,7 +4489,7 @@ function App() {
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#710991] rounded-full'></div>
+                                        <div className='h-[80%] w-[80%] bg-[#F8BBD0] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>OOH</span>
                                 </div>
