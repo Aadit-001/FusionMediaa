@@ -160,7 +160,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -171,7 +171,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -182,7 +182,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -194,7 +194,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -206,7 +206,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -217,7 +217,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -228,7 +228,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -814,7 +814,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -825,7 +825,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -836,7 +836,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -848,7 +848,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -860,7 +860,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -871,7 +871,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -882,7 +882,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -1468,7 +1468,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -1479,7 +1479,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -1490,7 +1490,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -1502,7 +1502,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -1514,7 +1514,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -1525,7 +1525,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -1536,7 +1536,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "blue"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 
@@ -2776,7 +2776,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#BBDEFB"
                 }, 'circles');
 
                 tl.to('#circle1', {
@@ -2787,7 +2787,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#E1BEE7"
                 }, 'circles');
 
                 tl.to('#circle6', {
@@ -2798,7 +2798,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFCDD2"
                 }, 'circles');
 
                 // Position circle 4 in the middle
@@ -2810,7 +2810,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#F8BBD0"
                 }, 'circles');
 
                 // Position circles 2, 5, 7 vertically on the right side
@@ -2822,7 +2822,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#FFF9C4"
                 }, 'circles');
 
                 tl.to('#circle3', {
@@ -2833,7 +2833,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C5CAE9"
                 }, 'circles');
 
                 tl.to('#circle5', {
@@ -2844,7 +2844,7 @@ function App() {
                     duration: 2,
                     visibility: "visible",
                     opacity: 1,
-                    background: "purple"
+                    background: "#C8E6C9"
                     // transition: "all 2s",
                 }, 'circles');
 

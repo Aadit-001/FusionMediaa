@@ -84,11 +84,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <i className={`fas fa-phone ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}></i>
-                <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>+91 81045 11574</span>
+                <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>+91 86556 25936</span>
               </li>
               <li className="flex items-center space-x-3">
                 <i className={`fas fa-envelope ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}></i>
-                <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Pratham.Fusionmarketing@gmail.com</span>
+                <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>info@fusionmedia.in</span>
               </li>
             </ul>
           </div>
