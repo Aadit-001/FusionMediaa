@@ -530,7 +530,7 @@ const Branding = () => {
           <div className="bg-transparent overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-8 relative p-10 rounded-3xl">
             {/* Animated BG box10, centered and behind content */}
             <div
-              className="h-2 w-2 rounded-full absolute left-1/2  -translate-x-1/2 z-0"
+              className=" h-2 w-2 rounded-full absolute left-1/2  -translate-x-1/2 z-0"
               id="box10"
               style={{ pointerEvents: 'none' }}
             ></div>
