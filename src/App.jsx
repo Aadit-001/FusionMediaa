@@ -30,8 +30,6 @@ import { useDarkMode } from './context/DarkModeContext';
 import Black_image from './assets/Black_image.png';
 
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -42,7 +40,7 @@ function App() {
             id: 1,
             text: "Fusion Media has been instrumental in transforming our digital presence. Their innovative approach and attention to detail have helped us achieve remarkable results.",
             name: "Sarah Johnson",
-            position: "CEO, TechVision Inc.",
+            position: "CEO, TechVision Inc. ",
             image: horeca
         },
         {
