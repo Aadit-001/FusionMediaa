@@ -97,7 +97,7 @@ const Clients = () => {
         <div className="h-[60px]"></div>
         
         {/* Breadcrumb Navigation */}
-        <div className={`flex items-center gap-2 mt-6 text-2xl mb-8 justify-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+        <div className={`flex items-center gap-2 mt-14 text-2xl mb-8 justify-center ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
           <span>Home</span>
           <span>•</span>
           <span className={isDarkMode ? 'text-gray-300' : 'text-gray-400'}>Clients</span>
@@ -127,7 +127,7 @@ const Clients = () => {
         {/* Hero Image */}
         <div className="flex justify-center mb-32">
           <DotLottieReact
-            src="https://lottie.host/83a9fd3a-e1a0-448b-b854-f1e911428554/yCSoUfNkOr.lottie"
+            src="https://lottie.host/082015b1-9299-4fa1-9dc8-729e4403f1ba/9Lb2GBkEI4.lottie"
             loop
             autoplay
             style={{ width: '500px', height: '500px' }}
