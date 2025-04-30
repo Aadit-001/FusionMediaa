@@ -87,7 +87,7 @@ const Branding = () => {
                         top: "160%",
                         left: "50%",
                         rotate: "360deg",
-                        scale: 4,
+                        scale: 2,
                         duration: 1,
                         visibility: "visible",
                         opacity: 1,
@@ -97,22 +97,22 @@ const Branding = () => {
                       
                   }
               })
-              gsap.to("#box1", {
-                  scale: 20,
-                  transformOrigin: "50% 50%",
-                  background: "#222",
-                  duration: 1,
-                  ease: "power2.out",
-                  // visibility: "visible",
-                  scrollTrigger: {
-                      trigger: ".fourth-section",
-                      start: "10% 80%",
-                      onEnter: () => gsap.to("#box1", { scale: 20, duration: 1.3, ease: "expo.inOut" }),
-                      onLeaveBack: () => gsap.to("#box1", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
-                      onLeave: () => gsap.to("#box1", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
-                      onEnterBack: () => gsap.to("#box1", { scale: 20, duration: 1.3, ease: "expo.inOut" })
-                  }
-              });
+              gsap.to("#box10", {
+                    scale: 400,
+                    transformOrigin: "50% 50%",
+                    background: "purple",
+                    duration: 1,
+                    ease: "power2.out",
+                    // visibility: "visible",
+                    scrollTrigger: {
+                      trigger: ".ser-section",
+                      start: "40% 65%",
+                      onEnter: () => gsap.to("#box10", { scale: 400, duration: 1.3, ease: "expo.inOut" }),
+                      onLeaveBack: () => gsap.to("#box10", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
+                      onLeave: () => gsap.to("#box10", { scale: 1, duration: 1.3, ease: "expo.inOut" }),
+                      onEnterBack: () => gsap.to("#box10", { scale: 400, duration: 1.3, ease: "expo.inOut" })
+                    }
+                  });
   
           // Cleanup function
           return () => {
@@ -325,7 +325,7 @@ const Branding = () => {
       </div>
 
       {/* Services Section */}
-      <div className={`px-8 py-16 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+      <div className={`ser-section px-8 py-16 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -339,7 +339,13 @@ const Branding = () => {
             </h3>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-24 gap-y-8">
+          <div className="bg-transparent overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-8 relative p-10 rounded-3xl">
+            {/* Animated BG box10, centered and behind content */}
+            <div
+              className="h-2 w-2 rounded-full absolute left-1/2  -translate-x-1/2 z-0"
+              id="box10"
+              style={{ pointerEvents: 'none' }}
+            ></div>
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
