@@ -52,10 +52,6 @@ const Work = () => {
 
         {/* Professional Minimalist Video Gallery Section */}
         <div className="mb-24">
-          <h2 className={`text-4xl md:text-5xl font-semibold mb-10 text-center ${isDarkMode ? 'text-white' : 'text-purple-600'}`}
-              style={{ fontFamily: 'Playfair Display, serif', letterSpacing: '0.02em' }}>
-            Featured Video Projects
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 xl:gap-20">
             {/* Video 1 */}
             <div className="flex flex-col items-center group">
@@ -63,8 +59,8 @@ const Work = () => {
                 <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={beyondGames} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/beyond_games.jpg" />
               </div>
               <div className="mt-3 w-full">
-                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Beyond Games Activation</p>
-                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Immersive brand event for gaming enthusiasts</p>
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Beyond Games Activation</p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 text-center mt-1">Immersive brand event for gaming enthusiasts</p>
               </div>
             </div>
             {/* Video 2 */}
@@ -73,8 +69,8 @@ const Work = () => {
                 <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={mountainWoods} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/mountain_woods.jpg" />
               </div>
               <div className="mt-3 w-full">
-                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Mountain Woods Launch</p>
-                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Nature-inspired product launch campaign</p>
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Mountain Woods Launch</p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 text-center mt-1">Nature-inspired product launch campaign</p>
               </div>
             </div>
             {/* Video 3 */}
@@ -83,8 +79,8 @@ const Work = () => {
                 <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events1} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events1.jpg" />
               </div>
               <div className="mt-3 w-full">
-                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events – Corporate Event</p>
-                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Corporate events and experiences</p>
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events – Corporate Event</p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 text-center mt-1">Corporate events and experiences</p>
               </div>
             </div>
             {/* Video 4 */}
@@ -93,8 +89,8 @@ const Work = () => {
                 <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events2} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events2.jpg" />
               </div>
               <div className="mt-3 w-full">
-                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events </p>
-                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Innovative displays and audience interaction</p>
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events </p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 text-center mt-1">Innovative displays and audience interaction</p>
               </div>
             </div>
             {/* Video 5 */}
@@ -103,8 +99,8 @@ const Work = () => {
                 <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events3} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events3.jpg" />
               </div>
               <div className="mt-3 w-full">
-                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events</p>
-                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Memorable events and experiences</p>
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events</p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 text-center mt-1">Memorable events and experiences</p>
               </div>
             </div>
             {/* Video 6 */}
@@ -113,8 +109,8 @@ const Work = () => {
                 <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_fly} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_fly.jpg" />
               </div>
               <div className="mt-3 w-full">
-                <p className="text-base md:text-lg text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Fly – Outdoor Campaign</p>
-                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 text-center mt-1">Creative outdoor visuals and placements</p>
+                <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Fly – Outdoor Campaign</p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 text-center mt-1">Creative outdoor visuals and placements</p>
               </div>
             </div>
           </div>

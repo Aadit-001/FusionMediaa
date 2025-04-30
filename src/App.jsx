@@ -4527,11 +4527,23 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box1'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Vector</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Designing the Web, Defining Success</li>
-                                <li>• HTML, CSS, JavaScript</li>
-                                <li>• Web Development</li>
-                                <li>• UI/UX</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Designing the Web, Defining Success</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>HTML, CSS, JavaScript</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Web Development</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>UI/UX</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusion_vector} alt="logo" className="contain h-full w-full" />
@@ -4546,13 +4558,31 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box2'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Events</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Turning Events into Memories</li>
-                                <li>• Corporate Events</li>
-                                <li>• Wedding Events</li>
-                                <li>• ATL\BTL Activation</li>
-                                <li>• Exhibitions</li>
-                                <li>• Talent Management</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Turning Events into Memories</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Corporate Events</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Wedding Events</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>ATL\BTL Activation</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Exhibitions</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Talent Management</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusionEvent} alt="logo" className="contain h-full w-full" />
@@ -4567,11 +4597,23 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box3'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Horeca</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Where Luxury Meets Comfort</li>
-                                <li>• Air BNB</li>
-                                <li>• Stay</li>
-                                <li>• Plush Rooms</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Where Luxury Meets Comfort</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Air BNB</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Stay</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Plush Rooms</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusion_horeca} alt="logo" className="contain h-full w-full" />
@@ -4586,10 +4628,19 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box4'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Fly</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Travel With Passion</li>
-                                <li>• Fly Global</li>
-                                <li>• Hospitatily</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Travel With Passion</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Fly Global</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Hospitality</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusion_fly} alt="logo" className="contain h-full w-full" />
