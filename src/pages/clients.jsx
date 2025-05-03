@@ -13,6 +13,7 @@ import svcbank from '../assets/clients/svcbank.png';
 import leela from '../assets/clients/leela.png';
 import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
+import beyondGames from '../assets/clients/beyondGames.jpg';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -34,7 +35,8 @@ const Clients = () => {
     { id: 11, name: 'Leela', logo: leela },
     { id: 13, name: 'Kimatsu', logo: kimatsu },
     { id: 14, name: 'JP', logo: jp },
-  ];
+    { id: 15, name: 'Beyond Games', logo: beyondGames },
+    ];
 
   const testimonials = [
     {

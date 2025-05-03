@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import tt from '../assets/testimonial/tt.png';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import logo from '../assets/logo.png';
 import logoWhite from '../assets/logoWhite.png';
 import { Briefcase, BarChart2, Settings, Target } from 'lucide-react';
 import { useDarkMode } from '../context/DarkModeContext';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -191,47 +192,44 @@ const About = () => {
               </div>
 
               {/* Card Content */}
-              <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12`}>
-                {/* Quote Content */}
-                <div className="relative z-10">
-                  <p className={`text-xl md:text-3xl font-medium mb-2 max-w-[650px] leading-normal ${
-                    isDarkMode ? 'text-gray-300' : 'text-gray-900'
-                  }`}>
-                    Jugal Shah is the founder, CXO, and<br className="hidden md:block" />
-                    growth hacker at Leo9 Studio headquartered<br className="hidden md:block" />
-                    in Mumbai, India, and an office in N.J., U.S.A.
-                  </p>
-                </div>
-
-                {/* Image - Adjusted for mobile */}
-                <div className="relative md:absolute right-0 md:right-12 -bottom-0 w-full md:w-96 mt-6 md:mt-0">
-                  <img 
-                    src={tt} 
-                    alt="Jugal Shah"
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
-
+              <div className={`relative border ${isDarkMode ? 'border-gray-100' : 'border-black'} rounded-sm p-6 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+                isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'
+              }`}>
                 {/* Founder Info */}
-                <div className="mt-6 md:mt-40">
-                  <h3 className={`text-2xl md:text-3xl font-bold ${
-                    isDarkMode ? 'text-white' : 'text-gray-900'
-                  }`}>Jugal Shah</h3>
-                  <p className={`text-lg md:text-xl mt-1 max-w-[500px] leading-normal ${
-                    isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    Founder, Head of UX at Leo9 Studio.<br className="hidden md:block" />
-                    Behavioral science and
-                    Neuromarketing expert.
-                  </p>
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block text-[#0077b5] mt-1"
-                  >
-                    in
-                  </a>
+                <div className="md:mt-10 max-w-3xl mx-auto px-4 text-center">
+                  <div className="space-y-6">
+                    <h3 className={`text-4xl md:text-5xl font-bold tracking-tighter ${
+                      isDarkMode ? 'text-white' : 'text-gray-900'
+                    }`}>Jugal Shah</h3>
+                    
+                    <div className="text-center">
+                      <p className={`text-xl md:text-2xl font-medium ${
+                        isDarkMode ? 'text-gray-300' : 'text-gray-800'
+                      }`}>Founder & Creative Lead at Fusion Media</p>
+                    </div>
+
+                    <p className={`mt-4 md:mt-6 text-lg md:text-xl leading-relaxed ${
+                      isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                      Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.
+                    </p>
+
+                    <div className="mt-6">
+                      <a 
+                        href="https://linkedin.com/in/jugal-shah" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center justify-center px-6 py-3 rounded-lg text-lg ${
+                          isDarkMode 
+                            ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300' 
+                            : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
+                        }`}
+                      >
+                        <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 mr-2" />
+                        Connect on LinkedIn
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

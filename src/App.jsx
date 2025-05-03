@@ -13,11 +13,11 @@ import kimatsu from './assets/clients/kimatsu.png';
 import witty from './assets/clients/witty.png';
 import symbiosis from './assets/clients/symbiosis.png';
 import electrolab from './assets/clients/electrolab.png';
+import beyondGames from './assets/clients/beyondGames.jpg';
 // import animation from './assets/Animation.lottie';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import { useState } from 'react';
-import tt from './assets/testimonial/tt.png';
 import White_image from './assets/White_image.png';
 import horeca from './assets/clients/horeca.jpg';
 import healthyMeal from './assets/clients/healthyMeal.jpg';
@@ -4185,11 +4185,12 @@ function App() {
                                 className="clients relative top-0  h-[10%] w-full">
                                 <div className='h-full w-full flex items-center justify-center'>
                                     <div className="marquee h-full w-full rounded-4xl">
-                                        <div className="marquee-content h-full w-full">
+                                    <div className="marquee-content h-full w-full gap-6 md:gap-12 flex items-center">
                                             <img src={axisbank} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
                                             <img src={nesco} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 2" />
                                             <img src={JP} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 3" />
                                             <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
+                                            <img src={beyondGames} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 9" />
                                             <img src={kimatsu} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 5" />
                                             <img src={witty} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 6" />
                                             <img src={symbiosis} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
@@ -4223,8 +4224,8 @@ function App() {
                             initial={{ opacity: 0, x: -50, y: 50 }}
                             whileInView={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className={`block w-full  font-bold text-3xl md:text-4xl lg:text-5xl text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                            <h1>
+                            className={`block w-full font-extrabold text-4xl md:text-5xl lg:text-6xl text-center leading-tight ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                            <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                                 Crafting Digital Excellence Through Creative Innovation
                             </h1>
                         </motion.div>
@@ -4677,15 +4678,6 @@ function App() {
                                             growth hacker at Leo9 Studio headquartered<br className="hidden md:block" />
                                             in Mumbai, India, and an office in N.J., U.S.A.
                                         </p>
-                                    </div>
-
-                                    {/* Image - Adjusted for mobile */}
-                                    <div className="relative md:absolute right-0 md:right-12 -bottom-0 w-full md:w-96 mt-6 md:mt-0">
-                                        <img
-                                            src={tt}
-                                            alt="Jugal Shah"
-                                            className="w-full h-full object-cover object-center"
-                                        />
                                     </div>
 
                                     {/* Founder Info */}

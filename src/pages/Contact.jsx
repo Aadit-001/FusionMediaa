@@ -149,8 +149,8 @@ const Contact = () => {
           </div>
           {/* Contact Info */}
           <div className="flex-1 ml-8">
-            <p className={`${isDarkMode ? 'text-indigo-400' : 'text-blue-600'}`}>Pratham.Fusionmarketing@gmail.com</p>
-            <p className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>IND: +91 81045 11574</p>
+            <p className={`${isDarkMode ? 'text-indigo-400' : 'text-blue-600'}`}>info@fusionmedia.in</p>
+            <p className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>IND: +91 86556 25936</p>
           </div>
         </div>
       </div>
