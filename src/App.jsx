@@ -13,11 +13,11 @@ import kimatsu from './assets/clients/kimatsu.png';
 import witty from './assets/clients/witty.png';
 import symbiosis from './assets/clients/symbiosis.png';
 import electrolab from './assets/clients/electrolab.png';
+import beyondGames from './assets/clients/beyondGames.jpg';
 // import animation from './assets/Animation.lottie';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import { useState } from 'react';
-import tt from './assets/testimonial/tt.png';
 import White_image from './assets/White_image.png';
 import horeca from './assets/clients/horeca.jpg';
 import healthyMeal from './assets/clients/healthyMeal.jpg';
@@ -28,6 +28,8 @@ import fusion_horeca from './assets/parentCompany/fusion_horeca.png';
 import fusion_vector from './assets/parentCompany/fusion_vector.png';
 import { useDarkMode } from './context/DarkModeContext';
 import Black_image from './assets/Black_image.png';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -4184,11 +4186,12 @@ function App() {
                                 className="clients relative top-0  h-[10%] w-full">
                                 <div className='h-full w-full flex items-center justify-center'>
                                     <div className="marquee h-full w-full rounded-4xl">
-                                        <div className="marquee-content h-full w-full">
+                                    <div className="marquee-content h-full w-full gap-6 md:gap-12 flex items-center">
                                             <img src={axisbank} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
                                             <img src={nesco} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 2" />
                                             <img src={JP} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 3" />
                                             <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
+                                            <img src={beyondGames} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 9" />
                                             <img src={kimatsu} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 5" />
                                             <img src={witty} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 6" />
                                             <img src={symbiosis} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
@@ -4222,8 +4225,8 @@ function App() {
                             initial={{ opacity: 0, x: -50, y: 50 }}
                             whileInView={{ opacity: 1, x: 0, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className={`block w-full  font-bold text-3xl md:text-4xl lg:text-5xl text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                            <h1>
+                            className={`block w-full font-extrabold text-4xl md:text-5xl lg:text-6xl text-center leading-tight ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                            <h1 className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
                                 Crafting Digital Excellence Through Creative Innovation
                             </h1>
                         </motion.div>
@@ -4526,11 +4529,23 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box1'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Vector</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Designing the Web, Defining Success</li>
-                                <li>• HTML, CSS, JavaScript</li>
-                                <li>• Web Development</li>
-                                <li>• UI/UX</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Designing the Web, Defining Success</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>HTML, CSS, JavaScript</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Web Development</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>UI/UX</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusion_vector} alt="logo" className="contain h-full w-full" />
@@ -4545,13 +4560,31 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box2'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Events</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Turning Events into Memories</li>
-                                <li>• Corporate Events</li>
-                                <li>• Wedding Events</li>
-                                <li>• ATL\BTL Activation</li>
-                                <li>• Exhibitions</li>
-                                <li>• Talent Management</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Turning Events into Memories</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Corporate Events</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Wedding Events</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>ATL\BTL Activation</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Exhibitions</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Talent Management</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusionEvent} alt="logo" className="contain h-full w-full" />
@@ -4566,11 +4599,23 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box3'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Horeca</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Where Luxury Meets Comfort</li>
-                                <li>• Air BNB</li>
-                                <li>• Stay</li>
-                                <li>• Plush Rooms</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Where Luxury Meets Comfort</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Air BNB</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Stay</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Plush Rooms</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusion_horeca} alt="logo" className="contain h-full w-full" />
@@ -4585,10 +4630,19 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box4'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Fly</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm '>
-                                <li>• Travel With Passion</li>
-                                <li>• Fly Global</li>
-                                <li>• Hospitatily</li>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span className='font-medium'>Travel With Passion</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Fly Global</span>
+                                </li>
+                                <li className='flex items-center gap-2'>
+                                    <span className='text-blue-100 font-semibold'>•</span>
+                                    <span>Hospitality</span>
+                                </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
                                 <img src={fusion_fly} alt="logo" className="contain h-full w-full" />
@@ -4601,65 +4655,56 @@ function App() {
                 </div>
 
                 <section className={`fifth-section min-h-screen py-16 md:py-32 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-6xl mx-auto">
-                            {/* Quote Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
-                            >
-                                {/* Large Quote Mark */}
-                                <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
-                                    <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
-                                </div>
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      {/* Quote Card */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
+      >
+        {/* Large Quote Mark */}
+        <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
+          <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
+        </div>
 
-                                {/* Card Content */}
-                                <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12`}>
-                                    {/* Quote Content */}
-                                    <div className="relative z-10">
-                                        <p className={`text-xl md:text-3xl font-medium mb-2 max-w-[650px] leading-normal ${isDarkMode ? 'text-gray-300' : 'text-gray-900'
-                                            }`}>
-                                            Jugal Shah is the founder, CXO, and<br className="hidden md:block" />
-                                            growth hacker at Leo9 Studio headquartered<br className="hidden md:block" />
-                                            in Mumbai, India, and an office in N.J., U.S.A.
-                                        </p>
-                                    </div>
+        {/* Card Content */}
+        <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'}`}>
+          {/* Founder Info */}
+          <div className="md:mt-10 max-w-3xl mx-auto px-4 text-center">
+            <div className="space-y-6">
+              <h3 className={`text-4xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
+              
+              <div className="text-center">
+                <p className={`text-xl md:text-2xl font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
+              </div>
 
-                                    {/* Image - Adjusted for mobile */}
-                                    <div className="relative md:absolute right-0 md:right-12 -bottom-0 w-full md:w-96 mt-6 md:mt-0">
-                                        <img
-                                            src={tt}
-                                            alt="Jugal Shah"
-                                            className="w-full h-full object-cover object-center"
-                                        />
-                                    </div>
+              <p className={`mt-4 md:mt-6 text-lg md:text-xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.
+              </p>
 
-                                    {/* Founder Info */}
-                                    <div className="mt-6 md:mt-40">
-                                        <h3 className={`text-2xl md:text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'
-                                            }`}>Jugal Shah</h3>
-                                        <p className={`text-lg md:text-xl mt-1 max-w-[500px] leading-normal ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                                            }`}>
-                                            Founder, Head of UX at Leo9 Studio.<br className="hidden md:block" />
-                                            Behavioral science and
-                                            Neuromarketing expert.
-                                        </p>
-                                        <a
-                                            href="https://linkedin.com"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-block text-[#0077b5] mt-1"
-                                        >
-                                            in
-                                        </a>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </section>
+              <div className="mt-6">
+                <a 
+                  href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center justify-center px-6 py-3 rounded-lg text-lg ${isDarkMode 
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300' 
+                    : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
+                  }`}
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 mr-2" />
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
 
                 {/* <div className="testimonial-section">
