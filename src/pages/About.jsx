@@ -200,7 +200,7 @@ const About = () => {
                   <div className="space-y-6">
                     <h3 className={`text-4xl md:text-5xl font-bold tracking-tighter ${
                       isDarkMode ? 'text-white' : 'text-gray-900'
-                    }`}>Jugal Shah</h3>
+                    }`}>Harsh Punmiya</h3>
                     
                     <div className="text-center">
                       <p className={`text-xl md:text-2xl font-medium ${
@@ -216,7 +216,7 @@ const About = () => {
 
                     <div className="mt-6">
                       <a 
-                        href="https://linkedin.com/in/jugal-shah" 
+                        href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className={`inline-flex items-center justify-center px-6 py-3 rounded-lg text-lg ${

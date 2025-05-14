@@ -452,7 +452,7 @@ const Branding = () => {
         <div className="container">
           <div className="relative mt-30 md:mt-0 px-0 lg:px-[10%] ">
             <div className="">
-              <h1 className="text-[#FFF9C4] text-2xl font-bold lg:font-semibold">Public  Relations</h1>
+              <h1 className="text-[#FFF59D] text-2xl font-bold lg:font-semibold">Public  Relations</h1>
             </div>
             <nav className="flex items-center gap-2 text-lg">
               <Link to="/" className={`text-gray-900 hover:text-gray-600 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Home</Link>
@@ -470,10 +470,10 @@ const Branding = () => {
                 loop
                 autoplay
               />
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 -ml-16 md:-ml-24 md:h-12 bg-[#FFF9C4] rounded-full"></div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 ml-16 md:ml-24 md:h-12 bg-[#FFF9C4] rounded-full" ></div>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 -ml-16 md:-ml-24 md:h-12 bg-[#FFF59D] rounded-full"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 md:w-12 ml-16 md:ml-24 md:h-12 bg-[#FFF59D] rounded-full" ></div>
             </div>
-            <div className="absolute w-12 h-12 bg-[#FFF9C4] rounded-full" id="circle13"></div>
+            <div className="absolute w-12 h-12 bg-[#FFF59D] rounded-full" id="circle13"></div>
 
             <div className="w-full md:w-1/2 flex items-center lg:justify-start justify-center  md:right-1 md:top-1/3 lg:pl-20">
               <motion.h1
@@ -483,7 +483,7 @@ const Branding = () => {
                 className={`text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-normal font-montserrat ${isDarkMode ? 'text-white' : 'text-gray-900'} mt-10 lg:mt-0`}
               >
                WE BUILD
-                <span className="text-[#FFF9C4]"> STRONG </span>
+                <span className="text-[#FFF59D]"> STRONG </span>
                 PUBLIC RELATIONS.
               </motion.h1>
             </div>
@@ -501,7 +501,7 @@ const Branding = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h1 className="text-[#FFF9C4] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
+            <h1 className="text-[#FFF59D] text-2xl font-bold mb-6 tracking-wide text-left">What Do We Serve ?</h1>
             <h3 className={`text-4xl font-bold max-w-3xl leading-tight text-left ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             We help you build and maintain strong relationships with your audience through strategic communication.
             </h3>
@@ -544,7 +544,7 @@ const Branding = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-20"
           >
-            <h2 className={`text-[#FFF9C4] text-2xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>HOW WE DO IT ?</h2>
+            <h2 className={`text-[#FFF59D] text-2xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>HOW WE DO IT ?</h2>
             <h3 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             Building Strong Relationships
             </h3>
@@ -582,7 +582,7 @@ const Branding = () => {
                     transition={{ duration: 0.8, delay: 1 }}
                   >
                     <motion.div
-                      className="absolute right-0 -top-1 w-2 h-2 bg-[#FFF9C4] rounded-full"
+                      className="absolute right-0 -top-1 w-2 h-2 bg-[#FFF59D] rounded-full"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 0.3, delay: 1.5 }}
@@ -602,7 +602,7 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FFF9C4] text-4xl font-medium mb-12 text-left"
+            className="text-[#FFF59D] text-4xl font-medium mb-12 text-left"
           >
             Public Relations
           </motion.h2>
@@ -656,7 +656,7 @@ const Branding = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[#FFF9C4] text-4xl font-medium mb-16 text-left"
+            className="text-[#FFF59D] text-4xl font-medium mb-16 text-left"
           >
             Explore Other Services.
           </motion.h2>

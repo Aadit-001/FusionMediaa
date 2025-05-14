@@ -28,6 +28,8 @@ import fusion_horeca from './assets/parentCompany/fusion_horeca.png';
 import fusion_vector from './assets/parentCompany/fusion_vector.png';
 import { useDarkMode } from './context/DarkModeContext';
 import Black_image from './assets/Black_image.png';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -4654,56 +4656,56 @@ function App() {
                 </div>
 
                 <section className={`fifth-section min-h-screen py-16 md:py-32 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-6xl mx-auto">
-                            {/* Quote Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                                className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
-                            >
-                                {/* Large Quote Mark */}
-                                <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
-                                    <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
-                                </div>
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      {/* Quote Card */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
+      >
+        {/* Large Quote Mark */}
+        <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
+          <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
+        </div>
 
-                                {/* Card Content */}
-                                <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12`}>
-                                    {/* Quote Content */}
-                                    <div className="relative z-10">
-                                        <p className={`text-xl md:text-3xl font-medium mb-2 max-w-[650px] leading-normal ${isDarkMode ? 'text-gray-300' : 'text-gray-900'
-                                            }`}>
-                                            Jugal Shah is the founder, CXO, and<br className="hidden md:block" />
-                                            growth hacker at Leo9 Studio headquartered<br className="hidden md:block" />
-                                            in Mumbai, India, and an office in N.J., U.S.A.
-                                        </p>
-                                    </div>
+        {/* Card Content */}
+        <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'}`}>
+          {/* Founder Info */}
+          <div className="md:mt-10 max-w-3xl mx-auto px-4 text-center">
+            <div className="space-y-6">
+              <h3 className={`text-4xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
+              
+              <div className="text-center">
+                <p className={`text-xl md:text-2xl font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
+              </div>
 
-                                    {/* Founder Info */}
-                                    <div className="mt-6 md:mt-40">
-                                        <h3 className={`text-2xl md:text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'
-                                            }`}>Jugal Shah</h3>
-                                        <p className={`text-lg md:text-xl mt-1 max-w-[500px] leading-normal ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                                            }`}>
-                                            Founder, Head of UX at Leo9 Studio.<br className="hidden md:block" />
-                                            Behavioral science and
-                                            Neuromarketing expert.
-                                        </p>
-                                        <a
-                                            href="https://linkedin.com"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-block text-[#0077b5] mt-1"
-                                        >
-                                            in
-                                        </a>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </div>
-                </section>
+              <p className={`mt-4 md:mt-6 text-lg md:text-xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.
+              </p>
+
+              <div className="mt-6">
+                <a 
+                  href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center justify-center px-6 py-3 rounded-lg text-lg ${isDarkMode 
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300' 
+                    : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
+                  }`}
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 mr-2" />
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
 
                 {/* <div className="testimonial-section">
