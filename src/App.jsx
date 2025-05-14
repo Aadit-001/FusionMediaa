@@ -32,7 +32,6 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -43,7 +42,7 @@ function App() {
             id: 1,
             text: "Fusion Media has been instrumental in transforming our digital presence. Their innovative approach and attention to detail have helped us achieve remarkable results.",
             name: "Sarah Johnson",
-            position: "CEO, TechVision Inc.",
+            position: "CEO, TechVision Inc. ",
             image: horeca
         },
         {
