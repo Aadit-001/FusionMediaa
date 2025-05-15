@@ -5,7 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import { RootLayout } from './RootLayout'
 import Work from './pages/work.jsx'
-import Services from './pages/services.jsx'
+// import Services from './pages/services.jsx'
 import Clients from './pages/Clients.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
@@ -32,7 +32,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<RootLayout />} >
             <Route index element={<App />} />
             <Route path="/work" element={<Work />} />
-            <Route path="/services" element={<Services />} />
+            {/* <Route path="/services" element={<Services />} /> */}
             <Route path="/clients" element={<Clients />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

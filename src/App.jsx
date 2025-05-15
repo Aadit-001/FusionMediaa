@@ -639,151 +639,151 @@ function App() {
 
 
                 //11
-                var t11 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".fifth-section",
-                        start: "0% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t11 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".fifth-section",
+                //         start: "0% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t11.to('#circle1', {
-                    top: "1100%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t11.to('#circle1', {
+                //     top: "1100%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t11.to('#circle3', {
-                    top: "1100%",
-                    left: "15%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle3', {
+                //     top: "1100%",
+                //     left: "15%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle6', {
-                    top: "1100%",
-                    left: "30%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle6', {
+                //     top: "1100%",
+                //     left: "30%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle4', {
-                    top: "1100%",
-                    left: "47%",
-                    rotate: "180deg",
-                    scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle4', {
+                //     top: "1100%",
+                //     left: "47%",
+                //     rotate: "180deg",
+                //     scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle7', {
-                    top: "1100%",
-                    left: "70%",
-                    rotate: "180deg",
-                    scale: 1.7,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle7', {
+                //     top: "1100%",
+                //     left: "70%",
+                //     rotate: "180deg",
+                //     scale: 1.7,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle5', {
-                    top: "1100%",
-                    left: "80%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle5', {
+                //     top: "1100%",
+                //     left: "80%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle2', {
-                    top: "1100%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle2', {
+                //     top: "1100%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                var t12 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".testimonial-section",
-                        start: "40% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t12 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".testimonial-section",
+                //         start: "40% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t12.to('#circle1', {
-                    top: "1200%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle1', {
+                //     top: "1200%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle2', {
-                    top: "1200%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle2', {
+                //     top: "1200%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle4', {
-                    top: "1200%",
-                    left: "46%",
-                    rotate: "180deg",
-                    scale: 0.6,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle4', {
+                //     top: "1200%",
+                //     left: "46%",
+                //     rotate: "180deg",
+                //     scale: 0.6,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
 
 
@@ -1293,151 +1293,151 @@ function App() {
 
 
                 //11
-                var t11 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".fifth-section",
-                        start: "0% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t11 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".fifth-section",
+                //         start: "0% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t11.to('#circle1', {
-                    top: "1100%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t11.to('#circle1', {
+                //     top: "1100%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t11.to('#circle3', {
-                    top: "1100%",
-                    left: "15%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle3', {
+                //     top: "1100%",
+                //     left: "15%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle6', {
-                    top: "1100%",
-                    left: "25%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle6', {
+                //     top: "1100%",
+                //     left: "25%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle4', {
-                    top: "1100%",
-                    left: "47%",
-                    rotate: "180deg",
-                    scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle4', {
+                //     top: "1100%",
+                //     left: "47%",
+                //     rotate: "180deg",
+                //     scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle7', {
-                    top: "1100%",
-                    left: "70%",
-                    rotate: "180deg",
-                    scale: 1.7,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle7', {
+                //     top: "1100%",
+                //     left: "70%",
+                //     rotate: "180deg",
+                //     scale: 1.7,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle5', {
-                    top: "1100%",
-                    left: "80%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle5', {
+                //     top: "1100%",
+                //     left: "80%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle2', {
-                    top: "1100%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle2', {
+                //     top: "1100%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                var t12 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".testimonial-section",
-                        start: "40% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t12 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".testimonial-section",
+                //         start: "40% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t12.to('#circle1', {
-                    top: "1240%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle1', {
+                //     top: "1240%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle2', {
-                    top: "1240%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle2', {
+                //     top: "1240%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle4', {
-                    top: "1240%",
-                    left: "46%",
-                    rotate: "180deg",
-                    scale: 0.6,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle4', {
+                //     top: "1240%",
+                //     left: "46%",
+                //     rotate: "180deg",
+                //     scale: 0.6,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
 
 
@@ -1947,151 +1947,151 @@ function App() {
 
 
                 //11
-                var t11 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".fifth-section",
-                        start: "0% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t11 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".fifth-section",
+                //         start: "0% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t11.to('#circle1', {
-                    top: "1100%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t11.to('#circle1', {
+                //     top: "1100%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t11.to('#circle3', {
-                    top: "1100%",
-                    left: "15%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle3', {
+                //     top: "1100%",
+                //     left: "15%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle6', {
-                    top: "1100%",
-                    left: "25%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle6', {
+                //     top: "1100%",
+                //     left: "25%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle4', {
-                    top: "1100%",
-                    left: "47%",
-                    rotate: "180deg",
-                    scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle4', {
+                //     top: "1100%",
+                //     left: "47%",
+                //     rotate: "180deg",
+                //     scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle7', {
-                    top: "1100%",
-                    left: "70%",
-                    rotate: "180deg",
-                    scale: 1.7,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle7', {
+                //     top: "1100%",
+                //     left: "70%",
+                //     rotate: "180deg",
+                //     scale: 1.7,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle5', {
-                    top: "1100%",
-                    left: "80%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle5', {
+                //     top: "1100%",
+                //     left: "80%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle2', {
-                    top: "1100%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle2', {
+                //     top: "1100%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                var t12 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".testimonial-section",
-                        start: "40% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t12 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".testimonial-section",
+                //         start: "40% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t12.to('#circle1', {
-                    top: "1240%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle1', {
+                //     top: "1240%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle2', {
-                    top: "1240%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle2', {
+                //     top: "1240%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle4', {
-                    top: "1240%",
-                    left: "46%",
-                    rotate: "180deg",
-                    scale: 0.6,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle4', {
+                //     top: "1240%",
+                //     left: "46%",
+                //     rotate: "180deg",
+                //     scale: 0.6,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
 
 
@@ -2601,151 +2601,151 @@ function App() {
 
 
                 //11
-                var t11 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".fifth-section",
-                        start: "0% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t11 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".fifth-section",
+                //         start: "0% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t11.to('#circle1', {
-                    top: "1100%",
-                    left: "3%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t11.to('#circle1', {
+                //     top: "1100%",
+                //     left: "3%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t11.to('#circle3', {
-                    top: "1100%",
-                    left: "12%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle3', {
+                //     top: "1100%",
+                //     left: "12%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle6', {
-                    top: "1100%",
-                    left: "22%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle6', {
+                //     top: "1100%",
+                //     left: "22%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle4', {
-                    top: "1100%",
-                    left: "44%",
-                    rotate: "180deg",
-                    scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle4', {
+                //     top: "1100%",
+                //     left: "44%",
+                //     rotate: "180deg",
+                //     scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle7', {
-                    top: "1100%",
-                    left: "70%",
-                    rotate: "180deg",
-                    scale: 1.7,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle7', {
+                //     top: "1100%",
+                //     left: "70%",
+                //     rotate: "180deg",
+                //     scale: 1.7,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle5', {
-                    top: "1100%",
-                    left: "80%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle5', {
+                //     top: "1100%",
+                //     left: "80%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle2', {
-                    top: "1100%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle2', {
+                //     top: "1100%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                var t12 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".testimonial-section",
-                        start: "40% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t12 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".testimonial-section",
+                //         start: "40% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t12.to('#circle1', {
-                    top: "1200%",
-                    left: "84%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle1', {
+                //     top: "1200%",
+                //     left: "84%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle2', {
-                    top: "1200%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle2', {
+                //     top: "1200%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle4', {
-                    top: "1200%",
-                    left: "44%",
-                    rotate: "180deg",
-                    scale: 0.6,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle4', {
+                //     top: "1200%",
+                //     left: "44%",
+                //     rotate: "180deg",
+                //     scale: 0.6,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
 
 
@@ -3255,151 +3255,151 @@ function App() {
 
 
                 //11
-                var t11 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".fifth-section",
-                        start: "0% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t11 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".fifth-section",
+                //         start: "0% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t11.to('#circle1', {
-                    top: "1100%",
-                    left: "3%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t11.to('#circle1', {
+                //     top: "1100%",
+                //     left: "3%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t11.to('#circle3', {
-                    top: "1100%",
-                    left: "12%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle3', {
+                //     top: "1100%",
+                //     left: "12%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle6', {
-                    top: "1100%",
-                    left: "22%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle6', {
+                //     top: "1100%",
+                //     left: "22%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle4', {
-                    top: "1100%",
-                    left: "44%",
-                    rotate: "180deg",
-                    scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle4', {
+                //     top: "1100%",
+                //     left: "44%",
+                //     rotate: "180deg",
+                //     scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle7', {
-                    top: "1100%",
-                    left: "70%",
-                    rotate: "180deg",
-                    scale: 1.5,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle7', {
+                //     top: "1100%",
+                //     left: "70%",
+                //     rotate: "180deg",
+                //     scale: 1.5,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle5', {
-                    top: "1100%",
-                    left: "80%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle5', {
+                //     top: "1100%",
+                //     left: "80%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                t11.to('#circle2', {
-                    top: "1100%",
-                    left: "90%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 1,
-                }, 'circles');
+                // t11.to('#circle2', {
+                //     top: "1100%",
+                //     left: "90%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     zIndex: 100,
+                //     opacity: 1,
+                // }, 'circles');
 
-                var t12 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".testimonial-section",
-                        start: "40% 100%",
-                        end: "100% 30%",
-                        // duration: "10",
-                        ease: "power3.out",
-                        scrub: true
-                    }
-                })
+                // var t12 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: ".testimonial-section",
+                //         start: "40% 100%",
+                //         end: "100% 30%",
+                //         // duration: "10",
+                //         ease: "power3.out",
+                //         scrub: true
+                //     }
+                // })
 
-                t12.to('#circle1', {
-                    top: "1180%",
-                    left: "82%",
-                    rotate: "180deg",
-                    // scale: 2,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle1', {
+                //     top: "1180%",
+                //     left: "82%",
+                //     rotate: "180deg",
+                //     // scale: 2,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle2', {
-                    top: "1180%",
-                    left: "5%",
-                    rotate: "180deg",
-                    // scale: 2
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle2', {
+                //     top: "1180%",
+                //     left: "5%",
+                //     rotate: "180deg",
+                //     // scale: 2
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
-                t12.to('#circle4', {
-                    top: "1180%",
-                    left: "44%",
-                    rotate: "180deg",
-                    scale: 0.6,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    opacity: 1,
-                    zIndex: 1,
-                    // backgroundColor: "",
-                }, 'circles');
+                // t12.to('#circle4', {
+                //     top: "1180%",
+                //     left: "44%",
+                //     rotate: "180deg",
+                //     scale: 0.6,
+                //     // duration: 2,
+                //     // ease: "power3.out",
+                //     // display: "hidden",
+                //     opacity: 1,
+                //     zIndex: 1,
+                //     // backgroundColor: "",
+                // }, 'circles');
 
 
 
