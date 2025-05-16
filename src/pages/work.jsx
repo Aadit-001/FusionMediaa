@@ -44,19 +44,27 @@ const Work = () => {
             <motion.div variants={textRevealVariants}>
               Memorable Brand Experiences
             </motion.div>
-            <motion.div variants={textRevealVariants}>
-              That Inspire & Engage
-            </motion.div>
           </motion.h1>
         </div>
 
         {/* Professional Minimalist Video Gallery Section */}
         <div className="mb-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 xl:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
             {/* Video 1 */}
-            <div className="flex flex-col items-center group">
-              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
-                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={beyondGames} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/beyond_games.jpg" />
+            <div className="flex flex-col items-center group ">
+              {/* <div className="w-full overflow-hidden" style={{ aspectRatio: '9/16', maxHeight: '700px' }}>
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/DooKo-0ID8c?autoplay=1&mute=1"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{ display: 'block' }}
+                ></iframe>
+              </div> */}
+              <div className="w-full  dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg flex justify-center items-center" style={{ maxHeight: '700px' }}>
+                <video className="w-full h-auto object-contain" style={{ minHeight: '400px', maxHeight: '520px' }} src={beyondGames} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events1.jpg" />
               </div>
               <div className="mt-3 w-full">
                 <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Beyond Games Activation</p>
@@ -65,8 +73,8 @@ const Work = () => {
             </div>
             {/* Video 2 */}
             <div className="flex flex-col items-center group">
-              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
-                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={mountainWoods} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/mountain_woods.jpg" />
+              <div className="w-full  dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg flex justify-center items-center" style={{ maxHeight: '700px' }}>
+                <video className="w-full h-auto object-contain" style={{ minHeight: '400px', maxHeight: '520px' }} src={mountainWoods} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/mountain_woods.jpg" />
               </div>
               <div className="mt-3 w-full">
                 <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Mountain Woods Launch</p>
@@ -75,8 +83,8 @@ const Work = () => {
             </div>
             {/* Video 3 */}
             <div className="flex flex-col items-center group">
-              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
-                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events1} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events1.jpg" />
+              <div className="w-full  dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg flex justify-center items-center" style={{ maxHeight: '700px' }}>
+                <video className="w-full h-auto object-contain" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events1} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events1.jpg" />
               </div>
               <div className="mt-3 w-full">
                 <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events – Corporate Event</p>
@@ -85,8 +93,8 @@ const Work = () => {
             </div>
             {/* Video 4 */}
             <div className="flex flex-col items-center group">
-              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
-                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events2} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events2.jpg" />
+              <div className="w-full  dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg flex justify-center items-center" style={{ maxHeight: '700px' }}>
+                <video className="w-full h-auto object-contain" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events2} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events2.jpg" />
               </div>
               <div className="mt-3 w-full">
                 <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events </p>
@@ -95,8 +103,8 @@ const Work = () => {
             </div>
             {/* Video 5 */}
             <div className="flex flex-col items-center group">
-              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
-                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events3} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events3.jpg" />
+              <div className="w-full  dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg flex justify-center items-center" style={{ maxHeight: '700px' }}>
+                <video className="w-full h-auto object-contain" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_events3} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events3.jpg" />
               </div>
               <div className="mt-3 w-full">
                 <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Events</p>
@@ -105,8 +113,8 @@ const Work = () => {
             </div>
             {/* Video 6 */}
             <div className="flex flex-col items-center group">
-              <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg" style={{ minHeight: '400px', maxHeight: '520px' }}>
-                <video className="w-full h-full object-cover" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_fly} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_fly.jpg" />
+              <div className="w-full  dark:bg-gray-800 overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg flex justify-center items-center" style={{ maxHeight: '700px' }}>
+                <video className="w-full h-auto object-contain" style={{ minHeight: '400px', maxHeight: '520px' }} src={fusion_fly} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_fly.jpg" />
               </div>
               <div className="mt-3 w-full">
                 <p className="text-xl md:text-2xl text-gray-700 dark:text-purple-500 text-center font-medium">Fusion Fly – Outdoor Campaign</p>

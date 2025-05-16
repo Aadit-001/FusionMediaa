@@ -61,7 +61,7 @@ const Branding = () => {
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".service-section",
-            start: "0% 100%",
+            start: "0% 50%",
             end: "100% 100%",
             scrub: true,
             // visibility: "visible",
@@ -269,7 +269,6 @@ const Branding = () => {
       background: "#C8E6C9",
       duration: 1,
       ease: "power2.out",
-      // visibility: "visible",
       scrollTrigger: {
         trigger: ".ser-section",
         start: "40% 65%",
