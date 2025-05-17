@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import fusionEvent from '../assets/clients/fusionEvent.png';
-import horeca from '../assets/clients/horeca.jpg';
-import healthyMeal from '../assets/clients/healthyMeal.jpg';
+import fusion_horeca from '../assets/clients/fusion_horeca.png';
+import healthyMeal from '../assets/clients/healthyMeal.png';
 import mountainWood from '../assets/clients/mountainWood.png';
 import axisbank from '../assets/clients/axisbank.png';  
 import symbiosis from '../assets/clients/symbiosis.png';
 import witty from '../assets/clients/witty.png';
 import electrolab from '../assets/clients/electrolab.png';
-import nesco from '../assets/clients/nesco.png';
-import svcbank from '../assets/clients/svcbank.png';
 import leela from '../assets/clients/leela.png';
 import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
-import beyondGames from '../assets/clients/beyondGames.jpg';
+import beyondGames from '../assets/clients/beyondGames.png';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -22,7 +20,7 @@ import { useDarkMode } from '../context/DarkModeContext';
 const Clients = () => {
   const { isDarkMode } = useDarkMode();
   const clientLogos = [
-    { id: 1, name: 'Horeca', logo: horeca },
+    { id: 1, name: 'Horeca', logo: fusion_horeca },
     { id: 2, name: 'Healthy Meal', logo: healthyMeal },
     { id: 3, name: 'Mountain Wood', logo: mountainWood },
     { id: 4, name: 'Fusion Event', logo: fusionEvent },
@@ -30,8 +28,6 @@ const Clients = () => {
     { id: 6, name: 'Symbiosis', logo: symbiosis },
     { id: 7, name: 'Witty', logo: witty },
     { id: 8, name: 'Electrolab', logo: electrolab },
-    { id: 9, name: 'NESCO', logo: nesco },
-    { id: 10, name: 'SVC Bank', logo: svcbank },
     { id: 11, name: 'Leela', logo: leela },
     { id: 13, name: 'Kimatsu', logo: kimatsu },
     { id: 14, name: 'JP', logo: jp },
@@ -44,7 +40,7 @@ const Clients = () => {
       text: "Fusion Media has been instrumental in transforming our digital presence. Their innovative approach and attention to detail have helped us achieve remarkable results.",
       name: "Sarah Johnson",
       position: "CEO, TechVision Inc.",
-      image: horeca
+      image: fusion_horeca
     },
     {
       id: 2,

@@ -436,7 +436,7 @@ a:hover {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    animation: marquee 50s linear infinite;
+    animation: marquee 40s linear infinite;
 }
 
 .marquee img {
