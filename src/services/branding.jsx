@@ -55,8 +55,65 @@ const Branding = () => {
     // scroll trigger start
 
     ScrollTrigger.matchMedia({
+
+
+
       // desktop
       "(min-width: 1200px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 50%",
+            end: "100% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        // Animate all circles together
+        // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
+
+        // Position circles 1, 3, 6 vertically on the left side
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service1-section",
+            start: "30% 120%",
+            end: "40% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "140%",
+          left: "50%",
+          rotate: "360deg",
+          scale: 2,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+
+
+      },
+
+
+      "(min-width: 1920px)": function () {
         // first section
         var tl = gsap.timeline({
           scrollTrigger: {
@@ -108,7 +165,6 @@ const Branding = () => {
 
 
       },
-
 
       // mobile
       "(min-width: 400px) and (max-width: 600px)": function () {
