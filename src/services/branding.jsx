@@ -61,7 +61,7 @@ const Branding = () => {
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".service-section",
-            start: "0% 100%",
+            start: "0% 50%",
             end: "100% 100%",
             scrub: true,
             // visibility: "visible",
@@ -96,7 +96,7 @@ const Branding = () => {
         })
 
         t2.to('#circle13', {
-          top: "150%",
+          top: "133%",
           left: "50%",
           rotate: "360deg",
           scale: 2,
@@ -197,7 +197,7 @@ const Branding = () => {
         })
 
         t2.to('#circle13', {
-          top: "200%",
+          top: "150%",
           left: "20%",
           rotate: "360deg",
           scale: 2,
@@ -206,8 +206,6 @@ const Branding = () => {
           opacity: 1,
           // background: "transparent"
         }, 'circles');
-
-
       },
 
       "(min-width: 801px) and (max-width: 1190px)": function () {
@@ -246,7 +244,7 @@ const Branding = () => {
         })
 
         t2.to('#circle13', {
-          top: "170%",
+          top: "150%",
           left: "60%",
           rotate: "360deg",
           scale: 2,
@@ -269,7 +267,6 @@ const Branding = () => {
       background: "#C8E6C9",
       duration: 1,
       ease: "power2.out",
-      // visibility: "visible",
       scrollTrigger: {
         trigger: ".ser-section",
         start: "40% 65%",
@@ -485,7 +482,9 @@ const Branding = () => {
             {/* <div className="hero-content"> */}
             <div className={`relative circless border-4 ${isDarkMode ? 'border-white' : 'border-slate-900'} mt-10 ml-[16%] md:ml-[0%]`} id="circle11">
               <DotLottieReact
-                src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
+                src={isDarkMode
+                  ? "https://lottie.host/6e066008-af58-454d-a314-bb39a491b07a/qzfpdLFUM3.lottie"
+                  : "https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"}
                 loop
                 autoplay
               />

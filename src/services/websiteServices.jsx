@@ -96,7 +96,7 @@ const Branding = () => {
         })
 
         t2.to('#circle13', {
-          top: "160%",
+          top: "140%",
           left: "50%",
           rotate: "360deg",
           scale: 2,
@@ -299,10 +299,10 @@ const Branding = () => {
     { title: "UI/UX Optimization" },
     { title: "Speed Optimization" },
     { title: "Website Maintenance" },
-    { title: "Interactive Design Features" },
     { title: "CMS Management" },
     { title: "Mobile-First Design" },
-    { title: "Customer-Web Tools" }
+    { title: "Customer-Web Tools" },
+    { title: "Interactive Design" }
   ];
 
   const processSteps = [
@@ -472,7 +472,9 @@ const Branding = () => {
             {/* <div className="hero-content"> */}
             <div className={`relative circless border-4 ${isDarkMode ? 'border-white' : 'border-slate-900'} mt-10 ml-[16%] md:ml-[0%]`} id="circle11">
               <DotLottieReact
-                src="https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"
+                src={isDarkMode
+                  ? "https://lottie.host/6e066008-af58-454d-a314-bb39a491b07a/qzfpdLFUM3.lottie"
+                  : "https://lottie.host/75718164-b410-4b37-a718-35ff309ea037/iAYzjWmW0u.lottie"}
                 loop
                 autoplay
               />

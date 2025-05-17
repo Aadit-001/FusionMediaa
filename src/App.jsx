@@ -5,25 +5,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './App.css';
-import axisbank from './assets/clients/axisbank.png';
-import nesco from './assets/clients/nesco.png';
-import JP from './assets/clients/JP.png';
-import leela from './assets/clients/leela.png';
-import kimatsu from './assets/clients/kimatsu.png';
-import witty from './assets/clients/witty.png';
-import symbiosis from './assets/clients/symbiosis.png';
-import electrolab from './assets/clients/electrolab.png';
-import beyondGames from './assets/clients/beyondGames.jpg';
+import axisbank from './assets/companys_carousel/axisbank.png';
+import JP from './assets/companys_carousel/JP.png';
+import modena from './assets/companys_carousel/modena.png';
+import leela from './assets/companys_carousel/leela.png';
+import kimatsu from './assets/companys_carousel/kimatsu.png';
+import witty from './assets/companys_carousel/witty.png';
+import symbiosis from './assets/companys_carousel/symbiosis.png';
+import electrolab from './assets/companys_carousel/electrolab.png';
+import beyondGames from './assets/companys_carousel/beyondGames.png';
+import ovenry from './assets/companys_carousel/ovenry.png';
 // import animation from './assets/Animation.lottie';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import { useState } from 'react';
 import White_image from './assets/White_image.png';
-import horeca from './assets/clients/horeca.jpg';
-import healthyMeal from './assets/clients/healthyMeal.jpg';
-import mountainWood from './assets/clients/mountainWood.png';
 import fusionEvent from './assets/parentCompany/fusionEvent.png';
 import fusion_fly from './assets/parentCompany/fusion_fly.png';
+import fusion_flyyy from './assets/clients/fusion_flyyy.png';
 import fusion_horeca from './assets/parentCompany/fusion_horeca.png';
 import fusion_vector from './assets/parentCompany/fusion_vector.png';
 import { useDarkMode } from './context/DarkModeContext';
@@ -40,24 +39,21 @@ function App() {
     const testimonials = [
         {
             id: 1,
-            text: "Fusion Media has been instrumental in transforming our digital presence. Their innovative approach and attention to detail have helped us achieve remarkable results.",
-            name: "Sarah Johnson",
-            position: "CEO, TechVision Inc. ",
-            image: horeca
+            text: "I had an excellent experience with Fusion Fly Pvt Ltd! They responded quickly to my inquiries and provided great offers for my trip to UAE. Their service was quick and efficient, and they made excellent recommendations for my stay in a 5-star hotel. I highly recommend them for international travel arrangements.",
+            name: "Krishna Dhamala",
+            image: fusion_flyyy
         },
         {
             id: 2,
-            text: "Working with Fusion Media has been a game-changer for our business. Their creative solutions and technical expertise have exceeded our expectations.",
-            name: "Michael Chen",
-            position: "Director, Innovation Labs",
-            image: healthyMeal
+            text: "Fusion Vector delivers outstanding service with a perfect blend of innovation and reliability. Their team's professionalism and attention to detail set them apart.",
+            name: "Miraj",
+            image: fusion_vector
         },
         {
             id: 3,
             text: "The team's dedication to quality and innovation is unmatched. They've helped us create experiences that truly resonate with our users.",
-            name: "Emma Williams",
-            position: "Head of Design, Future Corp",
-            image: mountainWood
+            name: "Dhruv",
+            image: fusion_horeca
         }
     ];
 
@@ -75,7 +71,7 @@ function App() {
     useEffect(() => {
         const timer = setInterval(() => {
             handleNext();
-        }, 3000); // Change testimonial every 5 seconds
+        }, 5000); // Change testimonial every 5 seconds
 
         return () => clearInterval(timer);
     }, []);
@@ -4065,7 +4061,7 @@ function App() {
         gsap.to("#box1", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "#8e44ad",
+            background: "#E1BEE7",
             duration: 1,
             ease: "power2.out",
             // visibility: "visible",
@@ -4081,7 +4077,7 @@ function App() {
         gsap.to("#box2", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "#8e44ad",
+            background: "#C5CAE9",
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -4096,7 +4092,7 @@ function App() {
         gsap.to("#box3", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "#8e44ad",
+            background: "#C8E6C9",
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -4111,7 +4107,7 @@ function App() {
         gsap.to("#box4", {
             scale: 20,
             transformOrigin: "50% 50%",
-            background: "#8e44ad",
+            background: "#BBDEFB",
             duration: 1,
             ease: "power2.out",
             scrollTrigger: {
@@ -4188,22 +4184,25 @@ function App() {
                                     <div className="marquee h-full w-full rounded-4xl">
                                     <div className="marquee-content h-full w-full gap-6 md:gap-12 flex items-center">
                                             <img src={axisbank} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
-                                            <img src={nesco} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 2" />
+                                            <img src={ovenry} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
                                             <img src={JP} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 3" />
-                                            <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
                                             <img src={beyondGames} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 9" />
                                             <img src={kimatsu} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 5" />
                                             <img src={witty} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 6" />
                                             <img src={symbiosis} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
+                                            <img src={modena} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
                                             <img src={electrolab} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 8" />
-                                            <img src={axisbank} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
-                                            <img src={nesco} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 2" />
-                                            <img src={JP} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 3" />
                                             <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
+                                            <img src={axisbank} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
+                                            <img src={ovenry} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
+                                            <img src={JP} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 3" />
+                                            <img src={beyondGames} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 9" />
                                             <img src={kimatsu} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 5" />
                                             <img src={witty} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 6" />
                                             <img src={symbiosis} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
+                                            <img src={modena} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
                                             <img src={electrolab} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 8" />
+                                            <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
                                         </div>
 
                                     </div>
@@ -4529,22 +4528,22 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box1'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Vector</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-base md:text-base list-disc list-inside space-y-3'>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span className='font-medium'>Designing the Web, Defining Success</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className=' text-gray-800'>Designing the Web, Defining Success</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>HTML, CSS, JavaScript</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className=' text-gray-700'>HTML, CSS, JavaScript</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Web Development</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className=' text-gray-700'>Web Development</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>UI/UX</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className=' text-gray-700'>UI/UX</span>
                                 </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
@@ -4560,30 +4559,30 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box2'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Events</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm md:text-base list-disc list-inside space-y-3'>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span className='font-medium'>Turning Events into Memories</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Turning Events into Memories</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Corporate Events</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Corporate Events</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Wedding Events</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Wedding Events</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>ATL\BTL Activation</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>ATL\BTL Activation</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Exhibitions</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Exhibitions</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Talent Management</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Talent Management</span>
                                 </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
@@ -4599,22 +4598,22 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box3'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Horeca</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm md:text-lg list-disc list-inside space-y-3'>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span className='font-medium'>Where Luxury Meets Comfort</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Where Luxury Meets Comfort</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Air BNB</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Air BNB</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Stay</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Stay</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Plush Rooms</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Plush Rooms</span>
                                 </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
@@ -4630,18 +4629,18 @@ function App() {
                         <div className='h-10 w-10 rounded-full ' id='box4'></div>
                         <div className='absolute top-0 z-1000 flex flex-col  items-center h-full w-full '>
                             <div className='pt-20 text-4xl font-bold mb-5'>Fusion Fly</div>
-                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm list-disc list-inside space-y-2'>
+                            <ul className='pl-10 pr-10 pt-2 pb-2 text-sm md:text-lg list-disc list-inside space-y-3'>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span className='font-medium'>Travel With Passion</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Travel With Passion</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Fly Global</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Fly Global</span>
                                 </li>
                                 <li className='flex items-center gap-2'>
-                                    <span className='text-blue-100 font-semibold'>•</span>
-                                    <span>Hospitality</span>
+                                    <span className='text-black font-semibold'>•</span>
+                                    <span className='text-gray-700'>Hospitality</span>
                                 </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
@@ -4654,8 +4653,8 @@ function App() {
                     {/* </div> */}
                 </div>
 
-                <section className={`fifth-section min-h-screen py-16 md:py-32 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-  <div className="container mx-auto px-4">
+                <section className={`fifth-section min-h-screen md:py-12 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+  <div className="container mx-auto px-4 mb-[-50px]">
     <div className="max-w-6xl mx-auto">
       {/* Quote Card */}
       <motion.div
@@ -4706,44 +4705,9 @@ function App() {
   </div>
 </section>
 
-
-                {/* <div className="testimonial-section">
-                    <h2 className="testimonial-title">What Clients Say</h2>
-                    <div className="testimonial-content">
-                        <div className="testimonial-client">
-                            <img
-                                src={leela}
-                                alt="Yevgen Sokolnikov"
-                                className="client-img"
-                            />
-                            <div className="client-info flex flex-col gap-2">
-                                <span className="client-name text-xl">Yevgen Sokolnikov</span>
-                                <span className="client-role">C.E.O. - boodmo.com</span>
-                            </div>
-                        </div>
-                        <div className="testimonial-main">
-                            <div className="testimonial-stars">
-                                <span className="quote-mark">“</span>
-                                {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="star">★</span>
-                                ))}
-                            </div>
-                            <p className="testimonial-text">
-                                Thanks to Leo9 Studio's work, the website's long checkout time has been cut down to one minute helping the client increase its business.
-                            </p>
-                            <div className="testimonial-dots">
-                                <span className="dot active"></span>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                <div className="testimonial-section flex flex-col items-center mt-[200px]" ref={ref}>
+                <div className="testimonial-section flex flex-col items-center mt-[-30px]" ref={ref}>
                     {/* Testimonial Header */}
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-10">
                         <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
                             Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
                             successful Projects
