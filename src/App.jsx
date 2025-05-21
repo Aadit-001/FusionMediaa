@@ -4286,8 +4286,8 @@ function App() {
                         </div>
                     </div> */}
 
-                <div className={`sticky-sections slide flex flex-col ${isDarkMode ? 'bg-black' : 'bg-white'}`} id='slide5'>
-                    <div className='container'>
+                <div className={`sticky-sections slide flex flex-col ${isDarkMode ? 'bg-black' : 'bg-white'} mx-10`} id='slide5'>
+                    {/* <div className='container'> */}
                         <div className={`sticky-section1 ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-1 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
                                 <div className={`h-20 w-72 md:w-128 flex items-center mt-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
@@ -4339,7 +4339,7 @@ function App() {
                         </div>
                         <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-2 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
+                                <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                         <div className='h-[80%] w-[80%] bg-[#FFF9C4] rounded-full'></div>
                                     </div>
@@ -4362,13 +4362,14 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-3 flex`}>
+                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-2 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
+                                <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                         <div className='h-[80%] w-[80%] bg-[#E1BEE7] rounded-full'></div>
                                     </div>
                                     <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
+                                    {/* <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media</span> */}
                                 </div>
                                 <div className='relative  flex items-center   ' ref={ref}>
                                     <motion.div
@@ -4381,21 +4382,20 @@ function App() {
                                         <span className='md:text-2xl text-1xl'>• Instagram Marketing</span>
                                         <span className='md:text-2xl text-1xl'>• Facebook Marketing</span>
                                         <span className='md:text-2xl text-1xl'>• Youtube Marketing</span>
-                                        <span className='md:text-2xl text-1xl'>• Engagement Posting Campaign</span>
-                                        <span className='md:text-2xl text-1xl'>• Stories & Reels Creation</span>
+                                        <span className='md:text-2xl text-1xl'>• Engagement Posting</span>
+                                        <span className='md:text-2xl text-1xl'>• Stories & Reels creation</span>
                                         <span className='md:text-2xl text-1xl'>• Strategy</span>
                                         <span className='md:text-2xl text-1xl'>• Influencer Discovery</span>
                                         <span className='md:text-2xl text-1xl'>• Partnership</span>
                                         <span className='md:text-2xl text-1xl'>• Sponsored Post</span>
                                         <span className='md:text-2xl text-1xl'>• Influencer Events</span>
-
                                     </motion.div>
                                 </div>
                             </div>
                         </div>
                         <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-4 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
+                                <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                         <div className='h-[80%] w-[80%] bg-[#C5CAE9] rounded-full'></div>
                                     </div>
@@ -4427,7 +4427,7 @@ function App() {
                         </div>
                         <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-5 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
+                                <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                         <div className='h-[80%] w-[80%] bg-[#FFCDD2] rounded-full'></div>
                                     </div>
@@ -4458,7 +4458,7 @@ function App() {
                         </div>
                         <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-6 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
+                                <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                         <div className='h-[80%] w-[80%] bg-[#C8E6C9] rounded-full'></div>
                                     </div>
@@ -4488,7 +4488,7 @@ function App() {
                         </div>
                         <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'}  h-screen w-full sticky-7 flex`}>
                             <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
+                                <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
                                     <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                         <div className='h-[80%] w-[80%] bg-[#F8BBD0] rounded-full'></div>
                                     </div>
@@ -4517,7 +4517,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
                 </div>
 
                 <div className={`fourth-section mx-1 slide slide4 flex items-center justify-center gap-2 ${isDarkMode ? 'bg-black' : 'bg-white'}`} id="slide4">
