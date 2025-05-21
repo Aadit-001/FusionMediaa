@@ -311,7 +311,6 @@ const Navbar = () => {
                         <NavLink to="/clients" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Clients</NavLink>
                         <NavLink to="/about" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>About</NavLink>
                         <NavLink to="/blogs" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Blogs</NavLink>
-                        <NavLink to="/admin/blog" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>Admin</NavLink>
                         <Link to="/contact" className="py-2" onClick={() => setIsMobileMenuOpen(false)}>
                             <button className={`${isDarkMode ? 'btnWhite liquidWhite' : 'btn liquid'} w-full`}><span>Contact</span></button>
                         </Link>
