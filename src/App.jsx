@@ -1327,7 +1327,7 @@ function App() {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "30%",
+                //     left: "25%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -1981,7 +1981,7 @@ function App() {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "30%",
+                //     left: "25%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -4130,7 +4130,7 @@ function App() {
 
     return (
         <div ref={containerRef} className="smooth-scroll">
-            <div className="app-max-container">
+            <div className="app-max-container mt-[-40px] md:mt-0 " >
                 <div className="hero-section slide slide1" id="slide1">
                     <div className="container">
                         <div className="hero-content">
@@ -4203,7 +4203,8 @@ function App() {
                                             <img src={modena} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
                                             <img src={electrolab} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 8" />
                                             <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
-                                    </div>
+                                        </div>
+
                                     </div>
                                     <div className='hidden md:visible absolute top-0 left-0 h-full w-[40%] from-white to-transparent bg-gradient-to-r'>
                                     </div>
