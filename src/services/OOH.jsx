@@ -56,7 +56,8 @@ const Branding = () => {
 
     ScrollTrigger.matchMedia({
       // desktop
-      "(min-width: 1200px)": function () {
+       // desktop
+            "(min-width: 1200px)": function () {
               // first section
               var tl = gsap.timeline({
                 scrollTrigger: {
@@ -108,8 +109,6 @@ const Branding = () => {
       
       
             },
-      
-      
             "(min-width: 1920px)": function () {
               // first section
               var tl = gsap.timeline({
@@ -162,9 +161,6 @@ const Branding = () => {
       
       
             },
-      
-            // mobile
-      
             "(min-width: 801px) and (max-width: 1190px)": function () {
               // first section
               var tl = gsap.timeline({
@@ -240,8 +236,8 @@ const Branding = () => {
               var t2 = gsap.timeline({
                 scrollTrigger: {
                   trigger: ".service-section",
-                  start: "10% 90%",
-                  end: "30% 100%",
+                  start: "0% 0%",
+                  end: "100% 100%",
                   scrub: true,
                   // visibility: "visible",
                   // markers: true
@@ -264,8 +260,8 @@ const Branding = () => {
               var tl = gsap.timeline({
                 scrollTrigger: {
                   trigger: ".service-section",
-                  start: "0% 0%",
-                  end: "70% 80%",
+                  start: "20% 0%",
+                  end: "40% 100%",
                   scrub: true,
                   // visibility: "visible",
                   // markers: true
@@ -286,8 +282,8 @@ const Branding = () => {
               var t2 = gsap.timeline({
                 scrollTrigger: {
                   trigger: ".service-section",
-                  start: "15% 100%",
-                  end: "30% 100%",
+                  start: "10% 50%",
+                  end: "30% 50%",
                   scrub: true,
                   // visibility: "visible",
                   // markers: true

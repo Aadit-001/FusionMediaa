@@ -567,7 +567,7 @@ useEffect(() => {
 
                 t10.to('#circle1', {
                     top: "920%",
-                    left: "25%",
+                    left: "27%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -579,7 +579,7 @@ useEffect(() => {
 
                 t10.to('#circle2', {
                     top: "920%",
-                    left: "140%",
+                    left: "160%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -591,7 +591,7 @@ useEffect(() => {
 
                 t10.to('#circle3', {
                     top: "920%",
-                    left: "100%",
+                    left: "120%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -603,7 +603,7 @@ useEffect(() => {
 
                 t10.to('#circle4', {
                     top: "920%",
-                    left: "46.6%",
+                    left: "60%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -615,7 +615,7 @@ useEffect(() => {
 
                 t10.to('#circle5', {
                     top: "920%",
-                    left: "180%",
+                    left: "220%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -3667,7 +3667,7 @@ useEffect(() => {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-[#E1BEE7] rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media</span>
                                 {/* <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media</span> */}
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
