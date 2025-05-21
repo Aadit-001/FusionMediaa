@@ -517,7 +517,10 @@ const Branding = () => {
               <span className="text-gray-400">•</span>
               <Link to="/services" className={`text-gray-900 hover:text-gray-600 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Services</Link>
               <span className="text-gray-400">•</span>
-              <span className={`text-gray-400 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Social Media Marketing</span>
+              <span className={`whitespace-nowrap text-gray-400 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                <span className="block md:inline">Social Media</span>
+                <span className="block md:inline">Marketing</span>
+              </span>
             </nav>
           </div>
           <div className='h-full w-full md:flex md:flex-row md:justify-between md:items-center'>
