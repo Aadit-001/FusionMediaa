@@ -23,7 +23,7 @@ import White_image from './assets/White_image.png';
 import fusionEvent from './assets/parentCompany/fusionEvent.png';
 import fusion_fly from './assets/parentCompany/fusion_fly.png';
 import fusion_flyyy from './assets/clients/fusion_flyyy.png';
-import fusion_horeca from './assets/parentCompany/fusion_horeca.png';
+import fusion_horecaa from './assets/parentCompany/fusion_horecaa.png';
 import fusion_vector from './assets/parentCompany/fusion_vector.png';
 import { useDarkMode } from './context/DarkModeContext';
 import Black_image from './assets/Black_image.png';
@@ -53,7 +53,7 @@ function App() {
             id: 3,
             text: "The team's dedication to quality and innovation is unmatched. They've helped us create experiences that truly resonate with our users.",
             name: "Dhruv",
-            image: fusion_horeca
+            image: fusion_horecaa
         }
     ];
 
@@ -4617,7 +4617,7 @@ function App() {
                                 </li>
                             </ul>
                             <div className='mt-1 h-[60%] w-full mx-2' >
-                                <img src={fusion_horeca} alt="logo" className="contain h-full w-full" />
+                                <img src={fusion_horecaa} alt="logo" className="contain h-full w-full" />
                             </div>
                         </div>
                         {/* </div> */}
@@ -4643,7 +4643,7 @@ function App() {
                                     <span className='text-gray-700'>Hospitality</span>
                                 </li>
                             </ul>
-                            <div className='mt-1 h-[60%] w-full mx-2' >
+                            <div className='mt-12 h-[60%] w-full mx-2' >
                                 <img src={fusion_fly} alt="logo" className="contain h-full w-full" />
                             </div>
                         </div>
