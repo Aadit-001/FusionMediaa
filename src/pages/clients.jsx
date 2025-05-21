@@ -12,6 +12,9 @@ import leela from '../assets/clients/leela.png';
 import kimatsu from '../assets/clients/kimatsu.png';
 import jp from '../assets/clients/JP.png';
 import beyondGames from '../assets/clients/beyondGames.png';
+import fusion_flyyy from '../assets/clients/fusion_flyyy.png';
+import fusion_vector from '../assets/parentCompany/fusion_vector.png';
+import fusion_horecaa from '../assets/parentCompany/fusion_horecaa.png';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -34,28 +37,25 @@ const Clients = () => {
     { id: 15, name: 'Beyond Games', logo: beyondGames },
     ];
 
-  const testimonials = [
-    {
-      id: 1,
-      text: "Fusion Media has been instrumental in transforming our digital presence. Their innovative approach and attention to detail have helped us achieve remarkable results.",
-      name: "Sarah Johnson",
-      position: "CEO, TechVision Inc.",
-      image: fusion_horeca
-    },
-    {
-      id: 2,
-      text: "Working with Fusion Media has been a game-changer for our business. Their creative solutions and technical expertise have exceeded our expectations.",
-      name: "Michael Chen",
-      position: "Director, Innovation Labs",
-      image: healthyMeal
-    },
-    {
-      id: 3,
-      text: "The team's dedication to quality and innovation is unmatched. They've helped us create experiences that truly resonate with our users.",
-      name: "Emma Williams",
-      position: "Head of Design, Future Corp",
-      image: mountainWood
-    }
+    const testimonials = [
+      {
+          id: 1,
+          text: "I had an excellent experience with Fusion Fly Pvt Ltd! They responded quickly to my inquiries and provided great offers for my trip to UAE. Their service was quick and efficient, and they made excellent recommendations for my stay in a 5-star hotel. I highly recommend them for international travel arrangements.",
+          name: "Krishna Dhamala",
+          image: fusion_flyyy
+      },
+      {
+          id: 2,
+          text: "Fusion Vector delivers outstanding service with a perfect blend of innovation and reliability. Their team's professionalism and attention to detail set them apart.",
+          name: "Miraj",
+          image: fusion_vector
+      },
+      {
+          id: 3,
+          text: "The team's dedication to quality and innovation is unmatched. They've helped us create experiences that truly resonate with our users.",
+          name: "Dhruv",
+          image: fusion_horecaa
+      }
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -156,61 +156,54 @@ const Clients = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className="flex flex-col items-center mt-[200px]" ref={ref}>
-          {/* Testimonial Header */}
-          <div className="text-center mb-20">
-            <h3 className={`text-4xl md:text-5xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'Lobster, cursive' }}>
-              Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
-              successful Projects
-            </h3>
-            <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>    
-          </div>
-          {/* Testimonial Content */}
-          <div className="max-w-[1000px] mx-auto flex flex-col items-center relative">
-            {/* Quote Mark */}
-            <span className="absolute -left-20 top-0 text-[#FF3366] text-[180px] md:text-[180px] font-serif leading-none hidden md:block">"</span>
-            
-            {/* Testimonial Text */}
-            <div className="text-center w-full">
-              <p className={`text-xl md:text-4xl font-normal mb-8 md:mb-20 leading-relaxed text-left md:pl-12 px-4 ${
-                isDarkMode ? 'text-gray-300' : 'text-gray-900'
-              }`}>
-                {testimonials[currentTestimonial].text}
-              </p>
-              {/* Author Info */}
-              <div className="flex items-center justify-start w-full gap-4 md:gap-6 mb-4 md:pl-12 px-4">
-                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gray-200">
-                  <img 
-                    src={testimonials[currentTestimonial].image}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-left">
-                  <h4 className={`text-lg md:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                    {testimonials[currentTestimonial].name}
-                  </h4>
-                  <p className={`text-base md:text-xl ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {testimonials[currentTestimonial].position}
-                  </p>
-                </div>
-              </div>
+        <div className="testimonial-section flex flex-col items-center mt-[-30px]" ref={ref}>
+                    {/* Testimonial Header */}
+                    <div className="text-center mb-10">
+                        <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
+                            Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
+                            successful Projects
+                        </h3>
+                        <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>
+                    </div>
+                    {/* Testimonial Content */}
+                    <div className="max-w-[1000px] mx-auto flex flex-col items-center relative bg-gray-400/10 rounded-lg p-2">
+                        {/* Quote Mark */}
+                        <span className="absolute -left-20 top-0 text-[#FF3366] text-[180px] md:text-[180px] font-serif leading-none hidden md:block">"</span>
 
-              {/* Dots Indicator */}
-              <div className="flex justify-center gap-3 md:gap-4 mt-4 md:mt-8">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
-                      currentTestimonial === index ? 'bg-[#FF3366]' : isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+                        {/* Testimonial Text */}
+                        <div className="text-center w-full">
+                            <p className="text-xl md:text-4xl font-normal mb-8 md:mb-20 leading-relaxed text-left md:pl-12 px-4">
+                                {testimonials[currentTestimonial].text}
+                            </p>
+                            {/* Author Info */}
+                            <div className="flex items-center justify-start w-full gap-4 md:gap-6 mb-4 md:pl-12 px-4">
+                                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gray-200">
+                                    <img
+                                        src={testimonials[currentTestimonial].image}
+                                        alt={testimonials[currentTestimonial].name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="text-left">
+                                    <h4 className="text-lg md:text-2xl font-bold">{testimonials[currentTestimonial].name}</h4>
+                                    <p className="text-base md:text-xl text-gray-600">{testimonials[currentTestimonial].position}</p>
+                                </div>
+                            </div>
+
+                            {/* Dots Indicator */}
+                            <div className="flex justify-center gap-3 md:gap-4 mt-4 md:mt-8">
+                                {testimonials.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => setCurrentTestimonial(index)}
+                                        className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${currentTestimonial === index ? 'bg-[#FF3366]' : 'bg-gray-300'
+                                            }`}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
         {/* Bottom CTA Section */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-10 md:py-20 rounded-lg mt-22 h-[200px] md:h-[280px] flex items-center justify-center px-4 md:px-0">
           <h2 className="text-3xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>

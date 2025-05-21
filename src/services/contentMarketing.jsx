@@ -96,7 +96,7 @@ const Branding = () => {
         })
 
         t2.to('#circle13', {
-          top: "143%",
+          top: "150%",
           left: "50%",
           rotate: "360deg",
           scale: 2,
@@ -149,7 +149,7 @@ const Branding = () => {
         })
 
         t2.to('#circle13', {
-          top: "140%",
+          top: "141%",
           left: "50%",
           rotate: "360deg",
           scale: 2,
