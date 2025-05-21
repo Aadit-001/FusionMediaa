@@ -107,8 +107,7 @@ const Clients = () => {
             initial="hidden"
             animate="visible"
             transition={{ staggerChildren: 0.3 }}
-            className={`text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto ${isDarkMode ? 'text-white' : 'text-gray-900'}`}
-            style={{ fontFamily: 'Lobster, cursive' }}
+            className={`text-3xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto ${isDarkMode ? 'text-white' : 'text-gray-900'} font-sans md:font-[Lobster,cursive]`}
           >
             <motion.div variants={textRevealVariants}>
               We make happy clients by
@@ -159,11 +158,11 @@ const Clients = () => {
         <div className="testimonial-section flex flex-col items-center mt-[-30px]" ref={ref}>
                     {/* Testimonial Header */}
                     <div className="text-center mb-10">
-                        <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
+                        <h3 className="text-2xl md:text-5xl font-bold font-sans md:font-[Lobster,cursive]">
                             Happy clients with <span className="gradient-text">{inView && <CountUp end={100} duration={3} />}+</span><br />
                             successful Projects
                         </h3>
-                        <h2 className="text-[#FF3366] text-2xl font-medium mt-[20px]" style={{ fontFamily: 'Lobster, cursive' }}>TESTIMONIALS</h2>
+                        <h2 className="text-[#FF3366] text-xl md:text-2xl font-medium mt-[20px] font-sans md:font-[Lobster,cursive]">TESTIMONIALS</h2>
                     </div>
                     {/* Testimonial Content */}
                     <div className="max-w-[1000px] mx-auto flex flex-col items-center relative bg-gray-400/10 rounded-lg p-2">
@@ -206,7 +205,7 @@ const Clients = () => {
                 </div>
         {/* Bottom CTA Section */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-10 md:py-20 rounded-lg mt-22 h-[200px] md:h-[280px] flex items-center justify-center px-4 md:px-0">
-          <h2 className="text-3xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight" style={{ fontFamily: 'Lobster, cursive' }}>
+          <h2 className="text-3xl md:text-6xl font-bold text-center max-w-4xl mx-auto leading-tight font-sans md:font-[Lobster,cursive]">
             Ready to transform<br />
             your digital presence?
           </h2>

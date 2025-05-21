@@ -95,8 +95,8 @@ const Work = () => {
                   <video className="object-contain w-full h-full" style={{ maxWidth: '100%', maxHeight: '420px' }} src={BeyondGame_Intro} autoPlay loop muted controls playsInline preload="auto" poster="/thumbnails/fusion_events3.jpg" />
                 </div>
                 <div className="mt-3 w-full">
-                  <p className={`text-xl md:text-2xl text-center font-medium ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>Beyond Game Intro</p>
-                  <p className={`text-sm md:text-base text-center mt-1 ${isDarkMode ? 'text-gray-200' : 'text-gray-500'}`}>Intro for gaming event</p>
+                  <p className={`text-xl md:text-2xl text-center font-medium ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>Beyond Game Trailer</p>
+                  <p className={`text-sm md:text-base text-center mt-1 ${isDarkMode ? 'text-gray-200' : 'text-gray-500'}`}>Trailer for gaming event</p>
                 </div>
               </div>
             </div>

@@ -1327,7 +1327,7 @@ function App() {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "25%",
+                //     left: "30%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -1981,7 +1981,7 @@ function App() {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "25%",
+                //     left: "30%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -4203,8 +4203,7 @@ function App() {
                                             <img src={modena} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
                                             <img src={electrolab} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 8" />
                                             <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
-                                        </div>
-
+                                    </div>
                                     </div>
                                     <div className='hidden md:visible absolute top-0 left-0 h-full w-[40%] from-white to-transparent bg-gradient-to-r'>
                                     </div>
@@ -4669,31 +4668,26 @@ function App() {
         </div>
 
         {/* Card Content */}
-        <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-6 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'}`}>
+        <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-3 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'} max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-4 md:mb-0`}>
           {/* Founder Info */}
-          <div className="md:mt-10 max-w-3xl mx-auto px-4 text-center">
-            <div className="space-y-6">
-              <h3 className={`text-4xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
-              
-              <div className="text-center">
-                <p className={`text-xl md:text-2xl font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
+          <div className="md:mt-10 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
+            <div className="space-y-3 md:space-y-6">
+              <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
+              <div className="text-center md:text-left">
+                <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
               </div>
-
-              <p className={`mt-4 md:mt-6 text-lg md:text-xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.
-              </p>
-
-              <div className="mt-6">
+              <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.</p>
+              <div className="mt-3 md:mt-6">
                 <a 
                   href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center px-6 py-3 rounded-lg text-lg ${isDarkMode 
+                  className={`inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-lg ${isDarkMode 
                     ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300' 
                     : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
                   }`}
                 >
-                  <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 mr-2" />
+                  <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                   Connect on LinkedIn
                 </a>
               </div>

@@ -447,10 +447,10 @@ a:hover {
 @keyframes marquee {
   0% {
     transform: translateX(0);
-}
-100% {
-    transform: translateX(-50%); /* Move by half the width of the duplicated content */
-}
+  }
+  100% {
+    transform: translateX(-350%);
+  }
 }
 
 .clients::before,
@@ -775,4 +775,10 @@ a:hover {
 
 .dot.active {
   background: #f45a6a;
+}
+
+@media (max-width: 768px) {
+  .marquee-content {
+    animation-duration: 12s !important;
+  }
 }
