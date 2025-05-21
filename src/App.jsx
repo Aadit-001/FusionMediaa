@@ -539,7 +539,7 @@ function App() {
                 var t10 = gsap.timeline({
                     scrollTrigger: {
                         trigger: ".sticky-7",
-                        start: "90% 100%",
+                        start: "70% 100%",
                         end: "100% 50%",
                         // duration: 10,
                         scrub: true
@@ -550,7 +550,7 @@ function App() {
                     top: "920%",
                     left: "25%",
                     rotate: "180deg",
-                    // scale: 3,
+                    scale: 3,
                     // duration: 2,
                     // ease: "power3.out",
                     // display: "hidden",
@@ -562,7 +562,7 @@ function App() {
                     top: "920%",
                     left: "140%",
                     rotate: "180deg",
-                    // scale: 3,
+                    scale: 3,
                     // duration: 2,
                     // ease: "power3.out",
                     // display: "hidden",
@@ -574,7 +574,7 @@ function App() {
                     top: "920%",
                     left: "100%",
                     rotate: "180deg",
-                    // scale: 3,
+                    scale: 3,
                     // duration: 2,
                     // ease: "power3.out",
                     // display: "hidden",
@@ -586,7 +586,7 @@ function App() {
                     top: "920%",
                     left: "46.6%",
                     rotate: "180deg",
-                    // scale: 1.8,
+                    scale: 3,
                     // duration: 2,
                     // ease: "power3.out",
                     // display: "hidden",
@@ -598,7 +598,7 @@ function App() {
                     top: "920%",
                     left: "180%",
                     rotate: "180deg",
-                    // scale: 3,
+                    scale: 3,
                     // duration: 2,
                     // ease: "power3.out",
                     // display: "hidden",
@@ -606,29 +606,6 @@ function App() {
                     opacity: 1,
                 }, 'circles');
 
-                t10.to('#circle6', {
-                    top: "920%",
-                    left: "48%",
-                    rotate: "180deg",
-                    scale: 1.6,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 0,
-                }, 'circles');
-
-                t10.to('#circle7', {
-                    top: "920%",
-                    left: "48%",
-                    rotate: "180deg",
-                    scale: 1.4,
-                    // duration: 2,
-                    // ease: "power3.out",
-                    // display: "hidden",
-                    zIndex: 100,
-                    opacity: 0,
-                }, 'circles');
 
 
 
@@ -3403,657 +3380,6 @@ function App() {
             },
             // "all": function () {
             //     // first section
-            //     var tl = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".second-section",
-            //             start: "50% 100%",
-            //             end: "100% 100%",
-            //             scrub: true,
-            //             // visibility: "visible",
-            //             // markers: true
-            //             // scroll: true
-            //         }
-            //     })
-
-            //     // Animate all circles together
-            //     // const circles = ['#circle1', '#circle2', '#circle3', '#circle4', '#circle5', '#circle6', '#circle7'];
-
-            //     // Position circles 1, 3, 6 vertically on the left side
-            //     tl.to('#circle2', {
-            //         top: "160%",
-            //         left: "35%",
-            //         rotate: "180deg",
-            //         scale: 0.8,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#FF9999"
-            //     }, 'circles');
-
-            //     tl.to('#circle1', {
-            //         top: "146%",
-            //         left: "28%",
-            //         rotate: "180deg",
-            //         scale: 1,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#D4A5A5"
-            //     }, 'circles');
-
-            //     tl.to('#circle6', {
-            //         top: "131%",
-            //         left: "35%",
-            //         rotate: "180deg",
-            //         scale: 0.8,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#FFEEAD"
-            //     }, 'circles');
-
-            //     // Position circle 4 in the middle
-            //     tl.to('#circle4', {
-            //         top: "144%",
-            //         left: "47%",
-            //         rotate: "180deg",
-            //         scale: 1.2,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#9DE0AD"
-            //     }, 'circles');
-
-            //     // Position circles 2, 5, 7 vertically on the right side
-            //     tl.to('#circle7', {
-            //         top: "131%",
-            //         left: "60%",
-            //         rotate: "180deg",
-            //         scale: 0.8,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#FFEEAD"
-            //     }, 'circles');
-
-            //     tl.to('#circle3', {
-            //         top: "146%",
-            //         left: "68%",
-            //         rotate: "180deg",
-            //         scale: 1,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#45B7D1"
-            //     }, 'circles');
-
-            //     tl.to('#circle5', {
-            //         top: "160%",
-            //         left: "60%",
-            //         rotate: "180deg",
-            //         scale: 0.8,
-            //         duration: 2,
-            //         visibility: "visible",
-            //         opacity: 1,
-            //         background: "#FF9999"
-            //         // transition: "all 2s",
-            //     }, 'circles');
-
-            //     // second section animation
-            //     // var t2 = gsap.timeline({
-            //     //     scrollTrigger: {
-            //     //         trigger: ".sticky-section",
-            //     //         start: "0% 100%",
-            //     //         end: "0% 100%",
-            //     //         scrub: true
-            //     //     }
-            //     // })
-
-            //     // t2.to('#circle1', {
-            //     //     top: "220%",
-            //     //     left: "12%",
-            //     //     rotate: "180deg",
-            //     //     scale: 1,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // t2.to('#circle3', {
-            //     //     top: "327%",
-            //     //     left: "18%",
-            //     //     rotate: "180deg",
-            //     //     scale: 1,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // t2.to('#circle6', {
-            //     //     top: "350%",
-            //     //     left: "29%",
-            //     //     rotate: "180deg",
-            //     //     scale: 1,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // // Position circle 4 in the middle
-            //     // t2.to('#circle4', {
-            //     //     top: "303%",
-            //     //     left: "29%",
-            //     //     rotate: "180deg",
-            //     //     scale: 0.8,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // // Position circles 2, 5, 7 vertically on the right side
-            //     // t2.to('#circle2', {
-            //     //     top: "283%",
-            //     //     left: "52%",
-            //     //     rotate: "180deg",
-            //     //     scale: 1,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // t2.to('#circle5', {
-            //     //     top: "327%",
-            //     //     left: "51%",
-            //     //     rotate: "180deg",
-            //     //     scale: 1,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // t2.to('#circle7', {
-            //     //     top: "350%",
-            //     //     left: "55%",
-            //     //     rotate: "180deg",
-            //     //     scale: 1,
-            //     //     duration: 1
-            //     // }, 'circles');
-
-            //     // third section animation
-            //     var t3 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-1",
-            //             start: "10% 100%",
-            //             end: "50% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t3.to('#circle1,#circle2,#circle3,#circle6,#circle5,#circle7', {
-            //         top: "214%",
-            //         left: "6%",
-            //         rotate: "180deg",
-            //         scale: 1,
-            //         duration: 2,
-            //         ease: "power3.out",
-            //         opacity: 0,
-            //         // display: "hidden",
-            //     }, 'circles');
-
-
-            //     t3.to('#circle4', {
-            //         top: "212%",
-            //         left: "5%",
-            //         rotate: "180deg",
-            //         scale: 0.8,
-            //         duration: 2,
-            //         ease: "power3.out",
-            //         opacity: 0,
-
-            //         // display: "hidden",
-            //     }, 'circles');
-
-
-            //     var t4 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-1",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-
-            //     t4.to('#circle4', {
-            //         top: "312%",
-            //         left: "49%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         // visibility: "hidden",
-            //         // opacity: 0,
-
-            //     }, 'circles');
-
-
-            //     t4.to('#circle1', {
-            //         top: "312%",
-            //         left: "10%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // visibility: "hidden",
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //     }, 'circles');
-
-
-            //     t4.to('#circle2', {
-            //         top: "312%",
-            //         left: "25%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // visibility: "hidden",
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //     }, 'circles');
-
-            //     t4.to('#circle3', {
-            //         top: "312%",
-            //         left: "35%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // visibility: "hidden",
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //     }, 'circles');
-
-            //     t4.to('#circle5', {
-            //         top: "312%",
-            //         left: "65%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // visibility: "hidden",
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //     }, 'circles');
-
-            //     t4.to('#circle6', {
-            //         top: "312%",
-            //         left: "80%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // visibility: "hidden",
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //     }, 'circles');
-
-            //     t4.to('#circle7', {
-            //         top: "312%",
-            //         left: "96%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         duration: 20,
-            //         opacity: 0,
-            //         // visibility: "hidden",
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //     }, 'circles');
-
-
-
-            //     var t5 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-2",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t5.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
-            //         top: "412%",
-            //         left: "10%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         // opacity: 1,
-            //     }, 'circles');
-
-
-            //     var t6 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-3",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t6.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
-            //         top: "512%",
-            //         left: "10%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         // opacity: 1,
-            //     }, 'circles');
-
-
-            //     var t7 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-4",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t7.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
-            //         top: "612%",
-            //         left: "10%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         // opacity: 1,
-            //     }, 'circles');
-
-
-            //     var t8 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-5",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t8.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
-            //         top: "712%",
-            //         left: "10%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         // opacity: 1,
-            //     }, 'circles');
-
-            //     var t9 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-6",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t9.to('#circle1 , #circle2 , #circle3 , #circle4 , #circle5 , #circle6 , #circle7', {
-            //         top: "812%",
-            //         left: "10%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         // opacity: 1,
-            //     }, 'circles');
-
-
-            //     var t10 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".sticky-7",
-            //             start: "90% 100%",
-            //             end: "100% 50%",
-            //             // duration: 10,
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t10.to('#circle1', {
-            //         top: "920%",
-            //         left: "8%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         opacity: 1,
-            //         zIndex: 100,
-            //     }, 'circles');
-
-            //     t10.to('#circle2', {
-            //         top: "920%",
-            //         left: "90%",
-            //         rotate: "180deg",
-            //         // scale: 0.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t10.to('#circle3', {
-            //         top: "920%",
-            //         left: "35%",
-            //         rotate: "180deg",
-            //         scale: 1,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t10.to('#circle4', {
-            //         top: "920%",
-            //         left: "46.6%",
-            //         rotate: "180deg",
-            //         scale: 1.8,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 0,
-            //     }, 'circles');
-
-            //     t10.to('#circle5', {
-            //         top: "920%",
-            //         left: "60%",
-            //         rotate: "180deg",
-            //         scale: 1,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t10.to('#circle6', {
-            //         top: "920%",
-            //         left: "48%",
-            //         rotate: "180deg",
-            //         scale: 1.6,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 0,
-            //     }, 'circles');
-
-            //     t10.to('#circle7', {
-            //         top: "920%",
-            //         left: "48%",
-            //         rotate: "180deg",
-            //         scale: 1.4,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 0,
-            //     }, 'circles');
-
-
-
-
-
-            //     //11
-            //     var t11 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".fifth-section",
-            //             start: "0% 100%",
-            //             end: "100% 30%",
-            //             // duration: "10",
-            //             ease: "power3.out",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t11.to('#circle1', {
-            //         top: "1100%",
-            //         left: "5%",
-            //         rotate: "180deg",
-            //         // scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         opacity: 1,
-            //         zIndex: 1,
-            //         // backgroundColor: "",
-            //     }, 'circles');
-
-            //     t11.to('#circle3', {
-            //         top: "1100%",
-            //         left: "15%",
-            //         rotate: "180deg",
-            //         // scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t11.to('#circle6', {
-            //         top: "1100%",
-            //         left: "25%",
-            //         rotate: "180deg",
-            //         // scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t11.to('#circle4', {
-            //         top: "1100%",
-            //         left: "47%",
-            //         rotate: "180deg",
-            //         scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t11.to('#circle7', {
-            //         top: "1100%",
-            //         left: "70%",
-            //         rotate: "180deg",
-            //         scale: 1.7,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t11.to('#circle5', {
-            //         top: "1100%",
-            //         left: "80%",
-            //         rotate: "180deg",
-            //         // scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     t11.to('#circle2', {
-            //         top: "1100%",
-            //         left: "90%",
-            //         rotate: "180deg",
-            //         // scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         zIndex: 100,
-            //         opacity: 1,
-            //     }, 'circles');
-
-            //     var t12 = gsap.timeline({
-            //         scrollTrigger: {
-            //             trigger: ".testimonial-section",
-            //             start: "40% 100%",
-            //             end: "100% 30%",
-            //             // duration: "10",
-            //             ease: "power3.out",
-            //             scrub: true
-            //         }
-            //     })
-
-            //     t12.to('#circle1', {
-            //         top: "1240%",
-            //         left: "90%",
-            //         rotate: "180deg",
-            //         // scale: 2,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         opacity: 1,
-            //         zIndex: 1,
-            //         // backgroundColor: "",
-            //     }, 'circles');
-
-            //     t12.to('#circle2', {
-            //         top: "1240%",
-            //         left: "5%",
-            //         rotate: "180deg",
-            //         // scale: 2
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         opacity: 1,
-            //         zIndex: 1,
-            //         // backgroundColor: "",
-            //     }, 'circles');
-
-            //     t12.to('#circle4', {
-            //         top: "1240%",
-            //         left: "46%",
-            //         rotate: "180deg",
-            //         scale: 0.6,
-            //         // duration: 2,
-            //         // ease: "power3.out",
-            //         // display: "hidden",
-            //         opacity: 1,
-            //         zIndex: 1,
-            //         // backgroundColor: "",
-            //     }, 'circles');
-
-
-
-
             // },
 
 
@@ -4129,7 +3455,7 @@ function App() {
 
 
     return (
-        <div ref={containerRef} className="smooth-scroll">
+        <div ref={containerRef} className={`smooth-scroll ${screen.width < 768 ? "overflow-hidden" : ""}`}>
             <div className="app-max-container">
                 <div className="hero-section slide slide1" id="slide1">
                     <div className="container">
@@ -4182,7 +3508,7 @@ function App() {
                                 className="clients relative top-0  h-[10%] w-full">
                                 <div className='h-full w-full flex items-center justify-center'>
                                     <div className="marquee h-full w-full rounded-4xl">
-                                    <div className="marquee-content h-full w-full gap-6 md:gap-12 flex items-center">
+                                        <div className="marquee-content h-full w-full gap-6 md:gap-12 flex items-center">
                                             <img src={axisbank} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
                                             <img src={ovenry} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 1" />
                                             <img src={JP} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 3" />
@@ -4203,7 +3529,7 @@ function App() {
                                             <img src={modena} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 7" />
                                             <img src={electrolab} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 8" />
                                             <img src={leela} className='h-[10%] md:h-full w-[50%] md:w-auto' alt="Client Logo 4" />
-                                    </div>
+                                        </div>
                                     </div>
                                     <div className='hidden md:visible absolute top-0 left-0 h-full w-[40%] from-white to-transparent bg-gradient-to-r'>
                                     </div>
@@ -4239,284 +3565,239 @@ function App() {
                     </div> */}
                     </div>
                 </div>
-                {/* 
-                <div className="third-section slide slide3" id="slide3">
-                    <div className="container">
-                            <div className='h-[100%] w-[100%] bg-pink-500 flex flex-col items-start md:items-center justify-center gap-5 md:gap-12 pl-[2%] pr-[2%] md:pl-[0%] md:pr-[0%]'>
-                                <div className='relative  flex flex-col md:flex-row  items-start md:items-center md:justify-center gap-5 md:gap-0'>
-                                    <div className='md:h-20 md:w-96 flex items-center  '>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin'></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>Content marketing</span>
-                                    </div>
-                                    <div className='md:h-20 md:w-88 flex items-center   '>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>Public Reactions</span>
 
-
-                                    </div>
+                <div className={`sticky-sections slide flex flex-col ${isDarkMode ? 'bg-black' : 'bg-white'} mx-10`} id='slide5'>
+                    {/* <div className='container'> */}
+                    <div className={`sticky-section1 ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-1 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className={`h-20 w-72 md:w-128 flex items-center mt-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#BBDEFB] rounded-full'></div>
                                 </div>
-                                <div className='relative  flex flex-col md:flex-row  md:items-center md:justify-center gap-5 md:gap-0'>
-                                    <div className='md:h-20 md:w-128  flex items-center '>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>Social media marketing</span>
-                                    </div>
-                                </div>
-                                <div className='relative  flex flex-col md:flex-row  md:items-center md:justify-center gap-5 md:gap-0 '>
-                                    <div className='md:h-20 md:w-100 flex items-center  '>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>Website services</span>
-                                    </div>
-                                    <div className='md:h-20 md:w-100 flex items-center  '>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>Event marketing</span>
-                                    </div>
-                                </div>
-                                <div className='relative  flex flex-col md:flex-row  md:items-center md:justify-center gap-5 md:gap-0  '>
-                                    <div className='md:h-20 md:w-80 flex items-center'>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>Branding</span>
-                                    </div>
-                                    <div className='md:h-20 md:w-80 flex items-center  '>
-                                        <div className='h-[40px] w-[40px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div>
-                                        <span className='text-2xl md:text-3xl font-bold ml-4'>OOH</span>
-                                    </div>
-                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
+                            </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Story Telling Campaigns</span>
+                                    <span className='md:text-2xl text-1xl'>• Copywriting</span>
+                                    <span className='md:text-2xl text-1xl'>• Blog Writing</span>
+                                    <span className='md:text-2xl text-1xl'>• Press Release</span>
+                                    <span className='md:text-2xl text-1xl'>• Content Calander</span>
+                                    <span className='md:text-2xl text-1xl'>• SEO Friendly Content</span>
+                                    <span className='md:text-2xl text-1xl'>• White Paper</span>
+                                    <span className='md:text-2xl text-1xl'>• Info Graphics</span>
+                                    <span className='md:text-2xl text-1xl'>• Podcast Scripting</span>
+                                    <span className='md:text-2xl text-1xl'>• Industry Reports</span>
+                                    <span className='md:text-2xl text-1xl'>• Product Descriptions</span>
+                                    <span className='md:text-2xl text-1xl'>• Video Marketing</span>
+                                </motion.div>
                             </div>
                         </div>
-                    </div> */}
-
-                <div className={`sticky-sections slide flex flex-col ${isDarkMode ? 'bg-black' : 'bg-white'}`} id='slide5'>
-                    <div className='container'>
-                        <div className={`sticky-section1 ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-1 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className={`h-20 w-72 md:w-128 flex items-center mt-20 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#BBDEFB] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Content marketing</span>
-                                </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Story Telling Campaigns</span>
-                                        <span className='md:text-2xl text-1xl'>• Copywriting</span>
-                                        <span className='md:text-2xl text-1xl'>• Blog Writing</span>
-                                        <span className='md:text-2xl text-1xl'>• Press Release</span>
-                                        <span className='md:text-2xl text-1xl'>• Content Calander</span>
-                                        <span className='md:text-2xl text-1xl'>• SEO Friendly Content</span>
-                                        <span className='md:text-2xl text-1xl'>• White Paper</span>
-                                        <span className='md:text-2xl text-1xl'>• Info Graphics</span>
-                                        <span className='md:text-2xl text-1xl'>• Podcast Scripting</span>
-                                        <span className='md:text-2xl text-1xl'>• Industry Reports</span>
-                                        <span className='md:text-2xl text-1xl'>• Product Descriptions</span>
-                                        <span className='md:text-2xl text-1xl'>• Video Marketing</span>
-                                    </motion.div>
-                                </div>
-                            </div>
-                            <div className={` h-[60%] absolute top-1/6 left-1/2 hidden md:block`}>
-                                {isDarkMode ? (
-                                    <DotLottieReact
-                                        // src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
-                                        src="https://lottie.host/5395e9ab-d434-4578-9b07-11314eb07be9/ZIGmC9zQ7a.lottie"
-                                        loop
-                                        autoplay
-                                    />
-                                ) : (
-                                    <DotLottieReact
-                                        // src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
-                                        src="https://lottie.host/5395e9ab-d434-4578-9b07-11314eb07be9/ZIGmC9zQ7a.lottie"
-                                        loop
-                                        autoplay
-                                    />
-                                )}
-                            </div>
+                        <div className={` h-[60%] absolute top-1/6 left-1/2 hidden md:block`}>
+                            {isDarkMode ? (
+                                <DotLottieReact
+                                    // src="https://lottie.host/c6e99e67-7324-46f4-9a2e-dbaba62b094c/nOitsKhSH4.lottie"
+                                    src="https://lottie.host/5395e9ab-d434-4578-9b07-11314eb07be9/ZIGmC9zQ7a.lottie"
+                                    loop
+                                    autoplay
+                                />
+                            ) : (
+                                <DotLottieReact
+                                    // src="https://lottie.host/b1e7a90d-f092-4c98-96ec-ba6ba48098d7/fzCleJXtNi.lottie"
+                                    src="https://lottie.host/5395e9ab-d434-4578-9b07-11314eb07be9/ZIGmC9zQ7a.lottie"
+                                    loop
+                                    autoplay
+                                />
+                            )}
                         </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-2 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#FFF9C4] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Public Relations</span>
+                    </div>
+                    <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-2 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#FFF9C4] rounded-full'></div>
                                 </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Media Relation</span>
-                                        <span className='md:text-2xl text-1xl'>• Event PR</span>
-                                        <span className='md:text-2xl text-1xl'>• Crisis Management</span>
-                                        <span className='md:text-2xl text-1xl'>• Reputation Management</span>
-                                        <span className='md:text-2xl text-1xl'>• Influencer Collaboration</span>
-                                    </motion.div>
-                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Public Relations</span>
                             </div>
-                        </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-3 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#E1BEE7] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
-                                </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Instagram Marketing</span>
-                                        <span className='md:text-2xl text-1xl'>• Facebook Marketing</span>
-                                        <span className='md:text-2xl text-1xl'>• Youtube Marketing</span>
-                                        <span className='md:text-2xl text-1xl'>• Engagement Posting Campaign</span>
-                                        <span className='md:text-2xl text-1xl'>• Stories & Reels Creation</span>
-                                        <span className='md:text-2xl text-1xl'>• Strategy</span>
-                                        <span className='md:text-2xl text-1xl'>• Influencer Discovery</span>
-                                        <span className='md:text-2xl text-1xl'>• Partnership</span>
-                                        <span className='md:text-2xl text-1xl'>• Sponsored Post</span>
-                                        <span className='md:text-2xl text-1xl'>• Influencer Events</span>
-
-                                    </motion.div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-4 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#C5CAE9] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Website Services</span>
-                                </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Website Design</span>
-                                        <span className='md:text-2xl text-1xl'>• Website Development</span>
-                                        <span className='md:text-2xl text-1xl'>• Website Audits</span>
-                                        <span className='md:text-2xl text-1xl'>• A/B Testing</span>
-                                        <span className='md:text-2xl text-1xl'>• UI/UX Optimization</span>
-                                        <span className='md:text-2xl text-1xl'>• Speed Optimization</span>
-                                        <span className='md:text-2xl text-1xl'>• Website Maintenance</span>
-                                        <span className='md:text-2xl text-1xl'>• Interactive Design Features</span>
-                                        <span className='md:text-2xl text-1xl'>• CMS Management</span>
-                                        <span className='md:text-2xl text-1xl'>• Mobile-First Design</span>
-                                        <span className='md:text-2xl text-1xl'>• Customer-Web Tools</span>
-
-                                    </motion.div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-5 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#FFCDD2] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Event Marketing</span>
-                                </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Event Planning</span>
-                                        <span className='md:text-2xl text-1xl'>• Brand Activation</span>
-                                        <span className='md:text-2xl text-1xl'>• Pop-up Shops</span>
-                                        <span className='md:text-2xl text-1xl'>• Webinar Marketing</span>
-                                        <span className='md:text-2xl text-1xl'>• Trade Show Support</span>
-                                        <span className='md:text-2xl text-1xl'>• Product Launches</span>
-                                        <span className='md:text-2xl text-1xl'>• Sponsorship Promotions</span>
-                                        <span className='md:text-2xl text-1xl'>• Virtual Event Productions</span>
-                                        <span className='md:text-2xl text-1xl'>• Event Branding</span>
-                                        <span className='md:text-2xl text-1xl'>• Post-Event Reports</span>
-
-                                    </motion.div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-6 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#C8E6C9] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Branding</span>
-                                </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Logo Creation</span>
-                                        <span className='md:text-2xl text-1xl'>• Brand Identity</span>
-                                        <span className='md:text-2xl text-1xl'>• Product Branding</span>
-                                        <span className='md:text-2xl text-1xl'>• Rebranding Strategy</span>
-                                        <span className='md:text-2xl text-1xl'>• Social Media Graphics</span>
-                                        <span className='md:text-2xl text-1xl'>• Poster and Flyer Design</span>
-                                        <span className='md:text-2xl text-1xl'>• Banner Ads</span>
-                                        <span className='md:text-2xl text-1xl'>• 3D Design</span>
-                                        <span className='md:text-2xl text-1xl'>• Animated Graphics</span>
-
-                                    </motion.div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'}  h-screen w-full sticky-7 flex`}>
-                            <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
-                                <div className='h-20 w-72 md:w-128 flex items-center mt-20 '>
-                                    <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
-                                        <div className='h-[80%] w-[80%] bg-[#F8BBD0] rounded-full'></div>
-                                    </div>
-                                    <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>OOH</span>
-                                </div>
-                                <div className='relative  flex items-center   ' ref={ref}>
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 100 }}
-                                        transition={{ duration: 0.8 }}
-                                        className="flex flex-col gap-1"
-                                    >
-                                        {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
-                                        <span className='md:text-2xl text-1xl'>• Billboard Advertising</span>
-                                        <span className='md:text-2xl text-1xl'>• Transit Advertising</span>
-                                        <span className='md:text-2xl text-1xl'>• Street Furniture</span>
-                                        <span className='md:text-2xl text-1xl'>• Digital Billboards</span>
-                                        <span className='md:text-2xl text-1xl'>• Mall Media</span>
-                                        <span className='md:text-2xl text-1xl'>• Airport Advertising</span>
-                                        <span className='md:text-2xl text-1xl'>• Metro Station Ads</span>
-                                        <span className='md:text-2xl text-1xl'>• Bus Shelter Ads</span>
-                                        <span className='md:text-2xl text-1xl'>• Retail OOH</span>
-                                        <span className='md:text-2xl text-1xl'>• Interactive Displays</span>
-
-                                    </motion.div>
-                                </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Media Relation</span>
+                                    <span className='md:text-2xl text-1xl'>• Event PR</span>
+                                    <span className='md:text-2xl text-1xl'>• Crisis Management</span>
+                                    <span className='md:text-2xl text-1xl'>• Reputation Management</span>
+                                    <span className='md:text-2xl text-1xl'>• Influencer Collaboration</span>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
+                    <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-2 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#E1BEE7] rounded-full'></div>
+                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
+                                {/* <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media</span> */}
+                            </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Instagram Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Facebook Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Youtube Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Engagement Posting</span>
+                                    <span className='md:text-2xl text-1xl'>• Stories & Reels creation</span>
+                                    <span className='md:text-2xl text-1xl'>• Strategy</span>
+                                    <span className='md:text-2xl text-1xl'>• Influencer Discovery</span>
+                                    <span className='md:text-2xl text-1xl'>• Partnership</span>
+                                    <span className='md:text-2xl text-1xl'>• Sponsored Post</span>
+                                    <span className='md:text-2xl text-1xl'>• Influencer Events</span>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-4 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#C5CAE9] rounded-full'></div>
+                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Website Services</span>
+                            </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Website Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Development</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Audits</span>
+                                    <span className='md:text-2xl text-1xl'>• A/B Testing</span>
+                                    <span className='md:text-2xl text-1xl'>• UI/UX Optimization</span>
+                                    <span className='md:text-2xl text-1xl'>• Speed Optimization</span>
+                                    <span className='md:text-2xl text-1xl'>• Website Maintenance</span>
+                                    <span className='md:text-2xl text-1xl'>• Interactive Design Features</span>
+                                    <span className='md:text-2xl text-1xl'>• CMS Management</span>
+                                    <span className='md:text-2xl text-1xl'>• Mobile-First Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Customer-Web Tools</span>
+
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-5 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#FFCDD2] rounded-full'></div>
+                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Event Marketing</span>
+                            </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Event Planning</span>
+                                    <span className='md:text-2xl text-1xl'>• Brand Activation</span>
+                                    <span className='md:text-2xl text-1xl'>• Pop-up Shops</span>
+                                    <span className='md:text-2xl text-1xl'>• Webinar Marketing</span>
+                                    <span className='md:text-2xl text-1xl'>• Trade Show Support</span>
+                                    <span className='md:text-2xl text-1xl'>• Product Launches</span>
+                                    <span className='md:text-2xl text-1xl'>• Sponsorship Promotions</span>
+                                    <span className='md:text-2xl text-1xl'>• Virtual Event Productions</span>
+                                    <span className='md:text-2xl text-1xl'>• Event Branding</span>
+                                    <span className='md:text-2xl text-1xl'>• Post-Event Reports</span>
+
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'} h-screen w-full sticky-6 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#C8E6C9] rounded-full'></div>
+                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Branding</span>
+                            </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Logo Creation</span>
+                                    <span className='md:text-2xl text-1xl'>• Brand Identity</span>
+                                    <span className='md:text-2xl text-1xl'>• Product Branding</span>
+                                    <span className='md:text-2xl text-1xl'>• Rebranding Strategy</span>
+                                    <span className='md:text-2xl text-1xl'>• Social Media Graphics</span>
+                                    <span className='md:text-2xl text-1xl'>• Poster and Flyer Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Banner Ads</span>
+                                    <span className='md:text-2xl text-1xl'>• 3D Design</span>
+                                    <span className='md:text-2xl text-1xl'>• Animated Graphics</span>
+
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`sticky-section ${isDarkMode ? 'bg-black' : 'bg-white'}  h-screen w-full sticky-7 flex`}>
+                        <div className={`left ${isDarkMode ? 'bg-black' : 'bg-white'} lg:pl-[60px] `}>
+                            <div className='h-20 w-90 md:w-128 flex items-center mt-20 '>
+                                <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
+                                    <div className='h-[80%] w-[80%] bg-[#F8BBD0] rounded-full'></div>
+                                </div>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>OOH</span>
+                            </div>
+                            <div className='relative  flex items-center   ' ref={ref}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 100 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="flex flex-col gap-1"
+                                >
+                                    {/* <div className='h-full w-20 rounded-full  border-3 border-dotted border-black myCustomSpin '></div> */}
+                                    <span className='md:text-2xl text-1xl'>• Billboard Advertising</span>
+                                    <span className='md:text-2xl text-1xl'>• Transit Advertising</span>
+                                    <span className='md:text-2xl text-1xl'>• Street Furniture</span>
+                                    <span className='md:text-2xl text-1xl'>• Digital Billboards</span>
+                                    <span className='md:text-2xl text-1xl'>• Mall Media</span>
+                                    <span className='md:text-2xl text-1xl'>• Airport Advertising</span>
+                                    <span className='md:text-2xl text-1xl'>• Metro Station Ads</span>
+                                    <span className='md:text-2xl text-1xl'>• Bus Shelter Ads</span>
+                                    <span className='md:text-2xl text-1xl'>• Retail OOH</span>
+                                    <span className='md:text-2xl text-1xl'>• Interactive Displays</span>
+
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* </div> */}
                 </div>
 
                 <div className={`fourth-section mx-1 slide slide4 flex items-center justify-center gap-2 ${isDarkMode ? 'bg-black' : 'bg-white'}`} id="slide4">
@@ -4653,51 +3934,51 @@ function App() {
                 </div>
 
                 <section className={`fifth-section min-h-screen md:py-12 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-  <div className="container mx-auto px-4 mb-[-50px]">
-    <div className="max-w-6xl mx-auto">
-      {/* Quote Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
-      >
-        {/* Large Quote Mark */}
-        <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
-          <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
-        </div>
+                    <div className="container mx-auto px-4 mb-[-50px]">
+                        <div className="max-w-6xl mx-auto">
+                            {/* Quote Card */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
+                            >
+                                {/* Large Quote Mark */}
+                                <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
+                                    <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
+                                </div>
 
-        {/* Card Content */}
-        <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-3 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'} max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-4 md:mb-0`}>
-          {/* Founder Info */}
-          <div className="md:mt-10 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
-            <div className="space-y-3 md:space-y-6">
-              <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
-              <div className="text-center md:text-left">
-                <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
-              </div>
-              <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.</p>
-              <div className="mt-3 md:mt-6">
-                <a 
-                  href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-lg ${isDarkMode 
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300' 
-                    : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
-                  }`}
-                >
-                  <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                  Connect on LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
+                                {/* Card Content */}
+                                <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-3 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'} max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-4 md:mb-0`}>
+                                    {/* Founder Info */}
+                                    <div className="md:mt-10 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
+                                        <div className="space-y-3 md:space-y-6">
+                                            <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
+                                            <div className="text-center md:text-left">
+                                                <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
+                                            </div>
+                                            <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.</p>
+                                            <div className="mt-3 md:mt-6">
+                                                <a
+                                                    href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className={`inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-lg ${isDarkMode
+                                                        ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300'
+                                                        : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
+                                                        }`}
+                                                >
+                                                    <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                                                    Connect on LinkedIn
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
 
                 <div className="testimonial-section flex flex-col items-center mt-[-30px]" ref={ref}>
                     {/* Testimonial Header */}

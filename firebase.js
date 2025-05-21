@@ -4,13 +4,13 @@ import { getAnalytics } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBg53f3iIDh4and5MEHafN45Zx9QRqo4BE",
-  authDomain: "fusion-mediaa.firebaseapp.com",
-  projectId: "fusion-mediaa",
-  storageBucket: "fusion-mediaa.firebasestorage.app",
-  messagingSenderId: "505493437957",
-  appId: "1:505493437957:web:b910ffb9d09c794a53a66c",
-  measurementId: "G-HNZYBJ125J"
+  apiKey: "AIzaSyBx-k2MFZm8PX-VrmmO1uflXLQSQ4g8ba0",
+  authDomain: "fusionmedia-02.firebaseapp.com",
+  projectId: "fusionmedia-02",
+  storageBucket: "fusionmedia-02.firebasestorage.app",
+  messagingSenderId: "302154543859",
+  appId: "1:302154543859:web:6ddaabf3c31d05a56ffd86",
+  measurementId: "G-VKNJ8N6H0F"
 };
 
 // Initialize Firebase
