@@ -29,7 +29,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className={`w-full ${isDarkMode ? 'bg-black text-white' : 'bg-white text-gray-900'}`}>
+    <div className={`w-full overflow-hidden ${isDarkMode ? 'bg-black text-white' : 'bg-white text-gray-900'}`}>
       {/* Hero Section */}
       <section className={`min-h-screen relative overflow-hidden ${isDarkMode ? 'bg-black' : 'bg-white'} pt-16 md:pt-0`}>
         <div className="container mx-auto px-0 md:px-4 relative">
@@ -71,7 +71,7 @@ const About = () => {
                 creativity, and strategic excellence.
               </motion.p>
             </motion.div>
-            <div className='md:col-span-5 scale-125 md:scale-150 mt-10 md:mt-0'>
+            <div className='md:col-span-5 scale-120 md:scale-150 mt-10 md:mt-0'>
                 <DotLottieReact
                     src="https://lottie.host/0df722b7-162c-4853-a61b-c5a450e8ac37/OvhrWEHMFW.lottie"
                     loop
