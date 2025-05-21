@@ -35,6 +35,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
+    const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  // Check if window is defined (for server-side rendering)
+  if (typeof window !== 'undefined') {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is a common breakpoint for mobile
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }
+}, []);
 
     const testimonials = [
         {
@@ -3579,7 +3598,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3628,7 +3647,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3654,7 +3673,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3684,7 +3703,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3716,7 +3735,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3747,7 +3766,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3777,7 +3796,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
