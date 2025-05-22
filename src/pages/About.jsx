@@ -35,13 +35,13 @@ const About = () => {
         <div className="container mx-auto px-0 md:px-4 relative">
           <div className="flex flex-col md:grid md:grid-cols-12 min-h-[90vh] md:min-h-screen items-center">
             {/* Left Content */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="md:col-span-7 mt-8 md:mt-0"
             >
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -51,33 +51,32 @@ const About = () => {
                   Welcome To
                 </div>
                 <div className="mt-0 md:mt-4 h-[120px] md:h-[180px] flex items-center">
-                  <img 
-                    src={isDarkMode ? logoWhite : logo} 
-                    alt="Fusion Media" 
+                  <img
+                    src={isDarkMode ? logoWhite : logo}
+                    alt="Fusion Media"
                     className="w-full md:w-[700px] h-full mx-auto md:mx-0 md:-ml-22"
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
               </motion.h1>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className={`text-lg md:text-xl max-w-xl text-center md:text-left mx-auto md:mx-0 mt-4 ${
-                  isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                }`}
+                className={`text-lg md:text-xl max-w-xl text-center md:text-left mx-auto md:mx-0 mt-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}
               >
-                Transforming ideas into exceptional digital experiences through innovation, 
+                Transforming ideas into exceptional digital experiences through innovation,
                 creativity, and strategic excellence.
               </motion.p>
             </motion.div>
             <div className='md:col-span-5 scale-120 md:scale-150 mt-10 md:mt-0'>
-                <DotLottieReact
-                    src="https://lottie.host/0df722b7-162c-4853-a61b-c5a450e8ac37/OvhrWEHMFW.lottie"
-                    loop
-                    autoplay
-                    className="w-full h-full"
-                />
+              <DotLottieReact
+                src="https://lottie.host/0df722b7-162c-4853-a61b-c5a450e8ac37/OvhrWEHMFW.lottie"
+                loop
+                autoplay
+                className="w-full h-full"
+              />
             </div>
           </div>
         </div>
@@ -92,14 +91,12 @@ const About = () => {
             transition={{ duration: 1 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className={`text-2xl md:text-3xl font-semibold mb-4 md:mb-8 text-center ${
-              isDarkMode ? 'text-white' : 'text-gray-900'
-            }`}>
+            <h2 className={`text-2xl md:text-3xl font-semibold mb-4 md:mb-8 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'
+              }`}>
               <span className="text-red-600">WHO WE ARE</span>
             </h2>
-            <p className={`text-2xl md:text-6xl font-semibold leading-normal md:leading-tight text-center px-4 md:px-0 ${
-              isDarkMode ? 'text-gray-300' : 'text-gray-800'
-            }`}>
+            <p className={`text-2xl md:text-6xl font-semibold leading-normal md:leading-tight text-center px-4 md:px-0 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'
+              }`}>
               A collective of creative minds, tech enthusiasts, and strategic thinkers
             </p>
           </motion.div>
@@ -119,21 +116,18 @@ const About = () => {
             >
               <div className="space-y-4 md:space-y-6">
                 <h3 className="text-red-600 text-xl md:text-2xl font-bold">OUR VISION</h3>
-                <p className={`text-2xl md:text-3xl font-semibold leading-relaxed ${
-                  isDarkMode ? 'text-gray-300' : 'text-gray-900'
-                }`}>
+                <p className={`text-2xl md:text-3xl font-semibold leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-900'
+                  }`}>
                   At Fusion Media, our vision is to transform the way brands communicate with their audiences
                   by blending human creativity with advanced technology.
                 </p>
-                <p className={`text-lg md:text-2xl leading-relaxed ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
-                }`}>
+                <p className={`text-lg md:text-2xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                  }`}>
                   We strive to push the limits of innovation, crafting campaigns that not only capture
                   attention but also resonate deeply, creating lasting emotional connections.
                 </p>
-                <p className={`text-lg md:text-2xl leading-relaxed ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
-                }`}>
+                <p className={`text-lg md:text-2xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                  }`}>
                   Our goal is to be the driving force behind groundbreaking brand experiences that inspire,
                   engage, and shape the future of storytelling.
                 </p>
@@ -150,21 +144,18 @@ const About = () => {
             >
               <div className="space-y-4 md:space-y-6">
                 <h3 className="text-blue-600 text-xl md:text-2xl font-bold">OUR MISSION</h3>
-                <p className={`text-2xl md:text-3xl font-semibold leading-relaxed ${
-                  isDarkMode ? 'text-gray-300' : 'text-gray-900'
-                }`}>
+                <p className={`text-2xl md:text-3xl font-semibold leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-900'
+                  }`}>
                   Our mission is to empower brands by harnessing the power of creativity and technology
                   to deliver impactful, forward-thinking campaigns.
                 </p>
-                <p className={`text-lg md:text-2xl leading-relaxed ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
-                }`}>
+                <p className={`text-lg md:text-2xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                  }`}>
                   Through close collaboration and a deep understanding of each brand's unique essence,
                   we aim to craft strategies that are bold, authentic, and memorable.
                 </p>
-                <p className={`text-lg md:text-2xl leading-relaxed ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-700'
-                }`}>
+                <p className={`text-lg md:text-2xl leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-700'
+                  }`}>
                   We ensure every project leaves a meaningful and lasting impression on both the brand
                   and its audience.
                 </p>
@@ -177,58 +168,58 @@ const About = () => {
 
       {/* Founder Section */}
       <section className={`fifth-section min-h-screen md:py-12 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-  <div className="container mx-auto px-4 mb-[-50px]">
-    <div className="max-w-6xl mx-auto">
-      {/* Quote Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
-      >
-        {/* Large Quote Mark */}
-        <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
-          <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
-        </div>
+        <div className="container mx-auto px-4 mb-[-50px]">
+          <div className="max-w-6xl mx-auto">
+            {/* Quote Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
+            >
+              {/* Large Quote Mark */}
+              <div className="absolute -top-8 md:-top-14 left-4 md:left-8 z-20">
+                <span className="text-[100px] md:text-[150px] leading-none text-[#ff4d6d]">"</span>
+              </div>
 
-        {/* Card Content */}
-        <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-3 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'} max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-4 md:mb-0`}>
-          {/* Founder Info */}
-          <div className="md:mt-10 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
-            <div className="space-y-3 md:space-y-6">
-              <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
-              <div className="text-center md:text-left">
-                <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
+              {/* Card Content */}
+              <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-3 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'} max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-4 md:mb-0`}>
+                {/* Founder Info */}
+                <div className="md:mt-10 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
+                  <div className="space-y-3 md:space-y-6">
+                    <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
+                    <div className="text-center md:text-left">
+                      <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder, Managing Director & Creative Lead at Fusion Media</p>
+                    </div>
+                    <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.</p>
+                    <div className="mt-3 md:mt-6">
+                      <a
+                        href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-lg ${isDarkMode
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300'
+                          : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
+                          }`}
+                      >
+                        <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                        Connect on LinkedIn
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.</p>
-              <div className="mt-3 md:mt-6">
-                <a 
-                  href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-lg ${isDarkMode 
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300' 
-                    : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
-                  }`}
-                >
-                  <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                  Connect on LinkedIn
-                </a>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Why Choose Us Section */}
-      <motion.section 
+      <motion.section
         ref={whyChooseRef}
         initial={{ opacity: 0, y: 50 }}
         animate={whyChooseInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }} 
+        transition={{ duration: 0.8 }}
         className="py-12 md:py-20 bg-black text-white overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-4">
