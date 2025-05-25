@@ -35,6 +35,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function App() {
+    const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  // Check if window is defined (for server-side rendering)
+  if (typeof window !== 'undefined') {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is a common breakpoint for mobile
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }
+}, []);
 
     const testimonials = [
         {
@@ -548,7 +567,7 @@ function App() {
 
                 t10.to('#circle1', {
                     top: "920%",
-                    left: "25%",
+                    left: "27%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -560,7 +579,7 @@ function App() {
 
                 t10.to('#circle2', {
                     top: "920%",
-                    left: "140%",
+                    left: "160%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -572,7 +591,7 @@ function App() {
 
                 t10.to('#circle3', {
                     top: "920%",
-                    left: "100%",
+                    left: "120%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -584,7 +603,7 @@ function App() {
 
                 t10.to('#circle4', {
                     top: "920%",
-                    left: "46.6%",
+                    left: "60%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -596,7 +615,7 @@ function App() {
 
                 t10.to('#circle5', {
                     top: "920%",
-                    left: "180%",
+                    left: "220%",
                     rotate: "180deg",
                     scale: 3,
                     // duration: 2,
@@ -3579,7 +3598,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3628,7 +3647,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3648,13 +3667,13 @@ function App() {
                                 <div className={`h-[60px] w-[60px] md:h-full md:w-20 rounded-full  border-3 border-dotted border-${isDarkMode ? 'white' : 'black'} myCustomSpin flex items-center justify-center`}>
                                     <div className='h-[80%] w-[80%] bg-[#E1BEE7] rounded-full'></div>
                                 </div>
-                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media Marketing</span>
+                                <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media</span>
                                 {/* <span className='md:text-3xl text-2xl lg:text-4xl font-bold ml-4'>Social Media</span> */}
                             </div>
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3684,7 +3703,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3716,7 +3735,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3747,7 +3766,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3777,7 +3796,7 @@ function App() {
                             <div className='relative  flex items-center   ' ref={ref}>
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 100 }}
+                                    whileInView={{ opacity: 1, x: isMobile ? 70 : 100 }}
                                     transition={{ duration: 0.8 }}
                                     className="flex flex-col gap-1"
                                 >
@@ -3955,7 +3974,7 @@ function App() {
                                         <div className="space-y-3 md:space-y-6">
                                             <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Harsh Punmiya</h3>
                                             <div className="text-center md:text-left">
-                                                <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder & Creative Lead at Fusion Media</p>
+                                                <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Founder, Managing Director & Creative Lead at Fusion Media</p>
                                             </div>
                                             <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Passionate about blending creativity with strategy, the vision behind Fusion Media is rooted in delivering powerful brand stories and engaging digital experiences. With a strong belief in the impact of design, storytelling, and innovation, the focus has always been on helping brands grow through bold ideas and modern execution. Every project is approached with a fresh perspective and a commitment to excellence.</p>
                                             <div className="mt-3 md:mt-6">

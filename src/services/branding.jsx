@@ -111,8 +111,6 @@ const Branding = () => {
 
 
       },
-
-
       "(min-width: 1920px)": function () {
         // first section
         var tl = gsap.timeline({
@@ -165,105 +163,6 @@ const Branding = () => {
 
 
       },
-
-      // mobile
-      "(min-width: 400px) and (max-width: 600px)": function () {
-        // first section
-        var tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".service-section",
-            start: "0% 0%",
-            end: "70% 80%",
-            scrub: true,
-            // visibility: "visible",
-            // markers: true
-          }
-        })
-
-        tl.to('#circle11', {
-          // top: "230%",
-          // left: "35%",
-          rotate: "360deg",
-          // scale: 2,
-          duration: 8,
-          visibility: "visible",
-          opacity: 1,
-          background: "transparent"
-        }, 'circles');
-
-        var t2 = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".service-section",
-            start: "15% 100%",
-            end: "30% 100%",
-            scrub: true,
-            // visibility: "visible",
-            // markers: true
-          }
-        })
-
-        t2.to('#circle13', {
-          top: "150%",
-          left: "20%",
-          rotate: "360deg",
-          scale: 2,
-          duration: 1,
-          visibility: "visible",
-          opacity: 1,
-          // background: "transparent"
-        }, 'circles');
-
-
-      },
-
-
-      "(min-width: 601px) and (max-width: 800px)": function () {
-        // first section
-        var tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".service-section",
-            start: "0% 10%",
-            end: "20% 80%",
-            scrub: true,
-            // visibility: "visible",
-            // markers: true
-          }
-        })
-
-        tl.to('#circle11', {
-          // top: "230%",
-          // left: "35%",
-          rotate: "360deg",
-          // scale: 2,
-          duration: 8,
-          visibility: "visible",
-          opacity: 1,
-          background: "transparent"
-        }, 'circles');
-
-        var t2 = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".service-section",
-            start: "10% 90%",
-            end: "30% 100%",
-            scrub: true,
-            // visibility: "visible",
-            // markers: true
-          }
-        })
-
-        t2.to('#circle13', {
-          top: "150%",
-          left: "20%",
-          rotate: "360deg",
-          scale: 2,
-          duration: 1,
-          visibility: "visible",
-          opacity: 1,
-          // background: "transparent"
-        }, 'circles');
-      },
-
       "(min-width: 801px) and (max-width: 1190px)": function () {
         // first section
         var tl = gsap.timeline({
@@ -311,7 +210,101 @@ const Branding = () => {
         }, 'circles');
 
 
-      }
+      },
+      "(min-width: 601px) and (max-width: 800px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 10%",
+            end: "20% 80%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "0% 0%",
+            end: "100% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "150%",
+          left: "20%",
+          rotate: "360deg",
+          scale: 2,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+      },
+      "(min-width: 200px) and (max-width: 600px)": function () {
+        // first section
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "20% 0%",
+            end: "40% 100%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        tl.to('#circle11', {
+          // top: "230%",
+          // left: "35%",
+          rotate: "360deg",
+          // scale: 2,
+          duration: 8,
+          visibility: "visible",
+          opacity: 1,
+          background: "transparent"
+        }, 'circles');
+
+        var t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".service-section",
+            start: "10% 50%",
+            end: "30% 50%",
+            scrub: true,
+            // visibility: "visible",
+            // markers: true
+          }
+        })
+
+        t2.to('#circle13', {
+          top: "128%",
+          left: "40%",
+          rotate: "360deg",
+          scale: 2,
+          duration: 1,
+          visibility: "visible",
+          opacity: 1,
+          // background: "transparent"
+        }, 'circles');
+
+
+      },
 
 
 
