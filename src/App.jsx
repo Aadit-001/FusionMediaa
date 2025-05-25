@@ -1323,7 +1323,7 @@ useEffect(() => {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "30%",
+                //     left: "25%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -1977,7 +1977,7 @@ useEffect(() => {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "30%",
+                //     left: "25%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
