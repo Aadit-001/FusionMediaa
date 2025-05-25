@@ -106,7 +106,7 @@ const Work = () => {
         {/* CGI Work Section */}
         <div className="mb-24">
           <motion.h2 
-            className="text-6xl md:text-4xl font-extrabold text-center mb-22 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-lg"
+            className={`text-6xl md:text-4xl font-extrabold text-center mb-22 ${isDarkMode ? 'bg-white' : 'bg-black'} bg-clip-text text-transparent drop-shadow-lg`}
             style={{ letterSpacing: '0.03em', fontFamily: 'Monoton' }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
