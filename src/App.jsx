@@ -1304,7 +1304,7 @@ function App() {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "25%",
+                //     left: "30%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -1374,7 +1374,7 @@ function App() {
                 // })
 
                 // t12.to('#circle1', {
-                //     top: "1240%",
+                //     top: "1200%",
                 //     left: "90%",
                 //     rotate: "180deg",
                 //     // scale: 2,
@@ -1387,7 +1387,7 @@ function App() {
                 // }, 'circles');
 
                 // t12.to('#circle2', {
-                //     top: "1240%",
+                //     top: "1200%",
                 //     left: "5%",
                 //     rotate: "180deg",
                 //     // scale: 2
@@ -1400,7 +1400,7 @@ function App() {
                 // }, 'circles');
 
                 // t12.to('#circle4', {
-                //     top: "1240%",
+                //     top: "1200%",
                 //     left: "46%",
                 //     rotate: "180deg",
                 //     scale: 0.6,
@@ -1958,7 +1958,7 @@ function App() {
 
                 // t11.to('#circle6', {
                 //     top: "1100%",
-                //     left: "25%",
+                //     left: "30%",
                 //     rotate: "180deg",
                 //     // scale: 2,
                 //     // duration: 2,
@@ -2028,7 +2028,7 @@ function App() {
                 // })
 
                 // t12.to('#circle1', {
-                //     top: "1240%",
+                //     top: "1200%",
                 //     left: "90%",
                 //     rotate: "180deg",
                 //     // scale: 2,
@@ -2041,7 +2041,7 @@ function App() {
                 // }, 'circles');
 
                 // t12.to('#circle2', {
-                //     top: "1240%",
+                //     top: "1200%",
                 //     left: "5%",
                 //     rotate: "180deg",
                 //     // scale: 2
@@ -2054,7 +2054,7 @@ function App() {
                 // }, 'circles');
 
                 // t12.to('#circle4', {
-                //     top: "1240%",
+                //     top: "1200%",
                 //     left: "46%",
                 //     rotate: "180deg",
                 //     scale: 0.6,
@@ -3934,7 +3934,7 @@ function App() {
                 </div>
 
                 <section className={`fifth-section min-h-screen md:py-12 relative ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-                    <div className="container mx-auto px-4 mb-[-50px]">
+                    <div className="container mx-auto px-4 mb-[-180px] md:mb-[-50px]">
                         <div className="max-w-6xl mx-auto">
                             {/* Quote Card */}
                             <motion.div
@@ -3980,7 +3980,7 @@ function App() {
                     </div>
                 </section>
 
-                <div className="testimonial-section flex flex-col items-center mt-[-30px]" ref={ref}>
+                <div className="testimonial-section flex flex-col items-center mt-[-160px] md:mt-[-30px]" ref={ref}>
                     {/* Testimonial Header */}
                     <div className="text-center mb-10">
                         <h3 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: 'Lobster, cursive' }}>
