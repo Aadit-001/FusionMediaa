@@ -210,47 +210,33 @@ const About = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
 
-      {/* Managing Director Section */}
-      <section className={`relative ${isDarkMode ? 'bg-black' : 'bg-white'} mt-24 mb-50`}>
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-6xl mx-auto">
-            {/* Quote Card */}
+            {/* Managing Director Sub-testimonial */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className={`relative ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative mt-12"
             >
-              {/* Large Quote Mark */}
-              <div className="absolute -top-8 md:-top-10 left-4 md:left-8 z-20">
-                <span className="text-[80px] md:text-[120px] leading-none text-[#ff4d6d]">"</span>
-              </div>
-
               {/* Card Content */}
-              <div className={`relative border ${isDarkMode ? 'border-gray-700' : 'border-black'} rounded-sm p-3 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ${isDarkMode ? 'bg-transparent backdrop-blur-sm' : 'bg-white'} max-w-[95vw] md:max-w-full mx-auto mt-8 md:mt-0 mb-0`}>
+              <div className={`relative border-l-2 border-r-2 ${isDarkMode ? 'border-blue-500/30' : 'border-blue-400/30'} pl-6 md:pl-8 pr-6 md:pr-8 before:absolute before:left-[-2px] before:top-0 before:h-full before:w-[2px] before:bg-gradient-to-b before:from-blue-500/50 before:to-transparent after:absolute after:right-[-2px] after:top-0 after:h-full after:w-[2px] after:bg-gradient-to-b after:from-blue-500/50 after:to-transparent`}>
                 {/* Managing Director Info */}
-                <div className="md:mt-6 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
-                  <div className="space-y-2 md:space-y-4">
-                    <h3 className={`text-2xl md:text-5xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Pratham Soni</h3>
-                    <div className="text-center md:text-left">
-                      <p className={`text-base md:text-2xl font-semibold md:font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>Managing Director at Fusion Media</p>
+                <div className="max-w-3xl mx-auto mt-20 mb-26">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3">
+                      <h3 className={`text-lg md:text-2xl font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Pratham Soni</h3>
+                      <span className={`text-sm md:text-base ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>•</span>
+                      <p className={`text-sm md:text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Managing Director</p>
                     </div>
-                    <p className={`mt-2 md:mt-6 text-sm md:text-xl leading-relaxed md:px-0 px-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>With a strategic mindset and extensive experience in business management, Pratham leads Fusion Media's operations and growth initiatives. His expertise in market analysis and business development has been instrumental in establishing Fusion Media as a leading creative agency. Under his leadership, the company continues to expand its reach and deliver exceptional results for clients across various industries.</p>
-                    <div className="mt-3 md:mt-6">
+                    <p className={`text-sm md:text-base leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>With a strategic mindset and extensive experience in business management, Pratham leads Fusion Media's operations and growth initiatives. His expertise in market analysis and business development has been instrumental in establishing Fusion Media as a leading creative agency.</p>
+                    <div className="pt-2">
                       <a
                         href="https://www.linkedin.com/in/pratham-soni/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 rounded-lg text-sm md:text-lg ${isDarkMode
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white hover:text-gray-300'
-                          : 'bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300'
-                          }`}
+                        className={`inline-flex items-center text-sm md:text-base ${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'}`}
                       >
-                        <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                        <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 mr-2" />
                         Connect on LinkedIn
                       </a>
                     </div>
