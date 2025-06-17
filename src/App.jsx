@@ -4745,11 +4745,11 @@ function App() {
         </div>
 
         <section
-          className={`fifth-section min-h-screen md:py-12 relative ${
+          className={`fifth-section min-h-screen md:py-8 relative ${
             isDarkMode ? "bg-black" : "bg-white"
           }`}
         >
-          <div className="container mx-auto px-4 mb-[-180px] md:mb-[-50px]">
+          <div className="container mx-auto px-4 mb-[-200px] md:mb-[-100px]">
             <div className="max-w-6xl mx-auto">
               {/* Quote Card */}
               <motion.div
@@ -4773,7 +4773,7 @@ function App() {
                     isDarkMode ? "border-gray-700" : "border-black"
                   } rounded-sm p-3 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
                     isDarkMode ? "bg-transparent backdrop-blur-sm" : "bg-white"
-                  } max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-4 md:mb-0`}
+                  } max-w-[95vw] md:max-w-full mx-auto mt-22 md:mt-0 mb-0`}
                 >
                   {/* Founder Info */}
                   <div className="md:mt-10 max-w-3xl mx-auto px-2 md:px-4 text-center md:text-left">
@@ -4809,7 +4809,7 @@ function App() {
                         execution. Every project is approached with a fresh
                         perspective and a commitment to excellence.
                       </p>
-                      <div className="mt-3 md:mt-6">
+                      <div className="mt-2 md:mt-4">
                         <a
                           href="https://www.linkedin.com/in/harsh-punmiya-b9320b285/"
                           target="_blank"
@@ -4820,10 +4820,7 @@ function App() {
                               : "bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-300"
                           }`}
                         >
-                          <FontAwesomeIcon
-                            icon={faLinkedin}
-                            className="w-4 h-4 md:w-5 md:h-5 mr-2"
-                          />
+                          <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                           Connect on LinkedIn
                         </a>
                       </div>
@@ -4840,34 +4837,44 @@ function App() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative mt-12"
+          className="relative -mt-12"
         >
           {/* Card Content Wrapper (with borders) */}
           <div
-            className={`relative border-l-2 border-r-2 ${isDarkMode ? 'border-blue-500/30' : 'border-blue-400/30'} before:absolute before:left-[-2px] before:top-0 before:h-full before:w-[2px] before:bg-gradient-to-b before:from-blue-500/50 before:to-transparent after:absolute after:right-[-2px] after:top-0 after:h-full after:w-[2px] after:bg-gradient-to-b after:from-blue-500/50 after:to-transparent`}
+            className={`relative border-l-2 border-r-2 ${
+              isDarkMode ? "border-blue-500/30" : "border-blue-400/30"
+            } before:absolute before:left-[-2px] before:top-0 before:h-full before:w-[2px] before:bg-gradient-to-b before:from-blue-500/50 before:to-transparent after:absolute after:right-[-2px] after:top-0 after:h-full after:w-[2px] after:bg-gradient-to-b after:from-blue-500/50 after:to-transparent max-w-3xl mx-auto`}
           >
             {/* Managing Director Info */}
-            <div className="max-w-3xl mx-auto text-left py-8 px-8 md:px-16">
+            <div className="text-left py-2 px-8 md:px-16">
               <div className="space-y-2">
                 <div className="flex items-center gap-2 md:gap-3">
                   <h3
-                    className={`text-xl md:text-3xl font-bold tracking-tighter ${isDarkMode ? "text-white" : "text-gray-900"}`}
+                    className={`text-xl md:text-3xl font-bold tracking-tighter ${
+                      isDarkMode ? "text-white" : "text-gray-900"
+                    }`}
                   >
                     Pratham Soni
                   </h3>
                   <span
-                    className={`text-sm md:text-base ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
+                    className={`text-sm md:text-base ${
+                      isDarkMode ? "text-gray-400" : "text-gray-600"
+                    }`}
                   >
                     •
                   </span>
                   <p
-                    className={`text-base md:text-xl ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
+                    className={`text-base md:text-xl ${
+                      isDarkMode ? "text-gray-300" : "text-gray-700"
+                    }`}
                   >
                     Managing Director
                   </p>
                 </div>
                 <p
-                  className={`mt-2 text-sm md:text-base leading-relaxed ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
+                  className={`mt-2 text-sm md:text-base leading-relaxed ${
+                    isDarkMode ? "text-gray-400" : "text-gray-600"
+                  }`}
                 >
                   With a strategic mindset and extensive experience in business
                   management, Pratham leads Fusion Media's operations and growth
@@ -4880,9 +4887,10 @@ function App() {
                     href="https://www.linkedin.com/in/pratham-soni/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center text-sm md:text-base ${isDarkMode
-                      ? "text-blue-400 hover:text-blue-300"
-                      : "text-blue-600 hover:text-blue-500"
+                    className={`inline-flex items-center text-sm md:text-base ${
+                      isDarkMode
+                        ? "text-blue-400 hover:text-blue-300"
+                        : "text-blue-600 hover:text-blue-500"
                     }`}
                   >
                     <FontAwesomeIcon
@@ -4898,7 +4906,7 @@ function App() {
         </motion.div>
 
         <div
-          className="testimonial-section flex flex-col items-center mt-[-160px] md:mt-[-30px]"
+          className="testimonial-section flex flex-col items-center mt-[-100px] md:mt-[-50px]"
           ref={ref}
         >
           {/* Testimonial Header */}
